@@ -18,6 +18,11 @@ public class Bullet : MonoBehaviour {
         }
 		movement = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
 	}
+	private void OnTriggerEnter2D(Collider2D other){
+		if (other.tag =="enemy"){
+			Destroy(this.gameObject);
+		}
+	}
 
 	void FixedUpdate(){
 		moveCharacter(movement);
