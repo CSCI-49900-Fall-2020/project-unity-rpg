@@ -681,8 +681,14 @@
  <Reference Include="Unity.InternalAPIEditorBridgeDev.001">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.SpriteShape.Editor">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Path.Editor">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.EditorCoroutines.Editor">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
@@ -705,8 +711,23 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEngineBridge.001">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Runtime">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.SpriteShape.Runtime">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
@@ -714,41 +735,20 @@
  <Reference Include="UnityEditor.InteractiveTutorialsFramework">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
  </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Path.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Mathematics.Editor">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
  <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
