@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
      <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
      <Compile Include="Assets\Scripts\Mechanics\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Mechanics\Bullet_Hit_Animation.cs" />
      <Compile Include="Assets\Scripts\Mechanics\DeathZone.cs" />
      <Compile Include="Assets\Scripts\Mechanics\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Mechanics\GameController.cs" />
