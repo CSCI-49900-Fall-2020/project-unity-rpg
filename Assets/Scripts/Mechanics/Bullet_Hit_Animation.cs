@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Bullet_Hit_Animation : MonoBehaviour
 {
-	/*
-	public Animator animator;
 
+	public Animator animator;
+    void Start(){
+    	animator.SetBool("Hit_confirm", false);
+	}
     // Start is called before the first frame update
 	private void OnTriggerEnter2D(Collider2D other){
 		if (other.tag =="enemy"){
 			animator.SetBool("Hit_confirm",true);
-			Destroy(this.gameObject);
+			//Destroy(this.gameObject);
 		}
 	}
-	*/
+
 }
