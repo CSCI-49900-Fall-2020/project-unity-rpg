@@ -42,6 +42,7 @@
      <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\PlatformerJumpPad.cs" />
      <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\PlatformerSpeedPad.cs" />
      <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\SimpleTrigger.cs" />
+     <Compile Include="Assets\Scripts\Core\DoNotDestoryOnTransition.cs" />
      <Compile Include="Assets\Scripts\Core\Fuzzy.cs" />
      <Compile Include="Assets\Scripts\Core\HeapQueue.cs" />
      <Compile Include="Assets\Scripts\Core\Simulation.Event.cs" />
@@ -60,6 +61,7 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerSpawn.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
      <Compile Include="Assets\Scripts\Mechanics\Bullet.cs" />
      <Compile Include="Assets\Scripts\Mechanics\CopyPlayerController.cs" />
@@ -690,6 +692,9 @@
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
         <HintPath>C:/Users/hye55/Documents/Coding Stuff/College Projects &amp; Homework/project-unity-rpg/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>C:/Users/hye55/Documents/Coding Stuff/College Projects &amp; Homework/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
         <HintPath>C:/Users/hye55/Documents/Coding Stuff/College Projects &amp; Homework/project-unity-rpg/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
