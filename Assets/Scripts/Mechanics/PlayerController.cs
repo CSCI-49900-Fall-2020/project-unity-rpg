@@ -55,6 +55,7 @@ namespace Platformer.Mechanics
 
         protected override void Update()
         {
+
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
@@ -79,6 +80,7 @@ namespace Platformer.Mechanics
 
         void UpdateJumpState()
         {
+
             jump = false;
             switch (jumpState)
             {
@@ -109,6 +111,7 @@ namespace Platformer.Mechanics
 
         protected override void ComputeVelocity()
         {
+
             if (jump && IsGrounded)
             {
                 velocity.y = jumpTakeOffSpeed * model.jumpModifier;

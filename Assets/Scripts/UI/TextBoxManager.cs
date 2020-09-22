@@ -2,6 +2,7 @@
 //using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Platformer.Mechanics;
 
 public class TextBoxManager : MonoBehaviour
 {
@@ -15,25 +16,26 @@ public class TextBoxManager : MonoBehaviour
     public int currentline;
     public int endatline;
 
-    //public PlayerController player;
+    public PlayerController player;
 
     public bool isActive;
-    
+
+
     void Start()
     {
-        //player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerController>();
 
         if (textfile != null)
         {
             textlines = (textfile.text.Split('\n'));
         }
 
-        if(endatline == 0) //if endline is unspecified, go to the end
+        if (endatline == 0) //if endline is unspecified, go to the end
         {
             endatline = textlines.Length - 1;
         }
 
-        if(isActive)
+        if (isActive)
         {
             enable();
         }
@@ -46,20 +48,20 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(!isActive)
+
+        if (!isActive)
         {
             return;
         }
-        
+
         theText.text = textlines[currentline];
 
-        if(Input.GetKeyDown(KeyCode.Return)) // press return/enter advances text
+        if (Input.GetKeyDown(KeyCode.Return)) // press return/enter advances text
         {
             currentline += 1;
         }
 
-        if(currentline > endatline) // once you reach the end, box disappears
+        if (currentline > endatline) // once you reach the end, box disappears
         {
             disable();
         }
@@ -69,20 +71,23 @@ public class TextBoxManager : MonoBehaviour
     {
         textbox.SetActive(true);
         isActive = true;
+
     }
 
     public void disable() //take away textbox
     {
         textbox.SetActive(false);
         isActive = false;
+
     }
 
     public void reuse(TextAsset theText) //reuse textbox
     {
-        if(theText != null)
+        if (theText != null)
         {
             textlines = new string[1];
             textlines = (theText.text.Split('\n'));
         }
     }
+
 }
