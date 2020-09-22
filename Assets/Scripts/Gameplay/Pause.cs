@@ -7,17 +7,34 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
 
     public static bool isPaused = false;
-    void Start()
+    public enum PauseMethod
     {
-
+        CharacterSwap,
+        GamePause
     }
 
-    // Update is called once per frame
+    public PauseMethod pauseMethod;
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.C))
         {
+            pauseMethod = PauseMethod.CharacterSwap;
+
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMethod = PauseMethod.GamePause;
+
             if (isPaused)
             {
                 ResumeGame();
