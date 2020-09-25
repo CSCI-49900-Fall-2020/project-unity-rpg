@@ -79,8 +79,9 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
      <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
-     <Compile Include="Assets\Scripts\Mechanics\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Mechanics\Bullet_Hit_Animation.cs" />
+     <Compile Include="Assets\Scripts\Mechanics\BulletAnimationHit.cs" />
+     <Compile Include="Assets\Scripts\Mechanics\BulletShootLeft.cs" />
+     <Compile Include="Assets\Scripts\Mechanics\BulletShootRight.cs" />
      <Compile Include="Assets\Scripts\Mechanics\DeathZone.cs" />
      <Compile Include="Assets\Scripts\Mechanics\EnemyController.cs" />
      <Compile Include="Assets\Scripts\Mechanics\GameController.cs" />
@@ -308,7 +309,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="System.IO.Compression.FileSystem">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/PackageCache/com.unity.connect.share@2.0.3/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/PackageCache/com.unity.connect.share@2.0.3/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -665,91 +666,91 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Cinemachine">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Connect.Share.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Connect.Share.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Connect.Share.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InteractiveTutorials.Core">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridgeDev.001">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Path.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.EditorCoroutines.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InteractiveTutorials.Core.Scripts">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.Scripts.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.InteractiveTutorials.Core.Scripts.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.InteractiveTutorialsFramework">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Phillip/Desktop/capstone Folder/testing clones/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Phillip/Desktop/capstone Folder/C sharp error/project-unity-rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
