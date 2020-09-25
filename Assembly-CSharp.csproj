@@ -61,7 +61,8 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerSpawn.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\SceneTransition.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\SceneTransitionAuto.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\SceneTransitionInterract.cs" />
      <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
      <Compile Include="Assets\Scripts\Mechanics\Bullet.cs" />
      <Compile Include="Assets\Scripts\Mechanics\CopyPlayerController.cs" />

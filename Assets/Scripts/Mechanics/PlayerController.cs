@@ -14,7 +14,7 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerController : KinematicObject
     {
-        public Transform player_entity;
+        public Transform playerEntity;
         public GameObject bulletPrefab;
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
@@ -31,8 +31,10 @@ namespace Platformer.Mechanics
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
-        /*internal new*/ public Collider2D collider2d;
-        /*internal new*/ public AudioSource audioSource;
+        /*internal new*/
+        public Collider2D collider2d;
+        /*internal new*/
+        public AudioSource audioSource;
         public Health health;
         public bool controlEnabled = true;
 
@@ -58,7 +60,8 @@ namespace Platformer.Mechanics
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
-                if (Input.GetButtonDown ("Fire1")){
+                if (Input.GetButtonDown("Fire1"))
+                {
                     shootBullet();
                 }
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
@@ -142,9 +145,10 @@ namespace Platformer.Mechanics
             InFlight,
             Landed
         }
-        public void shootBullet(){
+        public void shootBullet()
+        {
             GameObject b = Instantiate(bulletPrefab) as GameObject;
-            b.transform.position = player_entity.transform.position;
+            b.transform.position = playerEntity.transform.position;
         }
 
     }
