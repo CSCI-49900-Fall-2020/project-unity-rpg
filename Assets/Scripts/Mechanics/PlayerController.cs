@@ -14,8 +14,12 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerController : KinematicObject
     {
+        public bool facingRight = true;
+        public float fireRate = 5;
+        public float timeToFire = 1;
         public Transform playerEntity;
-        public GameObject bulletPrefab;
+        public GameObject bulletRightPrefab;
+        public GameObject bulletLeftPrefab;
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
@@ -61,10 +65,6 @@ namespace Platformer.Mechanics
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    shootBullet();
-                }
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
@@ -129,10 +129,21 @@ namespace Platformer.Mechanics
                 }
             }
 
-            if (move.x > 0.01f)
+            if (move.x > 0.01f){
                 spriteRenderer.flipX = false;
-            else if (move.x < -0.01f)
+                facingRight = true;
+            }
+            else if (move.x < -0.01f){
                 spriteRenderer.flipX = true;
+                facingRight = false;
+            }
+
+            if (Input.GetButtonDown ("Fire1") && facingRight)
+                bulletShootRight();
+            
+            if (Input.GetButtonDown ("Fire1") && facingRight==false)    
+                bulletShootLeft();
+
 
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
@@ -148,11 +159,14 @@ namespace Platformer.Mechanics
             InFlight,
             Landed
         }
-        public void shootBullet()
-        {
-            GameObject b = Instantiate(bulletPrefab) as GameObject;
+
+        public void bulletShootRight(){
+            GameObject b = Instantiate(bulletRightPrefab) as GameObject;
             b.transform.position = playerEntity.transform.position;
         }
-
+        public void bulletShootLeft(){
+            GameObject b = Instantiate(bulletLeftPrefab) as GameObject;
+            b.transform.position = playerEntity.transform.position;
+        }
     }
 }
