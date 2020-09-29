@@ -14,17 +14,12 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerController : KinematicObject
     {
-<<<<<<< HEAD
         public bool facingRight = true;
         public float fireRate = 5;
         public float timeToFire = 1;
         public Transform playerEntity;
         public GameObject bulletRightPrefab;
         public GameObject bulletLeftPrefab;
-=======
-        public Transform playerEntity;
-        public GameObject bulletPrefab;
->>>>>>> 461094873de311dc9d92089040e39d583ce317f4
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
@@ -66,17 +61,10 @@ namespace Platformer.Mechanics
 
         protected override void Update()
         {
+
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
-<<<<<<< HEAD
-
-=======
-                if (Input.GetButtonDown("Fire1"))
-                {
-                    shootBullet();
-                }
->>>>>>> 461094873de311dc9d92089040e39d583ce317f4
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
@@ -95,6 +83,7 @@ namespace Platformer.Mechanics
 
         void UpdateJumpState()
         {
+
             jump = false;
             switch (jumpState)
             {
@@ -125,6 +114,7 @@ namespace Platformer.Mechanics
 
         protected override void ComputeVelocity()
         {
+
             if (jump && IsGrounded)
             {
                 velocity.y = jumpTakeOffSpeed * model.jumpModifier;
@@ -169,18 +159,13 @@ namespace Platformer.Mechanics
             InFlight,
             Landed
         }
-<<<<<<< HEAD
+
         public void bulletShootRight(){
             GameObject b = Instantiate(bulletRightPrefab) as GameObject;
             b.transform.position = playerEntity.transform.position;
         }
         public void bulletShootLeft(){
             GameObject b = Instantiate(bulletLeftPrefab) as GameObject;
-=======
-        public void shootBullet()
-        {
-            GameObject b = Instantiate(bulletPrefab) as GameObject;
->>>>>>> 461094873de311dc9d92089040e39d583ce317f4
             b.transform.position = playerEntity.transform.position;
         }
     }

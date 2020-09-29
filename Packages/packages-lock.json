@@ -1,6 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "com.unity.2d.common": {
       "version": "2.0.2",
       "depth": 1,
@@ -18,16 +17,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.sprite": {
-=======
-    "com.unity.2d.tilemap": {
->>>>>>> 461094873de311dc9d92089040e39d583ce317f4
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
-    },
-<<<<<<< HEAD
-    "com.unity.2d.spriteshape": {
+          "com.unity.2d.spriteshape": {
       "version": "3.0.13",
       "depth": 0,
       "source": "registry",
@@ -38,8 +28,14 @@
       },
       "url": "https://packages.unity.com"
     },
-=======
->>>>>>> 461094873de311dc9d92089040e39d583ce317f4
+
+    "com.unity.2d.tilemap": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+
     "com.unity.cinemachine": {
       "version": "2.5.0",
       "depth": 0,
