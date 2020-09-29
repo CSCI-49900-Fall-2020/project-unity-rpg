@@ -11,6 +11,7 @@ public class SceneTransitionAuto : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        player = other.GetComponent<Collider2D>().gameObject.transform;
         SceneManager.LoadScene(sceneName);
         player.position = spawnPoint;
     }

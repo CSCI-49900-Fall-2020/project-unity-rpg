@@ -14,11 +14,13 @@ public class SceneTransitionInterract : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         triggered = true;
+        player = other.GetComponent<Collider2D>().gameObject.transform;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         triggered = false;
+        player = null;
     }
 
     void Update()
