@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ActivateText : MonoBehaviour
 {
     public TextAsset theText;
@@ -25,7 +26,7 @@ public class ActivateText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(waitforpress && Input.GetKeyDown(KeyCode.Return))
+        if (waitforpress && Input.GetKeyDown(KeyCode.Return))
         {
             textbox.reuse(theText);
             textbox.currentline = start;
@@ -41,9 +42,9 @@ public class ActivateText : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.name == "Player")
+        if (other.name == "Player")
         {
-            if(onbuttonpress)
+            if (onbuttonpress)
             {
                 waitforpress = true;
                 return;
@@ -53,7 +54,7 @@ public class ActivateText : MonoBehaviour
             textbox.endatline = end;
             textbox.enable();
 
-            if(CloseWhenDone)
+            if (CloseWhenDone)
             {
                 Destroy(gameObject);
             }
@@ -62,7 +63,7 @@ public class ActivateText : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.name == "Player")
+        if (other.name == "Player")
         {
             waitforpress = false;
         }
