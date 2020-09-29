@@ -11,6 +11,13 @@ public class TestDialogueOption : MonoBehaviour
 
     private UnityAction yesEvent, noEvent;
 
+    public bool onbuttonpress;
+    private bool waitforpress;
+    public bool CloseWhenDone;
+
+
+
+
     void Awake()
     {
         dialogueOption = DialogueOption.Instance();
@@ -24,19 +31,49 @@ public class TestDialogueOption : MonoBehaviour
 
     public void TestYN()
     {
-        dialogueOption.Choice("Yes or No", yesEvent, noEvent);
+        dialogueOption.Choice("Ohoho, you're approaching me?", yesEvent, noEvent);
     }
 
     //wrapped into unityactions
 
     void TestAccept()
     {
-        displayManager.DisplayMessage("Yes Accepted");
+        displayManager.DisplayMessage("I can't beat the sh*t out of you without getting closer");
     }
 
     void TestDecline()
     {
-        displayManager.DisplayMessage("No Declined");
+        displayManager.DisplayMessage("Nah bro");
+    }
+
+    void Update()
+    {
+        if (waitforpress && Input.GetKeyDown(KeyCode.Return))
+        {
+            dialogueOption.Choice("Ohoho, you're approaching me?", yesEvent, noEvent);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        {
+            if (onbuttonpress)
+            {
+                waitforpress = true;
+                return;
+            }
+
+            dialogueOption.Choice("Ohoho, you're approaching me?", yesEvent, noEvent);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.name == "Player")
+        {
+            waitforpress = false;
+        }
     }
 
 }

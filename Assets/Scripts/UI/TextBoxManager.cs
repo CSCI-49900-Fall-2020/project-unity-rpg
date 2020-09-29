@@ -20,6 +20,7 @@ public class TextBoxManager : MonoBehaviour
 
     public bool isActive;
 
+    public bool stopPlayerMovement;
 
     void Start()
     {
@@ -71,14 +72,17 @@ public class TextBoxManager : MonoBehaviour
     {
         textbox.SetActive(true);
         isActive = true;
-
+        if (stopPlayerMovement)
+        {
+            player.controlEnabled = false;
+        }
     }
 
     public void disable() //take away textbox
     {
         textbox.SetActive(false);
         isActive = false;
-
+        player.controlEnabled = true;
     }
 
     public void reuse(TextAsset theText) //reuse textbox
