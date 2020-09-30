@@ -27,8 +27,10 @@ public class SceneTransitionInterract : MonoBehaviour
     {
         if (triggered && Input.GetKeyDown(KeyCode.F))
         {
-            SceneManager.LoadScene(sceneName);
-            player.position = spawnPoint;
+            if(player.tag == "Player"){
+                SceneManager.LoadScene(sceneName);
+                player.position = spawnPoint;
+            }
         }
     }
 

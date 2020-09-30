@@ -72,6 +72,12 @@ namespace Platformer.Mechanics
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
+
+                if (Input.GetButtonDown ("Fire1") && facingRight)
+                bulletShootRight();
+            
+                if (Input.GetButtonDown ("Fire1") && facingRight==false)    
+                    bulletShootLeft();
             }
             else
             {
@@ -137,13 +143,6 @@ namespace Platformer.Mechanics
                 spriteRenderer.flipX = true;
                 facingRight = false;
             }
-
-            if (Input.GetButtonDown ("Fire1") && facingRight)
-                bulletShootRight();
-            
-            if (Input.GetButtonDown ("Fire1") && facingRight==false)    
-                bulletShootLeft();
-
 
             animator.SetBool("grounded", IsGrounded);
             animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
