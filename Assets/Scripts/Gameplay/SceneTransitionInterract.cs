@@ -10,39 +10,40 @@ public class SceneTransitionInterract : MonoBehaviour
     public Vector2 spawnPoint;
 
     //Read Note Below--------------------------------------------------------------------
-    bool triggered = false;
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        triggered = true;
-        player = other.GetComponent<Collider2D>().gameObject.transform;
-    }
+    // bool triggered = false;
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     triggered = true;
+    //     player = other.GetComponent<Collider2D>().gameObject.transform;
+    // }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        triggered = false;
-        player = null;
-    }
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     triggered = false;
+    //     player = null;
+    // }
 
-    void Update()
-    {
-        if (triggered && Input.GetKeyDown(KeyCode.F))
-        {
-            if(player.tag == "Player"){
-                SceneManager.LoadScene(sceneName);
-                player.position = spawnPoint;
-            }
-        }
-    }
+    // void Update()
+    // {
+    //     if (triggered && Input.GetKeyDown(KeyCode.F))
+    //     {
+    //         if(player.tag == "Player"){
+    //             SceneManager.LoadScene(sceneName);
+    //             player.position = spawnPoint;
+    //         }
+    //     }
+    // }
 
     //The above can potentially cause lag because it is constantly checking the if condition
     //Try to get the below to work
 
-    // private void OnTriggerStay2D(Collider2D other)
-    // {
-    //     if (Input.GetKeyDown(KeyCode.F))
-    //     {
-    //         SceneManager.LoadScene(scene_name);
-    //         player.position = spawn_point;
-    //     }
-    // }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetKeyDown(KeyCode.F) && other.tag == "Player")
+        {
+            player = other.GetComponent<Collider2D>().gameObject.transform;
+            SceneManager.LoadScene(sceneName);
+            player.position = spawnPoint;
+        }
+    }
 }
