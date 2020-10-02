@@ -20,6 +20,7 @@ namespace Platformer.Mechanics
         internal Collider2D _collider;
         internal AudioSource _audio;
         SpriteRenderer spriteRenderer;
+        public Health health;
 
         public Bounds Bounds => _collider.bounds;
 
