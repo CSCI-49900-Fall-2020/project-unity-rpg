@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
+
 public class TestDialogueOption : MonoBehaviour
 {
     private DialogueOption dialogueOption;
@@ -14,8 +15,6 @@ public class TestDialogueOption : MonoBehaviour
     public bool onbuttonpress;
     private bool waitforpress;
     public bool CloseWhenDone;
-
-
 
 
     void Awake()

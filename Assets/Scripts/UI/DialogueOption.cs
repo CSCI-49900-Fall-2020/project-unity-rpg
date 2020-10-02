@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using Platformer.Mechanics;
 
 public class DialogueOption : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class DialogueOption : MonoBehaviour
     //public Text accept, decline;
     public Button acceptButton, declineButton;
     public GameObject window;
+    public PlayerController player;
+
+    public bool stopPlayerMovement;
+
+    void Start()
+    {
+        player = FindObjectOfType<PlayerController>();
+    }
 
     private static DialogueOption instance;
     public static DialogueOption Instance()
@@ -27,6 +36,11 @@ public class DialogueOption : MonoBehaviour
 
     public void Choice(string question, UnityAction accept, UnityAction decline)
     {
+        if (stopPlayerMovement)
+        {
+            player.controlEnabled = false;
+        }
+
         window.SetActive(true);
 
         acceptButton.onClick.RemoveAllListeners();
@@ -45,6 +59,7 @@ public class DialogueOption : MonoBehaviour
 
     void CloseWindow()
     {
+        player.controlEnabled = true;
         window.SetActive(false);
     }
 }
