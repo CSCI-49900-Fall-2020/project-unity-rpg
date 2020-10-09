@@ -34,7 +34,8 @@ namespace Platformer.Mechanics
 
         void OnCollisionEnter2D(Collision2D collision)
         {
-            var player = collision.gameObject.GetComponent<PlayerController>();
+       
+          var player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
                 var ev = Schedule<PlayerEnemyCollision>();
