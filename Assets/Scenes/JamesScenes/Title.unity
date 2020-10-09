@@ -767,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: PresentationScene2
 --- !u!1 &1174650785
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: PresentationScene2
 --- !u!114 &1217795517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1058,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 160
+      value: 241.75
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -1066,7 +1068,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 156.5
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -1291,6 +1293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: PresentationScene2
 --- !u!114 &1459714093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2501,6 +2504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: PresentationScene2
 --- !u!1001 &7191423056740646153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2621,7 +2625,7 @@ PrefabInstance:
     - target: {fileID: 2308399167256393716, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6419285232573422175, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2638,6 +2642,41 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7191423056740646156}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: PresentationScene1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7260951473193b4994f1569b7c7485a, type: 3}
 --- !u!224 &7191423056740646154 stripped
@@ -2646,3 +2685,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7191423056740646153}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7191423056740646155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2308399167256393716, guid: e7260951473193b4994f1569b7c7485a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7191423056740646153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7191423056740646156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191423056740646155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850b8fa94979c6f409e1f7e9e9559824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onbuttonpress: 1
+  CloseWhenDone: 1
+  nextSceneName: PresentationScene1

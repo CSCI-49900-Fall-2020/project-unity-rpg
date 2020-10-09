@@ -288,6 +288,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276469638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1769683419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &511013615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -481,8 +493,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677995994}
-  - component: {fileID: 677995993}
   - component: {fileID: 677995992}
+  - component: {fileID: 677995993}
   m_Layer: 0
   m_Name: ManageWindow
   m_TagString: Untagged
@@ -503,7 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: {fileID: 1428556059}
-  displayTime: 1.5
+  displayTime: 1
   fadeTime: 1
 --- !u!114 &677995993
 MonoBehaviour:
@@ -517,9 +529,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7bb3ed6533a2d048b169acec2ca3f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 1597841342}
-  acceptButton: {fileID: 0}
-  declineButton: {fileID: 0}
+  question: {fileID: 0}
+  acceptButton: {fileID: 1583225578}
+  declineButton: {fileID: 276469638}
   window: {fileID: 1767766143}
   player: {fileID: 0}
   stopPlayerMovement: 0
@@ -1056,7 +1068,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 160
+      value: 269
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -1066,7 +1078,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -1324,7 +1336,7 @@ GameObject:
   - component: {fileID: 1549326832}
   - component: {fileID: 1549326831}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Title Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1415,6 +1427,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549326829}
   m_CullTransparentMesh: 0
+--- !u!114 &1583225578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7191423056740646153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1597841339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1930,7 @@ PrefabInstance:
     - target: {fileID: 2308399167256393716, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6419285232573422175, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2566,7 +2590,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 78.25
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2576,7 +2600,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 156.5
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2621,7 +2645,7 @@ PrefabInstance:
     - target: {fileID: 2308399167256393716, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6419285232573422175, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
