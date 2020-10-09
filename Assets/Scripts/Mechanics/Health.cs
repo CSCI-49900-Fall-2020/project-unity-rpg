@@ -54,7 +54,7 @@ namespace Platformer.Mechanics
 
         void Awake()
         {
-            currentHP = maxHP;
+            //currentHP = maxHP;
         }
     }
 }
