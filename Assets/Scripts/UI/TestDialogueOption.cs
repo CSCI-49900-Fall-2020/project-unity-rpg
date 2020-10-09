@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
+using Platformer.Core;
 
 public class TestDialogueOption : MonoBehaviour
 {
     private DialogueOption dialogueOption;
     private DisplayManager displayManager;
+    private W84secondsEx wait5s;
 
     private UnityAction yesEvent, noEvent;
 
@@ -16,6 +18,7 @@ public class TestDialogueOption : MonoBehaviour
     private bool waitforpress;
     public bool CloseWhenDone;
 
+    public string nextSceneName;
 
     void Awake()
     {
@@ -27,10 +30,17 @@ public class TestDialogueOption : MonoBehaviour
     }
 
     //set up buttons and functions
-
+    
     public void TestYN()
     {
         dialogueOption.Choice("Ohoho, you're approaching me?", yesEvent, noEvent);
+    }
+
+    public void changeScene(/*string nextSceneName*/)
+    {
+        SceneManager.LoadScene("JamesAssets");
+        //`wait5s.ExampleCoroutine();
+        SceneManager.LoadScene(nextSceneName);
     }
 
     //wrapped into unityactions

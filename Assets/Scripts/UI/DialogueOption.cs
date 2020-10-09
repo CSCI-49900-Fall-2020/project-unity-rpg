@@ -15,12 +15,12 @@ public class DialogueOption : MonoBehaviour
     public PlayerController player;
 
     public bool stopPlayerMovement;
-
+    
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
     }
-
+    
     private static DialogueOption instance;
     public static DialogueOption Instance()
     {
@@ -29,16 +29,21 @@ public class DialogueOption : MonoBehaviour
             instance = FindObjectOfType(typeof(DialogueOption)) as DialogueOption;
             if (!instance)
                 Debug.Log("There need to be at least one active DialogueOption script on a GameObject in your scene.");
+            //return;
         }
 
         return instance;
     }
-
+    
     public void Choice(string question, UnityAction accept, UnityAction decline)
     {
         if (stopPlayerMovement)
         {
-            player.controlEnabled = false;
+            //player.controlEnabled = false;
+            if(player != null)
+            {
+                player.controlEnabled = false;
+            }
         }
 
         window.SetActive(true);
@@ -59,7 +64,14 @@ public class DialogueOption : MonoBehaviour
 
     void CloseWindow()
     {
-        player.controlEnabled = true;
+        if (stopPlayerMovement)
+        {
+            if (player != null)
+            {
+                player.controlEnabled = true;
+            }
+        }
+        //player.controlEnabled = true;
         window.SetActive(false);
     }
 }
