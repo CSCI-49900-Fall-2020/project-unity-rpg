@@ -283,7 +283,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -386,7 +386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.1, y: -17.4}
+  m_AnchoredPosition: {x: 1.1, y: -17.400024}
   m_SizeDelta: {x: 772.9678, y: 97.63581}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &149161839
@@ -1993,6 +1993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 0
   CloseWhenDone: 1
+  nextSceneName: 
 --- !u!1 &1850387032
 GameObject:
   m_ObjectHideFlags: 0
