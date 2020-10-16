@@ -14,6 +14,7 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerController : KinematicObject
     {
+        public string characterName;
         public bool facingRight = true;
         public float fireRate = 5;
         public float timeToFire = 1;

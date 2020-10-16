@@ -16,6 +16,8 @@ namespace Platformer.Mechanics
     {
         public Transform player_entity;
 
+        public string characterName;
+
         //public GameObject bulletPrefab;
         //public AudioClip jumpAudio;
         //public AudioClip respawnAudio;
