@@ -779,6 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: 
 --- !u!1 &1174650785
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1174650786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -880,6 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: 
 --- !u!114 &1217795517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,7 +1070,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 269
+      value: 241.75
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -1078,7 +1080,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 102
+      value: 156.5
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -1303,6 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: 
 --- !u!114 &1459714093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,7 +1436,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7191423056740646153}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 7191423056740646155}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1529,7 +1532,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: It don't work yet bro.
+  m_Text: Start Game?
 --- !u!222 &1597841343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1930,7 +1933,7 @@ PrefabInstance:
     - target: {fileID: 2308399167256393716, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6419285232573422175, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2525,6 +2528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 0
+  nextSceneName: 
 --- !u!1001 &7191423056740646153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2590,7 +2594,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 51
+      value: 78.25
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2600,7 +2604,7 @@ PrefabInstance:
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 102
+      value: 156.5
       objectReference: {fileID: 0}
     - target: {fileID: 1127377723006816132, guid: e7260951473193b4994f1569b7c7485a,
         type: 3}
@@ -2662,6 +2666,36 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7191423056740646156}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7260951473193b4994f1569b7c7485a, type: 3}
 --- !u!224 &7191423056740646154 stripped
@@ -2670,3 +2704,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7191423056740646153}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7191423056740646155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2308399167256393716, guid: e7260951473193b4994f1569b7c7485a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7191423056740646153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7191423056740646156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191423056740646155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 850b8fa94979c6f409e1f7e9e9559824, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onbuttonpress: 1
+  CloseWhenDone: 1
+  nextSceneName: PresentationScene1

@@ -25,6 +25,11 @@ public class DisplayManager : MonoBehaviour
         return displayManager;
     }
 
+    void start()
+    {
+        displayText = GameObject.Find("Display Text").GetComponent<Text>();
+    }
+
     public void DisplayMessage(string message)
     {
         displayText.text = message;

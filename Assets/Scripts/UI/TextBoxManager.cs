@@ -24,6 +24,8 @@ public class TextBoxManager : MonoBehaviour
 
     void Start()
     {
+        textbox = GameObject.FindGameObjectWithTag("TextBox");
+
         player = FindObjectOfType<PlayerController>();
 
         if (textfile != null)
@@ -55,7 +57,10 @@ public class TextBoxManager : MonoBehaviour
             return;
         }
 
-        theText.text = textlines[currentline];
+        //theText.text = textlines[currentline];
+
+        if(currentline < textlines.Length)
+            theText.text = textlines[currentline];
 
         if (Input.GetKeyDown(KeyCode.Return)) // press return/enter advances text
         {
