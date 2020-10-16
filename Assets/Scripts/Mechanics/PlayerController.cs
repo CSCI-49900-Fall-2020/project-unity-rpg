@@ -14,12 +14,7 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerController : KinematicObject
     {
-        public bool facingRight = true;
-        public float fireRate = 5;
-        public float timeToFire = 1;
-        public Transform playerEntity;
-        public GameObject bulletRightPrefab;
-        public GameObject bulletLeftPrefab;
+
         public AudioClip jumpAudio;
         public AudioClip respawnAudio;
         public AudioClip ouchAudio;
@@ -72,12 +67,6 @@ namespace Platformer.Mechanics
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
-
-                if (Input.GetButtonDown ("Fire1") && facingRight)
-                bulletShootRight();
-            
-                if (Input.GetButtonDown ("Fire1") && facingRight==false)    
-                    bulletShootLeft();
             }
             else
             {
@@ -137,11 +126,9 @@ namespace Platformer.Mechanics
 
             if (move.x > 0.01f){
                 spriteRenderer.flipX = false;
-                facingRight = true;
             }
             else if (move.x < -0.01f){
                 spriteRenderer.flipX = true;
-                facingRight = false;
             }
 
             animator.SetBool("grounded", IsGrounded);
@@ -157,15 +144,6 @@ namespace Platformer.Mechanics
             Jumping,
             InFlight,
             Landed
-        }
-
-        public void bulletShootRight(){
-            GameObject b = Instantiate(bulletRightPrefab) as GameObject;
-            b.transform.position = playerEntity.transform.position;
-        }
-        public void bulletShootLeft(){
-            GameObject b = Instantiate(bulletLeftPrefab) as GameObject;
-            b.transform.position = playerEntity.transform.position;
         }
     }
 }
