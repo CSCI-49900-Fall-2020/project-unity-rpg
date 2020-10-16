@@ -10,6 +10,7 @@ public class ActivateText : MonoBehaviour
     public int start;
     public int end;
 
+    public GameObject textboxGameObject;
     public TextBoxManager textbox;
 
     public bool onbuttonpress;
@@ -20,6 +21,8 @@ public class ActivateText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //textboxGameObject = GameObject.FindGameObjectWithTag("TextBox");
+        //textbox = textboxGameObject.GetComponent<TextBoxManager>();
         textbox = FindObjectOfType<TextBoxManager>();
     }
 
