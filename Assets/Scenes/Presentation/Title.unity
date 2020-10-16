@@ -288,18 +288,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &276469638 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1769683419}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &511013615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -529,9 +517,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7bb3ed6533a2d048b169acec2ca3f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: {fileID: 0}
-  acceptButton: {fileID: 1583225578}
-  declineButton: {fileID: 276469638}
+  question: {fileID: 1597841342}
+  acceptButton: {fileID: 0}
+  declineButton: {fileID: 0}
   window: {fileID: 1767766143}
   player: {fileID: 0}
   stopPlayerMovement: 0
@@ -780,6 +768,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: 
+  assetsSceneName: 
 --- !u!1 &1174650785
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +871,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: 
+  assetsSceneName: 
 --- !u!114 &1217795517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,6 +1296,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: 
+  assetsSceneName: 
 --- !u!114 &1459714093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,18 +1421,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549326829}
   m_CullTransparentMesh: 0
---- !u!114 &1583225578 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7753263586553018654, guid: e7260951473193b4994f1569b7c7485a,
-    type: 3}
-  m_PrefabInstance: {fileID: 7191423056740646153}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7191423056740646155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1597841339
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,6 +2508,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: 
+  assetsSceneName: 
 --- !u!1001 &7191423056740646153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2725,3 +2705,4 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 1
   nextSceneName: PresentationScene1
+  assetsSceneName: PresentationAssets

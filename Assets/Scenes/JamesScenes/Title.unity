@@ -768,6 +768,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: PresentationScene2
+  assetsSceneName: 
 --- !u!1 &1174650785
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +871,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: PresentationScene2
+  assetsSceneName: 
 --- !u!114 &1217795517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1294,6 +1296,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: PresentationScene2
+  assetsSceneName: 
 --- !u!114 &1459714093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,6 +2508,7 @@ MonoBehaviour:
   onbuttonpress: 1
   CloseWhenDone: 0
   nextSceneName: PresentationScene2
+  assetsSceneName: 
 --- !u!1001 &7191423056740646153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2705,4 +2709,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onbuttonpress: 1
   CloseWhenDone: 1
-  nextSceneName: PresentationScene1
+  nextSceneName: PresentScene1
+  assetsSceneName: JamesAssets

@@ -19,6 +19,7 @@ public class TestDialogueOption : MonoBehaviour
     public bool CloseWhenDone;
 
     public string nextSceneName;
+    public string assetsSceneName;
 
     void Awake()
     {
@@ -38,7 +39,7 @@ public class TestDialogueOption : MonoBehaviour
 
     public void changeScene(/*string nextSceneName*/)
     {
-        SceneManager.LoadScene("JamesAssets");
+        SceneManager.LoadScene(assetsSceneName);
         //`wait5s.ExampleCoroutine();
         SceneManager.LoadScene(nextSceneName);
     }
