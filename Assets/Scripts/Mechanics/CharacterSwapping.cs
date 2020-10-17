@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Mechanics;
-<<<<<<< HEAD
 using UnityEngine.UI;
 using System;
-=======
->>>>>>> 4214fba... Added a lot of features
 
 public class CharacterSwapping : MonoBehaviour
 {
@@ -16,7 +13,6 @@ public class CharacterSwapping : MonoBehaviour
     public GameObject character4;
     public GameObject currentCharacter;
     public CameraFollow mainCamera;
-<<<<<<< HEAD
     public HealthBar mainHealthBar;
     public ManaBar mainManaBar;
     public Text subCharacterName1;
@@ -29,9 +25,6 @@ public class CharacterSwapping : MonoBehaviour
     public HealthBar subHealthBar3;
     public ManaBar subManaBar3;
     
-=======
-    public HealthBar healthBar;
->>>>>>> 4214fba... Added a lot of features
     public Vector2 tempPosition;
 
     void Awake(){
@@ -44,7 +37,6 @@ public class CharacterSwapping : MonoBehaviour
     }
     void Start(){
         //healthBar.SetMaxHealth(100, 10);
-<<<<<<< HEAD
         mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
         mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
         subCharacterName1.text = character2.GetComponent<Character>().characterName;
@@ -163,14 +155,6 @@ public class CharacterSwapping : MonoBehaviour
         if(Input.GetButtonDown("Character1")){
             if(currentCharacter != character1){
                 subCharacterInfoSwap(1);
-=======
-        healthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-    }
-
-    void Update(){
-        if(Input.GetButtonDown("Character1")){
-            if(currentCharacter != character1){
->>>>>>> 4214fba... Added a lot of features
                 // Disable control of current character
                 currentCharacter.GetComponent<CopyPlayerController>().controlEnabled = false;
                 // Swap their positions
@@ -181,19 +165,12 @@ public class CharacterSwapping : MonoBehaviour
                 currentCharacter = character1;
                 currentCharacter.GetComponent<CopyPlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-<<<<<<< HEAD
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                 mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
             }
         } else if (Input.GetButtonDown("Character2")){
             if(currentCharacter != character2){
                 subCharacterInfoSwap(2);
-=======
-                healthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-            }
-        } else if (Input.GetButtonDown("Character2")){
-            if(currentCharacter != character2){
->>>>>>> 4214fba... Added a lot of features
                 currentCharacter.GetComponent<CopyPlayerController>().controlEnabled = false;
                 tempPosition = character2.GetComponent<Transform>().position;
                 character2.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
@@ -201,19 +178,12 @@ public class CharacterSwapping : MonoBehaviour
                 currentCharacter = character2;
                 currentCharacter.GetComponent<CopyPlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-<<<<<<< HEAD
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                 mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
             }
         }else if (Input.GetButtonDown("Character3")){
             if(currentCharacter != character3){
                 subCharacterInfoSwap(3);
-=======
-                healthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-            }
-        }else if (Input.GetButtonDown("Character3")){
-            if(currentCharacter != character3){
->>>>>>> 4214fba... Added a lot of features
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<CopyPlayerController>().controlEnabled = false;
                 tempPosition = character3.GetComponent<Transform>().position;
                 character3.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
@@ -221,19 +191,12 @@ public class CharacterSwapping : MonoBehaviour
                 currentCharacter = character3;
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<CopyPlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-<<<<<<< HEAD
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                 mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
             }
         }else if (Input.GetButtonDown("Character4")){
             if(currentCharacter != character4){
                 subCharacterInfoSwap(4);
-=======
-                healthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-            }
-        }else if (Input.GetButtonDown("Character4")){
-            if(currentCharacter != character4){
->>>>>>> 4214fba... Added a lot of features
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<CopyPlayerController>().controlEnabled = false;
                 tempPosition = character4.GetComponent<Transform>().position;
                 character4.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
@@ -241,12 +204,8 @@ public class CharacterSwapping : MonoBehaviour
                 currentCharacter = character4;
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<CopyPlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-<<<<<<< HEAD
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                 mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
-=======
-                healthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
->>>>>>> 4214fba... Added a lot of features
             } 
         }
     }
