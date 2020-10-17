@@ -12014,8 +12014,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 48835370}
-  m_Father: {fileID: 0}
+  - {fileID: 143371909}
+  - {fileID: 441835646}
+  - {fileID: 20657153}
+  m_Father: {fileID: 784527940}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2067989150
