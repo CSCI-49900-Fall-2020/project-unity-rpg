@@ -5,11 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
-<<<<<<< HEAD
   - TextBox
   - DialogueText
-=======
->>>>>>> 4214fba... Added a lot of features
   - mainHealthBar
   layers:
   - Default
