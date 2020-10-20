@@ -36,6 +36,15 @@ EditorBuildSettings:
     path: Assets/Scenes/PaoloScenes/PaoloScene2.unity
     guid: 1dc018ce5f52c8849a4e32b211eecdcd
   - enabled: 1
+    path: Assets/Scenes/PaoloScenes/PaoloAssets.unity
+    guid: fd1e3d3b9ad429048a17d2ff834394ea
+  - enabled: 1
+    path: Assets/Scenes/PaoloScenes/PaoloScene1.unity
+    guid: 3ea2719b5027dd4448848da99a0fea64
+  - enabled: 1
+    path: Assets/Scenes/PaoloScenes/PaoloScene2.unity
+    guid: 1dc018ce5f52c8849a4e32b211eecdcd
+  - enabled: 1
     path: Assets/Scenes/JamesScenes/Title.unity
     guid: 317968a8e22e7de41857aa49efff94f5
   - enabled: 1
@@ -44,9 +53,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JamesScenes/PresentScene2.unity
     guid: 2ddd8985127dda44da2c4ef27dc8cdf7
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/JamesScenes/PresentScene1.unity
     guid: 065c9b5e8c55362409fb43e1d886d9c7
+=======
+>>>>>>> 9092474... patrol path movements
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
