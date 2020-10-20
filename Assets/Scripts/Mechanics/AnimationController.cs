@@ -67,10 +67,13 @@ namespace Platformer.Mechanics
             else if (move.x < -0.01f)
                 spriteRenderer.flipX = true;
 
+            // Uncommoment this if we get animations
+            /*
             if(animator){
                 animator.SetBool("grounded", IsGrounded);
                 animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
             }
+            */
             targetVelocity = move * maxSpeed;
         }
     }
