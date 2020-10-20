@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c8ae0f29e529449a4ec03bd3cbeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentScene2
+  sceneName: PaoloScene2
   player: {fileID: 0}
   spawnPoint: {x: 1, y: 2}
 --- !u!61 &1012952907
@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af416e01fa102d14fbbcb234c05ec898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentScene2
+  sceneName: PaoloScene2
   player: {fileID: 0}
   spawnPoint: {x: -1, y: 2}
 --- !u!61 &1533266031
@@ -1251,6 +1251,7 @@ MonoBehaviour:
   onbuttonpress: 0
   CloseWhenDone: 1
   nextSceneName: 
+  assetsSceneName: 
 --- !u!1 &1850387032
 GameObject:
   m_ObjectHideFlags: 0
