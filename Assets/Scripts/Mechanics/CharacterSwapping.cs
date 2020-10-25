@@ -27,14 +27,20 @@ public class CharacterSwapping : MonoBehaviour
     
     public Vector2 tempPosition;
 
+    public TextBoxManager textBoxManager;
+    public DialogueOption dialogueOption;
+
     void Awake(){
         currentCharacter = character1;
         mainCamera.objectToFollow = currentCharacter;
+        textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+        dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
     }
     void Start(){
         character2.GetComponent<PlayerController>().controlEnabled = false;
         character3.GetComponent<PlayerController>().controlEnabled = false;
         character4.GetComponent<PlayerController>().controlEnabled = false;
+        
         //healthBar.SetMaxHealth(100, 10);
         mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
         mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
@@ -162,6 +168,8 @@ public class CharacterSwapping : MonoBehaviour
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 // Set new character as currentCharacter and enable control of it
                 currentCharacter = character1;
+                textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -175,6 +183,8 @@ public class CharacterSwapping : MonoBehaviour
                 character2.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 currentCharacter = character2;
+                textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -188,6 +198,8 @@ public class CharacterSwapping : MonoBehaviour
                 character3.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 currentCharacter = character3;
+                textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -201,6 +213,8 @@ public class CharacterSwapping : MonoBehaviour
                 character4.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 currentCharacter = character4;
+                textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);

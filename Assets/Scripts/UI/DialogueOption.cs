@@ -18,12 +18,11 @@ public class DialogueOption : MonoBehaviour
     
     void Start()
     {
-        player = FindObjectOfType<PlayerController>();
 
-        question = GameObject.Find("Question").GetComponent<Text>();
-        acceptButton = GameObject.Find("Yes Button").GetComponent<Button>();
-        declineButton = GameObject.Find("No Button").GetComponent<Button>();
-        window = GameObject.FindGameObjectWithTag("DialogueText");
+        //question = GameObject.Find("Question").GetComponent<Text>();
+        //acceptButton = GameObject.Find("Yes Button").GetComponent<Button>();
+        //declineButton = GameObject.Find("No Button").GetComponent<Button>();
+        //window = GameObject.FindGameObjectWithTag("DialogueText");
 
     }
     

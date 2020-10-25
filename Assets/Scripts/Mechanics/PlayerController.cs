@@ -34,7 +34,9 @@ namespace Platformer.Mechanics
         /*internal new*/
         //public AudioSource audioSource;
         public Health health;
+        public Transform attackPosition;
         public bool controlEnabled = true;
+        public bool facingRight = true;
 
         bool jump;
         Vector2 move;
@@ -71,6 +73,16 @@ namespace Platformer.Mechanics
             {
                 move.x = 0;
             }
+
+            if (move.x > 0.01f){
+                facingRight = true;
+                attackPosition.localPosition = new Vector3(0.5f,0,0);
+                
+            } else if (move.x < -0.01f) {
+                facingRight = false;
+                attackPosition.localPosition = new Vector3(-0.5f,0,0);
+            }
+
             UpdateJumpState();
             base.Update();
         }
