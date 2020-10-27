@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Mechanics;
+using UnityEngine.UI;
 
 public class SkillButton : MonoBehaviour
 {
@@ -24,10 +25,10 @@ public class SkillButton : MonoBehaviour
 			}
 
 			if(unlockThisSkill == true){
-				GetComponent<SpriteRenderer>().color = new Color (1, 1, 1, 1);
+				GetComponent<Image>().color = new Color (1, 1, 1, 1);
 			}else
 			{
-				GetComponent<SpriteRenderer>().color = new Color (.5f, .5f, .5f, 1);
+				GetComponent<Image>().color = new Color (.5f, .5f, .5f, 1);
 			}
 		}
 
@@ -36,7 +37,7 @@ public class SkillButton : MonoBehaviour
 			if(previousReq == null)
 			{
 				unlockThisSkill = true;
-				GetComponent<SpriteRenderer>().color = new Color (1, 1, 1, 1);
+				GetComponent<Image>().color = new Color (1, 1, 1, 1);
 				return;
 			}
 			for (int i = 0; i < previousReq.Length; i++)
@@ -48,7 +49,7 @@ public class SkillButton : MonoBehaviour
 				}
 			}
 			unlockThisSkill = true;
-			GetComponent<SpriteRenderer>().color = new Color (1, 1, 1, 1);
+			GetComponent<Image>().color = new Color (1, 1, 1, 1);
 			return;	
 		}
 
@@ -70,33 +71,41 @@ public class SkillButton : MonoBehaviour
 			if (unlockThisSkill == false)
 			{
 				//holding left click colors red trying to upgrade a locked skill
-				GetComponent<SpriteRenderer>().color = new Color (1, 0, 0, 1);
+				GetComponent<Image>().color = new Color (1, 0, 0, 1);
 			}
 			else
 			{
 				if (skillTree.GetComponent<SkillTree>().abilityPoints != 0)
+				{
 					//holding left click this colors green upgrading a skill
-					GetComponent<SpriteRenderer>().color = new Color (0, 1, 0, 1);
+					GetComponent<Image>().color = new Color (0, 1, 0, 1);
+				}	
 				else
+				{
 					//holding left click this colors red upgrading a skill without any points left
-					GetComponent<SpriteRenderer>().color = new Color (1, 0, 0, 1);
+					GetComponent<Image>().color = new Color (1, 0, 0, 1);
+				}
 			}
 		}
 
-		void OnMouseUp()
+		public void UseButton()
 		{
+/*
 			if (unlockThisSkill == false)
 			{
 				//releasing left mouse click will change icon to grey scale if skill is locked
-				GetComponent<SpriteRenderer>().color = new Color (.5f, .5f, .5f, 1);
+				GetComponent<Image>().color = new Color (.5f, .5f, .5f, 1);
 			}
 			else
 			{
 				//releasing left mouse click will change icon to normal color scale if skill is unlocked
-				GetComponent<SpriteRenderer>().color = new Color (1, 1, 1, 1);
+				GetComponent<Image>().color = new Color (1, 1, 1, 1);
 			}
-			skillPlus1 = skillTree.GetComponent<SkillTree>().UpgradeSkill();
-
+*/			if (unlockThisSkill == true)
+			{
+				//if skill is unlocked, then you decuct a point from skill tree
+				skillPlus1 = skillTree.GetComponent<SkillTree>().UpgradeSkill();
+			}
 
 			if(skillPlus1 == true)
 			{
