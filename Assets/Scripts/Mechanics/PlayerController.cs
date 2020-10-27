@@ -72,16 +72,16 @@ namespace Platformer.Mechanics
                 if (keyBinds.GetButtonDown("Right"))
                 {
                     move.x = 1;
-                }
+                };
                 if (keyBinds.GetButtonDown("Left"))
                 {
                     move.x = -1;
-                }
+                };
                 
                 if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
                 {
                     stop();
-                }
+                };
                 
                 //move.x = Input.GetAxis("Horizontal");
                 if (jumpState == JumpState.Grounded && keyBinds.GetButtonDown("Jump"))//Input.GetButtonDown("Jump"))
