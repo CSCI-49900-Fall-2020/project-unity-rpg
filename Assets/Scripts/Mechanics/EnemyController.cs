@@ -20,6 +20,10 @@ namespace Platformer.Mechanics
         internal Collider2D _collider;
         internal AudioSource _audio;
         SpriteRenderer spriteRenderer;
+
+        public GameObject healthBarPrefab;
+        public GameObject healthBar;
+        //public HealthBar healthBar;
         public Health health;
 
         public Bounds Bounds => _collider.bounds;
@@ -32,16 +36,29 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
+        void Start() {
+            healthBar = Instantiate(healthBarPrefab, new Vector3(0,0,0), Quaternion.identity);
+            healthBar.transform.SetParent(gameObject.transform);
+            healthBar.transform.localPosition = new Vector3(0,0.25f,0);
+            healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
+            
+        }
+
         void OnCollisionEnter2D(Collision2D collision)
         {
-       
-          var player = collision.gameObject.GetComponent<PlayerController>();
+            var player = collision.gameObject.GetComponent<PlayerController>();
+            
             if (player != null)
             {
                 var ev = Schedule<PlayerEnemyCollision>();
                 ev.player = player;
                 ev.enemy = this;
             }
+        }
+
+        public void HealthDecrement(int damage){
+            health.Decrement(damage);
+            healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
         }
 
         void Update()
