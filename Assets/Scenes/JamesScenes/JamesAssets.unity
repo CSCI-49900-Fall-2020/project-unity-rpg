@@ -204,6 +204,18 @@ PrefabInstance:
       objectReference: {fileID: 1762026569}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
+--- !u!114 &96666804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+    type: 3}
+  m_PrefabInstance: {fileID: 96666803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762026561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709ee11994a2f44658e5fc9887c45081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &158099254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1580,7 @@ MonoBehaviour:
   acceptButton: {fileID: 970642843}
   declineButton: {fileID: 970642842}
   window: {fileID: 970642845}
-  player: {fileID: 0}
+  player: {fileID: 96666804}
   stopPlayerMovement: 1
 --- !u!114 &876660913
 MonoBehaviour:
@@ -1588,7 +1600,7 @@ MonoBehaviour:
   textlines: []
   currentline: 0
   endatline: 0
-  player: {fileID: 0}
+  player: {fileID: 96666804}
   isActive: 1
   stopPlayerMovement: 1
 --- !u!4 &876660914
