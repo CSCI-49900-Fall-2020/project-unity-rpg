@@ -68,6 +68,7 @@ namespace Platformer.Mechanics
 
             if (controlEnabled)
             {
+                /*
                 if (keyBinds.GetButtonDown("Right"))
                 {
                     move.x = 1;
@@ -81,11 +82,12 @@ namespace Platformer.Mechanics
                 {
                     stop();
                 };
-
-                //move.x = Input.GetAxis("Horizontal");
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                */
+                move.x = Input.GetAxis("Horizontal");
+                if (jumpState == JumpState.Grounded && keyBinds.GetButtonDown("Jump"))//Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
+                //else if (Input.GetButtonUp("Jump")) //release jump button
+                else if (keyBinds.GetButtonUp("Jump"))
                 {
                     stopJump = true;
                     //Schedule<PlayerStopJump>().player = this;
