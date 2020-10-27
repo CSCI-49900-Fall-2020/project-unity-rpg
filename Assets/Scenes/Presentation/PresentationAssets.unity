@@ -3884,20 +3884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba108882ef9c5e24d8a8d709ab3749fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1763369279}
-  mpNumbers: {fileID: 2019583307}
---- !u!114 &1763369279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763369276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 0
     m_SelectOnUp: {fileID: 0}
