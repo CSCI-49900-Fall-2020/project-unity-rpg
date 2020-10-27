@@ -49,6 +49,7 @@ namespace Platformer.Mechanics
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public Bounds Bounds => collider2d.bounds;
+        KeyBinds keyBinds;
 
         void Awake()
         {
@@ -57,26 +58,45 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+            keyBinds = GameObject.FindObjectOfType<KeyBinds>();
         }
 
+        void stop()
+        {
+            move.x = 0;
+        }
         protected override void Update()
         {
-
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                if (keyBinds.GetButtonDown("Right"))
+                {
+                    move.x = 1;
+                }
+                if (keyBinds.GetButtonDown("Left"))
+                {
+                    move.x = -1;
+                }
+                
+                if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
+                {
+                    stop();
+                }
+                
+                //move.x = Input.GetAxis("Horizontal");
+                if (jumpState == JumpState.Grounded && keyBinds.GetButtonDown("Jump"))//Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
+                //else if (Input.GetButtonUp("Jump")) //release jump button
+                else if (keyBinds.GetButtonUp("Jump"))
                 {
                     stopJump = true;
                     Schedule<PlayerStopJump>().player = this;
                 }
 
-                if (Input.GetButtonDown ("Fire1") && facingRight)
-                bulletShootRight();
-            
-                if (Input.GetButtonDown ("Fire1") && facingRight==false)    
+                if (Input.GetButtonDown("Fire1") && facingRight)
+                    bulletShootRight();
+
+                if (Input.GetButtonDown("Fire1") && facingRight == false)
                     bulletShootLeft();
             }
             else
