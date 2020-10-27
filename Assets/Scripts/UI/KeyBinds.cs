@@ -23,13 +23,13 @@ public class KeyBinds : MonoBehaviour
         keys.Add("Left", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Left", "A")));
         keys.Add("Down", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Down", "S")));
         keys.Add("Right", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Right", "D")));
-        //keys.Add("Jump", KeyCode.Space);
+        keys.Add("Jump", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Jump", "Space")));
 
         up.text = keys["Up"].ToString();
         left.text = keys["Left"].ToString();
         down.text = keys["Down"].ToString();
         right.text = keys["Right"].ToString();
-        //jump.text = keys["Jump"].ToString();
+        jump.text = keys["Jump"].ToString();
     }
 
     // Update is called once per frame
@@ -55,14 +55,36 @@ public class KeyBinds : MonoBehaviour
         {
             Debug.Log("Down");
         }
-        /*
+        
         if (Input.GetKeyDown(keys["Jump"]))
         {
             Debug.Log("Jump");
         }
-        */
+        
     }
     
+    public bool GetButtonDown(string buttonName)
+    {
+        if(keys.ContainsKey(buttonName) == false)
+        {
+            Debug.LogError("KeyBinds::GetButtonDown - No button called " + buttonName);
+            return false;
+        }
+
+        return Input.GetKey(keys[buttonName]);
+    }
+
+    public bool GetButtonUp(string buttonName)
+    {
+        if (keys.ContainsKey(buttonName) == false)
+        {
+            Debug.LogError("KeyBinds::GetButtonDown - No button called " + buttonName);
+            return false;
+        }
+
+        return Input.GetKeyUp(keys[buttonName]);
+    }
+
     void OnGUI()
     {
         if(currentKey != null)
@@ -106,11 +128,13 @@ public class KeyBinds : MonoBehaviour
         keys["Left"] = KeyCode.A;
         keys["Down"] = KeyCode.S;
         keys["Right"] = KeyCode.D;
+        keys["Jump"] = KeyCode.Space;
 
         up.text = keys["Up"].ToString();
         left.text = keys["Left"].ToString();
         down.text = keys["Down"].ToString();
         right.text = keys["Right"].ToString();
+        jump.text = keys["Jump"].ToString();
 
         foreach (var key in keys)
         {

@@ -14,9 +14,15 @@ namespace Platformer.Mechanics
     /// </summary>
     public class PlayerController : KinematicObject
     {
-        //public AudioClip jumpAudio;
-        //public AudioClip respawnAudio;
-        //public AudioClip ouchAudio;
+        public bool facingRight = true;
+        public float fireRate = 5;
+        public float timeToFire = 1;
+        public Transform playerEntity;
+        public GameObject bulletRightPrefab;
+        public GameObject bulletLeftPrefab;
+        public AudioClip jumpAudio;
+        public AudioClip respawnAudio;
+        public AudioClip ouchAudio;
 
         /// <summary>
         /// Max horizontal speed of the player.
@@ -32,58 +38,71 @@ namespace Platformer.Mechanics
         /*internal new*/
         public Collider2D collider2d;
         /*internal new*/
-        //public AudioSource audioSource;
+        public AudioSource audioSource;
         public Health health;
-        public Transform attackPosition;
         public bool controlEnabled = true;
-        public bool facingRight = true;
 
         bool jump;
         Vector2 move;
         SpriteRenderer spriteRenderer;
-        //internal Animator animator;
+        internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
         public Bounds Bounds => collider2d.bounds;
+        KeyBinds keyBinds;
 
         void Awake()
         {
             health = GetComponent<Health>();
-            //audioSource = GetComponent<AudioSource>();
+            audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
-            //animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
+            keyBinds = GameObject.FindObjectOfType<KeyBinds>();
         }
 
+        void stop()
+        {
+            move.x = 0;
+        }
         protected override void Update()
         {
-
             if (controlEnabled)
             {
-                move.x = Input.GetAxis("Horizontal");
-                if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
+                if (keyBinds.GetButtonDown("Right"))
+                {
+                    move.x = 1;
+                }
+                if (keyBinds.GetButtonDown("Left"))
+                {
+                    move.x = -1;
+                }
+                
+                if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
+                {
+                    stop();
+                }
+                
+                //move.x = Input.GetAxis("Horizontal");
+                if (jumpState == JumpState.Grounded && keyBinds.GetButtonDown("Jump"))//Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
-                else if (Input.GetButtonUp("Jump"))
+                //else if (Input.GetButtonUp("Jump")) //release jump button
+                else if (keyBinds.GetButtonUp("Jump"))
                 {
                     stopJump = true;
-                    //Schedule<PlayerStopJump>().player = this;
+                    Schedule<PlayerStopJump>().player = this;
                 }
+
+                if (Input.GetButtonDown("Fire1") && facingRight)
+                    bulletShootRight();
+
+                if (Input.GetButtonDown("Fire1") && facingRight == false)
+                    bulletShootLeft();
             }
             else
             {
                 move.x = 0;
             }
-
-            if (move.x > 0.01f)
-            {
-                facingRight = true;
-                attackPosition.localPosition = new Vector3(0.5f,0,0);
-    
-            } else if (move.x < -0.01f) {
-                facingRight = false;
-                attackPosition.localPosition = new Vector3(-0.5f,0,0);
-            }
-
             UpdateJumpState();
             base.Update();
         }
@@ -102,14 +121,14 @@ namespace Platformer.Mechanics
                 case JumpState.Jumping:
                     if (!IsGrounded)
                     {
-                        //Schedule<PlayerJumped>().player = this;
+                        Schedule<PlayerJumped>().player = this;
                         jumpState = JumpState.InFlight;
                     }
                     break;
                 case JumpState.InFlight:
                     if (IsGrounded)
                     {
-                        //Schedule<PlayerLanded>().player = this;
+                        Schedule<PlayerLanded>().player = this;
                         jumpState = JumpState.Landed;
                     }
                     break;
@@ -138,13 +157,15 @@ namespace Platformer.Mechanics
 
             if (move.x > 0.01f){
                 spriteRenderer.flipX = false;
+                facingRight = true;
             }
             else if (move.x < -0.01f){
                 spriteRenderer.flipX = true;
+                facingRight = false;
             }
 
-            //animator.SetBool("grounded", IsGrounded);
-            //animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
+            animator.SetBool("grounded", IsGrounded);
+            animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);
 
             targetVelocity = move * maxSpeed;
         }
@@ -156,6 +177,15 @@ namespace Platformer.Mechanics
             Jumping,
             InFlight,
             Landed
+        }
+
+        public void bulletShootRight(){
+            GameObject b = Instantiate(bulletRightPrefab) as GameObject;
+            b.transform.position = playerEntity.transform.position;
+        }
+        public void bulletShootLeft(){
+            GameObject b = Instantiate(bulletLeftPrefab) as GameObject;
+            b.transform.position = playerEntity.transform.position;
         }
     }
 }
