@@ -22,9 +22,14 @@ public class TextBoxManager : MonoBehaviour
 
     public bool stopPlayerMovement;
 
+    //public GameObject TurnOffUICanvas;
+    KeyBinds keyBinds;
+
     void Start()
     {
+        //player = GameObject.Find("Player").GetComponent<PlayerController>();
         textbox = GameObject.FindGameObjectWithTag("TextBox");
+        keyBinds = GameObject.FindObjectOfType<KeyBinds>();
 
         if (textfile != null)
         {
@@ -49,6 +54,7 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //player = GameObject.Find("Player").GetComponent<PlayerController>();
 
         if (!isActive)
         {
@@ -60,7 +66,7 @@ public class TextBoxManager : MonoBehaviour
         if(currentline < textlines.Length)
             theText.text = textlines[currentline];
 
-        if (Input.GetKeyDown(KeyCode.Return)) // press return/enter advances text
+        if (keyBinds.GetButtonDown("Interract")) // press return/enter advances text
         {
             currentline += 1;
         }
@@ -69,6 +75,12 @@ public class TextBoxManager : MonoBehaviour
         {
             disable();
         }
+        /*
+        if (Input.GetKeyDown("whatever it was"))
+        {
+            TurnOffUICanvas.SetActive(False);
+        }
+        */
     }
 
     public void enable() //add textbox

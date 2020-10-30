@@ -27,11 +27,17 @@ namespace Platformer.UI
 
         bool showMainCanvas = false;
 
+        KeyBinds keyBinds;
+
         void OnEnable()
         {
             _ToggleMainMenu(showMainCanvas);
         }
 
+        void Start()
+        {
+            keyBinds = GameObject.FindObjectOfType<KeyBinds>();
+        }
         /// <summary>
         /// Turn the main menu on or off.
         /// </summary>
@@ -63,7 +69,8 @@ namespace Platformer.UI
 
         void Update()
         {
-            if (Input.GetButtonDown("Menu"))
+            if (keyBinds.GetButtonDown("UICanvas"))
+            //if (Input.GetButtonDown("Menu"))
             {
                 ToggleMainMenu(show: !showMainCanvas);
             }

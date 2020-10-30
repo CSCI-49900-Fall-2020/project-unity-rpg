@@ -18,14 +18,17 @@ public class DialogueOption : MonoBehaviour
     
     void Start()
     {
-
+        //player = GameObject.Find("Player").GetComponent<PlayerController>();
         //question = GameObject.Find("Question").GetComponent<Text>();
         //acceptButton = GameObject.Find("Yes Button").GetComponent<Button>();
         //declineButton = GameObject.Find("No Button").GetComponent<Button>();
         //window = GameObject.FindGameObjectWithTag("DialogueText");
 
     }
-    
+    void Update()
+    {
+        //player = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
     private static DialogueOption instance;
     public static DialogueOption Instance()
     {
@@ -53,18 +56,21 @@ public class DialogueOption : MonoBehaviour
 
         window.SetActive(true);
 
-        acceptButton.onClick.RemoveAllListeners();
-        acceptButton.onClick.AddListener(accept);
-        acceptButton.onClick.AddListener(CloseWindow);
+        if (acceptButton != null || declineButton != null)
+        {
+            acceptButton.onClick.RemoveAllListeners();
+            acceptButton.onClick.AddListener(accept);
+            acceptButton.onClick.AddListener(CloseWindow);
 
-        declineButton.onClick.RemoveAllListeners();
-        declineButton.onClick.AddListener(decline);
-        declineButton.onClick.AddListener(CloseWindow);
+            declineButton.onClick.RemoveAllListeners();
+            declineButton.onClick.AddListener(decline);
+            declineButton.onClick.AddListener(CloseWindow);
 
-        this.question.text = question;
+            this.question.text = question;
 
-        acceptButton.gameObject.SetActive(true);
-        declineButton.gameObject.SetActive(true);
+            acceptButton.gameObject.SetActive(true);
+            declineButton.gameObject.SetActive(true);
+        }
     }
 
     void CloseWindow()

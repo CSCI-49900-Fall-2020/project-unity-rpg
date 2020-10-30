@@ -17,6 +17,7 @@ public class ActivateText : MonoBehaviour
     private bool waitforpress;
 
     public bool CloseWhenDone;
+    KeyBinds keyBinds;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,13 @@ public class ActivateText : MonoBehaviour
         //textboxGameObject = GameObject.FindGameObjectWithTag("TextBox");
         //textbox = textboxGameObject.GetComponent<TextBoxManager>();
         textbox = FindObjectOfType<TextBoxManager>();
+        keyBinds = GameObject.FindObjectOfType<KeyBinds>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (waitforpress && Input.GetKeyDown(KeyCode.Return))
+        if (waitforpress && keyBinds.GetButtonDown("Interract"))
         {
             textbox.reuse(theText);
             textbox.currentline = start;
@@ -45,7 +47,7 @@ public class ActivateText : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             if (onbuttonpress)
             {
@@ -66,7 +68,7 @@ public class ActivateText : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             waitforpress = false;
         }

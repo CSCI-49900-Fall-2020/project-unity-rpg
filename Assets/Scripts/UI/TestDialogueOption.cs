@@ -21,10 +21,13 @@ public class TestDialogueOption : MonoBehaviour
     public string nextSceneName;
     public string assetsSceneName;
 
+    KeyBinds keyBinds;
+
     void Awake()
     {
         dialogueOption = DialogueOption.Instance();
         displayManager = DisplayManager.Instance();
+        keyBinds = GameObject.FindObjectOfType<KeyBinds>();
 
         yesEvent = new UnityAction(TestAccept);
         noEvent = new UnityAction(TestDecline);
@@ -58,7 +61,7 @@ public class TestDialogueOption : MonoBehaviour
 
     void Update()
     {
-        if (waitforpress && Input.GetKeyDown(KeyCode.Return))
+        if (waitforpress && keyBinds.GetButtonDown("Interract"))
         {
             dialogueOption.Choice("Ohoho, you're approaching me?", yesEvent, noEvent);
         }
@@ -66,7 +69,7 @@ public class TestDialogueOption : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             if (onbuttonpress)
             {
@@ -80,7 +83,7 @@ public class TestDialogueOption : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             waitforpress = false;
         }
