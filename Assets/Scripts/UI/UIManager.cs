@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     }
     private void InventoryControl()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             if (GameManager.instance.isPaused)
             {

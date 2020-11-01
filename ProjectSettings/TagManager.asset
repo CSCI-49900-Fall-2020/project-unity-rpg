@@ -8,6 +8,8 @@ TagManager:
   - TextBox
   - DialogueText
   - mainHealthBar
+  - InventoryItems
+  - EquipmentTags
   layers:
   - Default
   - TransparentFX

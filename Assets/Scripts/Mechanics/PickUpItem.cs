@@ -7,10 +7,11 @@ using UnityEngine;
 public class PickUpItem : MonoBehaviour
 {
     public Item itemData;
+    public EquipmentItem equipmentData;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && this.tag == "InventoryItems")
         {
             if (GameManager.instance.items.Count < GameManager.instance.slots.Length)
              {           
@@ -20,6 +21,13 @@ public class PickUpItem : MonoBehaviour
             else
             {
                 Debug.Log("Inventory is full!. Can't pick up more items!");
+            }
+        }
+        else if (this.tag == "EquipmentTags" && collision.tag == "Player")
+        {
+            if (GameManager.instance.AddEquipmentItem(equipmentData))
+            {
+                Destroy(gameObject);
             }
         }
         
