@@ -28,12 +28,16 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => _collider.bounds;
 
+        public float knockbackPower = 100;
+        public float knockbackDuration = 1;
+
         void Awake()
         {
             control = GetComponent<AnimationController>();
             _collider = GetComponent<Collider2D>();
             _audio = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            health = GetComponent<Health>();
         }
 
         void Start() {
@@ -44,21 +48,26 @@ namespace Platformer.Mechanics
             
         }
 
-        void OnCollisionEnter2D(Collision2D collision)
-        {
-            var player = collision.gameObject.GetComponent<PlayerController>();
+        // Old OnCollisionEnter2D
+        // void OnCollisionEnter2D(Collision2D collision)
+        // {
+        //     var player = collision.gameObject.GetComponent<PlayerController>();
             
-            if (player != null)
-            {
-                var ev = Schedule<PlayerEnemyCollision>();
-                ev.player = player;
-                ev.enemy = this;
-            }
-        }
+        //     if (player != null)
+        //     {
+        //         var ev = Schedule<PlayerEnemyCollision>();
+        //         ev.player = player;
+        //         ev.enemy = this;
+        //     }
+        // }
 
         public void HealthDecrement(int damage){
             health.Decrement(damage);
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
+            
+            if(health.currentHP == 0){
+                Destroy(gameObject);
+            }
         }
 
         void Update()

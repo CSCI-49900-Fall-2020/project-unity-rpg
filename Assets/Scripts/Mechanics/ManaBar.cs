@@ -17,7 +17,7 @@ namespace Platformer.Mechanics
                 mpNumbers.text = currentMana + " / " + maxMana;
             }
 
-            public void SetCurrentHealth(int maxMana, int currentMana)
+            public void SetCurrentMana(int maxMana, int currentMana)
             {
                 mpNumbers.text = currentMana + " / " + maxMana;
                 slider.value = currentMana;

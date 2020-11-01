@@ -5,6 +5,7 @@ using Platformer.Gameplay;
 using static Platformer.Core.Simulation;
 using Platformer.Model;
 using Platformer.Core;
+using Platformer.UI;
 
 namespace Platformer.Mechanics
 {
@@ -31,13 +32,16 @@ namespace Platformer.Mechanics
         private bool stopJump;
         /*internal new*/
         public Collider2D collider2d;
+        public Rigidbody2D rb2d;
         /*internal new*/
         //public AudioSource audioSource;
         public Health health;
+        public Mana mana;
+        public HealthBar healthBar;
+        public ManaBar manaBar;
         public Transform attackPosition;
         public bool controlEnabled = true;
         public bool facingRight = true;
-
         bool jump;
         Vector2 move;
         SpriteRenderer spriteRenderer;
@@ -53,6 +57,7 @@ namespace Platformer.Mechanics
             health = GetComponent<Health>();
             //audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
+            rb2d = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             //animator = GetComponent<Animator>();
             keyBinds = GameObject.FindObjectOfType<KeyBinds>();
@@ -61,6 +66,7 @@ namespace Platformer.Mechanics
         void stop()
         {
             move.x = 0;
+            
         }
 
         protected override void Update()
@@ -142,6 +148,58 @@ namespace Platformer.Mechanics
                     break;
             }
         }
+
+        void incrementHealth(int value){
+            health.Increment(value);
+            healthBar.SetCurrentHealth(health.maxHP, health.currentHP);
+        }
+
+        void decrementHealth(int value){
+            health.Decrement(value);
+            healthBar.SetCurrentHealth(health.maxHP, health.currentHP);
+        }
+
+        void setMaxHealth(int value){
+            health.maxHP = value;
+            healthBar.SetMaxHealth(health.maxHP, health.currentHP);
+        }
+
+        void incrementMana(int value){
+            mana.Increment(value);
+            manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
+        }
+
+        void decrementMana(int value){
+            mana.Decrement(value);
+            manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
+        }
+
+        void setMaxMana(int value){
+            mana.Decrement(value);
+            manaBar.SetMaxMana(mana.maxMP, mana.currentMP);
+        }
+
+        // public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
+        // {
+        //     float timer = 0;
+        //     Debug.Log("knocking back");
+
+        //     while (knockbackDuration > timer)
+        //     {
+        //         timer += Time.deltaTime;
+        //         Vector2 direction = (obj.transform.position - gameObject.transform.position).normalized;
+        //         rb2d.AddForce(-direction * knockbackPower);
+        //     }
+
+        //     yield return 0;
+        // }
+
+        // private void OnCollisionEnter2D(Collision2D other) {
+        //     if(other.gameObject.CompareTag("enemy"))
+        //     {
+        //         StartCoroutine(Knockback(1, 100, other.gameObject.transform));
+        //     }
+        // }
 
         protected override void ComputeVelocity()
         {
