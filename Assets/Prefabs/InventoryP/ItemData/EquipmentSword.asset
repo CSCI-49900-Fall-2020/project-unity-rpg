@@ -16,3 +16,4 @@ MonoBehaviour:
   EquipmentID: 5
   description: increase damage by 1
   itemSprite: {fileID: 21300000, guid: 49aff6727c6c9944c8b1fcb42075904b, type: 3}
+  value: 1

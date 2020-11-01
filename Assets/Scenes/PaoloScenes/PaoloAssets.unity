@@ -5224,14 +5224,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1762026561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9c409c862ec7749b17d0a2c52bde45, type: 3}
+  m_Script: {fileID: 11500000, guid: 1df48f83ec91f774289b31eb79595c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  helmetE: {fileID: 0}
-  bodyE: {fileID: 0}
-  PantE: {fileID: 0}
-  bootsE: {fileID: 0}
-  swordE: {fileID: 0}
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  velocity: {x: 0, y: 0}
+  player_entity: {fileID: 0}
+  characterName: 
+  maxSpeed: 7
+  jumpTakeOffSpeed: 7
+  jumpState: 0
+  collider2d: {fileID: 0}
+  health: {fileID: 0}
+  controlEnabled: 1
 --- !u!4 &1762026569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,

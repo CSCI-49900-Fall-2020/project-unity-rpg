@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c8ae0f29e529449a4ec03bd3cbeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentationScene1
+  sceneName: PaoloPresentationScene1
   player: {fileID: 0}
   spawnPoint: {x: 0, y: 0}
 --- !u!61 &113324403
@@ -258,12 +258,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1380212567}
     m_Modifications:
-    - target: {fileID: 2849237568656712319, guid: f6ae9e84a6a4e614dab917d8d2dbb5b9,
-        type: 3}
-      propertyPath: equipmentData
-      value: 
-      objectReference: {fileID: 11400000, guid: 5da93a38dd0140e45be1f6f9f05029e9,
-        type: 2}
     - target: {fileID: 4345379462336373022, guid: f6ae9e84a6a4e614dab917d8d2dbb5b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -328,11 +322,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ItemSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336356632491661398, guid: f6ae9e84a6a4e614dab917d8d2dbb5b9,
-        type: 3}
-      propertyPath: m_TagString
-      value: EquipmentTags
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6ae9e84a6a4e614dab917d8d2dbb5b9, type: 3}
@@ -497,11 +486,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ItemPotion (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401369238730887617, guid: 0c53503d7ffc30a4cb684cea46f6a376,
-        type: 3}
-      propertyPath: m_TagString
-      value: InventoryItems
       objectReference: {fileID: 0}
     - target: {fileID: 4942337877350787209, guid: 0c53503d7ffc30a4cb684cea46f6a376,
         type: 3}
@@ -1172,11 +1156,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ItemPotion
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401369238730887617, guid: 0c53503d7ffc30a4cb684cea46f6a376,
-        type: 3}
-      propertyPath: m_TagString
-      value: InventoryItems
       objectReference: {fileID: 0}
     - target: {fileID: 4942337877350787209, guid: 0c53503d7ffc30a4cb684cea46f6a376,
         type: 3}
