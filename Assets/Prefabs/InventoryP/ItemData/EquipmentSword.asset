@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c613ecaba5ff1c42a33dd943be2bfe3, type: 3}
-  m_Name: ItemSword
+  m_Script: {fileID: 11500000, guid: dc2155fdbd664644f855d206c8194ed3, type: 3}
+  m_Name: EquipmentSword
   m_EditorClassIdentifier: 
   itemName: Sword
-  description: Damage by 1
+  EquipmentID: 5
+  description: increase damage by 1
   itemSprite: {fileID: 21300000, guid: 49aff6727c6c9944c8b1fcb42075904b, type: 3}
