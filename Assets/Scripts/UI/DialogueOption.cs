@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using Platformer.Mechanics;
+using Platformer.UI;
 
 public class DialogueOption : MonoBehaviour
 {

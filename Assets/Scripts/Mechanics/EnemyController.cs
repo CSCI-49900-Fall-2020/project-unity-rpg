@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
+using Platformer.Mechanics;
 
 namespace Platformer.Mechanics
 {
@@ -23,13 +24,13 @@ namespace Platformer.Mechanics
 
         public GameObject healthBarPrefab;
         public GameObject healthBar;
-        //public HealthBar healthBar;
         public Health health;
 
         public Bounds Bounds => _collider.bounds;
 
         public float knockbackPower = 100;
         public float knockbackDuration = 1;
+
 
         void Awake()
         {
@@ -45,7 +46,6 @@ namespace Platformer.Mechanics
             healthBar.transform.SetParent(gameObject.transform);
             healthBar.transform.localPosition = new Vector3(0,0.25f,0);
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
-            
         }
 
         // Old OnCollisionEnter2D

@@ -3,6 +3,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Platformer.Mechanics;
+using Platformer.UI;
 
 public class TextBoxManager : MonoBehaviour
 {

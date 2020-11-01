@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using Platformer.Core;
+using Platformer.UI;
 
 public class TestDialogueOption : MonoBehaviour
 {

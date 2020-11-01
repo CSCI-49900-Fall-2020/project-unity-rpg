@@ -4,6 +4,7 @@ using UnityEngine;
 using Platformer.Mechanics;
 using UnityEngine.UI;
 using System;
+using Platformer.UI;
 
 namespace Platformer.Mechanics
 {
