@@ -22,12 +22,13 @@ public class TextBoxManager : MonoBehaviour
 
     public bool stopPlayerMovement;
 
-    //public GameObject TurnOffUICanvas;
+    public GameObject Donut;
+    public string scriptName1;
+
     KeyBinds keyBinds;
 
     void Start()
     {
-        //player = GameObject.Find("Player").GetComponent<PlayerController>();
         textbox = GameObject.FindGameObjectWithTag("TextBox");
         keyBinds = GameObject.FindObjectOfType<KeyBinds>();
 
@@ -76,9 +77,9 @@ public class TextBoxManager : MonoBehaviour
             disable();
         }
         /*
-        if (Input.GetKeyDown("whatever it was"))
+        if (keyBinds.GetButtonDown("UICanvas"));
         {
-            TurnOffUICanvas.SetActive(False);
+            TurnOffUICanvas.SetActive(false);
         }
         */
     }
@@ -86,6 +87,10 @@ public class TextBoxManager : MonoBehaviour
     public void enable() //add textbox
     {
         textbox.SetActive(true);
+
+        //if (keyBinds.GetButtonDown("UICanvas"))
+        (Donut.GetComponent(scriptName1) as MonoBehaviour).enabled = false;
+
         isActive = true;
         if (stopPlayerMovement)
         {
@@ -96,6 +101,8 @@ public class TextBoxManager : MonoBehaviour
     public void disable() //take away textbox
     {
         textbox.SetActive(false);
+        (Donut.GetComponent(scriptName1) as MonoBehaviour).enabled = true;
+
         isActive = false;
         player.controlEnabled = true;
     }

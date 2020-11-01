@@ -16,10 +16,13 @@ public class KeyBinds : MonoBehaviour
     private Color32 normal = new Color32(39, 171, 249, 255);
     private Color32 selected = new Color32(239, 116, 36, 255);
 
+    private DisplayManager displayManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        displayManager = DisplayManager.Instance();
+
         keys.Add("Up", (KeyCode)System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("Up","W")));
         keys.Add("Left", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Left", "A")));
         keys.Add("Down", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Down", "S")));
@@ -131,6 +134,7 @@ public class KeyBinds : MonoBehaviour
         }
 
         PlayerPrefs.Save();
+        displayManager.DisplayMessage("Saved");
     }
 
     void AddKeyBind(KeyBinds keyBinds, string function, string defaultKey)
@@ -178,5 +182,6 @@ public class KeyBinds : MonoBehaviour
         }
 
         PlayerPrefs.Save();
+        displayManager.DisplayMessage("Default Keys");
     }
 }

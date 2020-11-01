@@ -13,9 +13,11 @@ public class DialogueOption : MonoBehaviour
     public Button acceptButton, declineButton;
     public GameObject window;
     public PlayerController player;
-
+    KeyBinds keyBinds;
     public bool stopPlayerMovement;
-    
+    public GameObject Donut;
+    public string scriptName1;
+
     void Start()
     {
         //player = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -23,7 +25,7 @@ public class DialogueOption : MonoBehaviour
         //acceptButton = GameObject.Find("Yes Button").GetComponent<Button>();
         //declineButton = GameObject.Find("No Button").GetComponent<Button>();
         //window = GameObject.FindGameObjectWithTag("DialogueText");
-
+        keyBinds = GameObject.FindObjectOfType<KeyBinds>();
     }
     void Update()
     {
@@ -35,8 +37,8 @@ public class DialogueOption : MonoBehaviour
         if (!instance)
         {
             instance = FindObjectOfType(typeof(DialogueOption)) as DialogueOption;
-            if (!instance)
-                Debug.Log("There need to be at least one active DialogueOption script on a GameObject in your scene.");
+            //if (!instance)
+            //    Debug.Log("There need to be at least one active DialogueOption script on a GameObject in your scene.");
             //return;
         }
 
@@ -55,6 +57,7 @@ public class DialogueOption : MonoBehaviour
         }
 
         window.SetActive(true);
+        (Donut.GetComponent(scriptName1) as MonoBehaviour).enabled = false;
 
         if (acceptButton != null || declineButton != null)
         {
@@ -84,5 +87,6 @@ public class DialogueOption : MonoBehaviour
         }
         //player.controlEnabled = true;
         window.SetActive(false);
+        (Donut.GetComponent(scriptName1) as MonoBehaviour).enabled = true;
     }
 }

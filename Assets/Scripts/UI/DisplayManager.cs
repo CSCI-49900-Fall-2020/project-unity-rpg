@@ -18,8 +18,8 @@ public class DisplayManager : MonoBehaviour
         if (!displayManager)
         {
             displayManager = FindObjectOfType(typeof(DisplayManager)) as DisplayManager;
-            if (!displayManager)
-                Debug.Log("There need to be at least one active displayManager script on a GameObject in your scene.");
+            //if (!displayManager)
+            //    Debug.Log("There need to be at least one active displayManager script on a GameObject in your scene.");
         }
 
         return displayManager;
@@ -27,13 +27,15 @@ public class DisplayManager : MonoBehaviour
 
     void start()
     {
-        displayText = GameObject.Find("Display Text").GetComponent<Text>();
+        //displayText = GameObject.Find("Display Text").GetComponent<Text>();
     }
 
     public void DisplayMessage(string message)
     {
-        displayText.text = message;
-        SetAlpha();
+        if (displayText != null) {
+            displayText.text = message;
+            SetAlpha();
+        }
     }
 
     void SetAlpha()
