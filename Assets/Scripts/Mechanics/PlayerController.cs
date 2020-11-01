@@ -200,7 +200,6 @@ namespace Platformer.Mechanics
         //         StartCoroutine(Knockback(1, 100, other.gameObject.transform));
         //     }
         // }
-
         protected override void ComputeVelocity()
         {
 

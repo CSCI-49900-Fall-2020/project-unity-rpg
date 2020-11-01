@@ -189,6 +189,7 @@ MonoBehaviour:
   stopPlayerMovement: 1
   Donut: {fileID: 1704348331}
   scriptName1: MetaGameController
+  textBoxManager: {fileID: 0}
 --- !u!114 &36008295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +213,7 @@ MonoBehaviour:
   stopPlayerMovement: 1
   Donut: {fileID: 1704348331}
   scriptName1: MetaGameController
+  characterSwapper: {fileID: 1704348338}
 --- !u!224 &36008296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -730,7 +732,11 @@ MonoBehaviour:
   jumpTakeOffSpeed: 7
   jumpState: 0
   collider2d: {fileID: 85298907}
+  rb2d: {fileID: 0}
   health: {fileID: 85298904}
+  mana: {fileID: 0}
+  healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
   attackPosition: {fileID: 139120037}
   controlEnabled: 0
   facingRight: 1
@@ -7486,8 +7492,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.98471344
-  m_Size: 0.33497518
+  m_Value: 0.9847134
+  m_Size: 0.33497512
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8589,7 +8595,11 @@ MonoBehaviour:
   jumpTakeOffSpeed: 7
   jumpState: 0
   collider2d: {fileID: 1441471199}
+  rb2d: {fileID: 0}
   health: {fileID: 1441471196}
+  mana: {fileID: 0}
+  healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
   attackPosition: {fileID: 377111649}
   controlEnabled: 0
   facingRight: 1
@@ -9547,7 +9557,11 @@ MonoBehaviour:
   jumpTakeOffSpeed: 7
   jumpState: 0
   collider2d: {fileID: 1576182916}
+  rb2d: {fileID: 0}
   health: {fileID: 1576182913}
+  mana: {fileID: 0}
+  healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
   attackPosition: {fileID: 56451172}
   controlEnabled: 0
   facingRight: 1
@@ -10756,8 +10770,6 @@ MonoBehaviour:
   subHealthBar3: {fileID: 1979178917}
   subManaBar3: {fileID: 1722104659}
   tempPosition: {x: 0, y: 0}
-  textBoxManager: {fileID: 36008295}
-  dialogueOption: {fileID: 36008294}
 --- !u!1 &1709178108
 GameObject:
   m_ObjectHideFlags: 0
@@ -11896,7 +11908,11 @@ MonoBehaviour:
   jumpTakeOffSpeed: 7
   jumpState: 0
   collider2d: {fileID: 1742884930}
+  rb2d: {fileID: 0}
   health: {fileID: 1742884928}
+  mana: {fileID: 0}
+  healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
   attackPosition: {fileID: 1284371506}
   controlEnabled: 1
   facingRight: 1
@@ -13177,6 +13193,7 @@ GameObject:
   - component: {fileID: 1870682138}
   - component: {fileID: 1870682137}
   - component: {fileID: 1870682140}
+  - component: {fileID: 1870682141}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13263,6 +13280,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToFollow: {fileID: 1762026561}
   speed: 2
+--- !u!114 &1870682141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870682136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fad1db19b141042a72994a6e4f1b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1945830692
 GameObject:
   m_ObjectHideFlags: 0

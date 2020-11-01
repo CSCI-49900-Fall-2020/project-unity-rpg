@@ -28,6 +28,8 @@ public class TextBoxManager : MonoBehaviour
 
     KeyBinds keyBinds;
 
+    public CharacterSwapping characterSwapper;
+
     void Start()
     {
         textbox = GameObject.FindGameObjectWithTag("TextBox");
@@ -94,8 +96,9 @@ public class TextBoxManager : MonoBehaviour
 
         isActive = true;
         if (stopPlayerMovement)
-        {
-            player.controlEnabled = false;
+        {   
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
+            //player.controlEnabled = false;
         }
     }
 
@@ -105,7 +108,7 @@ public class TextBoxManager : MonoBehaviour
         (Donut.GetComponent(scriptName1) as MonoBehaviour).enabled = true;
 
         isActive = false;
-        player.controlEnabled = true;
+        characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
     }
 
     public void reuse(TextAsset theText) //reuse textbox

@@ -18,6 +18,7 @@ public class DialogueOption : MonoBehaviour
     public bool stopPlayerMovement;
     public GameObject Donut;
     public string scriptName1;
+    public TextBoxManager textBoxManager;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class DialogueOption : MonoBehaviour
         //declineButton = GameObject.Find("No Button").GetComponent<Button>();
         //window = GameObject.FindGameObjectWithTag("DialogueText");
         keyBinds = GameObject.FindObjectOfType<KeyBinds>();
+        textBoxManager = gameObject.GetComponent<TextBoxManager>();
     }
     void Update()
     {
@@ -51,9 +53,10 @@ public class DialogueOption : MonoBehaviour
         if (stopPlayerMovement)
         {
             //player.controlEnabled = false;
-            if(player != null)
+            if(textBoxManager.characterSwapper.currentCharacter != null)
             {
-                player.controlEnabled = false;
+                textBoxManager.characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
+                //player.controlEnabled = false;
             }
         }
 
@@ -81,10 +84,14 @@ public class DialogueOption : MonoBehaviour
     {
         if (stopPlayerMovement)
         {
-            if (player != null)
+            if(textBoxManager.characterSwapper.currentCharacter != null)
             {
-                player.controlEnabled = true;
+                textBoxManager.characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
             }
+            // if (player != null)
+            // {
+            //     player.controlEnabled = true;
+            // }
         }
         //player.controlEnabled = true;
         window.SetActive(false);

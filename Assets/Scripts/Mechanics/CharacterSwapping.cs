@@ -14,7 +14,7 @@ namespace Platformer.Mechanics
         public GameObject character2;
         public GameObject character3;
         public GameObject character4;
-        public static GameObject currentCharacter;
+        public GameObject currentCharacter;
         public CameraFollow mainCamera;
         public HealthBar mainHealthBar;
         public ManaBar mainManaBar;
@@ -28,14 +28,14 @@ namespace Platformer.Mechanics
         public HealthBar subHealthBar3;
         public ManaBar subManaBar3;
         public Vector2 tempPosition;
-        public TextBoxManager textBoxManager;
-        public DialogueOption dialogueOption;
+        // public TextBoxManager textBoxManager;
+        // public DialogueOption dialogueOption;
 
         void Awake(){
             currentCharacter = character1;
             mainCamera.objectToFollow = currentCharacter;
-            //textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-            //dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+            // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+            // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
         }
         void Start(){
             character2.GetComponent<PlayerController>().controlEnabled = false;
@@ -179,8 +179,8 @@ namespace Platformer.Mechanics
                         currentCharacter.GetComponent<Transform>().position = tempPosition;
                         // Set new character as currentCharacter and enable control of it
                         currentCharacter = character1;
-                        //textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        //dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                         currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
                         mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                         mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -194,8 +194,8 @@ namespace Platformer.Mechanics
                         character2.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                         currentCharacter.GetComponent<Transform>().position = tempPosition;
                         currentCharacter = character2;
-                        //textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        //dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                         currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
                         mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                         mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -209,8 +209,8 @@ namespace Platformer.Mechanics
                         character3.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                         currentCharacter.GetComponent<Transform>().position = tempPosition;
                         currentCharacter = character3;
-                        //textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        //dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                         currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                         mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                         mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -224,8 +224,8 @@ namespace Platformer.Mechanics
                         character4.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                         currentCharacter.GetComponent<Transform>().position = tempPosition;
                         currentCharacter = character4;
-                        //textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        //dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                         currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                         mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                         mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
