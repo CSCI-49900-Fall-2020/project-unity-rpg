@@ -147,7 +147,7 @@ MonoBehaviour:
   - {fileID: 1055788992187979504}
   nextReq: []
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788991865045665
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,96 +296,7 @@ MonoBehaviour:
   - {fileID: 1055788992187979504}
   - {fileID: 1055788992530828193}
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
---- !u!1 &1055788991905105849
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1055788991905105848}
-  - component: {fileID: 1055788991905105797}
-  - component: {fileID: 1055788991905105798}
-  - component: {fileID: 1055788991905105799}
-  m_Layer: 5
-  m_Name: SkillPoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1055788991905105848
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055788991905105849}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1055788993265178614}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 408, y: -187}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1055788991905105797
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055788991905105849}
-  m_CullTransparentMesh: 0
---- !u!114 &1055788991905105798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055788991905105849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -5210200481252416856, guid: 43a13808eafb7d940a8fc2256048ea0a,
-    type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &1055788991905105799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055788991905105849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597bcebf0ad41a84b9d008dbcd79dd36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityPoints: 5
+  skillTree: {fileID: 0}
 --- !u!1 &1055788992187979504
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +445,7 @@ MonoBehaviour:
   nextReq:
   - {fileID: 1055788991859104151}
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788992279984253
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +593,7 @@ MonoBehaviour:
   - {fileID: 1055788992821845644}
   nextReq: []
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788992285778615
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +741,7 @@ MonoBehaviour:
   - {fileID: 1055788992821845644}
   nextReq: []
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788992377277098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,7 +964,7 @@ MonoBehaviour:
   - {fileID: 1055788993184861999}
   nextReq: []
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788992530828193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1112,7 @@ MonoBehaviour:
   - {fileID: 1055788991865045665}
   nextReq: []
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788992821845644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1261,7 @@ MonoBehaviour:
   - {fileID: 1055788992285778615}
   - {fileID: 1055788992279984253}
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788993136540918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1409,7 @@ MonoBehaviour:
   - {fileID: 1055788993184861999}
   nextReq: []
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788993184861999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1558,7 @@ MonoBehaviour:
   - {fileID: 1055788993136540918}
   - {fileID: 1055788992454784475}
   abilityLevel: 0
-  skillTree: {fileID: 1055788991905105849}
+  skillTree: {fileID: 0}
 --- !u!1 &1055788993265178615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,7 +1598,6 @@ RectTransform:
   - {fileID: 1055788993136540917}
   - {fileID: 1055788992454784474}
   - {fileID: 1055788991859104150}
-  - {fileID: 1055788991905105848}
   m_Father: {fileID: 1055788992377277097}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
