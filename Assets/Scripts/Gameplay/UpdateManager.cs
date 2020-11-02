@@ -16,7 +16,9 @@ public class UpdateManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerAggro.toUpdate();
+        if(gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().controlEnabled){
+            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerAggro>().toUpdate();
+        }
 
         // if(Input.GetKeyDown("m")){
         //     Debug.Log(Time.deltaTime + "Before update");
