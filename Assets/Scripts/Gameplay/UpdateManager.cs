@@ -6,8 +6,6 @@ using Platformer.Mechanics;
 public class UpdateManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public PlayerAggro playerAggro;
-
     void Start()
     {
         
@@ -28,7 +26,4 @@ public class UpdateManager : MonoBehaviour
         //     playerAggro.check();
         // }
     }
-
-
-
 }

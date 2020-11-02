@@ -35,7 +35,7 @@ namespace Platformer.Mechanics
             {
                 if(!enemiesToAggro.Contains(oldEnemy))
                 {   
-                    Debug.Log(oldEnemy.gameObject.name + " Stopped Chasing");
+                    //Debug.Log(oldEnemy.gameObject.name + " Stopped Chasing");
                     oldEnemy.GetComponent<EnemyAggro>().StopAggro();
                 }
             }
