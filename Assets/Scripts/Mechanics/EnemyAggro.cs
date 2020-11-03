@@ -45,9 +45,11 @@ namespace Platformer.Mechanics
             if(aggroedPlayer != null){
                 if(transform.position.x < aggroedPlayer.position.x)
                 {
-                    selfRigidBody2D.velocity = new Vector2(moveSpeed, 0);
+                    selfRigidBody2D.AddForce(new Vector2(moveSpeed,0), ForceMode2D.Force);
+                    //selfRigidBody2D.velocity = new Vector2(moveSpeed, 0);
                 } else {
-                    selfRigidBody2D.velocity = new Vector2(-moveSpeed, 0);
+                    selfRigidBody2D.AddForce(new Vector2(-moveSpeed,0), ForceMode2D.Force);
+                    //selfRigidBody2D.velocity = new Vector2(-moveSpeed, 0);
                 }
             }
         }
