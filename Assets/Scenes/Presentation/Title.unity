@@ -4449,7 +4449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1215804259}
   - component: {fileID: 1215804258}
-  - component: {fileID: 1215804257}
   - component: {fileID: 1215804260}
   m_Layer: 0
   m_Name: KeyBind Manager
@@ -4458,18 +4457,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1215804257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215804256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81fad1db19b141042a72994a6e4f1b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1215804258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4535,22 +4522,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 511013615}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1217795516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217795514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850b8fa94979c6f409e1f7e9e9559824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onbuttonpress: 1
-  CloseWhenDone: 0
-  nextSceneName: 
-  assetsSceneName: 
 --- !u!114 &1217795517
 MonoBehaviour:
   m_ObjectHideFlags: 0
