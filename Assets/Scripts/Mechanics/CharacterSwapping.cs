@@ -27,7 +27,9 @@ namespace Platformer.Mechanics
         public Text subCharacterName3;
         public HealthBar subHealthBar3;
         public ManaBar subManaBar3;
-        public Vector2 tempPosition;
+        Vector2 tempPosition;
+        HealthBar tempHealthBar;
+        ManaBar tempManaBar;
         // public TextBoxManager textBoxManager;
         // public DialogueOption dialogueOption;
 
@@ -67,6 +69,9 @@ namespace Platformer.Mechanics
 
         // Helper Function to swap characters
         void subCharacterInfoSwap(int newCharacterID){
+            tempHealthBar = currentCharacter.GetComponent<PlayerController>().healthBar;
+            tempManaBar = currentCharacter.GetComponent<PlayerController>().manaBar;
+
             if(currentCharacter == character1){
                 // The current state is main = 1, sub = 2,3,4
                 if(newCharacterID == 2){
@@ -74,6 +79,10 @@ namespace Platformer.Mechanics
                     subCharacterName1.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar1.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar1.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character1.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character1.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character2.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if (newCharacterID == 3){
                     // Needs to become main = 3, sub = 1,2,4
                     subCharacterName2.text = subCharacterName1.text;
@@ -82,6 +91,12 @@ namespace Platformer.Mechanics
                     subCharacterName1.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar1.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar1.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character1.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character1.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character3.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if (newCharacterID == 4) {
                     // Needs to become main = 4, sub = 1,2,3
                     subCharacterName3.text = subCharacterName2.text;
@@ -93,6 +108,14 @@ namespace Platformer.Mechanics
                     subCharacterName1.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar1.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar1.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character1.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character1.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = character4.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character4.GetComponent<PlayerController>().manaBar;
+                    character4.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character4.GetComponent<PlayerController>().manaBar = tempManaBar;
                 }
             } else if(currentCharacter == character2){
                 // The current state is main = 2, sub = 1,3,4
@@ -101,11 +124,19 @@ namespace Platformer.Mechanics
                     subCharacterName1.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar1.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar1.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character2.GetComponent<PlayerController>().healthBar = character1.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character1.GetComponent<PlayerController>().manaBar;
+                    character1.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character1.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if (newCharacterID == 3){
                     // Needs to become main = 3, sub = 1,2,4
                     subCharacterName2.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar2.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar2.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character2.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character3.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if (newCharacterID == 4){
                     // Needs to become main = 4, sub = 1,2,3
                     subCharacterName3.text = subCharacterName2.text;
@@ -114,6 +145,12 @@ namespace Platformer.Mechanics
                     subCharacterName2.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar2.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar2.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character2.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = character4.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character4.GetComponent<PlayerController>().manaBar;
+                    character4.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character4.GetComponent<PlayerController>().manaBar = tempManaBar;
                 }
             } else if(currentCharacter == character3){
                 // The current state is main = 3, sub = 1,2,4
@@ -125,16 +162,31 @@ namespace Platformer.Mechanics
                     subCharacterName2.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar2.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar2.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character3.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = character1.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character1.GetComponent<PlayerController>().manaBar;
+                    character1.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character1.GetComponent<PlayerController>().manaBar = tempManaBar;
+
                 } else if(newCharacterID == 2){
                     // Needs to become main = 2, sub = 1,3,4
                     subCharacterName2.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar2.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar2.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character3.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character2.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if (newCharacterID == 4){
                     // Needs to become main = 4, sub = 1,2,3
                     subCharacterName3.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar3.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar3.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character3.GetComponent<PlayerController>().healthBar = character4.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character4.GetComponent<PlayerController>().manaBar;
+                    character4.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character4.GetComponent<PlayerController>().manaBar = tempManaBar;
                 }
             } else if(currentCharacter == character4){
                 // The current state is main = 4, sub = 1,2,3
@@ -149,6 +201,14 @@ namespace Platformer.Mechanics
                     subCharacterName3.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar3.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar3.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character4.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character4.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = character1.GetComponent<PlayerController>().healthBar;
+                    character2.GetComponent<PlayerController>().manaBar = character1.GetComponent<PlayerController>().manaBar;
+                    character1.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character1.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if(newCharacterID == 2){
                     // Needs to become main = 2, sub = 1,3,4
                     subCharacterName2.text = subCharacterName3.text;
@@ -157,11 +217,21 @@ namespace Platformer.Mechanics
                     subCharacterName3.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar3.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar3.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character4.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character4.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = character2.GetComponent<PlayerController>().healthBar;
+                    character3.GetComponent<PlayerController>().manaBar = character2.GetComponent<PlayerController>().manaBar;
+                    character2.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character2.GetComponent<PlayerController>().manaBar = tempManaBar;
                 } else if (newCharacterID == 3){
                     // Needs to become main = 1, sub = 1,2,4
                     subCharacterName3.text = currentCharacter.GetComponent<Character>().characterName;
                     subHealthBar3.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                     subManaBar3.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+                    character4.GetComponent<PlayerController>().healthBar = character3.GetComponent<PlayerController>().healthBar;
+                    character4.GetComponent<PlayerController>().manaBar = character3.GetComponent<PlayerController>().manaBar;
+                    character3.GetComponent<PlayerController>().healthBar = tempHealthBar;
+                    character3.GetComponent<PlayerController>().manaBar = tempManaBar;
                 }
             }
         } 
