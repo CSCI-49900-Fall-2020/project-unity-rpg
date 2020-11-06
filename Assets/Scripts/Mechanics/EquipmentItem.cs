@@ -12,12 +12,14 @@ public class EquipmentItem : ScriptableObject
     public string description;
     public Sprite itemSprite;
     public int value;
+    public bool eUsing;
     public EquipmentItem()
     {
         itemName = null;
         EquipmentID = 0;
         description = null;
         value = 0;
+        eUsing = false;
     }
 
 }

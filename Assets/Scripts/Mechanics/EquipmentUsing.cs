@@ -6,15 +6,16 @@ using UnityEngine.UI;
 
 public class EquipmentUsing : MonoBehaviour
 {
-    public int equipmentID;
+    public int equipmentId;
     public EquipmentItem eItem;
+    public Button button;
 
     private EquipmentItem GetThisEItem()
     {
 
         for (int i = 0; i < GameManager.instance.equipmentItems.Count; i++)
         {
-            if (equipmentID == i)
+            if (equipmentId == i)
             {
                 eItem = GameManager.instance.equipmentItems[i];
             }
@@ -24,21 +25,40 @@ public class EquipmentUsing : MonoBehaviour
 
     public void UseEquipmentButton()
     {
-        //fix this
+        
         if (GetThisEItem().EquipmentID == 1)
         {
-          
+            Debug.Log("this happens " + GetThisEItem().itemName);
             for (int i = 0; i < GameManager.instance.equipmentItems.Count; i++)
             {
                 if (GameManager.instance.equipmentItems[i].EquipmentID == 1 && GameManager.instance.equipmentItems[i].itemName == eItem.itemName)
                 {
-                    GameManager.instance.playerC.GetComponent<Health>().maxHP += eItem.value;
-                    GameManager.instance.equipmentSlots[i].transform.GetChild(2).GetComponent<Text>().color = new Color(1,1,1,1);
+                    GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().GetComponent<PlayerController>().incrementHealth(5);
+                    button.enabled = false;
+                    GameManager.instance.equipmentItems[i].eUsing = true;
+                    GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = "USING";
+                   
                 }
-                else if (GameManager.instance.equipmentItems[i].EquipmentID == 1 && !(GameManager.instance.equipmentItems[i].itemName == eItem.itemName))
+
+
+            }
+
+
+
+        }
+        else if(GetThisEItem().EquipmentID == 5)
+        {
+            Debug.Log("this happens 5 " + GetThisEItem().itemName);
+            for (int i = 0; i < GameManager.instance.equipmentItems.Count; i++)
+            {
+                if (GameManager.instance.equipmentItems[i].EquipmentID == 5 && GameManager.instance.equipmentItems[i].itemName == eItem.itemName)
                 {
-                    GameManager.instance.equipmentSlots[i].transform.GetChild(2).GetComponent<Text>().color = new Color(1, 1, 1, 0);
+                    GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().GetComponent<PlayerController>().incrementHealth(5);
+                    button.enabled = false;
                 }
+
+
+
             }
         }
     }

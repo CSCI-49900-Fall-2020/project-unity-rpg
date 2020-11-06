@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2849237568656712319}
   m_Layer: 0
   m_Name: ItemSword
-  m_TagString: Untagged
+  m_TagString: EquipmentTags
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,4 +158,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb0ce5938636eb4dbce057a4a0f31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 7fc665b45ca063047943284818f37c42, type: 2}
+  itemData: {fileID: 0}
+  equipmentData: {fileID: 11400000, guid: 5da93a38dd0140e45be1f6f9f05029e9, type: 2}

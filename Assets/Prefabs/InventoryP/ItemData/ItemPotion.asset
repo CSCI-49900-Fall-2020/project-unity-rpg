@@ -15,3 +15,4 @@ MonoBehaviour:
   itemName: Potion
   description: Increase hp by 1
   itemSprite: {fileID: 21300000, guid: 41ce884d5b7ac1142a18e32bbeee6716, type: 3}
+  value: 50

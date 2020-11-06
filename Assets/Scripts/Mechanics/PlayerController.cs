@@ -157,10 +157,8 @@ namespace Platformer.Mechanics
             manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
         }
 
-        public void setMaxMana(int value){
-            mana.Decrement(value);
-            manaBar.SetMaxMana(mana.maxMP, mana.currentMP);
-        }
+
+        
 
         // public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
         // {
