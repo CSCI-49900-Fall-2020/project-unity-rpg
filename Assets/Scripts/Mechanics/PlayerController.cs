@@ -149,32 +149,32 @@ namespace Platformer.Mechanics
             }
         }
 
-        void incrementHealth(int value){
+        public void incrementHealth(int value){
             health.Increment(value);
             healthBar.SetCurrentHealth(health.maxHP, health.currentHP);
         }
 
-        void decrementHealth(int value){
+        public void decrementHealth(int value){
             health.Decrement(value);
             healthBar.SetCurrentHealth(health.maxHP, health.currentHP);
         }
 
-        void setMaxHealth(int value){
+        public void setMaxHealth(int value){
             health.maxHP = value;
             healthBar.SetMaxHealth(health.maxHP, health.currentHP);
         }
 
-        void incrementMana(int value){
+        public void incrementMana(int value){
             mana.Increment(value);
             manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
         }
 
-        void decrementMana(int value){
+        public void decrementMana(int value){
             mana.Decrement(value);
             manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
         }
 
-        void setMaxMana(int value){
+       public  void setMaxMana(int value){
             mana.Decrement(value);
             manaBar.SetMaxMana(mana.maxMP, mana.currentMP);
         }

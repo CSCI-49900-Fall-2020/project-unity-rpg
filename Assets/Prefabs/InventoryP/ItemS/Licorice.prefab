@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 323178954937337430}
   m_Layer: 0
   m_Name: Licorice
-  m_TagString: Untagged
+  m_TagString: InventoryItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,4 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
-  EquipData: {fileID: 11400000, guid: 7fbd6b823e65fc741a892ae646402c88, type: 2}
+  equipmentData: {fileID: 0}

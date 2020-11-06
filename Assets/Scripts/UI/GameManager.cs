@@ -17,13 +17,27 @@ public class GameManager : MonoBehaviour
     public List<EquipmentItem> equipmentItems = new List<EquipmentItem>();
     public GameObject[] equipmentSlots;
     public EquipmentRemoveButton[] equipmentButton;
-
+    public Sprite equipmentSprite;
 
     public GameObject playerC;
     //public Dictionary<Item, int> itemDict = new Dictionary<Item, int>();
 
     public ItemRemoveButton thisButton;//which item button we are hovering
     public ItemRemoveButton[] itemButtons;//all item button in inventory
+
+
+
+    //list of each equipment  helmet = 1, body = 2, pants = 3, boots = 4, sword = 5
+
+    public List<EquipmentItem> equipmentHelmet = new List<EquipmentItem>();
+    public List<EquipmentItem> equipmentBody = new List<EquipmentItem>();
+    public List<EquipmentItem> equipmentPants = new List<EquipmentItem>();
+    public List<EquipmentItem> equipmentBoots = new List<EquipmentItem>();
+    public List<EquipmentItem> equipmentSword = new List<EquipmentItem>();
+    public List<EquipmentItem> currentEquipmentsUsing = new List<EquipmentItem>();
+
+
+
 
 
     private void Awake()
@@ -72,6 +86,7 @@ public class GameManager : MonoBehaviour
                 //use button
                 slots[i].transform.GetChild(3).gameObject.SetActive(true);
 
+
             }
             else
             {
@@ -93,7 +108,6 @@ public class GameManager : MonoBehaviour
 
 
     }
-
   
 
     public void AddItem(Item nItem)
@@ -128,9 +142,47 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            equipmentItems.Add(eItem);
-            DisplayEquipmentItem();
-            return true;
+            if (eItem.EquipmentID == 1)
+            {
+                equipmentHelmet.Add(eItem);
+                equipmentItems.Add(eItem);
+                DisplayEquipmentItem();
+                return true;
+            }
+            else if (eItem.EquipmentID == 2)
+            {
+                equipmentBody.Add(eItem);
+                equipmentItems.Add(eItem);
+                DisplayEquipmentItem();
+                return true;
+            }
+            else if (eItem.EquipmentID == 3)
+            {
+                equipmentPants.Add(eItem);
+                equipmentItems.Add(eItem);
+                DisplayEquipmentItem();
+                return true;
+            }
+            else if (eItem.EquipmentID == 4)
+            {
+                equipmentBoots.Add(eItem);
+                equipmentItems.Add(eItem);
+                DisplayEquipmentItem();
+                return true;
+            }
+            else if (eItem.EquipmentID == 5)
+            {
+                equipmentSword.Add(eItem);
+                equipmentItems.Add(eItem);
+                DisplayEquipmentItem();
+                return true;
+            }
+            else
+            {
+                Debug.Log("this IDEquipment is not allowed");
+                return false;
+            }
+            
         }
     }
     public void DisplayEquipmentItem()
@@ -139,10 +191,14 @@ public class GameManager : MonoBehaviour
         {
             if (i < equipmentItems.Count)
             {
-                equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
-                equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = equipmentItems[i].itemSprite;
+               // equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+               // equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = equipmentItems[i].itemSprite;
 
                 equipmentSlots[i].transform.GetChild(1).gameObject.SetActive(true);
+
+                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().image.sprite = equipmentItems[i].itemSprite;
+                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().interactable = true;
+
 
             }
             else
@@ -151,7 +207,8 @@ public class GameManager : MonoBehaviour
                 equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = null;
 
                 equipmentSlots[i].transform.GetChild(1).gameObject.SetActive(false);
-                
+                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().image.sprite = equipmentSprite;
+                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().interactable = false;    
             }
         }
     }

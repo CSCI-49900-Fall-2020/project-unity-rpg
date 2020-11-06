@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1532283173734746926}
   m_Layer: 0
   m_Name: TreeStump
-  m_TagString: Untagged
+  m_TagString: InventoryItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,4 +131,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
-  EquipData: {fileID: 11400000, guid: f9a49ee5bea803745bbc9fdfd9b687bb, type: 2}
+  equipmentData: {fileID: 0}
