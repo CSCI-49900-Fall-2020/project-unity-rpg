@@ -42,6 +42,7 @@ public class ActivateText : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+            waitforpress = false;
         }
     }
 

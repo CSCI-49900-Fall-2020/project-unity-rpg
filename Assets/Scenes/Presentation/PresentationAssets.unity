@@ -1912,6 +1912,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8667861620789455212, guid: ab4267cd3cd85f345828694fc1082314,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -63.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667861620789455212, guid: ab4267cd3cd85f345828694fc1082314,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 391.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667861620789455212, guid: ab4267cd3cd85f345828694fc1082314,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 27.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667861620789455213, guid: ab4267cd3cd85f345828694fc1082314,
+        type: 3}
+      propertyPath: m_Text
+      value: Continue...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667861621731986622, guid: ab4267cd3cd85f345828694fc1082314,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8667861621731986623, guid: ab4267cd3cd85f345828694fc1082314,
         type: 3}
       propertyPath: m_Text
@@ -8590,7 +8615,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.9847134
+  m_Value: 0.98471344
   m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:

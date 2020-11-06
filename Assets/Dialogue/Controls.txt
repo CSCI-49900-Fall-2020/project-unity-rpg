@@ -1,7 +1,7 @@
-Controls:
-Movement: WASD or Arrow Keys
-Dialogue: Enter
-Pause: C
-Fire1: Ctrl or LeftClick
-...
-Do you understand?
+Hey, you know the controls?
+Movement: WASD
+Skills: IJKL
+Jump: Space
+Inventory: B
+Interact/Dialogue: Enter
+Pause: Escape

@@ -58,6 +58,10 @@ public class TestDialogueOption : MonoBehaviour
     void TestDecline()
     {
         displayManager.DisplayMessage("Nah bro");
+        if (CloseWhenDone)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
