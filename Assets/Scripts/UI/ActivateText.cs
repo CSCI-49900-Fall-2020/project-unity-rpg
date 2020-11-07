@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.UI;
+using Platformer.Mechanics;
 
 public class ActivateText : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class ActivateText : MonoBehaviour
     public bool onbuttonpress;
     private bool waitforpress;
 
-    public bool CloseWhenDone;
+    public bool stopPlayerMovement; //reserve for one line dialogue
+    public CharacterSwapping characterSwapper; //used to stop character
+
+    public bool DestroyObject;
     KeyBinds keyBinds;
 
     // Start is called before the first frame update
@@ -26,6 +30,7 @@ public class ActivateText : MonoBehaviour
         //textbox = textboxGameObject.GetComponent<TextBoxManager>();
         textbox = FindObjectOfType<TextBoxManager>();
         keyBinds = GameObject.FindObjectOfType<KeyBinds>();
+        characterSwapper = FindObjectOfType<CharacterSwapping>();
     }
 
     // Update is called once per frame
@@ -37,8 +42,13 @@ public class ActivateText : MonoBehaviour
             textbox.currentline = start;
             textbox.endatline = end;
             textbox.enable();
-
-            if (CloseWhenDone)
+            
+            if (stopPlayerMovement)
+            {
+                characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
+            }
+            
+            if (DestroyObject)
             {
                 Destroy(gameObject);
             }
@@ -59,8 +69,13 @@ public class ActivateText : MonoBehaviour
             textbox.currentline = start;
             textbox.endatline = end;
             textbox.enable();
-
-            if (CloseWhenDone)
+            
+            if (stopPlayerMovement)
+            {
+                characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
+            }
+            
+            if (DestroyObject)
             {
                 Destroy(gameObject);
             }
@@ -71,6 +86,7 @@ public class ActivateText : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            textbox.disable();
             waitforpress = false;
         }
     }

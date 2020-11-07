@@ -17,7 +17,7 @@ public class TextBoxManager : MonoBehaviour
     public int currentline;
     public int endatline;
 
-    public PlayerController player;
+    //public PlayerController player; //useless with characterswapper
 
     public bool isActive;
 

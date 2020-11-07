@@ -407,6 +407,8 @@ MonoBehaviour:
   textboxGameObject: {fileID: 0}
   textbox: {fileID: 0}
   onbuttonpress: 1
+  stopPlayerMovement: 1
+  characterSwapper: {fileID: 0}
   CloseWhenDone: 0
 --- !u!212 &150420689
 SpriteRenderer:
@@ -3294,6 +3296,8 @@ MonoBehaviour:
   textboxGameObject: {fileID: 0}
   textbox: {fileID: 0}
   onbuttonpress: 1
+  stopPlayerMovement: 1
+  characterSwapper: {fileID: 0}
   CloseWhenDone: 1
 --- !u!212 &1161981333
 SpriteRenderer:
@@ -3619,6 +3623,8 @@ MonoBehaviour:
   textboxGameObject: {fileID: 0}
   textbox: {fileID: 0}
   onbuttonpress: 1
+  stopPlayerMovement: 1
+  characterSwapper: {fileID: 0}
   CloseWhenDone: 0
 --- !u!212 &1221268019
 SpriteRenderer:
