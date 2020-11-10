@@ -29,7 +29,7 @@ public class Knockback : MonoBehaviour
                 //rb2d.AddForce(transform.forward * 500, ForceMode2D.Impulse);
                 //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 //rb2d.velocity = new Vector2 (0,5);
-                rb2d.AddForce(new Vector2 (0,5), ForceMode2D.Impulse);
+                rb2d.AddForce(new Vector2 (5,5), ForceMode2D.Impulse);
                 //rb2d.AddForce(new Vector2 (0,5), ForceMode2D.Force);
             }
         }
