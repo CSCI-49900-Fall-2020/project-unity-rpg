@@ -2388,6 +2388,7 @@ MonoBehaviour:
   stopPlayerMovement: 1
   Donut: {fileID: 1704348331}
   scriptName1: MetaGameController
+  textBoxManager: {fileID: 0}
 --- !u!114 &876660913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2402,15 +2403,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 970642838}
   theText: {fileID: 970642837}
-  textfile: {fileID: 4900000, guid: d6e9705102be2174db814cba278bf634, type: 3}
-  textlines: []
+  textfile: {fileID: 0}
+  textlines:
+  - Hello
+  - Its me
   currentline: 0
   endatline: 0
-  player: {fileID: 96666804}
   isActive: 1
   stopPlayerMovement: 1
   Donut: {fileID: 1704348331}
   scriptName1: MetaGameController
+  characterSwapper: {fileID: 0}
 --- !u!4 &876660914
 Transform:
   m_ObjectHideFlags: 0

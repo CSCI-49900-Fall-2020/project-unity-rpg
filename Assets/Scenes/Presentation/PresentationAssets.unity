@@ -445,7 +445,6 @@ MonoBehaviour:
   textlines: []
   currentline: 0
   endatline: 0
-  player: {fileID: 0}
   isActive: 0
   stopPlayerMovement: 0
   Donut: {fileID: 1704348331}
@@ -1360,7 +1359,7 @@ PrefabInstance:
     - target: {fileID: 95391780594314510, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
@@ -1711,6 +1710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8667861619710103335, guid: ab4267cd3cd85f345828694fc1082314,
+        type: 3}
+      propertyPath: m_TagString
+      value: TextBoxText
       objectReference: {fileID: 0}
     - target: {fileID: 8667861619768255488, guid: ab4267cd3cd85f345828694fc1082314,
         type: 3}
@@ -8590,7 +8594,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.9847134
+  m_Value: 0.98471344
   m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -14373,7 +14377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742884924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -0.03, z: 0}
+  m_LocalPosition: {x: -2.76, y: -0.03, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1284371506}
@@ -14558,6 +14562,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 96666803}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1762026562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762026561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415b5a848188dee4eb792033535fa47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aggroRange: 5
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!4 &1762026569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,

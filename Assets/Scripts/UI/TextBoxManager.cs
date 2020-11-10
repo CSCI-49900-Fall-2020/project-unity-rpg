@@ -17,14 +17,14 @@ public class TextBoxManager : MonoBehaviour
     public int currentline;
     public int endatline;
 
-    //public PlayerController player; //useless with characterswapper
+    //public PlayerController player; //replaced with public CharacterSwapping characterSwapper
 
-    public bool isActive;
+    public bool isActive; //activate immediately upon entering scene, used for testing purposes
 
     public bool stopPlayerMovement;
 
-    public GameObject Donut;
-    public string scriptName1;
+    public GameObject Donut; //Hold all the scripts to be disabled, The brain of the game
+    public string scriptName1; //Disable during textbox active
 
     KeyBinds keyBinds;
 
@@ -79,12 +79,6 @@ public class TextBoxManager : MonoBehaviour
         {
             disable();
         }
-        /*
-        if (keyBinds.GetButtonDown("UICanvas"));
-        {
-            TurnOffUICanvas.SetActive(false);
-        }
-        */
     }
 
     public void enable() //add textbox
@@ -111,7 +105,8 @@ public class TextBoxManager : MonoBehaviour
         characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
     }
 
-    public void reuse(TextAsset theText) //reuse textbox
+    //Reuse textbox and use dialogue from a seperate script
+    public void reuse(TextAsset theText)
     {
         if (theText != null)
         {

@@ -225,7 +225,7 @@ MonoBehaviour:
   onbuttonpress: 0
   stopPlayerMovement: 0
   characterSwapper: {fileID: 0}
-  CloseWhenDone: 0
+  DestroyObject: 0
 --- !u!61 &536275254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   onbuttonpress: 1
   stopPlayerMovement: 1
   characterSwapper: {fileID: 0}
-  CloseWhenDone: 0
+  DestroyObject: 0
 --- !u!61 &1850387036
 BoxCollider2D:
   m_ObjectHideFlags: 0

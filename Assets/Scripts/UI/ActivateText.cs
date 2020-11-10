@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Platformer.UI;
 using Platformer.Mechanics;
 
@@ -20,8 +21,11 @@ public class ActivateText : MonoBehaviour
     public bool stopPlayerMovement; //reserve for one line dialogue
     public CharacterSwapping characterSwapper; //used to stop character
 
-    public bool DestroyObject;
+    public new bool DestroyObject;
     KeyBinds keyBinds;
+
+    //public string[] lines;
+    //public Text line;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,12 @@ public class ActivateText : MonoBehaviour
         textbox = FindObjectOfType<TextBoxManager>();
         keyBinds = GameObject.FindObjectOfType<KeyBinds>();
         characterSwapper = FindObjectOfType<CharacterSwapping>();
+        //line = GameObject.FindGameObjectWithTag("TextBoxText").GetComponent<Text>();
+
+        //if (end == 0) //if endline is unspecified, go to the end
+        //{
+        //    end = lines.Length - 1;
+        //}
     }
 
     // Update is called once per frame
@@ -38,7 +48,14 @@ public class ActivateText : MonoBehaviour
     {
         if (waitforpress && keyBinds.GetButtonDown("Interract"))
         {
-            textbox.reuse(theText);
+            if (theText != null)
+            {
+                textbox.reuse(theText);
+            }
+            //else if (start < lines.Length)
+            //{
+            //    line.text = lines[start];
+            //}
             textbox.currentline = start;
             textbox.endatline = end;
             textbox.enable();
@@ -54,8 +71,15 @@ public class ActivateText : MonoBehaviour
             }
             waitforpress = false;
         }
+        //else if (lines.Length != 0)
+        //{
+        //    //activate Textbox
+        //    //each line in lines = each line in TextBox
+        //    //advance by getting interact
+        //}
     }
 
+    //activate when player enters collider
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
@@ -82,6 +106,7 @@ public class ActivateText : MonoBehaviour
         }
     }
 
+    //activate when player leaves collider
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag == "Player")
