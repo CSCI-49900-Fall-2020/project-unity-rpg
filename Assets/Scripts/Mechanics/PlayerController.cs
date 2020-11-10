@@ -5,7 +5,7 @@ using Platformer.Gameplay;
 using static Platformer.Core.Simulation;
 using Platformer.Model;
 using Platformer.Core;
-using Platformer.UI;
+
 
 namespace Platformer.Mechanics
 {
@@ -54,8 +54,6 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => collider2d.bounds;
 
-        KeyBinds keyBinds;
-
         void Awake()
         {
             health = GetComponent<Health>();
@@ -64,10 +62,10 @@ namespace Platformer.Mechanics
             rb2d = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             //animator = GetComponent<Animator>();
-            keyBinds = GameObject.FindObjectOfType<KeyBinds>();
+            
         }
 
-        void stop()
+        public void stop()
         {
             move.x = 0;
             
