@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2155fdbd664644f855d206c8194ed3, type: 3}
-  m_Name: EquipmentAncientHelmet
+  m_Name: EquipmentArmorChest
   m_EditorClassIdentifier: 
-  itemName: AncientHelmet
-  EquipmentID: 1
-  description: Add 10hp to MaxHp
-  itemSprite: {fileID: 21300000, guid: 7c8366f14060ab84d8c9b708345de06c, type: 3}
-  value: 3
+  itemName: ArmorChest
+  EquipmentID: 2
+  description: Adds 10 hp
+  itemSprite: {fileID: 21300000, guid: 68a4aa1c7232c314fb07238476fd5be3, type: 3}
+  value: 10
+  eUsing: 0

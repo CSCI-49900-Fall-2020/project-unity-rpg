@@ -29,12 +29,17 @@ public class GameManager : MonoBehaviour
 
     //list of each equipment  helmet = 1, body = 2, pants = 3, boots = 4, sword = 5
 
-    public List<EquipmentItem> equipmentHelmet = new List<EquipmentItem>();
-    public List<EquipmentItem> equipmentBody = new List<EquipmentItem>();
+    public List<EquipmentItem> equipmentHelmets = new List<EquipmentItem>();
+    public GameObject[] helmetSlots;
+    public List<EquipmentItem> equipmentChest = new List<EquipmentItem>();
+    public GameObject[] chestSlots;
     public List<EquipmentItem> equipmentPants = new List<EquipmentItem>();
+    public GameObject[] pantsSlots;
     public List<EquipmentItem> equipmentBoots = new List<EquipmentItem>();
-    public List<EquipmentItem> equipmentSword = new List<EquipmentItem>();
-    public List<EquipmentItem> currentEquipmentsUsing = new List<EquipmentItem>();
+    public GameObject[] bootsSlots;
+    public List<EquipmentItem> equipmentWeapon = new List<EquipmentItem>();
+    public GameObject[] weaponSlots;
+    //public List<EquipmentItem> currentEquipmentsUsing = new List<EquipmentItem>();
 
 
 
@@ -144,45 +149,62 @@ public class GameManager : MonoBehaviour
         {
             if (eItem.EquipmentID == 1)
             {
-                equipmentHelmet.Add(eItem);
-                equipmentItems.Add(eItem);
-                DisplayEquipmentItem();
-                return true;
+                    equipmentHelmets.Add(eItem);
+                    equipmentItems.Add(eItem);
+                    DisplayEquipmentItem();
+                    return true;
+                
             }
             else if (eItem.EquipmentID == 2)
             {
-                equipmentBody.Add(eItem);
-                equipmentItems.Add(eItem);
-                DisplayEquipmentItem();
-                return true;
+               
+                    equipmentChest.Add(eItem);
+                    equipmentItems.Add(eItem);
+                    DisplayEquipmentItem();
+                    return true;
+                
             }
             else if (eItem.EquipmentID == 3)
             {
-                equipmentPants.Add(eItem);
-                equipmentItems.Add(eItem);
-                DisplayEquipmentItem();
-                return true;
+                
+                    equipmentPants.Add(eItem);
+                    equipmentItems.Add(eItem);
+                    DisplayEquipmentItem();
+                    return true;
+                
             }
             else if (eItem.EquipmentID == 4)
             {
-                equipmentBoots.Add(eItem);
-                equipmentItems.Add(eItem);
-                DisplayEquipmentItem();
-                return true;
+
+                    equipmentBoots.Add(eItem);
+                    equipmentItems.Add(eItem);
+                    DisplayEquipmentItem();
+                    return true;
+                
             }
             else if (eItem.EquipmentID == 5)
             {
-                equipmentSword.Add(eItem);
-                equipmentItems.Add(eItem);
-                DisplayEquipmentItem();
-                return true;
+               
+                    equipmentWeapon.Add(eItem);
+                    equipmentItems.Add(eItem);
+                    DisplayEquipmentItem();
+                    return true;
+                
             }
             else
             {
                 Debug.Log("this IDEquipment is not allowed");
                 return false;
             }
-            
+        }
+    }
+
+
+    public void DisplayHelmets()
+    {
+        for(int i = 0; i < helmetSlots.Length; i++)
+        {
+
         }
     }
     public void DisplayEquipmentItem()
@@ -212,7 +234,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
+    
 
     public void RemoveEquipmentItem(EquipmentItem eitem)
     {
@@ -222,6 +244,7 @@ public class GameManager : MonoBehaviour
         ResetButtonEquipmentItems();
         DisplayEquipmentItem();
     }
+   
     public void ResetButtonEquipmentItems()
     {
         for (int i = 0; i < equipmentButton.Length; i++ )
