@@ -70,22 +70,22 @@ namespace Platformer.UI
           add AddKeyBind() in Start or Awake
           replace input.getbuttondown with keyBinds.GetButtonDown("Function") //Function given in keys.Add          
         */
-        void AddKeyBind(/*string action, string function, string defaultKey*/)//replicate KeyBinds.cs start function
-        {
-            KeyBinds keyBinds;
-            keyBinds = GameObject.FindObjectOfType<KeyBinds>();
+        //public void AddKeyBind()//string action, string function, string defaultKey replicate KeyBinds.cs start function
+        //{
+        //    KeyBinds keyBinds;
+        //    keyBinds = GameObject.FindObjectOfType<KeyBinds>();
 
-            //check if entries are null or empty, if not add the keybind
-            //if (!string.IsNullOrEmpty(function) && !string.IsNullOrEmpty(defaultKey))
-            //{
-            //    keys.Add(function, (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(function, defaultKey)));
-            //}
-            //else
-            //{
-            //    Debug.Log("No keybind added");
-            //}
-            //keyBinds.GetButtonDown(function); //this line needs to be manually placed in each code
-        }
+        //    //check if entries are null or empty, if not add the keybind
+        //    //if (!string.IsNullOrEmpty(function) && !string.IsNullOrEmpty(defaultKey))
+        //    //{
+        //    //    keys.Add(function, (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString(function, defaultKey)));
+        //    //}
+        //    //else
+        //    //{
+        //    //    Debug.Log("No keybind added");
+        //    //}
+        //    //keyBinds.GetButtonDown(function); //this line needs to be manually placed in each code
+        //}
         
 
         //emulate input.getbuttondown, input.getbutton, input.getbuttonup
