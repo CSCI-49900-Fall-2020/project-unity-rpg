@@ -155,6 +155,8 @@ MonoBehaviour:
   sceneName: Prison Rooms
   player: {fileID: 0}
   spawnPoint: {x: -8.86, y: -3.688}
+  changeCamera: 0
+  currCamera: {fileID: 0}
 --- !u!61 &35609162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -243,7 +245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &90492461
 Sprite:
@@ -523,6 +525,8 @@ MonoBehaviour:
   sceneName: Prison Rooms
   player: {fileID: 0}
   spawnPoint: {x: 2.32, y: -3.688}
+  changeCamera: 0
+  currCamera: {fileID: 0}
 --- !u!61 &488404549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -587,7 +591,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bfaa0792e7bc92b4fa7c70b586c40398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -611,7 +615,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &501534659
 MonoBehaviour:
@@ -2688,7 +2692,7 @@ GameObject:
   - component: {fileID: 682021204}
   - component: {fileID: 682021203}
   m_Layer: 5
-  m_Name: Background
+  m_Name: Background image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2798,12 +2802,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682021202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 2056242252}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2931,7 +2935,7 @@ Transform:
   m_LocalScale: {x: 0.41453695, y: 0.960969, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!213 &1060061519
 Sprite:
@@ -3442,6 +3446,11 @@ GameObject:
   - component: {fileID: 1257073363}
   - component: {fileID: 1257073362}
   - component: {fileID: 1257073364}
+  - component: {fileID: 1257073361}
+  - component: {fileID: 1257073368}
+  - component: {fileID: 1257073367}
+  - component: {fileID: 1257073366}
+  - component: {fileID: 1257073365}
   m_Layer: 0
   m_Name: Boss Man
   m_TagString: enemy
@@ -3449,6 +3458,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!50 &1257073361
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257073360}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!212 &1257073362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3511,7 +3541,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1257073364
 BoxCollider2D:
@@ -3520,7 +3550,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257073360}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3539,6 +3569,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.79933333, y: 0.6666667}
   m_EdgeRadius: 0
+--- !u!114 &1257073365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257073360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 1000000
+  currentHP: 1000000
+--- !u!114 &1257073366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257073360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3191b9401af1d394ba4ee2d50f9d3714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 0}
+  ouch: {fileID: 0}
+  healthBarPrefab: {fileID: 0}
+  healthBar: {fileID: 0}
+  health: {fileID: 0}
+  knockbackPower: 100
+  knockbackDuration: 1
+--- !u!114 &1257073367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257073360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d02721cd9d4baa869d3b890cec48f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+  velocity: {x: 0, y: 0}
+  maxSpeed: 7
+  jumpTakeOffSpeed: 7
+  move: {x: 0, y: 0}
+  jump: 0
+  stopJump: 0
+--- !u!95 &1257073368
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257073360}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1316026299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3734,7 @@ RectTransform:
   - {fileID: 1403319228}
   - {fileID: 1219454117}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3716,7 +3818,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1369024730
 MonoBehaviour:
@@ -3786,6 +3888,8 @@ MonoBehaviour:
   sceneName: Prison Rooms
   player: {fileID: 0}
   spawnPoint: {x: 2.32, y: -3.688}
+  changeCamera: 0
+  currCamera: {fileID: 0}
 --- !u!61 &1401835598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3850,7 +3954,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bfaa0792e7bc92b4fa7c70b586c40398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3874,7 +3978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403319227
 GameObject:
@@ -3988,6 +4092,8 @@ MonoBehaviour:
   sceneName: Prison Rooms
   player: {fileID: 0}
   spawnPoint: {x: 2.32, y: -3.688}
+  changeCamera: 0
+  currCamera: {fileID: 0}
 --- !u!61 &1512304767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4052,7 +4158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bfaa0792e7bc92b4fa7c70b586c40398, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4076,7 +4182,7 @@ Transform:
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627192850
 GameObject:
@@ -12576,7 +12682,7 @@ GameObject:
   - component: {fileID: 1697253569}
   - component: {fileID: 1697253568}
   m_Layer: 0
-  m_Name: Scene bubble destroy
+  m_Name: Scene bubble destroy (glitch ontriggerexit does not work))
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12641,7 +12747,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852716161
 GameObject:
@@ -12656,7 +12762,7 @@ GameObject:
   - component: {fileID: 1852716164}
   - component: {fileID: 1852716165}
   m_Layer: 0
-  m_Name: CamSwitch
+  m_Name: CamSwitch (to boss)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12700,7 +12806,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1852716164
 MonoBehaviour:
@@ -12716,7 +12822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   bossCamera: {fileID: 1874640966}
-  boss: {fileID: 1257073360}
 --- !u!114 &1852716165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12873,6 +12978,7 @@ Transform:
   m_Children:
   - {fileID: 656451598}
   - {fileID: 1627192851}
+  - {fileID: 682021208}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12922,5 +13028,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

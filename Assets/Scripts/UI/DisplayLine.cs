@@ -22,9 +22,9 @@ public class DisplayLine : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (displayText != null)
+        if (displayText != null && other.gameObject.tag == "Player")
         {
             displayText.text = line;
             SetAlpha();

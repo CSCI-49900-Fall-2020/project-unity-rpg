@@ -6,22 +6,34 @@ public class CameraSet : MonoBehaviour
 {
     public GameObject mainCamera;
     public GameObject bossCamera;
-    public GameObject boss;
 
     void Start()
     {
         mainCamera = GameObject.Find("Main Camera");
     }
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D other)
+    //void OnCollisionEnter2D()
     {
-        mainCamera.SetActive(false);
-        bossCamera.SetActive(true);
+        if (other.gameObject.tag == "Player")
+        {
+            mainCamera.SetActive(false);
+            bossCamera.SetActive(true);
+        }
     }
 
-    void OnTriggerExit2D()
+    //void OnTriggerStay2D(Collider2D other)
+    //{
+    //    if (other.attachedRigidbody)
+    //        other.attachedRigidbody.AddForce(Vector3.up * 10);
+    //}    //void OnTriggerStay2D(Collider2D other)
+
+    void OnTriggerExit2D(Collider2D other)
     {
-        mainCamera.SetActive(true);
-        bossCamera.SetActive(false);
+        if (other.gameObject.tag == "Player")
+        {
+            mainCamera.SetActive(true);
+            bossCamera.SetActive(false);
+        }
     }
 }
