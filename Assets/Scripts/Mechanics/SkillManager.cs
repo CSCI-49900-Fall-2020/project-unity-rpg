@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Platformer.Mechanics;
 
 public class SkillManager : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class SkillManager : MonoBehaviour
     }
 
 	public GameObject skillTreeUI;
-
 	void Update()
 	{
+		if(Input.GetKeyDown("y"))
+		{
+			Debug.Log("gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton()");
+		}
 	  	if(Input.GetKeyDown("t"))
 	  	{
 	    	if(skillTreeUI.activeSelf)

@@ -15,8 +15,8 @@ public class ShootManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey ("/"))
-        {
+        if (Input.GetKey("/")){
+        	print("hello");
         	gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton();
         }
     }
