@@ -22,8 +22,10 @@ namespace Platformer.Mechanics
         internal AudioSource _audio;
         SpriteRenderer spriteRenderer;
 
-        public GameObject healthBarPrefab;
-        public GameObject healthBar;
+        public Transform player;
+        public bool isFlipped = false;
+
+        public GameObject bossHealthBar;
         public Health health;
 
         public Bounds Bounds => _collider.bounds;
@@ -32,6 +34,8 @@ namespace Platformer.Mechanics
         public float knockbackDuration = 1;
 
 
+        public GameObject donut;//to reference the current character
+
         void Awake()
         {
             control = GetComponent<AnimationController>();
@@ -39,20 +43,22 @@ namespace Platformer.Mechanics
             _audio = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             health = GetComponent<Health>();
+            donut = GameObject.Find("Donut");
+            player = donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().transform;
         }
 
-        void Start() {
-            healthBar = Instantiate(healthBarPrefab, new Vector3(0,0,0), Quaternion.identity);
-            healthBar.transform.SetParent(gameObject.transform);
-            healthBar.transform.localPosition = new Vector3(0,0.25f,0);
-            healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
+        void Start()
+        {
+            bossHealthBar = GameObject.Find("Boss Health Bar");
+            bossHealthBar.SetActive(false);
         }
+
 
         // Old OnCollisionEnter2D
         // void OnCollisionEnter2D(Collision2D collision)
         // {
         //     var player = collision.gameObject.GetComponent<PlayerController>();
-            
+
         //     if (player != null)
         //     {
         //         var ev = Schedule<PlayerEnemyCollision>();
@@ -61,23 +67,49 @@ namespace Platformer.Mechanics
         //     }
         // }
 
-        public void HealthDecrement(int damage){
+        public void HealthDecrement(int damage)
+        {
             health.Decrement(damage);
-            healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
-            
-            if(health.currentHP == 0){
+            //BossHealthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
+
+            if (health.currentHP == 0)
+            {
                 Destroy(gameObject);
+            }
+        }
+
+        public void LookAtPlayer()
+        {
+            //bossHealthBar.SetActive(true);
+
+            //player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().transform;
+            Vector3 flipped = transform.localScale;
+            flipped.z *= -1f;
+
+            if (transform.position.x > player.position.x && isFlipped)
+            {
+                transform.localScale = flipped;
+                transform.Rotate(0f, 180f, 0f);
+                isFlipped = false;
+            }
+            else if (transform.position.x < player.position.x && !isFlipped)
+            {
+                transform.localScale = flipped;
+                transform.Rotate(0f, 180f, 0f);
+                isFlipped = true;
             }
         }
 
         void Update()
         {
+            //Debug.Log(donut.GetComponent<CharacterSwapping>().currentCharacter.name);
+            //Debug.Log("hello");
             if (path != null)
             {
                 if (mover == null) mover = path.CreateMover(control.maxSpeed * 0.5f);
                 control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
             }
         }
-
     }
 }

@@ -15,6 +15,8 @@ public class DisplayLine : MonoBehaviour
 
     void Start()
     {
+        //Color originalColor = displayText.color;
+
         if (displayText != null && OnTrigger != true)
         {
             displayText.text = line;
@@ -28,6 +30,15 @@ public class DisplayLine : MonoBehaviour
         {
             displayText.text = line;
             SetAlpha();
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Color originalColor = displayText.color;
+            StopCoroutine(fadeAlpha);
+            displayText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0);
         }
     }
 

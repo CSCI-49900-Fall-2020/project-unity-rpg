@@ -44,6 +44,7 @@ namespace Platformer.Mechanics
         public bool facingRight = true;
         bool jump;
 
+
         //change movement to allow addforce to work
         Vector2 move;
 
