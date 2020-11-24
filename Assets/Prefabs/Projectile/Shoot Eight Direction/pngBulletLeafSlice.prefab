@@ -147,5 +147,5 @@ MonoBehaviour:
   speed: 12
   rb: {fileID: 5831082051731401318}
   movement: {x: 0, y: 0}
-  bulletDirection: 0
+  bulletDirection: 2
   tempTime: 0
