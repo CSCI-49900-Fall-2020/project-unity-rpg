@@ -57,6 +57,7 @@ namespace Platformer.Mechanics
         {
             velocity.y = dir.y;
             velocity.x = dir.x;
+            //move.x = dir.x;
         }
 
         /// <summary>

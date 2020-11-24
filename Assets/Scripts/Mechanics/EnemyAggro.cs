@@ -11,6 +11,7 @@ namespace Platformer.Mechanics
         public float moveSpeed;
         public int aggroType = 1;
         public Transform aggroedPlayer;
+        public float enemyAggroRange = 5;
 
         void Start()
         {
@@ -23,6 +24,17 @@ namespace Platformer.Mechanics
                 case 1:
                     //Debug.Log("test");
                     ChasePlayer();
+                    break;
+                case 2: // bosses
+                    if (Vector2.Distance(gameObject.transform.position, aggroedPlayer.position) <= enemyAggroRange)
+                    {
+                        BossAggro();
+                    }
+                    if (Vector2.Distance(gameObject.transform.position, aggroedPlayer.position) > enemyAggroRange)
+                    {
+                        BossDeaggro();
+                    }
+
                     break;
                 default:
                     break;
@@ -38,6 +50,31 @@ namespace Platformer.Mechanics
                     selfRigidBody2D.velocity = new Vector2(-moveSpeed, 0);
                 }
             }
+        }
+
+        public void BossAggro()
+        {
+            //Debug.Log("hello");
+            BossController boss = GetComponent<BossController>();
+            boss.bossHealthBar.SetActive(true);
+
+
+            Vector2 target = new Vector2(aggroedPlayer.position.x, selfRigidBody2D.position.y);
+            Vector2 newPos = Vector2.MoveTowards(selfRigidBody2D.position, target, moveSpeed * Time.fixedDeltaTime);
+            selfRigidBody2D.MovePosition(newPos);
+
+            //boss.bossHealthBar.SetActive(true);
+            //if (!boss.bossHealthBar.activeSelf)
+            //if (!boss.bossHealthBar.activeSelf)
+            //{
+            //    boss.bossHealthBar.SetActive(true);
+            //}
+        }
+        public void BossDeaggro()
+        {
+            //Debug.Log("hello");
+            BossController boss = GetComponent<BossController>();
+            boss.bossHealthBar.SetActive(false);
         }
 
         public void StopAggro(){

@@ -43,7 +43,11 @@ namespace Platformer.Mechanics
         public bool controlEnabled = true;
         public bool facingRight = true;
         bool jump;
+
+
+        //change movement to allow addforce to work
         Vector2 move;
+
         SpriteRenderer spriteRenderer;
         //internal Animator animator;
         readonly PlatformerModel model = Simulation.GetModel<PlatformerModel>();
@@ -74,7 +78,14 @@ namespace Platformer.Mechanics
 
             if (controlEnabled)
             {
-                
+                //OnDisable();
+                //if (Input.GetKeyDown(KeyCode.M))
+                //{
+                //    //Bounce(new Vector2 (5,0));
+                //    rb2d.AddForce(new Vector2 (5,5), ForceMode2D.Impulse);
+                //}
+                //rb2d.AddForce(new Vector2 (5,5), ForceMode2D.Impulse);
+
                 if (keyBinds.GetButton("Right"))
                 {
                     move.x = 1;
@@ -178,28 +189,33 @@ namespace Platformer.Mechanics
             mana.Decrement(value);
             manaBar.SetMaxMana(mana.maxMP, mana.currentMP);
         }
+        //knockback function, add iframes, disable player control for a moment
+        public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
+        {
+            OnDisable();
+            float timer = 0;
+            Debug.Log("knocking back");
 
-        // public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
-        // {
-        //     float timer = 0;
-        //     Debug.Log("knocking back");
+            while (knockbackDuration > timer)
+            {
+                //Debug.Log("knocking back");
+                timer += Time.deltaTime;
+                Vector2 direction = (obj.transform.position - gameObject.transform.position).normalized;
+                rb2d.AddForce(-direction * knockbackPower);
+                //OnEnable();
+                //Bounce(-direction * knockbackPower);
+            }
+            OnEnable();
+            yield return 0;
+        }
 
-        //     while (knockbackDuration > timer)
-        //     {
-        //         timer += Time.deltaTime;
-        //         Vector2 direction = (obj.transform.position - gameObject.transform.position).normalized;
-        //         rb2d.AddForce(-direction * knockbackPower);
-        //     }
-
-        //     yield return 0;
-        // }
-
-        // private void OnCollisionEnter2D(Collision2D other) {
-        //     if(other.gameObject.CompareTag("enemy"))
-        //     {
-        //         StartCoroutine(Knockback(1, 100, other.gameObject.transform));
-        //     }
-        // }
+        private void OnCollisionEnter2D(Collision2D other) //when player collides with enemy
+        {
+            if (other.gameObject.CompareTag("enemy"))
+            {
+                StartCoroutine(Knockback(5, 10, other.gameObject.transform));
+            }
+        }
         protected override void ComputeVelocity()
         {
 

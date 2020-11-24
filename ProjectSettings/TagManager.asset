@@ -10,6 +10,7 @@ TagManager:
   - mainHealthBar
   - InventoryItems
   - EquipmentTags
+  - TextBoxText
   layers:
   - Default
   - TransparentFX
