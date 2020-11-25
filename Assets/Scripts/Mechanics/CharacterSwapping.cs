@@ -235,74 +235,89 @@ namespace Platformer.Mechanics
                 }
             }
         } 
-
-        void Update(){
+        
+        public void switchToCharacter1(){
             if(currentCharacter.GetComponent<PlayerController>().controlEnabled){
-                if(Input.GetButtonDown("Character1")){
-                    if(currentCharacter != character1){
-                        subCharacterInfoSwap(1);
-                        // Disable control of current character
-                        currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
-                        // Swap their positions
-                        tempPosition = character1.GetComponent<Transform>().position;
-                        character1.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
-                        currentCharacter.GetComponent<Transform>().position = tempPosition;
-                        // Set new character as currentCharacter and enable control of it
-                        currentCharacter = character1;
-                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
-                        currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
-                        mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-                        mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-                        mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
-                    }
-                } else if (Input.GetButtonDown("Character2")){
-                    if(currentCharacter != character2){
-                        subCharacterInfoSwap(2);
-                        currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
-                        tempPosition = character2.GetComponent<Transform>().position;
-                        character2.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
-                        currentCharacter.GetComponent<Transform>().position = tempPosition;
-                        currentCharacter = character2;
-                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
-                        currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
-                        mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-                        mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-                        mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
-                    }
-                }else if (Input.GetButtonDown("Character3")){
-                    if(currentCharacter != character3){
-                        subCharacterInfoSwap(3);
-                        currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = false;
-                        tempPosition = character3.GetComponent<Transform>().position;
-                        character3.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
-                        currentCharacter.GetComponent<Transform>().position = tempPosition;
-                        currentCharacter = character3;
-                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
-                        currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
-                        mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-                        mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-                        mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
-                    }
-                }else if (Input.GetButtonDown("Character4")){
-                    if(currentCharacter != character4){
-                        subCharacterInfoSwap(4);
-                        currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = false;
-                        tempPosition = character4.GetComponent<Transform>().position;
-                        character4.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
-                        currentCharacter.GetComponent<Transform>().position = tempPosition;
-                        currentCharacter = character4;
-                        // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                        // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
-                        currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
-                        mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-                        mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
-                        mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
-                    } 
+                if(currentCharacter != character1 && character1.GetComponent<PlayerController>().health.currentHP != 0){
+                    subCharacterInfoSwap(1);
+                    // Disable control of current character
+                    currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
+                    // Swap their positions
+                    tempPosition = character1.GetComponent<Transform>().position;
+                    character1.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
+                    currentCharacter.GetComponent<Transform>().position = tempPosition;
+                    // Set new character as currentCharacter and enable control of it
+                    currentCharacter = character1;
+                    // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                    // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                    currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
+                    mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
+                    mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
+                    mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
                 }
             }
+        }
+        public void switchToCharacter2(){
+            if(currentCharacter != character2 && character2.GetComponent<PlayerController>().health.currentHP != 0){
+                subCharacterInfoSwap(2);
+                currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
+                tempPosition = character2.GetComponent<Transform>().position;
+                character2.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
+                currentCharacter.GetComponent<Transform>().position = tempPosition;
+                currentCharacter = character2;
+                // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
+                mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
+                mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
+                mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+            }
+        }
+
+        public void switchToCharacter3(){
+            if(currentCharacter != character3  && character3.GetComponent<PlayerController>().health.currentHP != 0){
+                subCharacterInfoSwap(3);
+                currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = false;
+                tempPosition = character3.GetComponent<Transform>().position;
+                character3.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
+                currentCharacter.GetComponent<Transform>().position = tempPosition;
+                currentCharacter = character3;
+                // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
+                mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
+                mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
+                mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+            }   
+        }
+
+        public void switchToCharacter4(){
+            if(currentCharacter != character4 && character4.GetComponent<PlayerController>().health.currentHP != 0){
+                subCharacterInfoSwap(4);
+                currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = false;
+                tempPosition = character4.GetComponent<Transform>().position;
+                character4.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
+                currentCharacter.GetComponent<Transform>().position = tempPosition;
+                currentCharacter = character4;
+                // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
+                // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
+                currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
+                mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
+                mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
+                mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
+            } 
+        }
+
+        public void onDeathSwitch(){
+            if(character1.GetComponent<Health>().currentHP != 0){
+                switchToCharacter1();
+            } else if(character2.GetComponent<Health>().currentHP != 0){
+                switchToCharacter2();
+            } else if(character3.GetComponent<Health>().currentHP != 0){
+                switchToCharacter3();
+            } else if(character3.GetComponent<Health>().currentHP != 0){
+                switchToCharacter4();
+            } 
         }
     }
 }

@@ -24,8 +24,9 @@ namespace Platformer.Mechanics
 
         public GameObject healthBarPrefab;
         public GameObject healthBar;
-        public GameObject attackPosition;
         public Health health;
+
+        public GameObject attackPosition;
 
         public Bounds Bounds => _collider.bounds;
 
@@ -42,10 +43,10 @@ namespace Platformer.Mechanics
             health = GetComponent<Health>();
 
             healthBar = Instantiate(healthBarPrefab, new Vector3(0,0,0), Quaternion.identity);
-            healthBar.name = "enemyHealthBar";
             healthBar.transform.SetParent(gameObject.transform);
             healthBar.transform.localPosition = new Vector3(0,0.25f,0);
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
+
             attackPosition = new GameObject();
             attackPosition.name = "enemyAttackPosition";
             attackPosition.transform.SetParent(gameObject.transform);
@@ -81,14 +82,11 @@ namespace Platformer.Mechanics
                 if (mover == null) mover = path.CreateMover(control.maxSpeed * 0.5f);
                 control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
             }
-
-
         }
 
         private void OnDrawGizmosSelected() {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(attackPosition.transform.position, 1);
         }
-
     }
 }

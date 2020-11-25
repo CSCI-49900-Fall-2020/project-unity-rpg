@@ -6,17 +6,22 @@ using Platformer.UI;
 
 public class UpdateManager : MonoBehaviour
 {
+    CharacterSwapping characterSwapper;
     KeyBinds keyBinds;
     // Start is called before the first frame update
     void Start()
     {
         keyBinds = GameObject.FindObjectOfType<KeyBinds>();
+        characterSwapper = GetComponent<CharacterSwapping>();
     }
 
     void Update() {
         if(Input.GetKeyDown("n")){
-            Debug.Log("Hurting current character");
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().decrementHealth(5);
+            // Debug.Log("Hurting current character");
+            // characterSwapper.currentCharacter.GetComponent<PlayerController>().decrementHealth(5);
+            Debug.Log("testing");
+            //characterSwapper.currentCharacter.GetComponent<PlayerController>().Bounce(new Vector2(5, 5));
+            characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().AddForce(new Vector2(5,5), ForceMode2D.Impulse);
         }    
 
         if (keyBinds.GetButton("Right"))
@@ -34,10 +39,29 @@ public class UpdateManager : MonoBehaviour
             gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().stop();
         };
 
-        if(gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().jumpState == JumpState.Grounded && keyBinds.GetButtonDown("Jump")){
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().startJump();
-        } else (keyBinds.GetButtonDown("Jump")){
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().stopJump();
+        if (Input.GetButton("Jump"))
+        {
+            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().highJump();
+        };
+
+        if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !Input.GetButton("Jump")) {
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().lowJump();
+        }
+
+        if(Input.GetButtonDown("Character1")){
+            characterSwapper.switchToCharacter1();
+        }
+
+        if(Input.GetButtonDown("Character2")){
+            characterSwapper.switchToCharacter2();
+        }
+
+        if(Input.GetButtonDown("Character3")){
+            characterSwapper.switchToCharacter3();
+        }
+
+        if(Input.GetButtonDown("Character4")){
+            characterSwapper.switchToCharacter4();
         }
     }
 
