@@ -41,8 +41,6 @@ namespace Platformer.Mechanics
         public Transform attackPosition;
         public bool controlEnabled = true;
         public bool facingRight = true;
-        bool jump;
-
 
         //change movement to allow addforce to work
         Vector2 move;
@@ -53,9 +51,9 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => collider2d.bounds;
 
-        KeyBinds keyBinds;
-
         GameObject donut;
+
+        bool onGround;
 
         void Awake()
         {
@@ -65,7 +63,6 @@ namespace Platformer.Mechanics
             rb2d = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             //animator = GetComponent<Animator>();
-            keyBinds = GameObject.FindObjectOfType<KeyBinds>();
             donut = GameObject.Find("Donut");
         }
 
@@ -107,14 +104,22 @@ namespace Platformer.Mechanics
             //rb2d.velocity = new Vector2(-5, 0);
         }
 
-        public void highJump(){
-            if (rb2d.velocity.y == 0) {
-                rb2d.velocity = Vector2.up * jumpVelocity;
-            }
-        }
+        // public void highJump(){
+        //     if (rb2d.velocity.y == 0) {
+        //         rb2d.velocity = Vector2.up * jumpVelocity;
+        //     }
+        // }
 
-        public void lowJump(){
-            rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        // public void lowJump(){
+        //     rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        // }
+
+        public void jump(){
+            if(onGround){
+                //rb2d.AddForce(new Vector2(0,jumpVelocity), ForceMode2D.Impulse);
+                rb2d.velocity = Vector2.up * jumpVelocity;
+                onGround = false;
+            }
         }
 
         public void incrementHealth(int value){
@@ -165,11 +170,11 @@ namespace Platformer.Mechanics
         //     yield return 0;
         // }
 
-        // private void OnCollisionEnter2D(Collision2D other) {
-        //     if(other.gameObject.CompareTag("enemy"))
-        //     {
-        //         StartCoroutine(Knockback(1, 100, other.gameObject.transform));
-        //     }
-        // }
+        private void OnCollisionEnter2D(Collision2D other) {
+            if(other.gameObject.CompareTag("Ground"))
+            {
+                onGround = true;
+            }
+        }
     }
 }

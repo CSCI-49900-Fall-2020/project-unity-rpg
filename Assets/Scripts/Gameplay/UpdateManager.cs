@@ -24,31 +24,18 @@ public class UpdateManager : MonoBehaviour
             characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().AddForce(new Vector2(5,5), ForceMode2D.Impulse);
         }    
 
-        if (keyBinds.GetButton("Right"))
-        {
-            characterSwapper.currentCharacter.GetComponent<PlayerController>().moveRight();
-        };
-        
-        if (keyBinds.GetButton("Left"))
-        {
-            characterSwapper.currentCharacter.GetComponent<PlayerController>().moveLeft();
-        };
-        
-        if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
-        {
-            characterSwapper.currentCharacter.GetComponent<PlayerController>().stop();
-        };
+        // if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !keyBinds.GetButton("Jump")) {
+            
+        //     Debug.Log("characterSwapper.currentCharacter.name");
+        //     characterSwapper.currentCharacter.GetComponent<PlayerController>().lowJump();
+        // }
 
-        if (keyBinds.GetButton("Jump"))
+        if (keyBinds.GetButtonDown("Jump"))
         {
-            Debug.Log("B");
-            characterSwapper.currentCharacter.GetComponent<PlayerController>().highJump();
-        };
-
-        if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !keyBinds.GetButton("Jump")) {
             Debug.Log("A");
-            characterSwapper.currentCharacter.GetComponent<PlayerController>().lowJump();
-        }
+            //characterSwapper.currentCharacter.GetComponent<PlayerController>().highJump();
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().jump();
+        };
 
         if(Input.GetButtonDown("Character1")){
             characterSwapper.switchToCharacter1();
@@ -73,6 +60,21 @@ public class UpdateManager : MonoBehaviour
         if(gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().controlEnabled){
             gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerAggro>().toUpdate();
         }
+
+        if (keyBinds.GetButton("Right"))
+        {
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().moveRight();
+        };
+        
+        if (keyBinds.GetButton("Left"))
+        {
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().moveLeft();
+        };
+        
+        if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
+        {
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().stop();
+        };
 
         // if(Input.GetKeyDown("m")){
         //     Debug.Log(Time.deltaTime + "Before update");

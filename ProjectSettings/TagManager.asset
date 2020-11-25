@@ -11,6 +11,7 @@ TagManager:
   - InventoryItems
   - EquipmentTags
   - TextBoxText
+  - Ground
   layers:
   - Default
   - TransparentFX
