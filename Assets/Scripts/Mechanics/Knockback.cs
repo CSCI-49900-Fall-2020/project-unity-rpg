@@ -5,7 +5,7 @@ using UnityEngine;
 public class Knockback : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float explosionStrength = 1000.0f;
+    public float explosionStrength = 5.0f;
     public Collider2D target;
     public Vector2 forceVec;
     public Rigidbody2D rb2d;
@@ -40,7 +40,7 @@ public class Knockback : MonoBehaviour
         if (gameObject.CompareTag("Player")){
             if(other.gameObject.CompareTag("enemy")){
                 Debug.Log("OnTrigerEnter2D");
-                gameObject.GetComponent<Rigidbody2D>().AddForce(-Vector2.right * 100, ForceMode2D.Impulse);
+                gameObject.GetComponent<Rigidbody2D>().AddForce(-Vector2.right * 5, ForceMode2D.Impulse);
             }
         }
     }
@@ -49,8 +49,8 @@ public class Knockback : MonoBehaviour
         if(gameObject.CompareTag("enemy")){
             if(other.gameObject.CompareTag("enemy")){
                 Debug.Log("Hit ally");
-                other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 100, ForceMode2D.Impulse);
-                gameObject.GetComponent<Rigidbody2D>().AddForce(-Vector2.right * 100, ForceMode2D.Impulse);
+                other.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 5, ForceMode2D.Impulse);
+                gameObject.GetComponent<Rigidbody2D>().AddForce(-Vector2.right * 5, ForceMode2D.Impulse);
             }
         }
     }

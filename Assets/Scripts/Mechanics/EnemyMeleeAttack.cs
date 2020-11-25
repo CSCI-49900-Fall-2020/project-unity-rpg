@@ -24,8 +24,6 @@ namespace Platformer.Mechanics
                 Debug.Log("attacking player");
                 Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, playerLayerMask);
 
-
-
                 if(playersToDamage != null){
                     for(int i = 0; i < playersToDamage.Length; i++){
                         playersToDamage[i].GetComponent<PlayerController>().decrementHealth(damage);
