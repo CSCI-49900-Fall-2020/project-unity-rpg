@@ -919,7 +919,6 @@ GameObject:
   - component: {fileID: 85298902}
   - component: {fileID: 85298901}
   - component: {fileID: 85298910}
-  - component: {fileID: 85298911}
   m_Layer: 0
   m_Name: Dave
   m_TagString: Player
@@ -1135,24 +1134,6 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &85298911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85298900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7b679f10421e419a38cf3dfb21627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingRight: 1
-  timeTemp: 0
-  fireRate: 0.15
-  playerEntity: {fileID: 85298909}
-  bulletShoot: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
-    type: 3}
 --- !u!1 &89832093
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,7 +9999,6 @@ GameObject:
   - component: {fileID: 1441471194}
   - component: {fileID: 1441471193}
   - component: {fileID: 1441471202}
-  - component: {fileID: 1441471203}
   m_Layer: 0
   m_Name: Bob
   m_TagString: Player
@@ -10234,24 +10214,6 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 768
---- !u!114 &1441471203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441471192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7b679f10421e419a38cf3dfb21627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingRight: 1
-  timeTemp: 0
-  fireRate: 0.15
-  playerEntity: {fileID: 1441471201}
-  bulletShoot: {fileID: 2699123826227790593, guid: 4b3448c91902d2e42ae614ebf11200f2,
-    type: 3}
 --- !u!1 &1444082729
 GameObject:
   m_ObjectHideFlags: 0
@@ -11492,7 +11454,6 @@ GameObject:
   - component: {fileID: 1576182911}
   - component: {fileID: 1576182910}
   - component: {fileID: 1576182919}
-  - component: {fileID: 1576182920}
   m_Layer: 0
   m_Name: Charlie
   m_TagString: Player
@@ -11708,24 +11669,6 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1576182920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1576182909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7b679f10421e419a38cf3dfb21627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingRight: 1
-  timeTemp: 0
-  fireRate: 0.15
-  playerEntity: {fileID: 1576182918}
-  bulletShoot: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
-    type: 3}
 --- !u!1 &1580840385
 GameObject:
   m_ObjectHideFlags: 0
@@ -13392,9 +13335,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1704348331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f80ebbd5559e64f97269676479980e, type: 3}
+  m_Script: {fileID: 11500000, guid: 82c77dec72779de40b7bfb20eb75437b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: {fileID: 1497734599}
+  left: {fileID: 1696333903}
+  down: {fileID: 762606673}
+  right: {fileID: 42977964}
+  jump: {fileID: 98360126}
+  interract: {fileID: 515283899}
+  menu: {fileID: 1213050561}
+  inventory: {fileID: 1148974192}
+  skill1: {fileID: 506485077}
+  skill2: {fileID: 1273868415}
+  skill3: {fileID: 2125149538}
+  skill4: {fileID: 1574919675}
 --- !u!1 &1709178108
 GameObject:
   m_ObjectHideFlags: 0
@@ -14280,7 +14235,6 @@ GameObject:
   - component: {fileID: 1742884926}
   - component: {fileID: 1742884925}
   - component: {fileID: 1742884934}
-  - component: {fileID: 1742884935}
   m_Layer: 0
   m_Name: Alice
   m_TagString: Player
@@ -14496,24 +14450,6 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1742884935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742884924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf7b679f10421e419a38cf3dfb21627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  facingRight: 1
-  timeTemp: 0
-  fireRate: 0.15
-  playerEntity: {fileID: 1742884933}
-  bulletShoot: {fileID: 913255736847165583, guid: 59c9dead0d3b9d04099de3988b54d58b,
-    type: 3}
 --- !u!1001 &1754263198
 PrefabInstance:
   m_ObjectHideFlags: 0
