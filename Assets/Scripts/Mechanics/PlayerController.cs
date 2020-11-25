@@ -114,7 +114,7 @@ namespace Platformer.Mechanics
         }
 
         public void lowJump(){
-                rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
         public void incrementHealth(int value){

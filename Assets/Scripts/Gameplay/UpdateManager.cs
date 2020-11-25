@@ -26,25 +26,27 @@ public class UpdateManager : MonoBehaviour
 
         if (keyBinds.GetButton("Right"))
         {
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().moveRight();
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().moveRight();
         };
         
         if (keyBinds.GetButton("Left"))
         {
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().moveLeft();
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().moveLeft();
         };
         
         if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
         {
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().stop();
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().stop();
         };
 
-        if (Input.GetButton("Jump"))
+        if (keyBinds.GetButton("Jump"))
         {
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().highJump();
+            Debug.Log("B");
+            characterSwapper.currentCharacter.GetComponent<PlayerController>().highJump();
         };
 
-        if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !Input.GetButton("Jump")) {
+        if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !keyBinds.GetButton("Jump")) {
+            Debug.Log("A");
             characterSwapper.currentCharacter.GetComponent<PlayerController>().lowJump();
         }
 

@@ -12,12 +12,12 @@ namespace Platformer.Mechanics
         public int aggroType = 1;
         public Transform aggroedPlayer;
         public float enemyAggroRange = 5;
-        public EnemyMeleeAttack meleeAttack;
+        //public EnemyMeleeAttack meleeAttack;
 
         void Start()
         {
             selfRigidBody2D = GetComponent<Rigidbody2D>();
-            meleeAttack = GetComponent<EnemyMeleeAttack>();
+            //meleeAttack = GetComponent<EnemyMeleeAttack>();
         }
 
         public void AggroRoutine(){
@@ -51,7 +51,7 @@ namespace Platformer.Mechanics
                 //     //Debug.Log("Attacking player");
                 //     
                 // }
-                meleeAttack.attackPlayers();
+                //meleeAttack.attackPlayers();
             }
         }
 
