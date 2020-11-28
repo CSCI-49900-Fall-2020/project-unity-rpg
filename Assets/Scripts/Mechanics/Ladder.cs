@@ -8,16 +8,18 @@ public class Ladder : MonoBehaviour
     public float climbSpeed = 5f;
 
     void OnTriggerStay2D(Collider2D other) {
+        Rigidbody2D otherRb2d = other.GetComponent<Rigidbody2D>();
+
         if(other.tag == "Player" && Input.GetKey(KeyCode.W)){
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0,climbSpeed);
+            otherRb2d.velocity = new Vector2(0,climbSpeed);
             isClimbing = true;
         } else if(other.tag == "Player" && Input.GetKey(KeyCode.S)){
-            other.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-climbSpeed);
+            otherRb2d.velocity = new Vector2(0,-climbSpeed);
             isClimbing = true;
         } else {
             if(isClimbing){
-                other.GetComponent<Rigidbody2D>().gravityScale = 0;
-                other.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+                otherRb2d.gravityScale = 0;
+                otherRb2d.velocity = new Vector2(0,0);
             }
         }
     }
