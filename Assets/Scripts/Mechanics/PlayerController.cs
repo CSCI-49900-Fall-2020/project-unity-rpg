@@ -53,7 +53,8 @@ namespace Platformer.Mechanics
 
         GameObject donut;
 
-        bool onGround;
+        public bool onGround;
+        int jumpCount = 0;
 
         void Awake()
         {
@@ -92,30 +93,36 @@ namespace Platformer.Mechanics
         public void moveRight()
         {
             //move.x = 1;
-
-            transform.position += transform.right * (Time.deltaTime * 5);
+            Debug.Log("Going right");
+            if(controlEnabled)
+                transform.position += transform.right * (Time.deltaTime * 5);
             //rb2d.velocity = new Vector2(5, 0);
         }
 
         public void moveLeft()
         {
+            Debug.Log("Going left");
             //move.x = -1;
-            transform.position -= transform.right * (Time.deltaTime * 5);
+            if(controlEnabled)
+                transform.position -= transform.right * (Time.deltaTime * 5);
             //rb2d.velocity = new Vector2(-5, 0);
         }
 
-        // public void highJump(){
-        //     if (rb2d.velocity.y == 0) {
-        //         rb2d.velocity = Vector2.up * jumpVelocity;
-        //     }
-        // }
+        public void highJump(){
+            if (rb2d.velocity.y == 0) {
+                rb2d.velocity = Vector2.up * jumpVelocity;
+            }
+        }
 
-        // public void lowJump(){
-        //     rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        // }
+        public void lowJump(){
+            rb2d.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
 
         public void jump(){
-            if(onGround){
+            Debug.Log(onGround);
+            if(jumpCount < 2){
+                Debug.Log(gameObject.name + " jumping");
+                jumpCount++;
                 //rb2d.AddForce(new Vector2(0,jumpVelocity), ForceMode2D.Impulse);
                 rb2d.velocity = Vector2.up * jumpVelocity;
                 onGround = false;
@@ -171,9 +178,11 @@ namespace Platformer.Mechanics
         // }
 
         private void OnCollisionEnter2D(Collision2D other) {
+            Debug.Log("collided with " + other.gameObject.name);
             if(other.gameObject.CompareTag("Ground"))
             {
                 onGround = true;
+                jumpCount = 0;
             }
         }
     }

@@ -26,13 +26,12 @@ public class UpdateManager : MonoBehaviour
 
         // if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !keyBinds.GetButton("Jump")) {
             
-        //     Debug.Log("characterSwapper.currentCharacter.name");
+        //     Debug.Log(characterSwapper.currentCharacter.name);
         //     characterSwapper.currentCharacter.GetComponent<PlayerController>().lowJump();
         // }
 
         if (keyBinds.GetButtonDown("Jump"))
         {
-            Debug.Log("A");
             //characterSwapper.currentCharacter.GetComponent<PlayerController>().highJump();
             characterSwapper.currentCharacter.GetComponent<PlayerController>().jump();
         };

@@ -160,6 +160,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &79285259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &79285261
@@ -513,6 +515,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &326725557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +548,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &326725559
@@ -736,6 +740,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &350055443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +773,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &350055445
@@ -1042,6 +1048,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &724121388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,6 +1081,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &724121390
@@ -1265,6 +1273,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &743051023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1306,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &743051025
@@ -1488,6 +1498,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &778315035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,6 +1531,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &778315037
@@ -1711,6 +1723,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &807552539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,6 +1756,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &807552541
@@ -1934,6 +1948,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &825063133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,6 +1981,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &825063135
@@ -2157,6 +2173,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &880496154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2189,6 +2206,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &880496156
@@ -2380,6 +2398,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1086870605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2412,6 +2431,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1086870607
@@ -2603,6 +2623,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1091106573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2635,6 +2656,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1091106575
@@ -2826,6 +2848,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1130163282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2858,6 +2881,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1130163284
@@ -3049,6 +3073,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1144178892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3081,6 +3106,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1144178894
@@ -3402,6 +3428,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1206044146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3434,6 +3461,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1206044148
@@ -3755,6 +3783,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1251034516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3787,6 +3816,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1251034518
@@ -3978,6 +4008,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1327379893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4010,6 +4041,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1327379895
@@ -4201,6 +4233,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1386082482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4233,6 +4266,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1386082484
@@ -4424,6 +4458,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1434914096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4456,6 +4491,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1434914098
@@ -4777,6 +4813,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1575254349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4809,6 +4846,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1575254351
@@ -5044,6 +5082,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!114 &1912821559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5076,6 +5115,7 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 0}
+  attackPosition: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
 --- !u!114 &1912821561
@@ -5242,7 +5282,7 @@ GameObject:
   - component: {fileID: 2068247197}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
