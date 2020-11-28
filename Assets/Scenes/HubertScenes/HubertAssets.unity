@@ -446,7 +446,6 @@ MonoBehaviour:
   textlines: []
   currentline: 0
   endatline: 0
-  player: {fileID: 0}
   isActive: 0
   stopPlayerMovement: 1
   Donut: {fileID: 1704348331}
@@ -977,6 +976,7 @@ MonoBehaviour:
   attackPosition: {fileID: 139120037}
   controlEnabled: 0
   facingRight: 1
+  onGround: 0
 --- !u!114 &85298902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10027,6 +10027,7 @@ MonoBehaviour:
   attackPosition: {fileID: 377111649}
   controlEnabled: 0
   facingRight: 1
+  onGround: 0
 --- !u!114 &1441471194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11480,6 +11481,7 @@ MonoBehaviour:
   attackPosition: {fileID: 56451172}
   controlEnabled: 0
   facingRight: 1
+  onGround: 0
 --- !u!114 &1576182911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13144,8 +13146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8361193640cdf045a0d8ad064d8e728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: HubertScene3
-  spawnPoint: {x: -3, y: -5}
+  sceneName: HubTest
+  spawnPoint: {x: 0, y: 0}
 --- !u!114 &1704348333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14202,7 +14204,6 @@ GameObject:
   - component: {fileID: 1742884926}
   - component: {fileID: 1742884925}
   - component: {fileID: 1742884934}
-  - component: {fileID: 1742884935}
   m_Layer: 9
   m_Name: Alice
   m_TagString: Player
@@ -14235,6 +14236,7 @@ MonoBehaviour:
   attackPosition: {fileID: 1284371506}
   controlEnabled: 1
   facingRight: 1
+  onGround: 0
 --- !u!114 &1742884926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14416,22 +14418,6 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &1742884935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742884924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionStrength: 1000
-  target: {fileID: 0}
-  forceVec: {x: 0, y: 0}
-  rb2d: {fileID: 0}
 --- !u!1001 &1754263198
 PrefabInstance:
   m_ObjectHideFlags: 0

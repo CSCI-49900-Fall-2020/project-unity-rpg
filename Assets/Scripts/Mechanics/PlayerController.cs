@@ -93,7 +93,7 @@ namespace Platformer.Mechanics
         public void moveRight()
         {
             //move.x = 1;
-            Debug.Log("Going right");
+            //Debug.Log("Going right");
             if(controlEnabled)
                 transform.position += transform.right * (Time.deltaTime * 5);
             //rb2d.velocity = new Vector2(5, 0);
@@ -101,7 +101,7 @@ namespace Platformer.Mechanics
 
         public void moveLeft()
         {
-            Debug.Log("Going left");
+            //Debug.Log("Going left");
             //move.x = -1;
             if(controlEnabled)
                 transform.position -= transform.right * (Time.deltaTime * 5);
@@ -119,9 +119,9 @@ namespace Platformer.Mechanics
         }
 
         public void jump(){
-            Debug.Log(onGround);
+            //Debug.Log(onGround);
             if(jumpCount < 2){
-                Debug.Log(gameObject.name + " jumping");
+                //Debug.Log(gameObject.name + " jumping");
                 jumpCount++;
                 //rb2d.AddForce(new Vector2(0,jumpVelocity), ForceMode2D.Impulse);
                 rb2d.velocity = Vector2.up * jumpVelocity;

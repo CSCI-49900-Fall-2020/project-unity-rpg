@@ -315,9 +315,11 @@ namespace Platformer.Mechanics
                 switchToCharacter2();
             } else if(character3.GetComponent<Health>().currentHP != 0){
                 switchToCharacter3();
-            } else if(character3.GetComponent<Health>().currentHP != 0){
+            } else if(character4.GetComponent<Health>().currentHP != 0){
                 switchToCharacter4();
-            } 
+            } else {
+                Debug.Log("All characters are dead");
+            }
         }
     }
 }
