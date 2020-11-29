@@ -473,14 +473,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709ee11994a2f44658e5fc9887c45081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  velocity: {x: 0, y: 0}
   maxSpeed: 7
-  jumpTakeOffSpeed: 7
-  jumpState: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
+  jumpVelocity: 5
   collider2d: {fileID: 0}
+  rb2d: {fileID: 0}
   health: {fileID: 0}
+  mana: {fileID: 0}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   attackPosition: {fileID: 1993792653}
@@ -567,9 +567,6 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!1 &869902024
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cbc1c19e853e84c992aa8f157d375e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAggro: {fileID: 828531584}
 --- !u!212 &942041740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1462,6 +1458,8 @@ MonoBehaviour:
   sceneName: TestScene2
   player: {fileID: 0}
   spawnPoint: {x: 3, y: 5}
+  changeCamera: 0
+  currCamera: {fileID: 0}
 --- !u!61 &1176107867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2770,6 +2768,9 @@ MonoBehaviour:
     type: 3}
   healthBar: {fileID: 0}
   health: {fileID: 1556270772}
+  attackPosition: {fileID: 0}
+  knockbackPower: 100
+  knockbackDuration: 1
 --- !u!114 &1556270776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2842,6 +2843,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0793745086666334a95abc941e6bfa5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
+  aggroType: 1
+  aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!1 &1668431352
 GameObject:
   m_ObjectHideFlags: 0

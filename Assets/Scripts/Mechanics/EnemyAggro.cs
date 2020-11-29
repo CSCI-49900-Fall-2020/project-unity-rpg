@@ -12,10 +12,12 @@ namespace Platformer.Mechanics
         public int aggroType = 1;
         public Transform aggroedPlayer;
         public float enemyAggroRange = 5;
+        //public EnemyMeleeAttack meleeAttack;
 
         void Start()
         {
             selfRigidBody2D = GetComponent<Rigidbody2D>();
+            //meleeAttack = GetComponent<EnemyMeleeAttack>();
         }
 
         public void AggroRoutine(){
@@ -24,6 +26,7 @@ namespace Platformer.Mechanics
                 case 1:
                     //Debug.Log("test");
                     ChasePlayer();
+                    AttackPlayer();
                     break;
                 case 2: // bosses
                     if (Vector2.Distance(gameObject.transform.position, aggroedPlayer.position) <= enemyAggroRange)
@@ -41,13 +44,28 @@ namespace Platformer.Mechanics
             }
         }
 
+        public void AttackPlayer(){
+            if(aggroedPlayer != null){
+                // float distance = Vector2.Distance(gameObject.transform.position,aggroedPlayer.position);
+                // if(distance <= meleeAttack.attackRange){
+                //     //Debug.Log("Attacking player");
+                //     
+                // }
+                //meleeAttack.attackPlayers();
+            }
+        }
+
         public void ChasePlayer(){
             if(aggroedPlayer != null){
                 if(transform.position.x < aggroedPlayer.position.x)
                 {
+                    //selfRigidBody2D.AddForce(new Vector2(moveSpeed,0), ForceMode2D.Force);
                     selfRigidBody2D.velocity = new Vector2(moveSpeed, 0);
+                    gameObject.GetComponent<EnemyController>().attackPosition.transform.localPosition = new Vector3(0.25f, 0,0);
                 } else {
+                    //selfRigidBody2D.AddForce(new Vector2(-moveSpeed,0), ForceMode2D.Force);
                     selfRigidBody2D.velocity = new Vector2(-moveSpeed, 0);
+                    gameObject.GetComponent<EnemyController>().attackPosition.transform.localPosition = new Vector3(-0.25f, 0,0);
                 }
             }
         }

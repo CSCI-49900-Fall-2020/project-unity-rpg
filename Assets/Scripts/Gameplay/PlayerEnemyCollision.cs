@@ -49,7 +49,7 @@ namespace Platformer.Gameplay
             //     Schedule<PlayerDeath>();
             // }
 
-            player.health.Decrement(2);
+            player.decrementHealth(2);
         }
     }
 }

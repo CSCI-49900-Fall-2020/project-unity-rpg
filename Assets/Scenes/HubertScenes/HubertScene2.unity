@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c8ae0f29e529449a4ec03bd3cbeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentationScene1
+  sceneName: HubertScene1
   player: {fileID: 0}
   spawnPoint: {x: 0, y: 0}
 --- !u!61 &113324403
@@ -585,7 +585,7 @@ GameObject:
   - component: {fileID: 584423581}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c8ae0f29e529449a4ec03bd3cbeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentationScene3
+  sceneName: HubertScene3
   player: {fileID: 0}
   spawnPoint: {x: 0, y: 0}
 --- !u!61 &1725186283

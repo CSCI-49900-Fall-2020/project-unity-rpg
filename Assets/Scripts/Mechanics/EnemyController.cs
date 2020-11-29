@@ -26,6 +26,8 @@ namespace Platformer.Mechanics
         public GameObject healthBar;
         public Health health;
 
+        public GameObject attackPosition;
+
         public Bounds Bounds => _collider.bounds;
 
         public float knockbackPower = 100;
@@ -39,13 +41,16 @@ namespace Platformer.Mechanics
             _audio = GetComponent<AudioSource>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             health = GetComponent<Health>();
-        }
 
-        void Start() {
             healthBar = Instantiate(healthBarPrefab, new Vector3(0,0,0), Quaternion.identity);
             healthBar.transform.SetParent(gameObject.transform);
             healthBar.transform.localPosition = new Vector3(0,0.25f,0);
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
+
+            attackPosition = new GameObject();
+            attackPosition.name = "enemyAttackPosition";
+            attackPosition.transform.SetParent(gameObject.transform);
+            attackPosition.transform.localPosition = new Vector3(0.25f,0,0);
         }
 
         // Old OnCollisionEnter2D
@@ -79,5 +84,9 @@ namespace Platformer.Mechanics
             }
         }
 
+        private void OnDrawGizmosSelected() {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(attackPosition.transform.position, 1);
+        }
     }
 }

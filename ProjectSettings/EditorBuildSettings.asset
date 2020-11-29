@@ -26,46 +26,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Presentation/Prison Rooms.unity
     guid: c6fbd962027f3044b828eadf22f3c624
-  - enabled: 0
-    path: Assets/Scenes/HubertScenes/AssetsScene.unity
-    guid: eb3ebef8ae16cf1499705569e2c0fc2d
-  - enabled: 0
-    path: Assets/Scenes/HubertScenes/TestScene1.unity
-    guid: 32c5f52553a854642a6e71329de0e826
-  - enabled: 0
-    path: Assets/Scenes/HubertScenes/TestScene2.unity
-    guid: 1c231cbe1f14a6e4b8cc9f038110af1b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloScenes/PaoloAssets.unity
     guid: fd1e3d3b9ad429048a17d2ff834394ea
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloPresentation1/PaoloPresentationTitle.unity
     guid: da6f6a4944518f545b412898ec602d50
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloPresentation1/PaoloPresentationScene2.unity
     guid: 47fe9d499b83ca14c8d35413002c6a0f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloPresentation1/PaoloPresentationScene1.unity
     guid: a4f66e0ef93f1fd4b86c6c8f2251c3ed
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloPresentation1/PaoloPresentationAssets.unity
     guid: dd58a051a45f5984f9d583b61d6ae2ea
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloScenes/PaoloScene1.unity
     guid: 3ea2719b5027dd4448848da99a0fea64
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PaoloScenes/PaoloScene2.unity
     guid: 1dc018ce5f52c8849a4e32b211eecdcd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/JamesScenes/Title.unity
     guid: 317968a8e22e7de41857aa49efff94f5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/JamesScenes/JamesAssets.unity
     guid: f353084e5a0061d47a7ac842e7ec60ee
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/JamesScenes/PresentScene2.unity
     guid: 2ddd8985127dda44da2c4ef27dc8cdf7
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/HubertScenes/HubertAssets.unity
+    guid: d9d144adc41f1524cbce3c3a223c8ef0
+  - enabled: 1
+    path: Assets/Scenes/HubertScenes/HubertScene1.unity
+    guid: 03de842757fea2843a42df3c1b13270f
+  - enabled: 1
+    path: Assets/Scenes/HubertScenes/HubertScene2.unity
+    guid: 790259df7d602cd49a381a90c76468ef
+  - enabled: 1
+    path: Assets/Scenes/HubertScenes/HubertScene3.unity
+    guid: ae23b38e1c1c88148950a01b8eea2c70
+  - enabled: 1
+    path: Assets/Scenes/HubertScenes/HubertTitle.unity
+    guid: 45d4c9d648ecef44b8ae91e69b76b4a2
+  - enabled: 1
+    path: Assets/Scenes/HubertScenes/HubTest.unity
+    guid: c30cd6a62fc883c4092e929d4a5c0b28
   m_configObjects: {}
