@@ -5650,6 +5650,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.22560333
       objectReference: {fileID: 0}
+    - target: {fileID: 1219670531606954960, guid: c5deca4f62617374bb1303066de5907d,
+        type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 8771b62169cd73349ae5859e0b1c63bc,
+        type: 2}
     - target: {fileID: 6956063967249824249, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
       propertyPath: m_Name
@@ -16754,7 +16760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
-  equipmentData: {fileID: 11400000, guid: ed19892d1a3f3424183b1e5643b39458, type: 2}
+  equipmentData: {fileID: 0}
 --- !u!60 &866787794
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -17549,7 +17555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
-  equipmentData: {fileID: 11400000, guid: 7dc9d4c6b65b90a4f9a00b41428cc85b, type: 2}
+  equipmentData: {fileID: 0}
 --- !u!60 &1616590883
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -23095,7 +23101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
-  equipmentData: {fileID: 11400000, guid: 5597fdeded770f34cbf96768011931a6, type: 2}
+  equipmentData: {fileID: 0}
 --- !u!212 &2127056435
 SpriteRenderer:
   m_ObjectHideFlags: 0

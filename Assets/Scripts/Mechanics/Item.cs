@@ -11,10 +11,7 @@ public class Item : ScriptableObject
     public string description;
     public Sprite itemSprite;
     public int value;
-<<<<<<< HEAD
     public string modify;
-=======
 
->>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f
 
 }
