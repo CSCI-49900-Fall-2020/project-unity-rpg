@@ -84,6 +84,8 @@ public class EquipmentUsing : MonoBehaviour
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                     GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                    Debug.Log("name: " + GameManager.instance.equipmentItems[i].eItemUsedByCharacter);
+                    Debug.Log(eItem.itemName);
                     for (int j = 0; j < GameManager.instance.equipmentChest.Count; j++)
                     {
                         if (!(GameManager.instance.equipmentChest[j].itemName == eItem.itemName) && GameManager.instance.equipmentHelmets[j].eItemUsedByCharacter == eItem.eItemUsedByCharacter)
@@ -127,6 +129,8 @@ public class EquipmentUsing : MonoBehaviour
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                     GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                    Debug.Log("name: " + GameManager.instance.equipmentItems[i].eItemUsedByCharacter);
+                    Debug.Log(eItem.itemName);
                     for (int j = 0; j < GameManager.instance.equipmentPants.Count; j++)
                     {
                         if (!(GameManager.instance.equipmentPants[j].itemName == eItem.itemName) && GameManager.instance.equipmentHelmets[j].eItemUsedByCharacter == eItem.eItemUsedByCharacter)
@@ -169,6 +173,8 @@ public class EquipmentUsing : MonoBehaviour
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                     GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                    Debug.Log("name: " + GameManager.instance.equipmentItems[i].eItemUsedByCharacter);
+                    Debug.Log(eItem.itemName);
                     for (int j = 0; j < GameManager.instance.equipmentBoots.Count; j++)
                     {
                         if (!(GameManager.instance.equipmentBoots[j].itemName == eItem.itemName) && GameManager.instance.equipmentHelmets[j].eItemUsedByCharacter == eItem.eItemUsedByCharacter)
