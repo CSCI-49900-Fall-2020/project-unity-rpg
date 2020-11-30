@@ -41,6 +41,11 @@ namespace Platformer.Mechanics
         public Transform attackPosition;
         public bool controlEnabled = true;
         public bool facingRight = true;
+            
+        private List<EquipmentItem> playerCurrentEitems = new List<EquipmentItem>();
+
+        
+
 
         //change movement to allow addforce to work
         Vector2 move;
@@ -89,6 +94,66 @@ namespace Platformer.Mechanics
                 attackPosition.localPosition = new Vector3(-0.5f,0,0);
             }
         }
+        public void removeEquipmentItemFromPlayer(EquipmentItem equipment)
+        {
+            if (!(playerCurrentEitems.Contains(equipment)))
+            {
+                Debug.Log("this player is not using this equipment item! ");
+                return;
+            }
+            else
+            {
+                if (equipment.EquipmentID == 5)
+                {
+                    ////////////
+                    return;
+                }
+                setMaxHealth(health.maxHP - equipment.value);
+                playerCurrentEitems.Remove(equipment);
+                return;
+
+            }
+
+
+        }
+        public void InsertEquipmentItemToPlayer(EquipmentItem eitem)
+        {
+            if (playerCurrentEitems.Count == 0)
+            {
+                playerCurrentEitems.Add(eitem);
+                setMaxHealth(health.maxHP + eitem.value);
+                return;
+                //playerCurrentHealth = health.maxHP + eitem.value;
+            }
+            else
+            {
+                if (eitem.EquipmentID == 5)
+                {
+                    ////
+                    return;
+                }
+                else
+                {
+                    //check if the player has already one of those elements
+                    for (int i = 0; i < playerCurrentEitems.Count; i++)
+                    {
+                        if (playerCurrentEitems[i].EquipmentID == eitem.EquipmentID)
+                        {
+                            setMaxHealth(health.maxHP - playerCurrentEitems[i].value);
+                            playerCurrentEitems.Remove(playerCurrentEitems[i]);
+                            playerCurrentEitems.Add(eitem);
+                            setMaxHealth(health.maxHP + eitem.value);
+                            return;
+                        }
+                    }
+                    //add element
+                    playerCurrentEitems.Add(eitem);
+                    setMaxHealth(health.maxHP + eitem.value);
+                    return;
+                }
+            }
+        }
+
 
         public void moveRight()
         {

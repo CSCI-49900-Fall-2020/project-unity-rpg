@@ -18,3 +18,4 @@ MonoBehaviour:
   itemSprite: {fileID: 21300000, guid: 68a4aa1c7232c314fb07238476fd5be3, type: 3}
   value: 10
   eUsing: 0
+  eItemUsedByCharacter: 

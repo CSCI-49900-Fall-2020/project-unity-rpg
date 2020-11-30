@@ -25,15 +25,17 @@ public class UseItemButton : MonoBehaviour
 
     public void UseButton()
     {
-        if (GetThisItem().itemName.Equals("Potion"))
+        if (GetThisItem().modify.Equals("health"))
         {
             if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().currentHP < GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().maxHP)
             {
-                GameManager.instance.RemoveItem(GetThisItem());
+
                 GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().incrementHealth(GetThisItem().value);
+                Debug.Log(GetThisItem().itemName);
+                GameManager.instance.RemoveItem(GetThisItem());
                 if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().currentHP > GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().maxHP)
                 {
-                   GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().currentHP = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().maxHP;
+                    GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().currentHP = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().maxHP;
                 }
             }
             else
@@ -41,11 +43,14 @@ public class UseItemButton : MonoBehaviour
                 Debug.Log("Health is full");
             }
         }
-        else if (GetThisItem().itemName.Equals("Cookie")) {
+
+        else if (GetThisItem().modify.Equals("mana"))
+        {
             if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().currentMP < GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().maxMP)
             {
-                GameManager.instance.RemoveItem(GetThisItem());
+
                 GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().incrementMana(GetThisItem().value);
+                GameManager.instance.RemoveItem(GetThisItem());
                 if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().currentMP > GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().maxMP)
                 {
                     GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().currentMP = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().maxMP;

@@ -31,7 +31,7 @@ public class PickUpItem : MonoBehaviour
                 if (GameManager.instance.AddEquipmentItem(equipmentData))
                 {
                     Destroy(gameObject);
-                    Debug.Log("si debe destruir");
+                    
                 }
             }
         

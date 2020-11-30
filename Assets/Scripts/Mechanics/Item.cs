@@ -11,6 +11,6 @@ public class Item : ScriptableObject
     public string description;
     public Sprite itemSprite;
     public int value;
-
+    public string modify;
 
 }

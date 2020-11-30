@@ -16,5 +16,6 @@ MonoBehaviour:
   EquipmentID: 2
   description: add 2hp
   itemSprite: {fileID: 21300000, guid: 0440f865f7a6dfc49a38f8369d977f81, type: 3}
-  value: 4
+  value: 2
   eUsing: 0
+  eItemUsedByCharacter: 
