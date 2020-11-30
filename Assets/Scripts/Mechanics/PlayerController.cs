@@ -65,6 +65,7 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
             //animator = GetComponent<Animator>();
             donut = GameObject.Find("Donut");
+
         }
 
         public void stop()

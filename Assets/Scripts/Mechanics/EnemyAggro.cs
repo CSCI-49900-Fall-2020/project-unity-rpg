@@ -28,7 +28,7 @@ namespace Platformer.Mechanics
                     ChasePlayer();
                     AttackPlayer();
                     break;
-                case 2: // bosses
+                case 2: // bosses;
                     if (Vector2.Distance(gameObject.transform.position, aggroedPlayer.position) <= enemyAggroRange)
                     {
                         BossAggro();
