@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
                     equipmentItems.Add(eItem);
                     DisplayEquipmentItem();
                     return true;
-                
+                    
             }
             else if (eItem.EquipmentID == 4)
             {

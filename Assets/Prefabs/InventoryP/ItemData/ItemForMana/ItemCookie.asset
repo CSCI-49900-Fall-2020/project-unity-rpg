@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c613ecaba5ff1c42a33dd943be2bfe3, type: 3}
-  m_Name: ItemCookie 1
+  m_Name: ItemCookie
   m_EditorClassIdentifier: 
   itemName: Cookie
   description: add 5 mana
