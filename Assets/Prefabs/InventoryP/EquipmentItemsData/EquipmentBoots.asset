@@ -16,6 +16,11 @@ MonoBehaviour:
   EquipmentID: 4
   description: '1hp '
   itemSprite: {fileID: 21300000, guid: 69d5ea843a508084da59cd51bf547463, type: 3}
+<<<<<<< HEAD:Assets/Prefabs/InventoryP/EquipmentItemsData/EquipmentBoots.asset
   value: 1
   eUsing: 0
   eItemUsedByCharacter: 
+=======
+  value: 2
+  eUsing: 0
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f:Assets/Prefabs/InventoryP/ItemData/EquipmentBoots.asset

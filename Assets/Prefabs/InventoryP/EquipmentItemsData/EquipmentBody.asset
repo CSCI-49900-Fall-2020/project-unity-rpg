@@ -16,6 +16,11 @@ MonoBehaviour:
   EquipmentID: 2
   description: add 2hp
   itemSprite: {fileID: 21300000, guid: 0440f865f7a6dfc49a38f8369d977f81, type: 3}
+<<<<<<< HEAD:Assets/Prefabs/InventoryP/EquipmentItemsData/EquipmentBody.asset
   value: 2
   eUsing: 0
   eItemUsedByCharacter: 
+=======
+  value: 4
+  eUsing: 0
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f:Assets/Prefabs/InventoryP/ItemData/EquipmentBody.asset

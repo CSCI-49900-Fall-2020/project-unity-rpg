@@ -16,6 +16,11 @@ MonoBehaviour:
   EquipmentID: 1
   description: Add 10hp to MaxHp
   itemSprite: {fileID: 21300000, guid: b7ff7f09da7a80a46925316eb5939a98, type: 3}
+<<<<<<< HEAD:Assets/Prefabs/InventoryP/EquipmentItemsData/EquipmentAncientHelmet.asset
   value: 10
   eUsing: 1
   eItemUsedByCharacter: 
+=======
+  value: 3
+  eUsing: 1
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f:Assets/Prefabs/InventoryP/ItemData/EquipmentAncientHelmet.asset

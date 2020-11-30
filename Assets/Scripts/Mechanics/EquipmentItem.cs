@@ -13,7 +13,10 @@ public class EquipmentItem : ScriptableObject
     public Sprite itemSprite;
     public int value;
     public bool eUsing;
+<<<<<<< HEAD
     public string eItemUsedByCharacter;
+=======
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f
     public EquipmentItem()
     {
         itemName = null;

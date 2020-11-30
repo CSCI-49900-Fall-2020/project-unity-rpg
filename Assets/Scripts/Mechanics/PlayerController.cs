@@ -222,8 +222,15 @@ namespace Platformer.Mechanics
             manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
         }
 
+<<<<<<< HEAD
 
         
+=======
+       public  void setMaxMana(int value){
+            mana.Decrement(value);
+            manaBar.SetMaxMana(mana.maxMP, mana.currentMP);
+        }
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f
 
         // public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
         // {

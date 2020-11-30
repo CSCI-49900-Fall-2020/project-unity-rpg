@@ -16,4 +16,7 @@ MonoBehaviour:
   description: Increment mana by 1
   itemSprite: {fileID: 21300000, guid: 12516f4fd32142842a00f2eeb91a05f6, type: 3}
   value: 50
+<<<<<<< HEAD
   modify: mana
+=======
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f

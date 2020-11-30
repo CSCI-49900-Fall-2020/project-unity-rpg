@@ -16,4 +16,7 @@ MonoBehaviour:
   description: Increase hp by 50
   itemSprite: {fileID: 21300000, guid: 41ce884d5b7ac1142a18e32bbeee6716, type: 3}
   value: 50
+<<<<<<< HEAD:Assets/Prefabs/InventoryP/ItemData/ItemsForHealth/ItemPotion.asset
   modify: health
+=======
+>>>>>>> de29b0b38b3064d0dc41cae3680f750ec4f0b40f:Assets/Prefabs/InventoryP/ItemData/ItemPotion.asset
