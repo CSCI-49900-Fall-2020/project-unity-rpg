@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
-  equipmentData: {fileID: 11400000, guid: b7fb23ffb9d5a9840a8283d2b487519a, type: 2}
+  equipmentData: {fileID: 11400000, guid: 47ce123c21d200443af98069689911ce, type: 2}
 --- !u!60 &7416686654188557176
 PolygonCollider2D:
   m_ObjectHideFlags: 0

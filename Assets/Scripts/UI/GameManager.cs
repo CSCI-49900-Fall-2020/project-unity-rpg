@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         DisplayItems();
+        DisplayEquipmentItem();
     }
 
    
@@ -213,13 +214,19 @@ public class GameManager : MonoBehaviour
         {
             if (i < equipmentItems.Count)
             {
+              
                // equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().color = new Color(1, 1, 1, 1);
                // equipmentSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = equipmentItems[i].itemSprite;
 
                 equipmentSlots[i].transform.GetChild(1).gameObject.SetActive(true);
 
                 equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().image.sprite = equipmentItems[i].itemSprite;
-                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().interactable = true;
+                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().enabled = true;
+                if (equipmentItems[i].eUsing)
+                {
+                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = playerC.GetComponent<CharacterSw>
+                   equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                }
 
 
             }
@@ -230,7 +237,8 @@ public class GameManager : MonoBehaviour
 
                 equipmentSlots[i].transform.GetChild(1).gameObject.SetActive(false);
                 equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().image.sprite = equipmentSprite;
-                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().interactable = false;    
+                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().enabled = false;
+               
             }
         }
     }
@@ -256,6 +264,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 equipmentButton[i].equipItem = null;
+                
             }
         }
     }

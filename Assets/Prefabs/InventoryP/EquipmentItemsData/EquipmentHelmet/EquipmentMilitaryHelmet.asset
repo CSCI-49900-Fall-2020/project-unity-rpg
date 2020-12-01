@@ -18,3 +18,4 @@ MonoBehaviour:
   itemSprite: {fileID: 0}
   value: 10
   eUsing: 0
+  eItemUsedByCharacter: 

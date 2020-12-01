@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2155fdbd664644f855d206c8194ed3, type: 3}
-  m_Name: EquipmentMushRoomHelmet
+  m_Name: WarriorHelmet
   m_EditorClassIdentifier: 
-  itemName: mushRoom
+  itemName: WarriorHelmet
   EquipmentID: 1
-  description: add 5 hp
-  itemSprite: {fileID: 21300000, guid: a83a04ad3108a6245ae5977ad74af35a, type: 3}
-  value: 5
+  description: add 8 hp
+  itemSprite: {fileID: 21300000, guid: 7c8366f14060ab84d8c9b708345de06c, type: 3}
+  value: 8
   eUsing: 0
+  eItemUsedByCharacter: 

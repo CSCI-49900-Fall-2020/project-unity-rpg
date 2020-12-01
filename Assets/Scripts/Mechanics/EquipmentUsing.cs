@@ -40,7 +40,7 @@ public class EquipmentUsing : MonoBehaviour
                     //add in other if statments
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
                     GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
-                    GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                    GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>()
                     Debug.Log("name: " + GameManager.instance.equipmentItems[i].eItemUsedByCharacter);
                     Debug.Log(eItem.itemName);
                     for (int j = 0; j < GameManager.instance.equipmentHelmets.Count; j++)
