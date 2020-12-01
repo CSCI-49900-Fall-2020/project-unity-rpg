@@ -1273,7 +1273,6 @@ GameObject:
   - component: {fileID: 350030420}
   - component: {fileID: 350030419}
   - component: {fileID: 350030418}
-  - component: {fileID: 350030422}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1361,14 +1360,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!81 &350030422
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350030417}
-  m_Enabled: 1
 --- !u!1 &397963614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +1978,7 @@ GameObject:
   - component: {fileID: 504219910}
   - component: {fileID: 504219908}
   - component: {fileID: 504219912}
+  - component: {fileID: 504219909}
   m_Layer: 0
   m_Name: Boss Camera
   m_TagString: MainCamera
@@ -2002,6 +1994,14 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504219907}
   m_CullTransparentMesh: 0
+--- !u!81 &504219909
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504219907}
+  m_Enabled: 1
 --- !u!20 &504219910
 Camera:
   m_ObjectHideFlags: 0
@@ -2298,7 +2298,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2d433dc16052f44ca94dd10cfcbd432, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
@@ -2438,7 +2438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562868183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.25, y: -1.3, z: -505.9453}
+  m_LocalPosition: {x: 27.22, y: -1.3, z: -505.9453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12610,7 +12610,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9198113, b: 0.9198113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12696,8 +12696,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 20
-  attackOffset: {x: 0, y: 0, z: 0}
-  attackRange: 10
+  attackOffset: {x: -1.5, y: 0.35, z: 0}
+  attackRange: 1.2
   attackMask:
     serializedVersion: 2
     m_Bits: 512
@@ -12713,8 +12713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackStrength: 5
-  knockbackDamage: 5
+  knockbackStrength: 0
+  knockbackDamage: 0
 --- !u!1 &1387842471
 GameObject:
   m_ObjectHideFlags: 0

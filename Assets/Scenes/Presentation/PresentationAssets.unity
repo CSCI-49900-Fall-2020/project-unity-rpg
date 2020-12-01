@@ -822,7 +822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 56451172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 85298902}
   - component: {fileID: 85298901}
   - component: {fileID: 85298910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dave
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 139120037}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3066,7 +3066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 377111649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8823,7 +8823,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.98471344
+  m_Value: 0.9847134
   m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8953,7 +8953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1284371506}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10195,7 +10195,7 @@ GameObject:
   - component: {fileID: 1441471194}
   - component: {fileID: 1441471193}
   - component: {fileID: 1441471202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bob
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -11649,7 +11649,7 @@ GameObject:
   - component: {fileID: 1576182911}
   - component: {fileID: 1576182910}
   - component: {fileID: 1576182919}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Charlie
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -14445,7 +14445,7 @@ GameObject:
   - component: {fileID: 1742884925}
   - component: {fileID: 1742884934}
   - component: {fileID: 1742884930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Alice
   m_TagString: Player
   m_Icon: {fileID: 0}

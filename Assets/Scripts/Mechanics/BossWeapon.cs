@@ -28,7 +28,7 @@ public class BossWeapon : MonoBehaviour
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
         //Debug.Log(currentChar.currentCharacter.name); //gives current character name (works)
         //if (colInfo != null)
         //{
@@ -36,11 +36,12 @@ public class BossWeapon : MonoBehaviour
         //}
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         //currentChar.currentCharacter.GetComponent<PlayerController>().decrementHealth(attackDamage); //decrements current player health (works)
-        //if (colInfo != null)
-        //{
-        //    Debug.Log("Attack");
-        //    //colInfo[i].GetComponent<PlayerController>().decrementHealth(attackDamage);
-        //    //player.decrementHealth(attackDamage);
-        //}
+        if (colInfo != null)
+        {
+            currentChar.currentCharacter.GetComponent<PlayerController>().decrementHealth(attackDamage);
+            //Debug.Log("Attack");
+            //colInfo[i].GetComponent<PlayerController>().decrementHealth(attackDamage);
+            //player.decrementHealth(attackDamage);
+        }
     }
 }
