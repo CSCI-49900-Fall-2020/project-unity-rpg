@@ -1548,6 +1548,7 @@ MonoBehaviour:
   attackPosition: {fileID: 1716513210}
   controlEnabled: 0
   facingRight: 1
+  playerCurrentEitems: []
   onGround: 0
 --- !u!114 &227032892
 MonoBehaviour:
@@ -11228,7 +11229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 82, y: -12.963}
+  m_AnchoredPosition: {x: 82, y: -12.963013}
   m_SizeDelta: {x: -498.21475, y: -126.76825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255280564
@@ -15298,6 +15299,7 @@ MonoBehaviour:
   attackPosition: {fileID: 384935975}
   controlEnabled: 0
   facingRight: 1
+  playerCurrentEitems: []
   onGround: 0
 --- !u!114 &1726908111
 MonoBehaviour:
@@ -16037,6 +16039,7 @@ MonoBehaviour:
   attackPosition: {fileID: 1749778248}
   controlEnabled: 0
   facingRight: 1
+  playerCurrentEitems: []
   onGround: 0
 --- !u!114 &1814707026
 MonoBehaviour:
@@ -17910,6 +17913,7 @@ MonoBehaviour:
   attackPosition: {fileID: 1090298156}
   controlEnabled: 1
   facingRight: 1
+  playerCurrentEitems: []
   onGround: 0
 --- !u!114 &2002351449
 MonoBehaviour:
