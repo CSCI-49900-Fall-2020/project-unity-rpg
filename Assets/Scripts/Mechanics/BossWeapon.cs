@@ -20,7 +20,6 @@ public class BossWeapon : MonoBehaviour
         donut = GameObject.Find("Donut");
         //player = currentChar.currentCharacter;
         currentChar = donut.GetComponent<CharacterSwapping>();
-        
     }
 
     public void Attack()
@@ -39,7 +38,7 @@ public class BossWeapon : MonoBehaviour
         //    colInfo.GetComponent<PlayerController>().decrementHealth(attackDamage);
         //}
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-
+        //currentChar.currentCharacter.GetComponent<PlayerController>().decrementHealth(attackDamage); //decrements current player health (works)
         //if (colInfo != null)
         //{
         //    Debug.Log("Attack");
