@@ -22,6 +22,7 @@ public class BossWeapon : MonoBehaviour
         currentChar = donut.GetComponent<CharacterSwapping>();
     }
 
+    //Note: right now, there is no way to avoid the attack
     public void Attack()
     {
         Vector3 pos = transform.position;
@@ -29,13 +30,9 @@ public class BossWeapon : MonoBehaviour
         pos += transform.up * attackOffset.y;
         Debug.Log("Attack");
         //Debug.Log(currentChar.currentCharacter.name); //gives current character name (works)
-        //Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         //if (colInfo != null)
-        //if (colInfo.CompareTag("Player"))
         //{
         //    //colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
-        //    //colInfo.GetComponent<Health>().Decrement(attackDamage);
-        //    colInfo.GetComponent<PlayerController>().decrementHealth(attackDamage);
         //}
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         //currentChar.currentCharacter.GetComponent<PlayerController>().decrementHealth(attackDamage); //decrements current player health (works)
@@ -46,14 +43,4 @@ public class BossWeapon : MonoBehaviour
         //    //player.decrementHealth(attackDamage);
         //}
     }
-
-
-    //void OnDrawGizmosSelected()
-    //{
-    //    Vector3 pos = transform.position;
-    //    pos += transform.right * attackOffset.x;
-    //    pos += transform.up * attackOffset.y;
-
-    //    Gizmos.DrawWireSphere(pos, attackRange);
-    //}
 }
