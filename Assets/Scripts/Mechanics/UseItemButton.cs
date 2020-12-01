@@ -48,8 +48,9 @@ public class UseItemButton : MonoBehaviour
         {
             if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().currentMP < GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().maxMP)
             {
-
+                               
                 GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().incrementMana(GetThisItem().value);
+                
                 GameManager.instance.RemoveItem(GetThisItem());
                 if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().currentMP > GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().maxMP)
                 {

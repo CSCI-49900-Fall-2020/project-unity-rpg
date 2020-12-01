@@ -1542,7 +1542,7 @@ MonoBehaviour:
   collider2d: {fileID: 227032897}
   rb2d: {fileID: 0}
   health: {fileID: 227032894}
-  mana: {fileID: 0}
+  mana: {fileID: 227032893}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   attackPosition: {fileID: 1716513210}
@@ -15293,7 +15293,7 @@ MonoBehaviour:
   collider2d: {fileID: 1726908116}
   rb2d: {fileID: 0}
   health: {fileID: 1726908113}
-  mana: {fileID: 0}
+  mana: {fileID: 1726908112}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   attackPosition: {fileID: 384935975}
@@ -16033,7 +16033,7 @@ MonoBehaviour:
   collider2d: {fileID: 1814707031}
   rb2d: {fileID: 0}
   health: {fileID: 1814707028}
-  mana: {fileID: 0}
+  mana: {fileID: 1814707027}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   attackPosition: {fileID: 1749778248}
@@ -17907,7 +17907,7 @@ MonoBehaviour:
   collider2d: {fileID: 0}
   rb2d: {fileID: 0}
   health: {fileID: 2002351451}
-  mana: {fileID: 0}
+  mana: {fileID: 2002351450}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   attackPosition: {fileID: 1090298156}
