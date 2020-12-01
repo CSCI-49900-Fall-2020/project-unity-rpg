@@ -42,7 +42,7 @@ namespace Platformer.Mechanics
         public bool controlEnabled = true;
         public bool facingRight = true;
             
-        private List<EquipmentItem> playerCurrentEitems = new List<EquipmentItem>();
+        public List<EquipmentItem> playerCurrentEitems = new List<EquipmentItem>();
 
         
 
@@ -93,29 +93,7 @@ namespace Platformer.Mechanics
                 facingRight = false;
                 attackPosition.localPosition = new Vector3(-0.5f,0,0);
             }
-        }
-        public void removeEquipmentItemFromPlayer(EquipmentItem equipment)
-        {
-            if (!(playerCurrentEitems.Contains(equipment)))
-            {
-                Debug.Log("this player is not using this equipment item! ");
-                return;
-            }
-            else
-            {
-                if (equipment.EquipmentID == 5)
-                {
-                    ////////////
-                    return;
-                }
-                setMaxHealth(health.maxHP - equipment.value);
-                playerCurrentEitems.Remove(equipment);
-                return;
-
-            }
-
-
-        }
+        }    
         public void InsertEquipmentItemToPlayer(EquipmentItem eitem)
         {
             if (playerCurrentEitems.Count == 0)

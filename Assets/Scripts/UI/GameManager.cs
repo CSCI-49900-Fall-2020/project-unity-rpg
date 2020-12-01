@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using Platformer.Mechanics;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -221,12 +222,22 @@ public class GameManager : MonoBehaviour
                 equipmentSlots[i].transform.GetChild(1).gameObject.SetActive(true);
 
                 equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().image.sprite = equipmentItems[i].itemSprite;
-                equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().enabled = true;
                 if (equipmentItems[i].eUsing)
                 {
-                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = playerC.GetComponent<CharacterSw>
-                   equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                    equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().enabled = false;
+                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = equipmentItems[i].eItemUsedByCharacter;
                 }
+                else
+                {
+                    equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().enabled = true;
+                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = " ";
+                }
+             /*   if (equipmentItems[i].eUsing)
+                {
+                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                    equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                }*/
 
 
             }
@@ -238,7 +249,8 @@ public class GameManager : MonoBehaviour
                 equipmentSlots[i].transform.GetChild(1).gameObject.SetActive(false);
                 equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().image.sprite = equipmentSprite;
                 equipmentSlots[i].transform.GetChild(2).GetComponent<Button>().enabled = false;
-               
+                equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = " ";
+
             }
         }
     }
@@ -249,10 +261,34 @@ public class GameManager : MonoBehaviour
        //remove text "using" here
        //equipmentSlots[eitem.EquipmentID].transform.GetChild(2).GetComponent<Text>().color = new Color(1, 1, 1, 0);
         equipmentItems.Remove(eitem);
+        RemovingEquipmentItemFromOtherCharacter(eitem);
         ResetButtonEquipmentItems();
         DisplayEquipmentItem();
     }
-   
+   public void RemovingEquipmentItemFromOtherCharacter(EquipmentItem rEitem)
+    {
+        if (playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
+        {
+            playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+            playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+        }
+        else if (playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
+        {
+            playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+            playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+        }
+        else if (playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
+        {
+            playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+            playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+        }
+        else if (playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
+        {
+            playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+            playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+        }
+        
+    }
     public void ResetButtonEquipmentItems()
     {
         for (int i = 0; i < equipmentButton.Length; i++ )

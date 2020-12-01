@@ -29,7 +29,7 @@ public class EquipmentRemoveButton : MonoBehaviour, IPointerEnterHandler, IPoint
     public void ECloseButton()
     {
 
-        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().GetComponent<PlayerController>().removeEquipmentItemFromPlayer(GetEItem());
+        //GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().GetComponent<PlayerController>().removeEquipmentItemFromPlayer(GetEItem());
         GameManager.instance.RemoveEquipmentItem(GetEItem());
         Debug.Log("removing");
         equipItem = GetEItem();
