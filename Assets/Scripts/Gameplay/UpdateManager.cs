@@ -16,7 +16,6 @@ public class UpdateManager : MonoBehaviour
     }
 
     void Update() {
-
         if (keyBinds.GetButtonDown("Jump"))
         {
             characterSwapper.currentCharacter.GetComponent<PlayerController>().jump();

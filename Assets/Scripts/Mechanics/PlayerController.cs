@@ -64,6 +64,7 @@ namespace Platformer.Mechanics
         void Awake()
         {
             health = GetComponent<Health>();
+            mana = GetComponent<Mana>();
             //audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();
             rb2d = GetComponent<Rigidbody2D>();
