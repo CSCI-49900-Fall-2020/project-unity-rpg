@@ -16,23 +16,9 @@ public class UpdateManager : MonoBehaviour
     }
 
     void Update() {
-        if(Input.GetKeyDown("n")){
-            // Debug.Log("Hurting current character");
-            // characterSwapper.currentCharacter.GetComponent<PlayerController>().decrementHealth(5);
-            Debug.Log("testing");
-            //characterSwapper.currentCharacter.GetComponent<PlayerController>().Bounce(new Vector2(5, 5));
-            characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().AddForce(new Vector2(5,5), ForceMode2D.Impulse);
-        }    
-
-        // if(characterSwapper.currentCharacter.GetComponent<Rigidbody2D>().velocity.y > 0 && !keyBinds.GetButton("Jump")) {
-            
-        //     Debug.Log(characterSwapper.currentCharacter.name);
-        //     characterSwapper.currentCharacter.GetComponent<PlayerController>().lowJump();
-        // }
 
         if (keyBinds.GetButtonDown("Jump"))
         {
-            //characterSwapper.currentCharacter.GetComponent<PlayerController>().highJump();
             characterSwapper.currentCharacter.GetComponent<PlayerController>().jump();
         };
 

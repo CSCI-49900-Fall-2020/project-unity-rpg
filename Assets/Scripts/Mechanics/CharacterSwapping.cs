@@ -195,7 +195,7 @@ namespace Platformer.Mechanics
                     subCharacterName1.text = subCharacterName2.text;
                     subHealthBar1.SetMaxHealth((int)Math.Floor(subHealthBar2.slider.maxValue), (int)Math.Floor(subHealthBar2.slider.value));
                     subManaBar1.SetMaxMana((int)Math.Floor(subManaBar2.slider.maxValue), (int)Math.Floor(subManaBar2.slider.value));
-                    subCharacterName1.text = subCharacterName3.text;
+                    subCharacterName2.text = subCharacterName3.text;
                     subHealthBar2.SetMaxHealth((int)Math.Floor(subHealthBar3.slider.maxValue), (int)Math.Floor(subHealthBar3.slider.value));
                     subManaBar2.SetMaxMana((int)Math.Floor(subManaBar3.slider.maxValue), (int)Math.Floor(subManaBar3.slider.value));
                     subCharacterName3.text = currentCharacter.GetComponent<Character>().characterName;

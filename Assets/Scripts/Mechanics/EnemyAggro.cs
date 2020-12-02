@@ -60,11 +60,13 @@ namespace Platformer.Mechanics
                 if(transform.position.x < aggroedPlayer.position.x)
                 {
                     //selfRigidBody2D.AddForce(new Vector2(moveSpeed,0), ForceMode2D.Force);
-                    selfRigidBody2D.velocity = new Vector2(moveSpeed, 0);
+                    //selfRigidBody2D.velocity = new Vector2(moveSpeed, 0);
+                    transform.position += transform.right * (Time.deltaTime * moveSpeed);
                     gameObject.GetComponent<EnemyController>().attackPosition.transform.localPosition = new Vector3(0.25f, 0,0);
                 } else {
                     //selfRigidBody2D.AddForce(new Vector2(-moveSpeed,0), ForceMode2D.Force);
-                    selfRigidBody2D.velocity = new Vector2(-moveSpeed, 0);
+                    //selfRigidBody2D.velocity = new Vector2(-moveSpeed, 0);
+                    transform.position -= transform.right * (Time.deltaTime * moveSpeed);
                     gameObject.GetComponent<EnemyController>().attackPosition.transform.localPosition = new Vector3(-0.25f, 0,0);
                 }
             }

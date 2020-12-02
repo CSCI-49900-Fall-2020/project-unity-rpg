@@ -10,19 +10,26 @@ namespace Platformer.Mechanics
         public float startTimeBetweenAttack;
 
         public Transform attackPosition;
-        public float attackRange;
+
+        public Animator attackAnimator;
+        public float attackRange = 0.5f;
         public LayerMask enemyLayerMask;
         public int damage;
 
-        // Update is called once per frame
+        void Start()
+        {
+            attackAnimator = attackPosition.GetComponent<Animator>();
+        }
         void Update()
         {
             if(timeBetweenAttack <= 0){
                 if(Input.GetKey(KeyCode.G)){
+                    attackAnimator.Play("MeleeAttack");
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, enemyLayerMask);
 
                     for(int i = 0; i < enemiesToDamage.Length; i++){
                         enemiesToDamage[i].GetComponent<EnemyController>().HealthDecrement(damage);
+                        enemiesToDamage[i].GetComponent<Knockback>().knockbackSelf(gameObject);
                     }
                     timeBetweenAttack = startTimeBetweenAttack;
                 }

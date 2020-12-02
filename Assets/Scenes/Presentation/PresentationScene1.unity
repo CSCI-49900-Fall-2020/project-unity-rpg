@@ -425,7 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: PresentationScene3
   player: {fileID: 0}
-  spawnPoint: {x: 1, y: 2}
+  spawnPoint: {x: -7, y: 0}
 --- !u!61 &134889664
 BoxCollider2D:
   m_ObjectHideFlags: 0

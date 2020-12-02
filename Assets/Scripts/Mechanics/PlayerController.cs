@@ -79,22 +79,38 @@ namespace Platformer.Mechanics
             
         }
 
+        void Start() {
+            attackPosition.localPosition = new Vector3(0.25f,0,0);
+        }
+
         protected void Update()
         {
             if( rb2d.velocity.y < 0){
                 rb2d.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier -1) * Time.deltaTime;
             }
 
-            if (move.x > 0.01f)
-            {
-                facingRight = true;
-                attackPosition.localPosition = new Vector3(0.5f,0,0);
+            // if (move.x > 0.01f && !facingRight)
+            // {
+            //     Flip();
     
-            } else if (move.x < -0.01f) {
-                facingRight = false;
-                attackPosition.localPosition = new Vector3(-0.5f,0,0);
-            }
+            // } else if (move.x < -0.01f && facingRight) {
+            //     Flip();
+            // }
         }    
+
+        void Flip()
+        {
+            facingRight = !facingRight;
+            
+            int multiply = 1;
+            if(!facingRight)
+                multiply = -1;
+
+            attackPosition.localPosition = new Vector3(0.25f * multiply,0,0);
+            Vector3 flip = attackPosition.localScale;
+            flip.x *= -1;
+            attackPosition.localScale = flip;
+        }
         public void InsertEquipmentItemToPlayer(EquipmentItem eitem)
         {
             if (playerCurrentEitems.Count == 0)
@@ -141,6 +157,9 @@ namespace Platformer.Mechanics
             if(controlEnabled)
                 transform.position += transform.right * (Time.deltaTime * 5);
             //rb2d.velocity = new Vector2(5, 0);
+
+            if(!facingRight)
+                Flip();
         }
 
         public void moveLeft()
@@ -150,6 +169,8 @@ namespace Platformer.Mechanics
             if(controlEnabled)
                 transform.position -= transform.right * (Time.deltaTime * 5);
             //rb2d.velocity = new Vector2(-5, 0);
+            if(facingRight)
+                Flip();
         }
 
         public void highJump(){
