@@ -1,7 +1,8 @@
-Hey, you know the controls?
-Movement: WASD
-Skills: IJKL
+Default Controls
+Movement: WASD 
+Melee Attack: G
+Shoot: /
 Jump: Space
 Inventory: B
-Interact/Dialogue: Enter
+Interact/Dialogue: Enter/W
 Pause: Escape

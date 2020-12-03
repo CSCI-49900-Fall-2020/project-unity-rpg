@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 2
 --- !u!114 &23740490
 MonoBehaviour:
@@ -819,6 +820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &255766122
 MonoBehaviour:
@@ -1059,6 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 2
 --- !u!114 &330260986
 MonoBehaviour:
@@ -1398,6 +1401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &397963616
 MonoBehaviour:
@@ -1638,6 +1642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &471658299
 MonoBehaviour:
@@ -2572,6 +2577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &641585116
 MonoBehaviour:
@@ -12149,12 +12155,12 @@ PrefabInstance:
     - target: {fileID: 61206449453150434, guid: 1225560780f01c045aefbd5adf389b1c,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 61206449453150434, guid: 1225560780f01c045aefbd5adf389b1c,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 61206449473832464, guid: 1225560780f01c045aefbd5adf389b1c,
         type: 3}
@@ -12219,7 +12225,7 @@ PrefabInstance:
     - target: {fileID: 61206450103692452, guid: 1225560780f01c045aefbd5adf389b1c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 61206450103692453, guid: 1225560780f01c045aefbd5adf389b1c,
         type: 3}
@@ -12527,8 +12533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1000
-  currentHP: 1000
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1371852716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12714,6 +12720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 0
+  selfKnockbackStrength: 5
   knockbackDamage: 0
 --- !u!1 &1387842471
 GameObject:
@@ -12957,6 +12964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 2
 --- !u!114 &1424195761
 MonoBehaviour:
@@ -13323,6 +13331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &1546236141
 MonoBehaviour:
@@ -63224,6 +63233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &1922685175
 MonoBehaviour:
@@ -63833,6 +63843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 2
 --- !u!114 &2036674007
 MonoBehaviour:
@@ -64119,6 +64130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 5
+  selfKnockbackStrength: 5
   knockbackDamage: 5
 --- !u!114 &2076416750
 MonoBehaviour:

@@ -44,7 +44,6 @@ namespace Platformer.Mechanics
             
         public List<EquipmentItem> playerCurrentEitems = new List<EquipmentItem>();
 
-        
 
 
         //change movement to allow addforce to work
@@ -71,7 +70,6 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
             //animator = GetComponent<Animator>();
             donut = GameObject.Find("Donut");
-
         }
 
         public void stop()

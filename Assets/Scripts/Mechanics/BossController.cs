@@ -25,6 +25,8 @@ namespace Platformer.Mechanics
         public Transform player;
         public bool isFlipped = false;
 
+        public GameObject tempBoss;
+        public GameObject tempBossHealth;
         public GameObject bossHealthBar;
         public Health health;
 
@@ -49,7 +51,14 @@ namespace Platformer.Mechanics
 
         void Start()
         {
-            bossHealthBar = GameObject.Find("Boss Health Bar");
+            tempBoss = GameObject.Find("TempBoss");
+            //bossHealthBar = tempBoss.GetComponent<BossController>().tempBossHealth;
+            if (bossHealthBar == null)
+            {
+                bossHealthBar = GameObject.Find("Boss Health Bar");
+            }
+            bossHealthBar = tempBoss.GetComponent<BossController>().tempBossHealth;
+            
             bossHealthBar.SetActive(false);
         }
 
