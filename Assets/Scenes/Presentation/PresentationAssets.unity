@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 0
+  startTimeBetweenAttack: 1
   attackPosition: {fileID: 2047838096}
   attackAnimator: {fileID: 0}
   attackRange: 0.5
@@ -4066,8 +4066,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isFlipped: 0
   tempBoss: {fileID: 0}
-  tempBossHealth: {fileID: 1717278700}
-  bossHealthBar: {fileID: 0}
+  bossHealthBar: {fileID: 1717278700}
   health: {fileID: 0}
   knockbackPower: 100
   knockbackDuration: 1
@@ -10865,7 +10864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 0
+  startTimeBetweenAttack: 1
   attackPosition: {fileID: 1603393872}
   attackAnimator: {fileID: 0}
   attackRange: 0.5
@@ -11819,7 +11818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 0
+  startTimeBetweenAttack: 1
   attackPosition: {fileID: 1281032772}
   attackAnimator: {fileID: 0}
   attackRange: 0.5
@@ -13821,6 +13820,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1717278698}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1717278701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717278700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92e18de28bf8b747b98e333098e8f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &1722104657
 GameObject:
   m_ObjectHideFlags: 0
@@ -18893,17 +18905,22 @@ PrefabInstance:
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: sceneName
-      value: PresentationScene3
+      value: Prison
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: spawnPoint.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
+        type: 3}
+      propertyPath: spawnPoint.x
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535527, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
@@ -19124,6 +19141,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5586667500579134656, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: enemyLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 5586667500579134659, guid: 4ee1b60b279b70144b3e7c2643a449b5,
         type: 3}
       propertyPath: m_LocalPosition.x

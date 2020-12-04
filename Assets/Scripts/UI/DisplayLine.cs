@@ -11,6 +11,9 @@ public class DisplayLine : MonoBehaviour
     public int repeatNum;
     public string line;
     public bool OnTrigger;
+
+    public bool onlyTriggerOnce = false;
+    bool triggered = false;
     private IEnumerator fadeAlpha;
 
     void Start()
@@ -28,8 +31,16 @@ public class DisplayLine : MonoBehaviour
     {
         if (displayText != null && other.gameObject.tag == "Player")
         {
-            displayText.text = line;
-            SetAlpha();
+            if(onlyTriggerOnce){
+                if(!triggered){
+                    displayText.text = line;
+                    SetAlpha();
+                    triggered = true;
+                }
+            } else {
+                displayText.text = line;
+                SetAlpha();
+            }
         }
     }
     void OnTriggerExit2D(Collider2D other)

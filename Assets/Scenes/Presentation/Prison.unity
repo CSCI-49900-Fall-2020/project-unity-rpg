@@ -3075,6 +3075,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Abandoned Prison - Rafters
   OnTrigger: 0
+  onlyTriggerOnce: 0
 --- !u!4 &549842203
 Transform:
   m_ObjectHideFlags: 0
@@ -3514,6 +3515,7 @@ MonoBehaviour:
   repeatNum: 3
   line: Warning
   OnTrigger: 1
+  onlyTriggerOnce: 1
 --- !u!114 &634849992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13131,6 +13133,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Abandoned Prison - Main Hall
   OnTrigger: 0
+  onlyTriggerOnce: 0
 --- !u!4 &1123217039
 Transform:
   m_ObjectHideFlags: 0
@@ -14588,7 +14591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1290715225530138, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_TagString
-      value: enemy
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 1290715225530138, guid: 6877fb649746c674d8fbbcf60d41892b, type: 3}
       propertyPath: m_Layer
@@ -65659,6 +65662,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Abandoned Prison - Unknown
   OnTrigger: 0
+  onlyTriggerOnce: 0
 --- !u!4 &1645757384
 Transform:
   m_ObjectHideFlags: 0
@@ -66506,6 +66510,7 @@ MonoBehaviour:
   repeatNum: 3
   line: Warning
   OnTrigger: 1
+  onlyTriggerOnce: 0
 --- !u!1 &1874640966
 GameObject:
   m_ObjectHideFlags: 0
@@ -68199,6 +68204,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Abandoned Prison - Corridor
   OnTrigger: 0
+  onlyTriggerOnce: 0
 --- !u!4 &2088745906
 Transform:
   m_ObjectHideFlags: 0

@@ -54,18 +54,5 @@ public class UpdateManager : MonoBehaviour
         {
             characterSwapper.currentCharacter.GetComponent<PlayerController>().moveLeft();
         };
-        
-        if (keyBinds.GetButtonUp("Right") || keyBinds.GetButtonUp("Left"))
-        {
-            characterSwapper.currentCharacter.GetComponent<PlayerController>().stop();
-        };
-
-        // if(Input.GetKeyDown("m")){
-        //     Debug.Log(Time.deltaTime + "Before update");
-        //     playerAggro.check();
-        //     playerAggro.toUpdate();
-        //     Debug.Log(Time.deltaTime + "After update");
-        //     playerAggro.check();
-        // }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - EquipmentTags
   - TextBoxText
   - Ground
+  - Boss
   layers:
   - Default
   - TransparentFX

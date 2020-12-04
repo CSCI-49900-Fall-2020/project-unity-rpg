@@ -23,17 +23,12 @@ namespace Platformer.Mechanics
         /// Max horizontal speed of the player.
         /// </summary>
         public float maxSpeed = 7;
-
         public float fallMultiplier = 2.5f;
         public float lowJumpMultiplier = 2f;
-
         public float jumpVelocity = 5;
-
-        /*internal new*/
+        public int jumpLimit = 1;
         public Collider2D collider2d;
         public Rigidbody2D rb2d;
-        /*internal new*/
-        //public AudioSource audioSource;
         public Health health;
         public Mana mana;
         public HealthBar healthBar;
@@ -41,13 +36,7 @@ namespace Platformer.Mechanics
         public Transform attackPosition;
         public bool controlEnabled = true;
         public bool facingRight = true;
-            
         public List<EquipmentItem> playerCurrentEitems = new List<EquipmentItem>();
-
-
-
-        //change movement to allow addforce to work
-        Vector2 move;
 
         SpriteRenderer spriteRenderer;
         //internal Animator animator;
@@ -72,12 +61,6 @@ namespace Platformer.Mechanics
             donut = GameObject.Find("Donut");
         }
 
-        public void stop()
-        {
-            move.x = 0;
-            
-        }
-
         void Start() {
             attackPosition.localPosition = new Vector3(0.25f,0,0);
         }
@@ -87,14 +70,6 @@ namespace Platformer.Mechanics
             if( rb2d.velocity.y < 0){
                 rb2d.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier -1) * Time.deltaTime;
             }
-
-            // if (move.x > 0.01f && !facingRight)
-            // {
-            //     Flip();
-    
-            // } else if (move.x < -0.01f && facingRight) {
-            //     Flip();
-            // }
         }    
 
         void Flip()
@@ -151,23 +126,16 @@ namespace Platformer.Mechanics
 
         public void moveRight()
         {
-            //move.x = 1;
-            //Debug.Log("Going right");
             if(controlEnabled)
                 transform.position += transform.right * (Time.deltaTime * 5);
-            //rb2d.velocity = new Vector2(5, 0);
-
             if(!facingRight)
                 Flip();
         }
 
         public void moveLeft()
         {
-            //Debug.Log("Going left");
-            //move.x = -1;
             if(controlEnabled)
                 transform.position -= transform.right * (Time.deltaTime * 5);
-            //rb2d.velocity = new Vector2(-5, 0);
             if(facingRight)
                 Flip();
         }
@@ -183,11 +151,8 @@ namespace Platformer.Mechanics
         }
 
         public void jump(){
-            //Debug.Log(onGround);
-            if(jumpCount < 2){
-                //Debug.Log(gameObject.name + " jumping");
+            if(jumpCount < jumpLimit){
                 jumpCount++;
-                //rb2d.AddForce(new Vector2(0,jumpVelocity), ForceMode2D.Impulse);
                 rb2d.velocity = Vector2.up * jumpVelocity;
                 onGround = false;
             }
@@ -221,30 +186,12 @@ namespace Platformer.Mechanics
             manaBar.SetCurrentMana(mana.maxMP, mana.currentMP);
         }
 
-
-       public  void setMaxMana(int value){
+        public  void setMaxMana(int value){
             mana.Decrement(value);
             manaBar.SetMaxMana(mana.maxMP, mana.currentMP);
         }
 
-
-        // public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
-        // {
-        //     float timer = 0;
-        //     Debug.Log("knocking back");
-
-        //     while (knockbackDuration > timer)
-        //     {
-        //         timer += Time.deltaTime;
-        //         Vector2 direction = (obj.transform.position - gameObject.transform.position).normalized;
-        //         rb2d.AddForce(-direction * knockbackPower);
-        //     }
-
-        //     yield return 0;
-        // }
-
         private void OnCollisionEnter2D(Collision2D other) {
-            Debug.Log("collided with " + other.gameObject.name);
             if(other.gameObject.CompareTag("Ground"))
             {
                 onGround = true;

@@ -28,8 +28,12 @@ namespace Platformer.Mechanics
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, enemyLayerMask);
 
                     for(int i = 0; i < enemiesToDamage.Length; i++){
-                        enemiesToDamage[i].GetComponent<EnemyController>().HealthDecrement(damage);
-                        enemiesToDamage[i].GetComponent<Knockback>().knockbackSelf(gameObject);
+                        if(enemiesToDamage[i].CompareTag("enemy")){
+                            enemiesToDamage[i].GetComponent<EnemyController>().HealthDecrement(damage);
+                            enemiesToDamage[i].GetComponent<Knockback>().knockbackSelf(gameObject);
+                        } else if (enemiesToDamage[i].CompareTag("Boss")){
+                            enemiesToDamage[i].GetComponent<BossController>().HealthDecrement(damage);
+                        }
                     }
                     timeBetweenAttack = startTimeBetweenAttack;
                 }

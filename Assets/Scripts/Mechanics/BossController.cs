@@ -26,16 +26,9 @@ namespace Platformer.Mechanics
         public bool isFlipped = false;
 
         public GameObject tempBoss;
-        public GameObject tempBossHealth;
         public GameObject bossHealthBar;
         public Health health;
-
         public Bounds Bounds => _collider.bounds;
-
-        public float knockbackPower = 100;
-        public float knockbackDuration = 1;
-
-
         public GameObject donut;//to reference the current character
 
         void Awake()
@@ -57,31 +50,17 @@ namespace Platformer.Mechanics
             {
                 bossHealthBar = GameObject.Find("Boss Health Bar");
             }
-            bossHealthBar = tempBoss.GetComponent<BossController>().tempBossHealth;
-            
+            bossHealthBar = tempBoss.GetComponent<BossController>().bossHealthBar;
+            bossHealthBar.GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
             bossHealthBar.SetActive(false);
         }
-
-
-        // Old OnCollisionEnter2D
-        // void OnCollisionEnter2D(Collision2D collision)
-        // {
-        //     var player = collision.gameObject.GetComponent<PlayerController>();
-
-        //     if (player != null)
-        //     {
-        //         var ev = Schedule<PlayerEnemyCollision>();
-        //         ev.player = player;
-        //         ev.enemy = this;
-        //     }
-        // }
 
         public void HealthDecrement(int damage)
         {
             health.Decrement(damage);
-            //BossHealthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
+            bossHealthBar.GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
 
-            if (health.currentHP == 0)
+            if (health.currentHP <= 0)
             {
                 Destroy(gameObject);
             }

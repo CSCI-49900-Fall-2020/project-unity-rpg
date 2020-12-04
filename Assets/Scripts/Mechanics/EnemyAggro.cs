@@ -24,7 +24,6 @@ namespace Platformer.Mechanics
             switch(aggroType)
             {
                 case 1:
-                    //Debug.Log("test");
                     ChasePlayer();
                     AttackPlayer();
                     break;
@@ -74,25 +73,16 @@ namespace Platformer.Mechanics
 
         public void BossAggro()
         {
-            //Debug.Log("hello");
             BossController boss = GetComponent<BossController>();
             boss.bossHealthBar.SetActive(true);
-
 
             Vector2 target = new Vector2(aggroedPlayer.position.x, selfRigidBody2D.position.y);
             Vector2 newPos = Vector2.MoveTowards(selfRigidBody2D.position, target, moveSpeed * Time.fixedDeltaTime);
             selfRigidBody2D.MovePosition(newPos);
-
-            //boss.bossHealthBar.SetActive(true);
-            //if (!boss.bossHealthBar.activeSelf)
-            //if (!boss.bossHealthBar.activeSelf)
-            //{
-            //    boss.bossHealthBar.SetActive(true);
-            //}
         }
+        
         public void BossDeaggro()
         {
-            //Debug.Log("hello");
             BossController boss = GetComponent<BossController>();
             boss.bossHealthBar.SetActive(false);
         }

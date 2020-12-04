@@ -14,14 +14,10 @@ public class Enemy_pursue : StateMachineBehaviour
     BossController boss;
     public GameObject donut;
 
-    
-
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         donut = GameObject.Find("Donut");
-        player = donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().transform;
         //player = GameObject.FindGameObjectWithTag("Player").transform;
         //player = donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().transform;
         rb2d = animator.GetComponent<Rigidbody2D>();
@@ -34,7 +30,7 @@ public class Enemy_pursue : StateMachineBehaviour
         //Debug.Log(donut.GetComponent<CharacterSwapping>().currentCharacter.name);
 
         boss.LookAtPlayer();
-
+        player = donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().transform;
         //Vector2 target = new Vector2(player.position.x, rb2d.position.y);
         //Vector2 newPos = Vector2.MoveTowards(rb2d.position, target, speed * Time.fixedDeltaTime);
         //rb2d.MovePosition(newPos);
@@ -42,6 +38,7 @@ public class Enemy_pursue : StateMachineBehaviour
         if (Vector2.Distance(player.position, rb2d.position) <= attackRange)
         {
             animator.SetTrigger("Attack");
+            
         }
     }
 

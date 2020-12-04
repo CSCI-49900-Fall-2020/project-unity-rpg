@@ -15,7 +15,7 @@ namespace Platformer.Mechanics
             enemiesToAggro.Clear();
             
             for(int i = 0; i < entitiesFound.Length; i++){
-                if(entitiesFound[i].gameObject.CompareTag("enemy")){
+                if(entitiesFound[i].gameObject.CompareTag("enemy") || entitiesFound[i].gameObject.CompareTag("Boss")){
                     Vector3 direction = transform.position - entitiesFound[i].transform.position;
                     RaycastHit2D hit = Physics2D.Raycast(entitiesFound[i].transform.position,direction,aggroRange);
                     Debug.DrawLine(entitiesFound[i].transform.position, hit.point, Color.red);

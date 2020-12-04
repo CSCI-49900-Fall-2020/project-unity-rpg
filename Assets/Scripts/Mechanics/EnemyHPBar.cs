@@ -9,6 +9,10 @@ namespace Platformer.Mechanics
     {
         public Slider slider;
 
+        private void Awake() {
+            slider = GetComponent<Slider>();
+        }
+
         public void SetMaxHealth(int maxHP, int currentHP)
         {
             slider.maxValue = maxHP;
