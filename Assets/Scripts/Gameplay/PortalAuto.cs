@@ -12,43 +12,64 @@ public class PortalAuto : MonoBehaviour
     //public string sceneName;
     public Transform player;
     public Vector2 spawnPoint;
-    KeyBinds keyBinds;
-    //Read Note Below--------------------------------------------------------------------
-    // bool triggered = false;
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     triggered = true;
-    //     player = other.GetComponent<Collider2D>().gameObject.transform;
-    // }
+    public bool isBossDoor;
+    public bool isBossDoorEntrance;
+    public GameObject bossCamera;
+    public GameObject mainCamera;
+    Health bossHealth;
 
-    // void OnTriggerExit2D(Collider2D other)
-    // {
-    //     triggered = false;
-    //     player = null;
-    // }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
+    //        player = other.GetComponent<Collider2D>().gameObject.transform;
+    //        player.position = spawnPoint;
 
-    // void Update()
-    // {
-    //     if (triggered && Input.GetKeyDown(KeyCode.F))
-    //     {
-    //         if(player.tag == "Player"){
-    //             SceneManager.LoadScene(sceneName);
-    //             player.position = spawnPoint;
-    //         }
-    //     }
-    // }
+    //    }
+    //}
 
-    //The above can potentially cause lag because it is constantly checking the if condition
-    //Try to get the below to work
-
-
-    void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        if (other.tag == "Player")
-        {
-            player = other.GetComponent<Collider2D>().gameObject.transform;
-            player.position = spawnPoint;
+        mainCamera = GameObject.Find("Main Camera");
+    }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        player = other.GetComponent<Collider2D>().gameObject.transform;
+        //SceneManager.LoadScene(sceneName);
+        player.position = spawnPoint;
+
+        if (isBossDoor)
+        {
+            if (isBossDoorEntrance)
+            {
+                bossCamera.SetActive(true);
+                mainCamera.SetActive(false);
+            }
+            else
+            {
+                bossCamera.SetActive(false);
+                mainCamera.SetActive(true);
+            }
         }
+        //if (isBossDoor)
+        //{
+        //    if (isBossDoorEntrance)
+        //    {
+        //        bossCamera.SetActive(True);
+        //        mainCamera.SetActive(False);
+        //        player.position = spawnPoint;
+        //    }
+        //    else if (bossHealth.currentHP == 0)
+        //    {
+        //        bossCamera.SetActive(False);
+        //        mainCamera.SetActive(True);
+        //        player.position = spawnPoint;
+        //    }
+        //}
+        //else
+        //{
+        //    player.position = spawnPoint;
+        //}
     }
 }
