@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2771796803229542992}
   - component: {fileID: 6512748683188641985}
   - component: {fileID: 4684894483259894063}
-  - component: {fileID: 2964233244015518627}
+  - component: {fileID: 2626055347908775788}
+  - component: {fileID: 5471896418967449848}
   m_Layer: 0
   m_Name: pngBulletFireSlice
   m_TagString: Untagged
@@ -132,7 +133,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.32}
   m_EdgeRadius: 0
---- !u!114 &2964233244015518627
+--- !u!114 &2626055347908775788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,5 +148,17 @@ MonoBehaviour:
   speed: 12
   rb: {fileID: 6512748683188641985}
   movement: {x: 0, y: 0}
-  bulletDirection: 0
+  bulletDirection: 2
   tempTime: 0
+--- !u!114 &5471896418967449848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913255736847165583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1261e9af42996248a7fad50697f385d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

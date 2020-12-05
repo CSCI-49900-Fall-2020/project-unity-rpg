@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1970690606150026272}
   - component: {fileID: 5370616568714065827}
   - component: {fileID: 5974666424493747596}
+  - component: {fileID: -6267526926639369989}
   m_Layer: 0
   m_Name: pngBulletRockSlice
   m_TagString: Untagged
@@ -147,5 +148,17 @@ MonoBehaviour:
   speed: 12
   rb: {fileID: 1970690606150026272}
   movement: {x: 0, y: 0}
-  bulletDirection: 2
+  bulletDirection: 1
   tempTime: 0
+--- !u!114 &-6267526926639369989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525623391309211960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1261e9af42996248a7fad50697f385d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

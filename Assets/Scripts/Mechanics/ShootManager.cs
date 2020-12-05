@@ -5,7 +5,7 @@ using Platformer.Mechanics;
 
 public class ShootManager : MonoBehaviour
 {
-	//should be merged with button manager but I want to avoid merge conflicts 
+    //should be merged with button manager but I want to avoid merge conflicts 
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,19 @@ public class ShootManager : MonoBehaviour
     {
         if (Input.GetKey ("/"))
         {
-        	gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton();
+            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton(1);
+        }
+        if (Input.GetKey ("j"))
+        {
+            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton(2);
+        }
+        if (Input.GetKey ("k"))
+        {
+            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton(3);
+        }
+        if (Input.GetKey ("l"))
+        {
+            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton(4);
         }
     }
 }

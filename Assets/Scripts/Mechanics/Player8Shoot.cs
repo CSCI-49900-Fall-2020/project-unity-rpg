@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player5Shoot : MonoBehaviour
+public class Player8Shoot : MonoBehaviour
 {
 	public float speed = 12f;
 	public Rigidbody2D rb;
@@ -10,7 +10,6 @@ public class Player5Shoot : MonoBehaviour
 	private Vector2 screenBounds;
 	public int bulletDirection = 0;
 	public float tempTime;
-
 	void Start()
 	{
 		screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
@@ -63,31 +62,43 @@ public class Player5Shoot : MonoBehaviour
 	public void ShootUpRight(Vector2 direction)
 	{
         //shoots bullet at the right direction
+        Quaternion rotation = Quaternion.Euler(0,0,45);
+        GetComponent<Transform>().rotation = rotation;
         rb.MovePosition((Vector2)transform.position + new Vector2(speed * Time.deltaTime, 0.15f ));
 	}
 	public void ShootUpLeft(Vector2 direction)
 	{
         //shoots bullet at the right direction
+        Quaternion rotation = Quaternion.Euler(0,0,135);
+        GetComponent<Transform>().rotation = rotation;
         rb.MovePosition((Vector2)transform.position + new Vector2(speed * Time.deltaTime * -1, 0.15f ));
 	}
 	public void ShootUp(Vector2 direction)
 	{
         //shoots bullet at the right direction
+        Quaternion rotation = Quaternion.Euler(0,0,90);
+        GetComponent<Transform>().rotation = rotation;
 		rb.MovePosition((Vector2)transform.position + new Vector2(0f, Time.deltaTime * speed ));
 	}
 	public void ShootDownRight(Vector2 direction)
 	{
         //shoots bullet at the right direction
+        Quaternion rotation = Quaternion.Euler(0,0,-45);
+        GetComponent<Transform>().rotation = rotation;
         rb.MovePosition((Vector2)transform.position + new Vector2(speed * Time.deltaTime, -0.15f ));
 	}
 	public void ShootDownLeft(Vector2 direction)
 	{
         //shoots bullet at the right direction
+        Quaternion rotation = Quaternion.Euler(0,0,-135);
+        GetComponent<Transform>().rotation = rotation;
         rb.MovePosition((Vector2)transform.position + new Vector2(speed * Time.deltaTime * -1, -0.15f ));
 	}
 	public void ShootDown(Vector2 direction)
 	{
         //shoots bullet at the right direction
+        Quaternion rotation = Quaternion.Euler(0,0,-90);
+        GetComponent<Transform>().rotation = rotation;
 		rb.MovePosition((Vector2)transform.position + new Vector2(0f, Time.deltaTime * speed * -1));
 	}
 	public void ShootRight(Vector2 direction)
@@ -97,6 +108,8 @@ public class Player5Shoot : MonoBehaviour
 	}
 	public void ShootLeft(Vector2 direction)
 	{
+		Quaternion rotation = Quaternion.Euler(180,0,180);
+        GetComponent<Transform>().rotation = rotation;
     	rb.MovePosition((Vector2)transform.position + new Vector2(speed * Time.deltaTime * -1, 0f ));
 	}
 }

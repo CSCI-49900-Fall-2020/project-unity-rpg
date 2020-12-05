@@ -23,7 +23,7 @@ public class BreakableBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerController>() || collision.gameObject.GetComponent<BulletShootLeft>() || collision.GetComponent<BulletShootRight>())
+        if (collision.gameObject.GetComponent<PlayerController>())
         {
             
             Debug.Log("works");

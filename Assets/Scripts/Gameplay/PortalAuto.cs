@@ -48,6 +48,7 @@ public class PortalAuto : MonoBehaviour
         {
             player = other.GetComponent<Collider2D>().gameObject.transform;
             player.position = spawnPoint;
+
         }
     }
 }

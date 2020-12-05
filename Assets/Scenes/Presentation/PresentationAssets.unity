@@ -1302,8 +1302,12 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 85298911}
-  bulletShoot: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
+  damage: 0
+  bulletShoot1: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
     type: 3}
+  bulletShoot2: {fileID: 0}
+  bulletShoot3: {fileID: 0}
+  bulletShoot4: {fileID: 0}
 --- !u!4 &85298911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156987257460372360, guid: f7d1ff2c4af3faf4b9973c02e210c816,
@@ -4068,8 +4072,6 @@ MonoBehaviour:
   tempBoss: {fileID: 0}
   bossHealthBar: {fileID: 1717278700}
   health: {fileID: 0}
-  knockbackPower: 100
-  knockbackDuration: 1
   donut: {fileID: 0}
 --- !u!114 &448402682
 MonoBehaviour:
@@ -9485,7 +9487,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.9847134
+  m_Value: 0.98471344
   m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10843,8 +10845,12 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1441471203}
-  bulletShoot: {fileID: 2699123826227790593, guid: 4b3448c91902d2e42ae614ebf11200f2,
+  damage: 0
+  bulletShoot1: {fileID: 2699123826227790593, guid: 4b3448c91902d2e42ae614ebf11200f2,
     type: 3}
+  bulletShoot2: {fileID: 0}
+  bulletShoot3: {fileID: 0}
+  bulletShoot4: {fileID: 0}
 --- !u!4 &1441471203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5586667500579134659, guid: 4ee1b60b279b70144b3e7c2643a449b5,
@@ -11797,8 +11803,12 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1576182920}
-  bulletShoot: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
+  damage: 0
+  bulletShoot1: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
     type: 3}
+  bulletShoot2: {fileID: 0}
+  bulletShoot3: {fileID: 0}
+  bulletShoot4: {fileID: 0}
 --- !u!4 &1576182920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4150175718139645394, guid: 30537492faab62c4abec9729b3693f11,
@@ -14770,8 +14780,12 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1742884935}
-  bulletShoot: {fileID: 913255736847165583, guid: 59c9dead0d3b9d04099de3988b54d58b,
+  damage: 0
+  bulletShoot1: {fileID: 913255736847165583, guid: 59c9dead0d3b9d04099de3988b54d58b,
     type: 3}
+  bulletShoot2: {fileID: 0}
+  bulletShoot3: {fileID: 0}
+  bulletShoot4: {fileID: 0}
 --- !u!114 &1742884926
 MonoBehaviour:
   m_ObjectHideFlags: 0

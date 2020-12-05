@@ -9,9 +9,19 @@ public class PlayerDetectShoot : MonoBehaviour
     public float timeTemp = 0f;
     public float fireRate = 0.15f;
     public Transform playerEntity;
+    public int damage;
 
-    public GameObject bulletShoot;
+    public GameObject bulletShoot1 = null;
+    public GameObject bulletShoot2 = null;
+    public GameObject bulletShoot3 = null;
+    public GameObject bulletShoot4 = null;
+
+    GameObject bulletShoot = null;
     Vector2 move;
+
+    //       void SelectBullet(int bulletNumber)        determines what bullet gets shot out
+    //public void ShootBulletButton(int bulletNumber)   shoot bullet on based on fireRate
+    //public void ShootBullet()
 
     // Start is called before the first frame update
     void Start()
@@ -30,95 +40,96 @@ public class PlayerDetectShoot : MonoBehaviour
         //if (Input.GetKey ("/") && Time.time > timeTemp)
     }
 
-    public void ShootBulletButton()
+    void SelectBullet(int bulletNumber){
+        switch (bulletNumber){
+            case 1:
+                bulletShoot = bulletShoot1;
+
+                break;
+            case 2:
+                bulletShoot = bulletShoot2;
+                break;
+            case 3:
+                bulletShoot = bulletShoot3;
+                break;
+            case 4:
+                bulletShoot = bulletShoot4;
+                break;
+        }
+    }
+
+    public void ShootBulletButton(int bulletNumber)
     {
         if (Time.time > timeTemp)
         {
+            SelectBullet(bulletNumber);
             ShootBullet();
             timeTemp = Time.time + fireRate;
         }
     }
 
+
+
     public void ShootBullet()
     {
-        if (Input.GetKey("w") && Input.GetKey("d"))
+        if (bulletShoot == null){
+            print("shot empty");
+        }
+        else if (Input.GetKey("w") && Input.GetKey("d"))
         {
-            //donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection = 8;
-            Quaternion rotation = Quaternion.Euler(0,0,45);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            //UR means upper right direction
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 8;
             GameObject bulletUR = Instantiate(bulletShoot) as GameObject;
-            bulletUR.transform.position = playerEntity.transform.position;     
-            //bulletUR.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position;         
+            bulletUR.transform.position = playerEntity.transform.position;          
         }
         else if (Input.GetKey("w") && Input.GetKey("a"))
         {
-            //donut.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection = 7;
-            Quaternion rotation = Quaternion.Euler(0,0,135);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            //UL means upper left direction
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 7;
             GameObject bulletUL = Instantiate(bulletShoot) as GameObject;
             bulletUL.transform.position = playerEntity.transform.position;  
-            //bulletUL.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position;
         }
         else if (Input.GetKey("w"))
         {
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection =6;
-            Quaternion rotation = Quaternion.Euler(0,0,90);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 6;
             GameObject bulletUp = Instantiate(bulletShoot) as GameObject;
             bulletUp.transform.position = playerEntity.transform.position;
-            //bulletUp.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position;
         }
 
 
         else if (Input.GetKey("s") && Input.GetKey("d"))
         {
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection = 5;
-            Quaternion rotation = Quaternion.Euler(0,0,-45);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            //DR means lower right direction
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 5;
             GameObject bulletDR = Instantiate(bulletShoot) as GameObject;
             bulletDR.transform.position = playerEntity.transform.position; 
-            //bulletDR.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position; 
         }
         else if (Input.GetKey("s") && Input.GetKey("a"))
         {
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection = 4;
-            Quaternion rotation = Quaternion.Euler(0,0,-135);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            //DL means lower left direction
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 4;
             GameObject bulletDL = Instantiate(bulletShoot) as GameObject;
-            bulletDL.transform.position = playerEntity.transform.position; 
-            //bulletDL.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position; 
+            bulletDL.transform.position = playerEntity.transform.position;  
         }
         else if (Input.GetKey("s"))
         {
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection =3;
-            Quaternion rotation = Quaternion.Euler(0,0,-90);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 3;
             GameObject bulletDown = Instantiate(bulletShoot) as GameObject;
             bulletDown.transform.position = playerEntity.transform.position;
-            //bulletDown.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position;
         }
 
 
         else if ( facingRight )
         {
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection =2;
-            Quaternion rotation = Quaternion.Euler(0,0,0);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 2;
             GameObject bulletR = Instantiate(bulletShoot) as GameObject;
-            bulletR.transform.position = playerEntity.transform.position;
-            //bulletR.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position;
-              
+            bulletR.transform.position = playerEntity.transform.position;      
         }
         else if ( facingRight == false )    
         {
-            bulletShoot.GetComponent<Player5Shoot>().bulletDirection =1;
-            Quaternion rotation = Quaternion.Euler(180,0,180);
-            bulletShoot.GetComponent<Transform>().rotation = rotation;
+            bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 1;
             GameObject bulletL = Instantiate(bulletShoot) as GameObject;
             bulletL.transform.position = playerEntity.transform.position;
-            //bulletL.transform.position = gameObject.GetComponent<CharacterSwapping>().currentCharacter.transform.position;
         }
     }
 }

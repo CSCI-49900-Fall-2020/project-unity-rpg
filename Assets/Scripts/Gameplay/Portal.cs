@@ -10,7 +10,7 @@ using Platformer.Mechanics;
 public class Portal : MonoBehaviour
 {
     //public string sceneName;
-    public Transform player;
+    public Transform player = null;
     public Vector2 spawnPoint;
     KeyBinds keyBinds;
     //Read Note Below--------------------------------------------------------------------
