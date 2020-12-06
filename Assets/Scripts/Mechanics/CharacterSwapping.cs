@@ -5,6 +5,7 @@ using Platformer.Mechanics;
 using UnityEngine.UI;
 using System;
 using Platformer.UI;
+using UnityEngine.SceneManagement;
 
 namespace Platformer.Mechanics
 {
@@ -248,8 +249,6 @@ namespace Platformer.Mechanics
                     currentCharacter.GetComponent<Transform>().position = tempPosition;
                     // Set new character as currentCharacter and enable control of it
                     currentCharacter = character1;
-                    // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                    // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                     currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
                     mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                     mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -265,8 +264,6 @@ namespace Platformer.Mechanics
                 character2.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 currentCharacter = character2;
-                // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -282,8 +279,6 @@ namespace Platformer.Mechanics
                 character3.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 currentCharacter = character3;
-                // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
@@ -299,10 +294,9 @@ namespace Platformer.Mechanics
                 character4.GetComponent<Transform>().position = currentCharacter.GetComponent<Transform>().position;
                 currentCharacter.GetComponent<Transform>().position = tempPosition;
                 currentCharacter = character4;
-                // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-                // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
+                Debug.Log("test");
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                 mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
             } 
@@ -318,7 +312,7 @@ namespace Platformer.Mechanics
             } else if(character4.GetComponent<Health>().currentHP != 0){
                 switchToCharacter4();
             } else {
-                Debug.Log("All characters are dead");
+                SceneManager.LoadScene("GameOver");
             }
         }
     }

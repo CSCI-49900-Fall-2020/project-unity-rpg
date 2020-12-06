@@ -75,6 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HubertScenes/HubTest.unity
     guid: c30cd6a62fc883c4092e929d4a5c0b28
   - enabled: 1
+    path: Assets/Scenes/Presentation/GameOver.unity
+    guid: 80a5d1d9cb5410d4e993b646d651b138
+  - enabled: 1
     path: Assets/Scenes/Presentation/PresentationPaoloScene.unity
     guid: 53613e807f3e83d4688751981165b24b
   m_configObjects: {}

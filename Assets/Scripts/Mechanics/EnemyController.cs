@@ -30,10 +30,6 @@ namespace Platformer.Mechanics
 
         public Bounds Bounds => _collider.bounds;
 
-        public float knockbackPower = 100;
-        public float knockbackDuration = 1;
-
-
         void Awake()
         {
             control = GetComponent<AnimationController>();
@@ -42,9 +38,11 @@ namespace Platformer.Mechanics
             spriteRenderer = GetComponent<SpriteRenderer>();
             health = GetComponent<Health>();
 
+            float height = Bounds.extents.y;
+
             healthBar = Instantiate(healthBarPrefab, new Vector3(0,0,0), Quaternion.identity);
             healthBar.transform.SetParent(gameObject.transform);
-            healthBar.transform.localPosition = new Vector3(0,0.25f,0);
+            healthBar.transform.localPosition = new Vector3(0, height + 0.25f, 0);
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetMaxHealth(health.maxHP, health.currentHP);
 
             attackPosition = new GameObject();
@@ -84,9 +82,9 @@ namespace Platformer.Mechanics
             }
         }
 
-        private void OnDrawGizmosSelected() {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(attackPosition.transform.position, 1);
-        }
+        // private void OnDrawGizmosSelected() {
+        //     Gizmos.color = Color.red;
+        //     Gizmos.DrawWireSphere(attackPosition.transform.position, 1);
+        // }
     }
 }
