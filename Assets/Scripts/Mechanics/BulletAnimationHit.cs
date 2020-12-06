@@ -8,25 +8,20 @@ using UnityEngine;
 public class BulletAnimationHit : MonoBehaviour
 {
 
-	//public Animator animator;
-	
     void Start(){
-    //	animator.SetBool("hitConfirm", false);
+
 	}
-    // Start is called before the first frame update
+
 	private void OnTriggerEnter2D(Collider2D other){
 		if (other.tag =="enemy"){
-	//		animator.SetBool("hitConfirm",true);
-			other.GetComponent<Health>().Decrement(15);
+			other.GetComponent<EnemyController>().HealthDecrement(1);
 			Destroy(this.gameObject);
 		}
 		if (other.tag =="Boss"){
-	//		animator.SetBool("hitConfirm",true);
-			other.GetComponent<Health>().Decrement(15);
+			other.GetComponent<BossController>().HealthDecrement(5);
 			Destroy(this.gameObject);
 		}
 		if (other.tag =="Ground"){
-	//		animator.SetBool("hitConfirm",true);
 			Destroy(this.gameObject);
 		}
 	}
