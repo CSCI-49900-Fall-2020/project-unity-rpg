@@ -45,11 +45,17 @@ public class PortalAuto : MonoBehaviour
             {
                 bossCamera.SetActive(true);
                 mainCamera.SetActive(false);
+                player.position = spawnPoint;
             }
-            else
+            else if (bossHealth.currentHP == 0)
             {
                 bossCamera.SetActive(false);
                 mainCamera.SetActive(true);
+                player.position = spawnPoint;
+            }
+            else
+            {
+                player.position = spawnPoint;
             }
         }
         //if (isBossDoor)
