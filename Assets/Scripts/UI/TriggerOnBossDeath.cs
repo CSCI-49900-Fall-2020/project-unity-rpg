@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 //designed to activate only after boss death
-public class Toggle : MonoBehaviour
+public class TriggerOnBossDeath : MonoBehaviour
 {
 
     public GameObject door;
