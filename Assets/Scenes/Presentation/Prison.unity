@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 2
+  knockbackDamage: 10
 --- !u!114 &23740490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,8 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1
-  currentHP: 1
+  maxHP: 50
+  currentHP: 50
 --- !u!114 &23740492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,7 +510,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &35609160
 GameObject:
@@ -923,7 +923,7 @@ PrefabInstance:
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
@@ -1211,8 +1211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &255766124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,7 +1382,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &255766131
 MonoBehaviour:
@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 2
+  knockbackDamage: 10
 --- !u!114 &330260986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1628,8 +1628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1
-  currentHP: 1
+  maxHP: 50
+  currentHP: 50
 --- !u!114 &330260988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1799,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341067384
 GameObject:
@@ -2020,7 +2020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &397963616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,8 +2049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &397963618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,7 +2220,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &471658297
 GameObject:
@@ -2261,7 +2261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &471658299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,8 +2290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &471658301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,7 +2461,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488404547
 GameObject:
@@ -2822,7 +2822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &514370230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2851,8 +2851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &514370232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3022,7 +3022,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &548772538
 MonoBehaviour:
@@ -3132,7 +3132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &557110271
 GameObject:
@@ -3521,7 +3521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634849990
 GameObject:
@@ -3638,7 +3638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &641585116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3667,8 +3667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &641585118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3838,7 +3838,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648511967
 GameObject:
@@ -13362,7 +13362,7 @@ PrefabInstance:
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
@@ -14531,7 +14531,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1130751771
 GameObject:
@@ -14722,7 +14722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &1192771580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14751,8 +14751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1192771582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14922,7 +14922,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222188750
 GameObject:
@@ -15657,7 +15657,7 @@ Transform:
   m_LocalScale: {x: 3.2, y: 102, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298872988
 GameObject:
@@ -16071,8 +16071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 500
-  currentHP: 500
+  maxHP: 700
+  currentHP: 700
 --- !u!114 &1371852716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16238,7 +16238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078c68eab2249694785adbb1d410a44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
+  attackDamage: 25
   attackOffset: {x: -1.5, y: 0.35, z: 0}
   attackRange: 1.2
   attackMask:
@@ -16256,9 +16256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackStrength: 0
+  knockbackStrength: 20
   selfKnockbackStrength: 5
-  knockbackDamage: 0
+  knockbackDamage: 20
 --- !u!1 &1378918198
 GameObject:
   m_ObjectHideFlags: 0
@@ -16584,7 +16584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 2
+  knockbackDamage: 10
 --- !u!114 &1424195761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16613,8 +16613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1
-  currentHP: 1
+  maxHP: 50
+  currentHP: 50
 --- !u!114 &1424195763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16780,7 +16780,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1424195770
 Rigidbody2D:
@@ -16842,7 +16842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &1463317549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16871,8 +16871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1463317551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17042,7 +17042,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510196960
 GameObject:
@@ -17083,7 +17083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &1510196962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17112,8 +17112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1510196964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17283,7 +17283,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512304765
 GameObject:
@@ -17451,7 +17451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 10
 --- !u!114 &1546236141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17480,8 +17480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1
-  currentHP: 1
+  maxHP: 50
+  currentHP: 50
 --- !u!114 &1546236143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17651,7 +17651,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1546236150
 MonoBehaviour:
@@ -17710,7 +17710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &1569319551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17739,8 +17739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1569319553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17910,7 +17910,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627192850
 GameObject:
@@ -67134,9 +67134,11 @@ MonoBehaviour:
   player: {fileID: 1656741773}
   spawnPoint: {x: 143, y: -3.51}
   isBossDoor: 1
-  isBossDoorEntrance: 1
+  isBossDoorEntrance: 0
+  isBossDoorExit: 0
   bossCamera: {fileID: 504219907}
   mainCamera: {fileID: 0}
+  bossHealth: {fileID: 0}
 --- !u!61 &1656741770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67480,7 +67482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &1732104062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67509,8 +67511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1732104064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67680,7 +67682,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1741160629
 PrefabInstance:
@@ -68062,8 +68064,139 @@ MonoBehaviour:
   spawnPoint: {x: 123, y: -3.51}
   isBossDoor: 1
   isBossDoorEntrance: 1
+  isBossDoorExit: 0
   bossCamera: {fileID: 504219907}
   mainCamera: {fileID: 0}
+  bossHealth: {fileID: 0}
+--- !u!1 &1816776381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816776385}
+  - component: {fileID: 1816776384}
+  - component: {fileID: 1816776383}
+  - component: {fileID: 1816776382}
+  m_Layer: 0
+  m_Name: Exit door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1816776382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816776381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9382bacc6bb96e648b3938b1c1879e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1816776385}
+  spawnPoint: {x: 143, y: -3.51}
+  isBossDoor: 0
+  isBossDoorEntrance: 0
+  isBossDoorExit: 1
+  bossCamera: {fileID: 504219907}
+  mainCamera: {fileID: 0}
+  bossHealth: {fileID: 0}
+--- !u!61 &1816776383
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816776381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1816776384
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816776381}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: f238b59652de75c4db0698a3b55885cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1816776385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816776381}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2045066693}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1852716161
 GameObject:
   m_ObjectHideFlags: 0
@@ -68628,7 +68761,7 @@ Transform:
   - {fileID: 1298872989}
   - {fileID: 196945889}
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1922685173
 GameObject:
@@ -68669,7 +68802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &1922685175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68698,8 +68831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &1922685177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68869,7 +69002,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1936682513
 GameObject:
@@ -69144,7 +69277,7 @@ PrefabInstance:
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
@@ -69351,7 +69484,7 @@ PrefabInstance:
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 804532461095387313, guid: c5deca4f62617374bb1303066de5907d,
         type: 3}
@@ -69429,7 +69562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 2
+  knockbackDamage: 10
 --- !u!114 &2036674007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69458,7 +69591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 1
+  maxHP: 50
   currentHP: 1
 --- !u!114 &2036674009
 MonoBehaviour:
@@ -69629,8 +69762,58 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2045066691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045066693}
+  - component: {fileID: 2045066692}
+  m_Layer: 0
+  m_Name: Exit Toggle Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2045066692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045066691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b1f04efec3bdf4b9d255906e58ee8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1816776381}
+--- !u!224 &2045066693
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045066691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1816776385}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 133.95, y: -2.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2056242250
 GameObject:
   m_ObjectHideFlags: 0
@@ -69742,7 +69925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackStrength: 5
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 15
 --- !u!114 &2076416750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69771,8 +69954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  maxHP: 100
+  currentHP: 100
 --- !u!114 &2076416752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69942,7 +70125,7 @@ Transform:
   m_LocalScale: {x: 0.92732054, y: 0.915815, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088745904
 GameObject:
@@ -69992,7 +70175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2088745907
 BoxCollider2D:
