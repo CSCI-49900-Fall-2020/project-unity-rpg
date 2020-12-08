@@ -14,9 +14,10 @@ public class PortalAuto : MonoBehaviour
     public Vector2 spawnPoint;
     public bool isBossDoor;
     public bool isBossDoorEntrance;
+    public bool isBossDoorExit;
     public GameObject bossCamera;
     public GameObject mainCamera;
-    Health bossHealth;
+    public Health bossHealth;
 
     //void OnTriggerEnter2D(Collider2D other)
     //{
@@ -33,12 +34,13 @@ public class PortalAuto : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera");
     }
 
+
     private void OnTriggerStay2D(Collider2D other)
     {
         player = other.GetComponent<Collider2D>().gameObject.transform;
         //SceneManager.LoadScene(sceneName);
         player.position = spawnPoint;
-
+        bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
         if (isBossDoor)
         {
             if (isBossDoorEntrance)
@@ -47,12 +49,21 @@ public class PortalAuto : MonoBehaviour
                 mainCamera.SetActive(false);
                 player.position = spawnPoint;
             }
-            else if (bossHealth.currentHP == 0)
+            else if(isBossDoorExit)
             {
-                bossCamera.SetActive(false);
-                mainCamera.SetActive(true);
-                player.position = spawnPoint;
+                if (bossHealth.currentHP == 0)
+                {
+                    bossCamera.SetActive(false);
+                    mainCamera.SetActive(true);
+                    //player.position = spawnPoint;
+                }
             }
+            //else if (bossHealth.currentHP == 0)
+            //{
+            //    bossCamera.SetActive(false);
+            //    mainCamera.SetActive(true);
+            //    player.position = spawnPoint;
+            //}
             else
             {
                 player.position = spawnPoint;
