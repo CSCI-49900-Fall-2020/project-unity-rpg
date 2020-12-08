@@ -9487,7 +9487,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.98471344
+  m_Value: 0.9847134
   m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -18753,11 +18753,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2174709299062730756, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: currentMP
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2174709299062730758, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
       propertyPath: bossBar
       value: 
       objectReference: {fileID: 1717278700}
+    - target: {fileID: 2174709299062730758, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730758, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: jumpLimit
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730758, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: jumpVelocity
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2174709299062730759, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
       propertyPath: m_Name
@@ -18766,7 +18786,12 @@ PrefabInstance:
     - target: {fileID: 2174709299062730875, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
       propertyPath: currentHP
-      value: 100
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730875, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: maxHP
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2174709299062730878, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
@@ -18847,6 +18872,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charlie
       objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645226, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645226, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: jumpVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4150175718139645394, guid: 30537492faab62c4abec9729b3693f11,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18901,6 +18936,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645396, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: currentMP
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645397, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: currentHP
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645397, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: maxHP
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30537492faab62c4abec9729b3693f11, type: 3}
@@ -19215,10 +19265,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134713, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: currentMP
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5586667500579134714, guid: 4ee1b60b279b70144b3e7c2643a449b5,
         type: 3}
       propertyPath: m_Name
       value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134715, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: jumpLimit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134715, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134718, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: currentHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134718, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: maxHP
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ee1b60b279b70144b3e7c2643a449b5, type: 3}
@@ -19229,10 +19304,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: jumpLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: jumpVelocity
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372353, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
       propertyPath: m_Name
       value: Dave
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372354, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: currentMP
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372360, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
@@ -19288,6 +19383,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372365, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: currentHP
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372365, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: maxHP
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7d1ff2c4af3faf4b9973c02e210c816, type: 3}

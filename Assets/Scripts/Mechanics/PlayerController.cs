@@ -23,6 +23,7 @@ namespace Platformer.Mechanics
         /// Max horizontal speed of the player.
         /// </summary>
         public float maxSpeed = 7;
+        public float moveSpeed = 2;
         public float fallMultiplier = 2.5f;
         public float lowJumpMultiplier = 2f;
         public float jumpVelocity = 5;
@@ -127,7 +128,7 @@ namespace Platformer.Mechanics
         public void moveRight()
         {
             if(controlEnabled)
-                transform.position += transform.right * (Time.deltaTime * 5);
+                transform.position += transform.right * (Time.deltaTime * moveSpeed);
             if(!facingRight)
                 Flip();
         }
@@ -135,7 +136,7 @@ namespace Platformer.Mechanics
         public void moveLeft()
         {
             if(controlEnabled)
-                transform.position -= transform.right * (Time.deltaTime * 5);
+                transform.position -= transform.right * (Time.deltaTime * moveSpeed);
             if(facingRight)
                 Flip();
         }
