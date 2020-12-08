@@ -18,7 +18,7 @@ public class PortalAuto : MonoBehaviour
     public GameObject bossCamera;
     public GameObject mainCamera;
     public Health bossHealth;
-
+    public string sceneName;
     //void OnTriggerEnter2D(Collider2D other)
     //{
     //    if (other.tag == "Player")
@@ -40,7 +40,12 @@ public class PortalAuto : MonoBehaviour
         player = other.GetComponent<Collider2D>().gameObject.transform;
         //SceneManager.LoadScene(sceneName);
         player.position = spawnPoint;
-        bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
+        //bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
+        GameObject temp = GameObject.Find("sword_boss");
+        if(temp != null)
+        {
+            bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
+        }
         if (isBossDoor)
         {
             if (isBossDoorEntrance)
@@ -51,11 +56,12 @@ public class PortalAuto : MonoBehaviour
             }
             else if(isBossDoorExit)
             {
-                if (bossHealth.currentHP == 0)
+                if (bossHealth == null || bossHealth.currentHP == 0)
                 {
                     bossCamera.SetActive(false);
                     mainCamera.SetActive(true);
-                    //player.position = spawnPoint;
+                    player.position = spawnPoint;
+                    SceneManager.LoadScene(sceneName);
                 }
             }
             //else if (bossHealth.currentHP == 0)
