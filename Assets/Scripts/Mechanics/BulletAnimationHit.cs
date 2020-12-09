@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class BulletAnimationHit : MonoBehaviour
 {
+	public int damage = 25;
 
     void Start(){
 
@@ -14,11 +15,12 @@ public class BulletAnimationHit : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other){
 		if (other.tag =="enemy"){
-			other.GetComponent<EnemyController>().HealthDecrement(1);
+			Debug.Log(damage);
+			other.GetComponent<EnemyController>().HealthDecrement(damage);
 			Destroy(this.gameObject);
 		}
 		if (other.tag =="Boss"){
-			other.GetComponent<BossController>().HealthDecrement(5);
+			other.GetComponent<BossController>().HealthDecrement(damage);
 			Destroy(this.gameObject);
 		}
 		if (other.tag =="Ground"){

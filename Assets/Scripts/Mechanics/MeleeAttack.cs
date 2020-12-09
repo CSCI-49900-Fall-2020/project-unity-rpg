@@ -15,24 +15,50 @@ namespace Platformer.Mechanics
         public float attackRange = 0.5f;
         public LayerMask enemyLayerMask;
         public int damage;
-
+        GameObject donut;
+        SkillTree skillT;
         void Start()
         {
+            donut = GameObject.Find("Donut");
+            skillT = donut.GetComponent<SkillTree>();
             attackAnimator = attackPosition.GetComponent<Animator>();
         }
         void Update()
         {
-            if(timeBetweenAttack <= 0){
+           
+        
+            if (timeBetweenAttack <= 0){
+
                 if(Input.GetKey(KeyCode.G)){
+                    int bonusDamage = 0;
+                    for (int i = 0; i < skillT.sTree.Length; i++)
+                    {
+                        if (skillT.sTree[i].skilButtonID == "w1" && skillT.sTree[i].abilityLevel >= 1)
+                        {
+                            
+                            bonusDamage += 1 * skillT.sTree[i].abilityLevel;
+                        }
+                        if (skillT.sTree[i].skilButtonID == "w2" && skillT.sTree[i].abilityLevel >= 1)
+                        {
+                            bonusDamage += 2 * skillT.sTree[i].abilityLevel;
+                        }
+                        if (skillT.sTree[i].skilButtonID == "w3" && skillT.sTree[i].abilityLevel >= 1)
+                        {
+                            bonusDamage += 3 * skillT.sTree[i].abilityLevel;
+                        }
+                       
+                    }
                     attackAnimator.Play("MeleeAttack");
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, enemyLayerMask);
 
                     for(int i = 0; i < enemiesToDamage.Length; i++){
                         if(enemiesToDamage[i].CompareTag("enemy")){
-                            enemiesToDamage[i].GetComponent<EnemyController>().HealthDecrement(damage);
+                            enemiesToDamage[i].GetComponent<EnemyController>().HealthDecrement(damage + bonusDamage);
+                            Debug.Log(damage + bonusDamage);
                             enemiesToDamage[i].GetComponent<Knockback>().knockbackSelf(gameObject);
                         } else if (enemiesToDamage[i].CompareTag("Boss")){
-                            enemiesToDamage[i].GetComponent<BossController>().HealthDecrement(damage);
+                            enemiesToDamage[i].GetComponent<BossController>().HealthDecrement(damage + bonusDamage);
+
                         }
                     }
                     timeBetweenAttack = startTimeBetweenAttack;

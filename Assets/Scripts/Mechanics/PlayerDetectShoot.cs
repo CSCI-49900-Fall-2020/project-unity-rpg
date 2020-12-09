@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platformer.Mechanics;
+using Platformer.UI;
 
 public class PlayerDetectShoot : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class PlayerDetectShoot : MonoBehaviour
     public float timeTemp = 0f;
     public float fireRate = 0.15f;
     public Transform playerEntity;
-    public int damage;
-
+    public int damage = 5;
+    public CharacterSwapping characterS;
+    public GameObject donut;
     public GameObject bulletShoot1 = null;
     public GameObject bulletShoot2 = null;
     public GameObject bulletShoot3 = null;
     public GameObject bulletShoot4 = null;
-
+    KeyBinds keyB;
+    SkillTree playerSkillTree;
     GameObject bulletShoot = null;
     Vector2 move;
 
@@ -26,6 +29,11 @@ public class PlayerDetectShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        donut = GameObject.Find("Donut");
+        characterS = donut.GetComponent<CharacterSwapping>();
+        keyB = donut.GetComponent<KeyBinds>();
+        playerSkillTree = donut.GetComponent<SkillTree>();
         
     }
 
@@ -68,68 +76,87 @@ public class PlayerDetectShoot : MonoBehaviour
         }
     }
 
+    void ScriptBullet()
+    {
+        int bonusDamage = 0;
+        for (int i = 0; i < playerSkillTree.sTree.Length; i++)
+        {
+            if (playerSkillTree.sTree[i].skilButtonID == "f1" && playerSkillTree.sTree[i].abilityLevel >= 1)
+            {
+                bonusDamage += 1 * playerSkillTree.sTree[i].abilityLevel;
+            }
+            if (playerSkillTree.sTree[i].skilButtonID == "f2" && playerSkillTree.sTree[i].abilityLevel >= 1)
+            {
+                bonusDamage += 2 * playerSkillTree.sTree[i].abilityLevel;
+            }
+            if (playerSkillTree.sTree[i].skilButtonID == "f3" && playerSkillTree.sTree[i].abilityLevel >= 1)
+            {
+                bonusDamage += 3 * playerSkillTree.sTree[i].abilityLevel;
+            }
+            if (playerSkillTree.sTree[i].skilButtonID == "f4" && playerSkillTree.sTree[i].abilityLevel >= 1)
+            {
+                bonusDamage += 4 * playerSkillTree.sTree[i].abilityLevel;
+            }
+        }
 
+        GameObject bullet = Instantiate(bulletShoot) as GameObject;
+        bullet.transform.position = playerEntity.transform.position;
+        bullet.GetComponent<BulletAnimationHit>().damage = characterS.currentCharacter.GetComponent<PlayerDetectShoot>().damage + bonusDamage;
+        
+    }
 
     public void ShootBullet()
     {
         if (bulletShoot == null){
             print("shot empty");
         }
-        else if (Input.GetKey("w") && Input.GetKey("d"))
+        else if (keyB.GetButton("Up") && keyB.GetButton("Right"))
         {
             //UR means upper right direction
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 8;
-            GameObject bulletUR = Instantiate(bulletShoot) as GameObject;
-            bulletUR.transform.position = playerEntity.transform.position;          
+            ScriptBullet();
         }
-        else if (Input.GetKey("w") && Input.GetKey("a"))
+        else if (keyB.GetButton("Up") && keyB.GetButton("Left"))
         {
             //UL means upper left direction
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 7;
-            GameObject bulletUL = Instantiate(bulletShoot) as GameObject;
-            bulletUL.transform.position = playerEntity.transform.position;  
+            ScriptBullet();
         }
-        else if (Input.GetKey("w"))
+        else if (keyB.GetButton("Up"))
         {
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 6;
-            GameObject bulletUp = Instantiate(bulletShoot) as GameObject;
-            bulletUp.transform.position = playerEntity.transform.position;
+            ScriptBullet();
         }
 
 
-        else if (Input.GetKey("s") && Input.GetKey("d"))
+        else if (keyB.GetButton("Down") && keyB.GetButton("Right"))
         {
             //DR means lower right direction
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 5;
-            GameObject bulletDR = Instantiate(bulletShoot) as GameObject;
-            bulletDR.transform.position = playerEntity.transform.position; 
+            ScriptBullet();
         }
-        else if (Input.GetKey("s") && Input.GetKey("a"))
+        else if (keyB.GetButton("Down") && keyB.GetButton("Left"))
         {
             //DL means lower left direction
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 4;
-            GameObject bulletDL = Instantiate(bulletShoot) as GameObject;
-            bulletDL.transform.position = playerEntity.transform.position;  
+            ScriptBullet();
         }
-        else if (Input.GetKey("s"))
+        else if (keyB.GetButton("Down"))
         {
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 3;
-            GameObject bulletDown = Instantiate(bulletShoot) as GameObject;
-            bulletDown.transform.position = playerEntity.transform.position;
+            ScriptBullet();
         }
 
 
         else if ( facingRight )
         {
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 2;
-            GameObject bulletR = Instantiate(bulletShoot) as GameObject;
-            bulletR.transform.position = playerEntity.transform.position;      
+            ScriptBullet();
         }
         else if ( facingRight == false )    
         {
             bulletShoot.GetComponent<Player8Shoot>().bulletDirection = 1;
-            GameObject bulletL = Instantiate(bulletShoot) as GameObject;
-            bulletL.transform.position = playerEntity.transform.position;
+            ScriptBullet();
         }
     }
 }

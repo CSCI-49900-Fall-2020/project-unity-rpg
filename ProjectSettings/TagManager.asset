@@ -13,6 +13,7 @@ TagManager:
   - TextBoxText
   - Ground
   - Boss
+  - bullet
   layers:
   - Default
   - TransparentFX

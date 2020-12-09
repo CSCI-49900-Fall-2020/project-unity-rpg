@@ -8,8 +8,12 @@ public class PickUpItem : MonoBehaviour
 {
     public Item itemData;
     public EquipmentItem equipmentData;
-    
-    
+   // GameObject donut;
+
+    private void Start()
+    {
+       // donut = GameObject.Find("Donut");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -20,6 +24,7 @@ public class PickUpItem : MonoBehaviour
                 {
                     Destroy(gameObject);
                     GameManager.instance.AddItem(itemData);
+                    //donut.GetComponent<ShootManager>().enabled = true;
                 }
                 else
                 {

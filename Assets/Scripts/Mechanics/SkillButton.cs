@@ -13,15 +13,18 @@ public class SkillButton : MonoBehaviour
 	public int abilityLevel = 0;
 	public GameObject skillTree;
 
-	int abilityLevelReq = 3;
-	bool unlockThisSkill = false;
+	public int abilityLevelReq = 1;
+	public bool unlockThisSkill = false;
 	bool unlockNextSkill = false;
+	public string skilButtonID;
+	
 		
 		void Start()
 		{
 			if(previousReq == null || previousReq.Length == 0)
 			{
 				unlockThisSkill = true;
+				
 			}
 
 			if(unlockThisSkill == true){
@@ -32,11 +35,14 @@ public class SkillButton : MonoBehaviour
 			}
 		}
 
+
+	
 		void UnlockCurrentTeir()
 		{
 			if(previousReq == null)
 			{
 				unlockThisSkill = true;
+				
 				GetComponent<Image>().color = new Color (1, 1, 1, 1);
 				return;
 			}
@@ -109,11 +115,15 @@ public class SkillButton : MonoBehaviour
 
 			if(skillPlus1 == true)
 			{
+           
 				abilityLevel = abilityLevel + 1;
 				UnlockNextTeir();
 				UnlockCurrentTeir();
 				skillPlus1 = false;
+			
 			}
+		
+			
 		}
 
     // Update is called once per frame

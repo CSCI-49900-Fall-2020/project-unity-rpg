@@ -8,6 +8,7 @@ namespace Platformer.Mechanics
 	public class SkillTree : MonoBehaviour
 	{
 		public int abilityPoints = 5;
+		public SkillButton[] sTree;
 		public bool UpgradeSkill(){
 			if (abilityPoints > 0)
 			{

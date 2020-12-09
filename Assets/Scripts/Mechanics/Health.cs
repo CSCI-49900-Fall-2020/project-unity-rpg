@@ -10,6 +10,9 @@ namespace Platformer.Mechanics
     /// </summary>
     public class Health : MonoBehaviour
     {
+
+        GameObject donut;
+        SkillTree skillT;
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
@@ -21,10 +24,16 @@ namespace Platformer.Mechanics
         public bool IsAlive => currentHP > 0;
 
         public int currentHP;
-
+        
         /// <summary>
         /// Increment the HP of the entity.
         /// </summary>
+        /// 
+        private void Start()
+        {
+            donut = GameObject.Find("Donut");
+            skillT = donut.GetComponent<SkillTree>();
+        }
         public void Increment(int value)
         {
             currentHP = Mathf.Clamp(currentHP + value, 0, maxHP);
@@ -36,12 +45,39 @@ namespace Platformer.Mechanics
         /// </summary>
         public void Decrement(int value)
         {
-            currentHP = Mathf.Clamp(currentHP - value, 0, maxHP);
+            if (gameObject.tag == "Player")
+            {
+                int damageReduction = 0;
+                for (int i = 0; i < skillT.sTree.Length; i++)
+                {
+                    if (skillT.sTree[i].skilButtonID == "e1" && skillT.sTree[i].abilityLevel >= 1)
+                    {
+                        damageReduction += 1 * skillT.sTree[i].abilityLevel;
+                    }
+                    if (skillT.sTree[i].skilButtonID == "e2" && skillT.sTree[i].abilityLevel >= 1)
+                    {
+                        damageReduction += 2 * skillT.sTree[i].abilityLevel;
+                    }
+                    if (skillT.sTree[i].skilButtonID == "e3" && skillT.sTree[i].abilityLevel >= 1)
+                    {
+                        damageReduction += 3 * skillT.sTree[i].abilityLevel;
+                    }
+
+                }
+                int damageToTake = Mathf.Clamp(value - damageReduction, 0, maxHP);
+                currentHP = Mathf.Clamp(currentHP - damageToTake, 0, maxHP);
+                
+            }
+            else
+            {
+                currentHP = Mathf.Clamp(currentHP - value, 0, maxHP);
+            }         
             if (currentHP == 0)
             {
                 var ev = Schedule<HealthIsZero>();
                 ev.health = this;
             }
+
         }
 
         /// <summary>

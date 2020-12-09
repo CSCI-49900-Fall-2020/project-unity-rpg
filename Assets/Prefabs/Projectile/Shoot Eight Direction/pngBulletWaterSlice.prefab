@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3082563391559320325}
   m_Layer: 0
   m_Name: pngBulletWaterSlice
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,3 +162,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1261e9af42996248a7fad50697f385d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5

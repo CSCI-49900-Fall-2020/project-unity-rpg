@@ -81,7 +81,7 @@ namespace Platformer.Mechanics
                 control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
             }
         }
-
+       
         // private void OnDrawGizmosSelected() {
         //     Gizmos.color = Color.red;
         //     Gizmos.DrawWireSphere(attackPosition.transform.position, 1);

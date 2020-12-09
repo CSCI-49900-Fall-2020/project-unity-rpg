@@ -37,62 +37,65 @@ public class PortalAuto : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        player = other.GetComponent<Collider2D>().gameObject.transform;
-        //SceneManager.LoadScene(sceneName);
-        player.position = spawnPoint;
-        //bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
-        GameObject temp = GameObject.Find("sword_boss");
-        if(temp != null)
+        if (other.gameObject.tag == "Player")
         {
-            bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
-        }
-        if (isBossDoor)
-        {
-            if (isBossDoorEntrance)
+            player = other.GetComponent<Collider2D>().gameObject.transform;
+            //SceneManager.LoadScene(sceneName);
+            player.position = spawnPoint;
+            //bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
+            GameObject temp = GameObject.Find("sword_boss");
+            if (temp != null)
             {
-                bossCamera.SetActive(true);
-                mainCamera.SetActive(false);
-                player.position = spawnPoint;
+                bossHealth = GameObject.Find("sword_boss").GetComponent<Health>();
             }
-            else if(isBossDoorExit)
+            if (isBossDoor)
             {
-                if (bossHealth == null || bossHealth.currentHP == 0)
+                if (isBossDoorEntrance)
                 {
-                    bossCamera.SetActive(false);
-                    mainCamera.SetActive(true);
+                    bossCamera.SetActive(true);
+                    mainCamera.SetActive(false);
                     player.position = spawnPoint;
-                    SceneManager.LoadScene(sceneName);
+                }
+                else if (isBossDoorExit)
+                {
+                    if (bossHealth == null || bossHealth.currentHP == 0)
+                    {
+                        bossCamera.SetActive(false);
+                        mainCamera.SetActive(true);
+                        player.position = spawnPoint;
+                        SceneManager.LoadScene(sceneName);
+                    }
+                }
+                //else if (bossHealth.currentHP == 0)
+                //{
+                //    bossCamera.SetActive(false);
+                //    mainCamera.SetActive(true);
+                //    player.position = spawnPoint;
+                //}
+                else
+                {
+                    player.position = spawnPoint;
                 }
             }
-            //else if (bossHealth.currentHP == 0)
+            //if (isBossDoor)
             //{
-            //    bossCamera.SetActive(false);
-            //    mainCamera.SetActive(true);
+            //    if (isBossDoorEntrance)
+            //    {
+            //        bossCamera.SetActive(True);
+            //        mainCamera.SetActive(False);
+            //        player.position = spawnPoint;
+            //    }
+            //    else if (bossHealth.currentHP == 0)
+            //    {
+            //        bossCamera.SetActive(False);
+            //        mainCamera.SetActive(True);
+            //        player.position = spawnPoint;
+            //    }
+            //}
+            //else
+            //{
             //    player.position = spawnPoint;
             //}
-            else
-            {
-                player.position = spawnPoint;
-            }
         }
-        //if (isBossDoor)
-        //{
-        //    if (isBossDoorEntrance)
-        //    {
-        //        bossCamera.SetActive(True);
-        //        mainCamera.SetActive(False);
-        //        player.position = spawnPoint;
-        //    }
-        //    else if (bossHealth.currentHP == 0)
-        //    {
-        //        bossCamera.SetActive(False);
-        //        mainCamera.SetActive(True);
-        //        player.position = spawnPoint;
-        //    }
-        //}
-        //else
-        //{
-        //    player.position = spawnPoint;
-        //}
     }
 }
