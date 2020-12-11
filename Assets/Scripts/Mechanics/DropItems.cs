@@ -8,7 +8,14 @@ public class DropItems : MonoBehaviour
     public GameObject theDrops;
     public Transform dropPoint;
     public SpriteRenderer sr;
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            Destroy(gameObject);
+        }
+    }
     public void Update()
     {
         
