@@ -12,29 +12,29 @@ public class SceneTransitionInterract : MonoBehaviour
     public GameObject currCamera;
     private GameObject mainCamera;
     //Read Note Below--------------------------------------------------------------------
-     bool triggered = false;
-     void OnTriggerEnter2D(Collider2D other)
+    bool triggered = false;
+    void OnTriggerEnter2D(Collider2D other)
     {
-         triggered = true;
-         player = other.GetComponent<Collider2D>().gameObject.transform;
-     }
+        triggered = true;
+        player = other.GetComponent<Collider2D>().gameObject.transform;
+    }
 
-     void OnTriggerExit2D(Collider2D other)
-     {
-         triggered = false;
-         player = null;
-     }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        triggered = false;
+        player = null;
+    }
 
     void Update()
-     {
-         if (triggered && Input.GetKeyDown(KeyCode.F))
-         {
-             if(player.tag == "Player"){
-                 SceneManager.LoadScene(sceneName);
+    {
+        if (triggered && Input.GetKeyDown(KeyCode.F))
+        {
+            if(player.tag == "Player"){
+                SceneManager.LoadScene(sceneName);
                 player.position = spawnPoint;
             }
-         }
-     }
+        }
+    }
 
     //The above can potentially cause lag because it is constantly checking the if condition
     //Try to get the below to work
@@ -44,7 +44,7 @@ public class SceneTransitionInterract : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera");
     }
 
-   /* private void OnTriggerStay2D(Collider2D other)
+    /* private void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKeyDown(KeyCode.F) && other.tag == "Player")
         {

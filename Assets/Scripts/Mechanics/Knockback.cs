@@ -10,12 +10,6 @@ namespace Platformer.Mechanics
         public float selfKnockbackStrength = 5f;
         public int knockbackDamage = 5;
 
-
-        private void Update() {
-            if(Input.GetKeyDown(KeyCode.H))
-                gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(5,5), ForceMode2D.Impulse);
-        }
-
         void OnCollisionEnter2D(Collision2D other)
         {
             //Debug.Log("Collided");
@@ -33,7 +27,6 @@ namespace Platformer.Mechanics
                 Vector2 pushDirection = -(gameObject.transform.position - other.gameObject.transform.position).normalized;
                 other.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection, ForceMode2D.Impulse);
             }
-           
         }
 
         public void knockbackTarget(GameObject target){

@@ -5,23 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public DoNotDestroyOnTransition[] toDestroy;
+    GameObject donut;
+    SaveData saveData;
+    DoNotDestroyOnTransition[] toDestroy;
     
     // Start is called before the first frame update
     void Start()
     {
-        GameObject temp;
         toDestroy = GameObject.FindObjectsOfType<DoNotDestroyOnTransition>();
+
+        donut = GameObject.Find("Donut");
+        saveData = donut.GetComponent<SaveData>();
+    }
+
+    public void LoadSave(){
+        saveData.LoadData();
+    }
+
+    public void GoToTitle(){
+        GameObject temp;
 
         foreach(DoNotDestroyOnTransition obj in toDestroy){
             temp = obj.gameObject;
             Destroy(temp);
         }
-    }
 
-    void Update() {
-        if(Input.anyKey){
-            SceneManager.LoadScene("Title");
-        }
+        SceneManager.LoadScene("Title");
     }
 }

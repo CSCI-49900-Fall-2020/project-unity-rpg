@@ -22,6 +22,7 @@ namespace Platformer.Mechanics
         /// <summary>
         /// Max horizontal speed of the player.
         /// </summary>
+        public int characterID;
         public float maxSpeed = 7;
         public float moveSpeed = 2;
         public float fallMultiplier = 2.5f;
