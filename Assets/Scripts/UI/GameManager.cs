@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public List<EquipmentItem> equipmentItems = new List<EquipmentItem>();
     public GameObject[] equipmentSlots;
     public EquipmentRemoveButton[] equipmentButton;
+    
+    
     public Sprite equipmentSprite;
 
     public GameObject playerC;
@@ -69,7 +71,7 @@ public class GameManager : MonoBehaviour
    
 
 
-    private void DisplayItems()
+    public void DisplayItems()
     {
 
         for(int i = 0;i < slots.Length; i++)
