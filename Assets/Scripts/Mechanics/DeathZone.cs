@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Platformer.Gameplay;
 using UnityEngine;
 using static Platformer.Core.Simulation;
+using UnityEngine.SceneManagement;
 
 namespace Platformer.Mechanics
 {
@@ -17,8 +18,13 @@ namespace Platformer.Mechanics
             var p = collider.gameObject.GetComponent<PlayerController>();
             if (p != null)
             {
-                var ev = Schedule<PlayerEnteredDeathZone>();
-                ev.deathzone = this;
+                SceneManager.LoadScene("GameOver");
+                //var ev = Schedule<PlayerEnteredDeathZone>();
+                // ev.deathzone = this;
+            }
+            else
+            {
+                Destroy(collider.gameObject);
             }
         }
     }
