@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1219670531606954960}
   m_Layer: 0
   m_Name: ItemCookie
-  m_TagString: Untagged
+  m_TagString: InventoryItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,4 +187,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb0ce5938636eb4dbce057a4a0f31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: 9dd685b96c065d54d97f0fde7bec019e, type: 2}
+  itemData: {fileID: 0}
+  equipmentData: {fileID: 0}

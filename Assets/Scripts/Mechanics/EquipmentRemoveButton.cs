@@ -101,6 +101,7 @@ public class EquipmentRemoveButton : MonoBehaviour, IPointerEnterHandler, IPoint
 
             return stringBuilder.ToString();
         }
+       
     }
 
 }

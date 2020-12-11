@@ -26,20 +26,17 @@ public class GameManager : MonoBehaviour
     public ItemRemoveButton thisButton;//which item button we are hovering
     public ItemRemoveButton[] itemButtons;//all item button in inventory
 
+    
 
 
     //list of each equipment  helmet = 1, body = 2, pants = 3, boots = 4, sword = 5
 
     public List<EquipmentItem> equipmentHelmets = new List<EquipmentItem>();
-    public GameObject[] helmetSlots;
-    public List<EquipmentItem> equipmentChest = new List<EquipmentItem>();
-    public GameObject[] chestSlots;
-    public List<EquipmentItem> equipmentPants = new List<EquipmentItem>();
-    public GameObject[] pantsSlots;
-    public List<EquipmentItem> equipmentBoots = new List<EquipmentItem>();
-    public GameObject[] bootsSlots;
+    public List<EquipmentItem> equipmentChest = new List<EquipmentItem>();  
+    public List<EquipmentItem> equipmentPants = new List<EquipmentItem>();  
+    public List<EquipmentItem> equipmentBoots = new List<EquipmentItem>();   
     public List<EquipmentItem> equipmentWeapon = new List<EquipmentItem>();
-    public GameObject[] weaponSlots;
+  
     //public List<EquipmentItem> currentEquipmentsUsing = new List<EquipmentItem>();
 
 
@@ -202,13 +199,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void DisplayHelmets()
-    {
-        for(int i = 0; i < helmetSlots.Length; i++)
-        {
 
-        }
-    }
     public void DisplayEquipmentItem()
     {
         for (int i = 0; i < equipmentSlots.Length; i++)

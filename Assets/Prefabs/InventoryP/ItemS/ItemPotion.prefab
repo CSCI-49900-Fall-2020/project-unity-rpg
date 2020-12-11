@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6868503990462508008}
   m_Layer: 0
   m_Name: ItemPotion
-  m_TagString: Untagged
+  m_TagString: InventoryItems
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: d6de3228c39c3d0489904c35189d5771, type: 2}
+  equipmentData: {fileID: 0}
