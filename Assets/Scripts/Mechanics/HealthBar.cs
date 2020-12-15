@@ -14,11 +14,13 @@ namespace Platformer.Mechanics
 
         public void SetMaxHealth(int maxHealth, int currentHealth)
         {
-			slider.maxValue = maxHealth;
-			slider.value = currentHealth;
+            slider.maxValue = maxHealth;
+            slider.value = currentHealth;
             hpNumbers.text = currentHealth + " / " + maxHealth;
 
-			fill.color = gradient.Evaluate(slider.normalizedValue);
+            
+             
+            fill.color = gradient.Evaluate(slider.normalizedValue);
         }
 
         public void SetCurrentHealth(int maxHealth, int currentHealth)

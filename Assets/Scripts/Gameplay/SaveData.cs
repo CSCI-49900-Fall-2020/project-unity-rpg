@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SaveData : MonoBehaviour
 {
-    //For reference, position 0 is current HP and position 1 is current MP
-    int[] AliceData = new int[2];
-    int[] BobData = new int[2];
-    int[] CharlieData = new int[2];
-    int[] DaveData = new int[2];
+    //For reference, position 0 is current HP and position 1 is current MP, position 2 is current maxHP, position 3 is current maxMP
+    int[] AliceData = new int[4];
+    int[] BobData = new int[4];
+    int[] CharlieData = new int[4];
+    int[] DaveData = new int[4];
     public Vector2 saveLocation = new Vector2(0,10);
     string saveScene = "PresentationScene1";
     int characterAtSave = 1;
@@ -75,6 +75,16 @@ public class SaveData : MonoBehaviour
         CharlieController.incrementMana(CharlieData[1]);
         DaveController.incrementMana(DaveData[1]);
 
+        AliceController.setMaxHealth(AliceData[2]);       
+        BobController.setMaxHealth(BobData[2]);
+        CharlieController.setMaxHealth(CharlieData[2]);
+        DaveController.setMaxHealth(DaveData[2]);
+
+        AliceController.setMaxMana(AliceData[3]);
+        BobController.setMaxMana(BobData[3]);
+        CharlieController.setMaxMana(CharlieData[3]);
+        DaveController.setMaxMana(DaveData[3]);
+
         StartCoroutine(LoadSaveScene());
         // SceneManager.LoadScene(saveScene);
 
@@ -95,114 +105,138 @@ public class SaveData : MonoBehaviour
             default:
                 break;
         }
-
+       
         //LOADING ITEMS
         if (saveItems.Count != 0 ) {
             gameManagerGO.GetComponent<GameManager>().items.Clear();
             for (int i = 0; i < saveItems.Count; i++)
             {
                 gameManagerGO.GetComponent<GameManager>().items.Add(saveItems[i]);
-                Debug.Log("LOAD: " + saveItems[i].itemName);
+               // Debug.Log("LOAD: " + saveItems[i].itemName);
             }
             for (int i = 0; i < gameManagerGO.GetComponent<GameManager>().items.Count; i++)
             {
-                Debug.Log("LOAD: " + gameManagerGO.GetComponent<GameManager>().items[i].itemName);
+              //  Debug.Log("LOAD: " + gameManagerGO.GetComponent<GameManager>().items[i].itemName);
             }
             gameManagerGO.GetComponent<GameManager>().itemNumbers.Clear();
             for (int i = 0; i < saveitemNumbers.Count; i++)
             {
                 gameManagerGO.GetComponent<GameManager>().itemNumbers.Add(saveitemNumbers[i]);
-                Debug.Log("LOAD: " + saveitemNumbers[i]);
+              //  Debug.Log("LOAD: " + saveitemNumbers[i]);
             }
 
             gameManagerGO.GetComponent<GameManager>().slots = saveSlots;
             gameManagerGO.GetComponent<GameManager>().DisplayItems();
         }
+        //LOADING ITEMS WORKING
 
-        if (savedEquipmentItems.Count != 0)
-        {
+
 
 
             //LOADING EQUIPMENT ITEMS
-            gameManagerGO.GetComponent<GameManager>().equipmentItems.Clear();
-            for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentItems.Count; i++)
-            {
-                gameManager.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentItems[i]);
-            }
+            //gameManagerGO.GetComponent<GameManager>().equipmentItems.Clear();
 
-            for (int i = 0; i < savedEquipmentItems.Count; i++)
-            {
-                gameManagerGO.GetComponent<GameManager>().equipmentItems.Add(savedEquipmentItems[i]);
-            }
 
 
             //LOADING EQUIPMENT HELMET
-            gameManagerGO.GetComponent<GameManager>().equipmentHelmets.Clear();
-            for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentHelmets.Count; i++)
+            // gameManagerGO.GetComponent<GameManager>().equipmentHelmets.Clear();
+            /*for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentHelmets.Count; i++)
             {
                 gameManager.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentHelmets[i]);
-            }
-            for (int i = 0; i < savedEquipmentHelmets.Count; i++)
-            {
-                gameManagerGO.GetComponent<GameManager>().equipmentHelmets.Add(savedEquipmentHelmets[i]);
-            }
+            }*/
+            //            Debug.Log("HELMETS BEFORE: " + gameManager.GetComponent<GameManager>().equipmentHelmets.Count);
+            /*    for (int i = 0; i < savedEquipmentHelmets.Count; i++)
+                {
+                    gameManagerGO.GetComponent<GameManager>().equipmentHelmets.Add(savedEquipmentHelmets[i]);
+                }*/
             //LOADING EQUIPMENT BODY
-            gameManagerGO.GetComponent<GameManager>().equipmentChest.Clear();
-            for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentChest.Count; i++)
+            //gameManagerGO.GetComponent<GameManager>().equipmentChest.Clear();
+            /*for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentChest.Count; i++)
             {
                 gameManager.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentChest[i]);
             }
-            for (int i = 0; i < savedEquipmentChest.Count; i++)
-            {
-                gameManagerGO.GetComponent<GameManager>().equipmentChest.Add(savedEquipmentChest[i]);
-            }
+           // Debug.Log("BODY BEFORE: " + gameManager.GetComponent<GameManager>().equipmentChest.Count);
+            *//* for (int i = 0; i < savedEquipmentChest.Count; i++)
+             {
+                 gameManagerGO.GetComponent<GameManager>().equipmentChest.Add(savedEquipmentChest[i]);
+             }*//*
             //LOADING EQUIPMENT PANTS
-            gameManagerGO.GetComponent<GameManager>().equipmentPants.Clear();
+            // gameManagerGO.GetComponent<GameManager>().equipmentPants.Clear();
             for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentPants.Count; i++)
             {
                 gameManager.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentPants[i]);
             }
-            for (int i = 0; i < savedEquipmentPants.Count; i++)
-            {
-                gameManagerGO.GetComponent<GameManager>().equipmentPants.Add(savedEquipmentPants[i]);
-            }
+           // Debug.Log("PANTS BEFORE: " + gameManager.GetComponent<GameManager>().equipmentPants.Count);
+            *//*  for (int i = 0; i < savedEquipmentPants.Count; i++)
+              {
+                  gameManagerGO.GetComponent<GameManager>().equipmentPants.Add(savedEquipmentPants[i]);
+              }*//*
             //LOADING EQUIPMENT BOOTS
-            gameManagerGO.GetComponent<GameManager>().equipmentBoots.Clear();
+            // gameManagerGO.GetComponent<GameManager>().equipmentBoots.Clear();
             for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentBoots.Count; i++)
             {
                 gameManager.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentBoots[i]);
             }
-            for (int i = 0; i < savedEquipmentBoots.Count; i++)
-            {
-                gameManagerGO.GetComponent<GameManager>().equipmentBoots.Add(savedEquipmentBoots[i]);
-            }
+            //Debug.Log("BOOTS BEFORE: " + gameManager.GetComponent<GameManager>().equipmentBoots.Count);
+            *//*    for (int i = 0; i < savedEquipmentBoots.Count; i++)
+                {
+                    gameManagerGO.GetComponent<GameManager>().equipmentBoots.Add(savedEquipmentBoots[i]);
+                }*//*
             //LOADING EQUIPMENT WEAPON
-            gameManagerGO.GetComponent<GameManager>().equipmentWeapon.Clear();
+            //gameManagerGO.GetComponent<GameManager>().equipmentWeapon.Clear();
             for (int i = 0; i < gameManager.GetComponent<GameManager>().equipmentWeapon.Count; i++)
             {
                 gameManager.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentWeapon[i]);
-            }
-            for (int i = 0; i < savedEquipmentWeapon.Count; i++)
+            }*/
+            //  Debug.Log("WEAPONS BEFORE: " + gameManager.GetComponent<GameManager>().equipmentWeapon.Count);
+            /* for (int i = 0; i < savedEquipmentWeapon.Count; i++)
+             {
+                 gameManagerGO.GetComponent<GameManager>().equipmentWeapon.Add(savedEquipmentWeapon[i]);
+             }*/
+            Debug.Log("EITEMS BEFORE loop: " + gameManagerGO.GetComponent<GameManager>().equipmentItems.Count);
+            for (int i = 0; i < gameManagerGO.GetComponent<GameManager>().equipmentItems.Count; i++)
             {
-                gameManagerGO.GetComponent<GameManager>().equipmentWeapon.Add(savedEquipmentWeapon[i]);
+                gameManagerGO.GetComponent<GameManager>().RemoveEquipmentItem(gameManager.GetComponent<GameManager>().equipmentItems[i]);
             }
-            gameManagerGO.GetComponent<GameManager>().equipmentSlots = savedEquipmentSlots;
-            gameManagerGO.GetComponent<GameManager>().DisplayEquipmentItem();
+            for (int i = 0; i < gameManagerGO.GetComponent<GameManager>().equipmentItems.Count; i++)
+            {
+                Debug.Log("EITEM NOT DELETED: " + gameManagerGO.GetComponent<GameManager>().equipmentItems[i]);
+            }
+            Debug.Log("EITEMS BEFORE after loop: " + gameManagerGO.GetComponent<GameManager>().equipmentItems.Count);
+            for (int i = 0; i < savedEquipmentItems.Count; i++)
+            {
+                gameManagerGO.GetComponent<GameManager>().AddEquipmentItem(savedEquipmentItems[i]);
+            }
+            Debug.Log("EITEMS AFTER : " + gameManager.GetComponent<GameManager>().equipmentItems.Count);
 
-        }
+
+            gameManagerGO.GetComponent<GameManager>().equipmentSlots = savedEquipmentSlots;
+           
+        
 
         characterSwapper.currentCharacter.transform.position = saveLocation;
     }
 
     public void save(Vector3 newSaveLocation, string newSaveScene, int newCharacterAtSave){
-        AliceData[0] = AliceController.GetComponent<Health>().currentHP;
+        AliceData[0] = AliceController.GetComponent<Health>().currentHP;       
         BobData[0] = BobController.GetComponent<Health>().currentHP;
         CharlieData[0] = CharlieController.GetComponent<Health>().currentHP;
         DaveData[0] = DaveController.GetComponent<Health>().currentHP;
+       
         AliceData[1] = AliceController.GetComponent<Mana>().currentMP;
         BobData[1] = BobController.GetComponent<Mana>().currentMP;
         CharlieData[1] = CharlieController.GetComponent<Mana>().currentMP;
         DaveData[1] = DaveController.GetComponent<Mana>().currentMP;
+       
+        AliceData[2] = AliceController.GetComponent<Health>().maxHP;
+        BobData[2] = BobController.GetComponent<Health>().maxHP;
+        CharlieData[2] = CharlieController.GetComponent<Health>().maxHP;
+        DaveData[2] = DaveController.GetComponent<Health>().maxHP;
+        
+        AliceData[3] = AliceController.GetComponent<Mana>().maxMP;
+        BobData[3] = BobController.GetComponent<Mana>().maxMP;
+        CharlieData[3] = CharlieController.GetComponent<Mana>().maxMP;
+        DaveData[3] = DaveController.GetComponent<Mana>().maxMP;
         saveLocation = newSaveLocation;
         saveScene = newSaveScene;
         characterAtSave = newCharacterAtSave;
@@ -212,27 +246,43 @@ public class SaveData : MonoBehaviour
         for (int i = 0;i< gameManager.items.Count;i++)
         {
             saveItems.Add(gameManager.items[i]);
-            Debug.Log("SAVED: " + saveItems[i].itemName);
+           // Debug.Log("SAVED: " + saveItems[i].itemName);
         }
 
         for (int j = 0; j < gameManager.itemNumbers.Count;j++)
         {
             saveitemNumbers.Add(gameManager.itemNumbers[j]);
-            Debug.Log("SAVED: " + saveitemNumbers[j]);
+          //  Debug.Log("SAVED: " + saveitemNumbers[j]);
         }
         saveSlots = gameManager.slots;
 
         //SAVING ALL EQUIPMENT
-        for (int i = 0; i <gameManager.equipmentItems.Count;i++)
+        savedEquipmentItems.AddRange(gameManager.equipmentItems);
+        /*for (int i = 0; i <gameManager.equipmentItems.Count;i++)
         {
-            savedEquipmentItems.Add(gameManager.equipmentItems[i]);
+            savedEquipmentItems[i] = gameManager.equipmentItems[i];
+        }*/
+       
+        for (int i = 0; i < savedEquipmentItems.Count; i++)
+        {
+            Debug.Log("SAVED: " + savedEquipmentItems[i].itemName);
         }
+        for (int i = 0; i < savedEquipmentHelmets.Count; i++)
+        {
+            Debug.Log("SAVED: " + savedEquipmentHelmets[i].itemName);
+        }
+        Debug.Log("EITEMS COUNT: " + savedEquipmentItems.Count);
+        Debug.Log("HELMETS COUNT: " + savedEquipmentHelmets.Count);
         savedEquipmentSlots = gameManager.equipmentSlots;
-        //SAVING EQUIPMENT HELMET
+        //Debug.Log("EquipmentITEMS Count: " + savedEquipmentItems.Count);
+       // Debug.Log("EquipmentSlots Count: " + savedEquipmentSlots.Length);
+        /*//SAVING EQUIPMENT HELMET
         for (int i = 0; i < gameManager.equipmentHelmets.Count; i++)
         {
             savedEquipmentHelmets.Add(gameManager.equipmentHelmets[i]);
         }
+
+
         //SAVING EQUIPMENT BODY
         for (int i = 0; i < gameManager.equipmentChest.Count; i++)
         {
@@ -252,7 +302,7 @@ public class SaveData : MonoBehaviour
         for (int i = 0; i < gameManager.equipmentWeapon.Count; i++)
         {
             savedEquipmentWeapon.Add(gameManager.equipmentWeapon[i]);
-        }
+        }*/
 
 
     }

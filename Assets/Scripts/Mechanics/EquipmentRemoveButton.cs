@@ -32,6 +32,10 @@ public class EquipmentRemoveButton : MonoBehaviour, IPointerEnterHandler, IPoint
         //GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().GetComponent<PlayerController>().removeEquipmentItemFromPlayer(GetEItem());
         GameManager.instance.RemoveEquipmentItem(GetEItem());
         Debug.Log("removing");
+        if (GameManager.instance.equipmentItems.Contains(GetEItem()))
+        {
+            Debug.Log("not completed removed");
+        }
         equipItem = GetEItem();
         if (equipItem != null)
         {

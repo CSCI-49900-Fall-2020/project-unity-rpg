@@ -280,7 +280,8 @@ public class GameManager : MonoBehaviour
             playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().health.maxHP - rEitem.value);
             playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
         }
-        
+
+
     }
     public void ResetButtonEquipmentItems()
     {

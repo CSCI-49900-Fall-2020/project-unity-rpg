@@ -174,8 +174,13 @@ namespace Platformer.Mechanics
         }
 
         public void setMaxHealth(int value){
-            health.maxHP = value;
-            healthBar.SetMaxHealth(health.maxHP, health.currentHP);
+            health.maxHP = value;           
+            if (health.currentHP > health.maxHP)
+            {
+                health.currentHP = health.maxHP;
+            }
+                healthBar.SetMaxHealth(value, health.currentHP);
+            
         }
 
         public void incrementMana(int value){
