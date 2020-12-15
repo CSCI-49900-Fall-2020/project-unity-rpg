@@ -5,23 +5,21 @@ using UnityEngine;
 public class CollectingCoins : MonoBehaviour
 {
     public int coinValue = 1;
+    public AudioClip pointsSound;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") 
         {
             ScoreManager.instance.ChangeScore(coinValue);
+            AudioSource.PlayClipAtPoint(pointsSound, transform.position);
             Destroy(gameObject);
         }
     }
+    public void soundsg()
+    {
+        AudioSource.PlayClipAtPoint(pointsSound, transform.position);
+    }
+
 }
