@@ -153,7 +153,7 @@ namespace Platformer.Mechanics
         }
 
         public void jump(){
-            if(jumpCount < jumpLimit){
+            if(controlEnabled && jumpCount < jumpLimit){
                 jumpCount++;
                 rb2d.velocity = Vector2.up * jumpVelocity;
                 onGround = false;
