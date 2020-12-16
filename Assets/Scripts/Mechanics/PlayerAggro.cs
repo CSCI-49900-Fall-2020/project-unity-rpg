@@ -26,7 +26,7 @@ namespace Platformer.Mechanics
                         
                         Vector3 direction = transform.position - entitiesFound[i].transform.position;
                         RaycastHit2D hit = Physics2D.Raycast(entitiesFound[i].transform.position,direction,aggroRange,hittableLayerMask);
-                        Debug.DrawLine(entitiesFound[i].transform.position, hit.point, Color.red, 1f);
+                        Debug.DrawLine(entitiesFound[i].transform.position, hit.point, Color.red);
                         if(hit != false && hit.collider.name == gameObject.name){                
                             enemiesToAggro.Add(entitiesFound[i]); 
                         } 
