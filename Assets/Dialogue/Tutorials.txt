@@ -23,3 +23,8 @@ Press 1,2,3, and 4 to switch between you guys.
 
 Well goodbye.
 I have to guide other lost travelers through this place.
+
+Oh! One more thing.
+Press T to open your skill window.
+Right now, you have 5 skill points.
+You can become a superhuman now. 
