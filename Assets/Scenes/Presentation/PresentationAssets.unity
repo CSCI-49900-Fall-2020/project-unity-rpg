@@ -6859,7 +6859,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 80321311}
   m_HandleRect: {fileID: 0}
@@ -7730,7 +7730,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 779548861}
   m_HandleRect: {fileID: 0}
@@ -8766,7 +8766,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1031177899}
   m_HandleRect: {fileID: 0}
@@ -9123,7 +9123,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 883709846}
   m_HandleRect: {fileID: 0}
@@ -11626,7 +11626,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 579073690}
   m_HandleRect: {fileID: 0}
@@ -16721,7 +16721,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1228574867}
   m_HandleRect: {fileID: 0}
@@ -17622,6 +17622,9 @@ MonoBehaviour:
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 768
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 9
 --- !u!4 &1762026569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4520396350849616, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
@@ -17807,7 +17810,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1467624229}
   m_HandleRect: {fileID: 0}
@@ -19898,7 +19901,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 856991237}
   m_HandleRect: {fileID: 0}
@@ -22055,6 +22058,21 @@ PrefabInstance:
       propertyPath: maxHP
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730877, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: aggroRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730877, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730877, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: playerLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 2174709299062730878, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22203,6 +22221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645395, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: playerLayerMask.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 4150175718139645396, guid: 30537492faab62c4abec9729b3693f11,
         type: 3}
@@ -22532,6 +22555,11 @@ PrefabInstance:
       propertyPath: enemyLayerMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134656, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: playerLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 5586667500579134659, guid: 4ee1b60b279b70144b3e7c2643a449b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22778,7 +22806,7 @@ PrefabInstance:
     - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
@@ -22854,6 +22882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372363, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: playerLayerMask.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372365, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
