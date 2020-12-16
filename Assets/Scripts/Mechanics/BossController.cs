@@ -63,6 +63,7 @@ namespace Platformer.Mechanics
             if (health.currentHP <= 0)
             {
                 Destroy(gameObject);
+                bossHealthBar.SetActive(false);
             }
         }
 

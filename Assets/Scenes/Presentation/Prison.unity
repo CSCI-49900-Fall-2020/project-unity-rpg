@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 17005491}
   - component: {fileID: 17005493}
   - component: {fileID: 17005492}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,6 +430,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &23740493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,7 +1044,7 @@ GameObject:
   - component: {fileID: 141102050}
   - component: {fileID: 141102052}
   - component: {fileID: 141102051}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1225,7 @@ GameObject:
   - component: {fileID: 205495474}
   - component: {fileID: 205495473}
   - component: {fileID: 205495472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10711,6 +10714,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &255766125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10885,7 +10891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259187529}
   - component: {fileID: 259187530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TX Village Props Tree B (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10966,7 +10972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 279210014}
   - component: {fileID: 279210013}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DinnerTable2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11126,6 +11132,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &330260989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11317,7 +11326,7 @@ GameObject:
   - component: {fileID: 397745043}
   - component: {fileID: 397745045}
   - component: {fileID: 397745044}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11545,6 +11554,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &397963619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11784,6 +11796,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &471658302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12343,6 +12358,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &514370233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12614,7 +12632,7 @@ GameObject:
   - component: {fileID: 557110272}
   - component: {fileID: 557110274}
   - component: {fileID: 557110273}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12763,7 +12781,7 @@ GameObject:
   m_Component:
   - component: {fileID: 559083820}
   - component: {fileID: 559083819}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DinnerTable2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13157,6 +13175,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &641585119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13385,7 +13406,7 @@ GameObject:
   - component: {fileID: 656451600}
   - component: {fileID: 656451599}
   - component: {fileID: 656451601}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -17482,7 +17503,7 @@ GameObject:
   - component: {fileID: 682021205}
   - component: {fileID: 682021204}
   - component: {fileID: 682021203}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17616,7 +17637,7 @@ GameObject:
   - component: {fileID: 752963405}
   - component: {fileID: 752963407}
   - component: {fileID: 752963406}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17766,6 +17787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243085621220176993, guid: ab5640a546e165146a4f6cfefff2c4d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2200312638079990600, guid: ab5640a546e165146a4f6cfefff2c4d6,
         type: 3}
@@ -18204,7 +18230,7 @@ GameObject:
   - component: {fileID: 1075803113}
   - component: {fileID: 1075803115}
   - component: {fileID: 1075803114}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18353,7 +18379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077776600}
   - component: {fileID: 1077776599}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DinnerTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18611,7 +18637,7 @@ GameObject:
   - component: {fileID: 1130751772}
   - component: {fileID: 1130751774}
   - component: {fileID: 1130751773}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18839,6 +18865,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1192771583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19000,7 +19029,7 @@ GameObject:
   - component: {fileID: 1222188751}
   - component: {fileID: 1222188753}
   - component: {fileID: 1222188752}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19150,7 +19179,7 @@ GameObject:
   - component: {fileID: 1247186992}
   - component: {fileID: 1247186994}
   - component: {fileID: 1247186993}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19508,6 +19537,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 1243085621220176993, guid: ab5640a546e165146a4f6cfefff2c4d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2200312638079990600, guid: ab5640a546e165146a4f6cfefff2c4d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19765,7 +19799,7 @@ GameObject:
   - component: {fileID: 1329990402}
   - component: {fileID: 1329990404}
   - component: {fileID: 1329990403}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20338,7 +20372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378918199}
   - component: {fileID: 1378918200}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TX Village Props Tree B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20703,6 +20737,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1424195764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20959,6 +20996,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1463317552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21198,6 +21238,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1510196965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21564,6 +21607,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1546236144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21821,6 +21867,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1569319554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21982,7 +22031,7 @@ GameObject:
   - component: {fileID: 1627192851}
   - component: {fileID: 1627192853}
   - component: {fileID: 1627192852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71410,6 +71459,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1243085621220176993, guid: ab5640a546e165146a4f6cfefff2c4d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2200312638079990600, guid: ab5640a546e165146a4f6cfefff2c4d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71592,6 +71646,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1732104065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71754,6 +71811,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1243085621220176993, guid: ab5640a546e165146a4f6cfefff2c4d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2200312638079990600, guid: ab5640a546e165146a4f6cfefff2c4d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71858,7 +71920,7 @@ GameObject:
   - component: {fileID: 1763447877}
   - component: {fileID: 1763447879}
   - component: {fileID: 1763447878}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72360,6 +72422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1243085621220176993, guid: ab5640a546e165146a4f6cfefff2c4d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2200312638079990600, guid: ab5640a546e165146a4f6cfefff2c4d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72649,7 +72716,7 @@ GameObject:
   - component: {fileID: 1881093699}
   - component: {fileID: 1881093701}
   - component: {fileID: 1881093700}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72912,6 +72979,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1922685178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73151,7 +73221,7 @@ GameObject:
   - component: {fileID: 1962115506}
   - component: {fileID: 1962115508}
   - component: {fileID: 1962115507}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73670,6 +73740,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &2036674010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73880,7 +73953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056242252}
   - component: {fileID: 2056242251}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74032,6 +74105,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &2076416753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74269,7 +74345,7 @@ GameObject:
   - component: {fileID: 2094117757}
   - component: {fileID: 2094117759}
   - component: {fileID: 2094117758}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74419,7 +74495,7 @@ GameObject:
   - component: {fileID: 2132942291}
   - component: {fileID: 2132942293}
   - component: {fileID: 2132942292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: prison bars (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74569,6 +74645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pillar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243085621220176993, guid: ab5640a546e165146a4f6cfefff2c4d6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2200312638079990600, guid: ab5640a546e165146a4f6cfefff2c4d6,
         type: 3}

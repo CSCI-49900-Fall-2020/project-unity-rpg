@@ -1842,7 +1842,7 @@ GameObject:
   - component: {fileID: 656451600}
   - component: {fileID: 656451599}
   - component: {fileID: 656451601}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -7818,6 +7818,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Room 101
   OnTrigger: 1
+  onlyTriggerOnce: 0
 --- !u!213 &1183972321
 Sprite:
   m_ObjectHideFlags: 0
@@ -8269,6 +8270,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Room 102
   OnTrigger: 1
+  onlyTriggerOnce: 0
 --- !u!1 &1340395494
 GameObject:
   m_ObjectHideFlags: 0
@@ -9190,7 +9192,7 @@ GameObject:
   - component: {fileID: 1627192851}
   - component: {fileID: 1627192853}
   - component: {fileID: 1627192852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13709,6 +13711,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Room 104
   OnTrigger: 1
+  onlyTriggerOnce: 0
 --- !u!1 &1800826851
 GameObject:
   m_ObjectHideFlags: 0
@@ -13800,6 +13803,7 @@ MonoBehaviour:
   repeatNum: 1
   line: Room 103
   OnTrigger: 1
+  onlyTriggerOnce: 0
 --- !u!1 &1870387803
 GameObject:
   m_ObjectHideFlags: 0
@@ -14158,7 +14162,7 @@ GameObject:
   - component: {fileID: 1965703166}
   - component: {fileID: 1965703165}
   - component: {fileID: 1965703164}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -19102,7 +19106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056242252}
   - component: {fileID: 2056242251}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

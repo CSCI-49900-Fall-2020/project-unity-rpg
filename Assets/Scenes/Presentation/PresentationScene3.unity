@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 551566661}
   - component: {fileID: 551566660}
   - component: {fileID: 551566659}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Unjumpable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34074,7 +34074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680911687}
   - component: {fileID: 1680911686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34259,7 +34259,7 @@ GameObject:
   - component: {fileID: 2068247196}
   - component: {fileID: 2068247195}
   - component: {fileID: 2068247197}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tilemap
   m_TagString: Ground
   m_Icon: {fileID: 0}

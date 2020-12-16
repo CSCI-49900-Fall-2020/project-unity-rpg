@@ -2574,6 +2574,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &1533521481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2734,7 +2737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557130130}
   - component: {fileID: 1557130129}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3186,7 +3189,7 @@ GameObject:
   - component: {fileID: 2041347676}
   - component: {fileID: 2041347675}
   - component: {fileID: 2041347674}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9673,7 +9676,7 @@ GameObject:
   - component: {fileID: 2073375895}
   - component: {fileID: 2073375894}
   - component: {fileID: 2073375896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}

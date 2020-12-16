@@ -4426,6 +4426,7 @@ MonoBehaviour:
   attackPosition: {fileID: 0}
   drops: 0
   theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &753062958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17951,7 +17952,7 @@ GameObject:
   - component: {fileID: 1535412185}
   - component: {fileID: 1535412184}
   - component: {fileID: 1535412183}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tilemap
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -38418,7 +38419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596393294}
   - component: {fileID: 1596393293}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
