@@ -29,6 +29,10 @@ namespace Platformer.Mechanics
         public GameObject attackPosition;
 
         public Bounds Bounds => _collider.bounds;
+        public bool drops;
+        public GameObject theDrops;
+        [HideInInspector]
+        public Transform dropItem;
 
         void Awake()
         {
@@ -49,6 +53,8 @@ namespace Platformer.Mechanics
             attackPosition.name = "enemyAttackPosition";
             attackPosition.transform.SetParent(gameObject.transform);
             attackPosition.transform.localPosition = new Vector3(0.25f,0,0);
+            dropItem = GetComponent<Transform>();
+
         }
 
         // Old OnCollisionEnter2D
@@ -69,6 +75,10 @@ namespace Platformer.Mechanics
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
             
             if(health.currentHP == 0){
+                if (drops)
+                {
+                    Instantiate(theDrops, dropItem.position, dropItem.rotation);
+                }
                 Destroy(gameObject);
             }
         }

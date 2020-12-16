@@ -11,13 +11,15 @@ public class EnemyDropItems : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.GetComponent<PlayerController>() &&
-            collision.contacts[0].normal.y < -0.5f)
+        if (collision.gameObject.tag == "bullet")
         {
-            Destroy(gameObject);
-            if (drops)
+            if (GetComponent<Health>().currentHP >= 20)
             {
-                Instantiate(theDrops, dropItem.position, dropItem.rotation);
+                if (drops)
+                {
+                    Instantiate(theDrops, dropItem.position, dropItem.rotation);
+                }
+
             }
 
         }
