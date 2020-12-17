@@ -7,5 +7,7 @@ namespace Platformer.Mechanics
     public class Character : MonoBehaviour
     {
         public string characterName;
+
+        public int knockbackResistance;
     }
 }

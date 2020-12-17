@@ -29,6 +29,7 @@ namespace Platformer.Mechanics
         public float lowJumpMultiplier = 2f;
         public float jumpVelocity = 5;
         public int jumpLimit = 1;
+        float jumpCooldown;
         public Collider2D collider2d;
         public Rigidbody2D rb2d;
         public Health health;
@@ -71,6 +72,12 @@ namespace Platformer.Mechanics
         {
             if( rb2d.velocity.y < 0){
                 rb2d.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier -1) * Time.deltaTime;
+            }
+
+            if(jumpCount > 0 && jumpCooldown > 0){
+                jumpCooldown -= Time.deltaTime;
+            } else if(jumpCount > 0 && jumpCooldown <= 0){
+                jumpCount = 0;
             }
         }    
 
@@ -157,6 +164,7 @@ namespace Platformer.Mechanics
                 jumpCount++;
                 rb2d.velocity = Vector2.up * jumpVelocity;
                 onGround = false;
+                jumpCooldown = 5f;
             }
         }
 

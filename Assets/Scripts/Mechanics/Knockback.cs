@@ -12,14 +12,11 @@ namespace Platformer.Mechanics
 
         void OnCollisionEnter2D(Collision2D other)
         {
-            //Debug.Log("Collided");
-
             if(other.gameObject.CompareTag("Player")){
-                //Debug.Log("Player collided with me");
-
+                int knockbackResistance = other.gameObject.GetComponent<Character>().knockbackResistance;
                 Vector2 pushDirection = -(gameObject.transform.position - other.gameObject.transform.position).normalized;
 
-                other.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * knockbackStrength, ForceMode2D.Impulse);
+                other.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * Mathf.Clamp(knockbackStrength - knockbackResistance,0,knockbackStrength), ForceMode2D.Impulse);
                 other.gameObject.GetComponent<PlayerController>().decrementHealth(knockbackDamage);
             }
 
@@ -31,8 +28,10 @@ namespace Platformer.Mechanics
 
         public void knockbackTarget(GameObject target){
             if(target.CompareTag("Player")){
+                int knockbackResistance = target.GetComponent<Character>().knockbackResistance;
                 Vector2 pushDirection = -(gameObject.transform.position - target.gameObject.transform.position).normalized;
-                target.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * knockbackStrength, ForceMode2D.Impulse);
+
+                target.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * Mathf.Clamp(knockbackStrength - knockbackResistance,0,knockbackStrength), ForceMode2D.Impulse);
             }
         }
 

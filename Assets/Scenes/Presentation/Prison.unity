@@ -409,6 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 50
   currentHP: 50
 --- !u!114 &23740492
@@ -10680,7 +10681,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
-  enemyAggroRange: 30
+  enemyAggroRange: 20
 --- !u!114 &255766123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10693,6 +10694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &255766124
@@ -11111,6 +11113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 50
   currentHP: 50
 --- !u!114 &330260988
@@ -11520,7 +11523,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
-  enemyAggroRange: 30
+  enemyAggroRange: 20
 --- !u!114 &397963617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11533,6 +11536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &397963618
@@ -11762,7 +11766,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
-  enemyAggroRange: 30
+  enemyAggroRange: 20
 --- !u!114 &471658300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11775,6 +11779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &471658301
@@ -12337,6 +12342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &514370232
@@ -13141,7 +13147,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
-  enemyAggroRange: 30
+  enemyAggroRange: 20
 --- !u!114 &641585117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13154,6 +13160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &641585118
@@ -18844,6 +18851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1192771582
@@ -19464,6 +19472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 1000000
   currentHP: 1000000
 --- !u!114 &1257073366
@@ -20174,6 +20183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 700
   currentHP: 700
 --- !u!114 &1371852716
@@ -20716,6 +20726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 50
   currentHP: 50
 --- !u!114 &1424195763
@@ -20975,6 +20986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1463317551
@@ -21217,6 +21229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1510196964
@@ -21586,6 +21599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 50
   currentHP: 50
 --- !u!114 &1546236143
@@ -21846,6 +21860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1569319553
@@ -71625,6 +71640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1732104064
@@ -72961,7 +72977,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
-  enemyAggroRange: 30
+  enemyAggroRange: 20
 --- !u!114 &1922685176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72974,6 +72990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1922685177
@@ -73735,6 +73752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 50
   currentHP: 1
 --- !u!114 &2036674009
@@ -74087,7 +74105,7 @@ MonoBehaviour:
   moveSpeed: 1
   aggroType: 1
   aggroedPlayer: {fileID: 0}
-  enemyAggroRange: 30
+  enemyAggroRange: 20
 --- !u!114 &2076416751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74100,6 +74118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &2076416752

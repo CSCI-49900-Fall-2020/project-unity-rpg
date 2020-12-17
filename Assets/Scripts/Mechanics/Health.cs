@@ -13,6 +13,7 @@ namespace Platformer.Mechanics
 
         GameObject donut;
         SkillTree skillT;
+        public int damageReduction = 0;
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
@@ -47,7 +48,6 @@ namespace Platformer.Mechanics
         {
             if (gameObject.tag == "Player")
             {
-                int damageReduction = 0;
                 for (int i = 0; i < skillT.sTree.Length; i++)
                 {
                     if (skillT.sTree[i].skilButtonID == "e1" && skillT.sTree[i].abilityLevel >= 1)

@@ -1310,10 +1310,7 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 85298911}
-  bulletShootDamage1: 20
-  bulletShootDamage2: 20
-  bulletShootDamage3: 20
-  bulletShootDamage4: 20
+  damage: 5
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
@@ -1340,10 +1337,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 1
+  startTimeBetweenAttack: 0.15
   attackPosition: {fileID: 2047838096}
   attackAnimator: {fileID: 0}
-  attackRange: 0.5
+  attackRange: 1.5
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -4782,6 +4779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 1000000
   currentHP: 1000000
 --- !u!212 &448402684
@@ -9254,8 +9252,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -905957295
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f51724ab0a527f147a880a75ce277bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -11734,7 +11732,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
   m_Value: 0.9847134
-  m_Size: 0.33497512
+  m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11921,8 +11919,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -905957295
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f51724ab0a527f147a880a75ce277bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13477,10 +13475,7 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1441471203}
-  bulletShootDamage1: 10
-  bulletShootDamage2: 10
-  bulletShootDamage3: 10
-  bulletShootDamage4: 10
+  damage: 15
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 2699123826227790593, guid: 4b3448c91902d2e42ae614ebf11200f2,
@@ -13507,10 +13502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 1
+  startTimeBetweenAttack: 0.15
   attackPosition: {fileID: 1603393872}
   attackAnimator: {fileID: 0}
-  attackRange: 0.5
+  attackRange: 1
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -14617,10 +14612,7 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1576182920}
-  bulletShootDamage1: 15
-  bulletShootDamage2: 15
-  bulletShootDamage3: 15
-  bulletShootDamage4: 15
+  damage: 10
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
@@ -14647,10 +14639,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 1
+  startTimeBetweenAttack: 0.15
   attackPosition: {fileID: 1281032772}
   attackAnimator: {fileID: 0}
-  attackRange: 0.5
+  attackRange: 1.3
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -15112,8 +15104,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -905957295
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f51724ab0a527f147a880a75ce277bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18533,13 +18525,11 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1742884935}
-  bulletShootDamage1: 5
-  bulletShootDamage2: 5
-  bulletShootDamage3: 5
-  bulletShootDamage4: 5
+  damage: 20
   characterS: {fileID: 0}
   donut: {fileID: 0}
-  bulletShoot1: {fileID: 0}
+  bulletShoot1: {fileID: 913255736847165583, guid: 59c9dead0d3b9d04099de3988b54d58b,
+    type: 3}
   bulletShoot2: {fileID: 0}
   bulletShoot3: {fileID: 0}
   bulletShoot4: {fileID: 0}
@@ -18556,10 +18546,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttack: 0
-  startTimeBetweenAttack: 1
+  startTimeBetweenAttack: 0.15
   attackPosition: {fileID: 383458270}
   attackAnimator: {fileID: 0}
-  attackRange: 0.5
+  attackRange: 0.75
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -21693,8 +21683,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -905957295
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f51724ab0a527f147a880a75ce277bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23124,7 +23114,7 @@ PrefabInstance:
     - target: {fileID: 2174709299062730758, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
       propertyPath: moveSpeed
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2174709299062730758, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
@@ -23231,6 +23221,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730879, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -772903483
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299062730879, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2174709299512661001, guid: 8aed0118a80561f42be37c1898685057,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23240,6 +23240,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299512661001, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174709299512661001, guid: 8aed0118a80561f42be37c1898685057,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8aed0118a80561f42be37c1898685057, type: 3}
@@ -23258,7 +23268,7 @@ PrefabInstance:
     - target: {fileID: 4150175718139645226, guid: 30537492faab62c4abec9729b3693f11,
         type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4150175718139645226, guid: 30537492faab62c4abec9729b3693f11,
         type: 3}
@@ -23269,6 +23279,21 @@ PrefabInstance:
         type: 3}
       propertyPath: characterID
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645227, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: knockbackResistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645393, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -772903483
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645393, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4150175718139645394, guid: 30537492faab62c4abec9729b3693f11,
         type: 3}
@@ -23350,6 +23375,21 @@ PrefabInstance:
       propertyPath: maxHP
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 4150175718139645397, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: damageReduction
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718850267440, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150175718850267440, guid: 30537492faab62c4abec9729b3693f11,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30537492faab62c4abec9729b3693f11, type: 3}
 --- !u!1001 &4735668206263547784
@@ -23382,7 +23422,7 @@ PrefabInstance:
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: spawnPoint.x
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535527, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
@@ -23695,6 +23735,16 @@ PrefabInstance:
       propertyPath: hittableLayerMask.m_Bits
       value: 3584
       objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134658, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -772903483
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134658, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5586667500579134659, guid: 4ee1b60b279b70144b3e7c2643a449b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23750,6 +23800,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134712, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: knockbackResistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5586667500579134713, guid: 4ee1b60b279b70144b3e7c2643a449b5,
         type: 3}
       propertyPath: currentMP
@@ -23784,6 +23839,21 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHP
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667500579134718, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: damageReduction
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667501643383363, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586667501643383363, guid: 4ee1b60b279b70144b3e7c2643a449b5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ee1b60b279b70144b3e7c2643a449b5, type: 3}
@@ -23941,12 +24011,12 @@ PrefabInstance:
     - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
       propertyPath: moveSpeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
       propertyPath: jumpVelocity
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372352, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
@@ -23962,6 +24032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: currentMP
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372355, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: knockbackResistance
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372360, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
@@ -24018,6 +24093,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372361, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -772903483
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372361, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9156987257460372363, guid: f7d1ff2c4af3faf4b9973c02e210c816,
         type: 3}
       propertyPath: playerLayerMask.m_Bits
@@ -24037,6 +24122,21 @@ PrefabInstance:
         type: 3}
       propertyPath: maxHP
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257460372365, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: damageReduction
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257514324208, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9156987257514324208, guid: f7d1ff2c4af3faf4b9973c02e210c816,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7d1ff2c4af3faf4b9973c02e210c816, type: 3}

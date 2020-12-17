@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
     public float speed = 2.0f;
     
     void Update () {
-        if(Vector2.Distance(transform.position, objectToFollow.transform.position) <= 5){
+        if(Vector2.Distance(transform.position, objectToFollow.transform.position) <= 10){
             float interpolation = speed * Time.deltaTime;
             
             Vector3 position = this.transform.position;

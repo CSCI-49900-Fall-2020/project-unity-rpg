@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Presentation/Prison Rooms.unity
     guid: c6fbd962027f3044b828eadf22f3c624
   - enabled: 1
+    path: Assets/Scenes/Presentation/Victory.unity
+    guid: 780257c5ad1776b42aba82392e1ffcfe
+  - enabled: 1
     path: Assets/Scenes/PaoloScenes/PaoloAssets.unity
     guid: fd1e3d3b9ad429048a17d2ff834394ea
   - enabled: 1

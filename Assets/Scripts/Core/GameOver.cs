@@ -8,6 +8,8 @@ public class GameOver : MonoBehaviour
 {
     GameObject donut;
     SaveData saveData;
+    CharacterSwapping characterSwapper;
+    GameObject mainCamera;
     DoNotDestroyOnTransition[] toDestroy;
     
     // Start is called before the first frame update
@@ -17,8 +19,13 @@ public class GameOver : MonoBehaviour
 
         donut = GameObject.Find("Donut");
         
-        if(donut != null)
+        if(donut != null){
             saveData = donut.GetComponent<SaveData>();
+            characterSwapper = donut.GetComponent<CharacterSwapping>();
+            mainCamera = characterSwapper.mainCamera.gameObject;
+            if(!mainCamera.activeSelf)
+                mainCamera.SetActive(true);
+        }
     }
     
     public void LoadSave(){
@@ -36,5 +43,8 @@ public class GameOver : MonoBehaviour
         }
 
         SceneManager.LoadScene("Title");
+        
+        if(mainCamera != null)
+            Destroy(mainCamera);
     }
 }

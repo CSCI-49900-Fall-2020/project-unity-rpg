@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3651264712040063933}
   - component: {fileID: 3651264712040063926}
   m_Layer: 8
-  m_Name: black_square
+  m_Name: BasicEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 3651264712040063932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.41, y: -6.33, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -194,8 +194,9 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   health: {fileID: 0}
   attackPosition: {fileID: 0}
-  knockbackPower: 100
-  knockbackDuration: 1
+  drops: 0
+  theDrops: {fileID: 0}
+  dropItem: {fileID: 0}
 --- !u!114 &3651264712040063934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,8 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  currentHP: 10
+  damageReduction: 0
+  maxHP: 20
+  currentHP: 20
 --- !u!114 &3651264712040063933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackStrength: 5
+  knockbackStrength: 10
   selfKnockbackStrength: 5
-  knockbackDamage: 5
+  knockbackDamage: 10
