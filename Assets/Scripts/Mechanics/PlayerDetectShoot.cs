@@ -10,13 +10,14 @@ public class PlayerDetectShoot : MonoBehaviour
     public float timeTemp = 0f;
     public float fireRate = 0.15f;
     public Transform playerEntity;
-    public int damage = 5;
+    public int bulletShootDamage1 = 5;
+    public int bulletShootDamage2 = 5;
+   
     public CharacterSwapping characterS;
     public GameObject donut;
     public GameObject bulletShoot1 = null;
     public GameObject bulletShoot2 = null;
-    public GameObject bulletShoot3 = null;
-    public GameObject bulletShoot4 = null;
+   
     KeyBinds keyB;
     SkillTree playerSkillTree;
     GameObject bulletShoot = null;
@@ -57,12 +58,12 @@ public class PlayerDetectShoot : MonoBehaviour
             case 2:
                 bulletShoot = bulletShoot2;
                 break;
-            case 3:
+           /* case 3:
                 bulletShoot = bulletShoot3;
                 break;
             case 4:
                 bulletShoot = bulletShoot4;
-                break;
+                break;*/
         }
     }
 
@@ -101,8 +102,8 @@ public class PlayerDetectShoot : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletShoot) as GameObject;
         bullet.transform.position = playerEntity.transform.position;
-        bullet.GetComponent<BulletAnimationHit>().damage = characterS.currentCharacter.GetComponent<PlayerDetectShoot>().damage + bonusDamage;
-        
+        bullet.GetComponent<BulletAnimationHit>().damage = characterS.currentCharacter.GetComponent<PlayerDetectShoot>().bulletShootDamage1 + bonusDamage;
+      
     }
 
     public void ShootBullet()

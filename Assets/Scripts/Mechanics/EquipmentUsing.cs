@@ -217,22 +217,35 @@ public class EquipmentUsing : MonoBehaviour
             {
                 if (GameManager.instance.equipmentItems[i].EquipmentID == 5 && GameManager.instance.equipmentItems[i].itemName == eItem.itemName)
                 {
-                    GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage += GetThisEItem().value;
-                    GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShoot1 = GetThisEItem().shootingPng;
+
+                    if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShoot1 == null)
+                    {
+                        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShootDamage1 += GetThisEItem().value;
+                        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShoot1 = GetThisEItem().shootingPng;
+                        GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                        GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                    }
+                    else if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShoot2 == null)
+                    {
+                        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShootDamage2 += GetThisEItem().value;
+                        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShoot2 = GetThisEItem().shootingPng;
+                        GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                        GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                    }
+
+                }
                     // GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerAttributes>().playerDamage += GetThisEItem().value;
                     // Debug.Log("Name: " + GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Health>().GetComponent<PlayerController>().name);
 
                     button.enabled = false;
 
-                    GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
-                    GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
+                   // GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().text = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                    //GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                     GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
-                    for (int j = 0; j < GameManager.instance.equipmentWeapon.Count; j++)
+                 /*   for (int j = 0; j < GameManager.instance.equipmentWeapon.Count; j++)
                     {
                         if (!(GameManager.instance.equipmentWeapon[j].itemName == eItem.itemName) && GameManager.instance.equipmentWeapon[j].eItemUsedByCharacter == eItem.eItemUsedByCharacter)
                         {
-
-
                             for (int k = 0; k < GameManager.instance.equipmentSlots.Length; k++)
                             {
                                 if (k < GameManager.instance.equipmentItems.Count)
@@ -248,11 +261,11 @@ public class EquipmentUsing : MonoBehaviour
                             }
 
                         }
-                    }
+                    }*/
 
                 }
             }
         }
     }
 
-}
+

@@ -121,9 +121,10 @@ public class UsingStoreButtons : MonoBehaviour
             }
             else
             {
-                GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage += value;
+                //MAKE THE CHANGE FOR ALL BULLETS
+                //GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage += value;
                 ScoreManager.instance.decreaseScore(itemCost);
-                Debug.Log(GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage);
+               // Debug.Log(GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage);
             }
         }
         else if(slotID == 7)
@@ -147,10 +148,11 @@ public class UsingStoreButtons : MonoBehaviour
             }
             else
             {
-                GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage += value;
+                //MAKE THE CHANGE FOR ALL BULLETS
+               // GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage += value;
                 GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<MeleeAttack>().damage += value;
                 ScoreManager.instance.decreaseScore(itemCost);
-                Debug.Log(GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage);
+               // Debug.Log(GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().damage);
                 Debug.Log(GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<MeleeAttack>().damage);
             }
         }
