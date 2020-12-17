@@ -111,7 +111,8 @@ public class ActivateText : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            textbox.disable();
+            if(textbox != null)
+                textbox.disable();
             waitforpress = false;
         }
     }

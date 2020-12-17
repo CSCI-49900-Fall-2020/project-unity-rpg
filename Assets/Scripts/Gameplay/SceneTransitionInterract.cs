@@ -30,8 +30,14 @@ public class SceneTransitionInterract : MonoBehaviour
         if (triggered && Input.GetKeyDown(KeyCode.F))
         {
             if(player.tag == "Player"){
+                if(changeCamera)
+                    currCamera.SetActive(false);
+
                 SceneManager.LoadScene(sceneName);
                 player.position = spawnPoint;
+
+                if(changeCamera)
+                    mainCamera.SetActive(true);
             }
         }
     }
@@ -44,19 +50,19 @@ public class SceneTransitionInterract : MonoBehaviour
         mainCamera = GameObject.Find("Main Camera");
     }
 
-    /* private void OnTriggerStay2D(Collider2D other)
-    {
-        if (Input.GetKeyDown(KeyCode.F) && other.tag == "Player")
-        {
-            player = other.GetComponent<Collider2D>().gameObject.transform;
-            SceneManager.LoadScene(sceneName);
-            player.position = spawnPoint;
+//     private void OnTriggerStay2D(Collider2D other)
+//     {
+//         if (Input.GetKeyDown(KeyCode.F) && other.tag == "Player")
+//         {
+//             player = other.GetComponent<Collider2D>().gameObject.transform;
+//             SceneManager.LoadScene(sceneName);
+//             player.position = spawnPoint;
 
-            if(changeCamera)
-            {
-                currCamera.SetActive(false);
-                mainCamera.SetActive(true);
-            }
-        }
-    }*/
+//             if(changeCamera)
+//             {
+//                 currCamera.SetActive(false);
+//                 mainCamera.SetActive(true);
+//             }
+//         }
+//     }
 }

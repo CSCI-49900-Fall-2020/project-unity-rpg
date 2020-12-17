@@ -15,7 +15,7 @@ public class SavePoint : MonoBehaviour
     GameObject CharlieGO;
     GameObject DaveGO;
 
-    bool triggered = false;
+    public bool triggered = false;
     // Start is called before the first frame update
     void Start()
     {

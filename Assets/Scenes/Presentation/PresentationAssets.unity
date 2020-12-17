@@ -1310,14 +1310,13 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 85298911}
-  damage: 5
+  bulletShootDamage1: 5
+  bulletShootDamage2: 5
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
     type: 3}
   bulletShoot2: {fileID: 0}
-  bulletShoot3: {fileID: 0}
-  bulletShoot4: {fileID: 0}
 --- !u!4 &85298911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9156987257460372360, guid: f7d1ff2c4af3faf4b9973c02e210c816,
@@ -13475,14 +13474,13 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1441471203}
-  damage: 15
+  bulletShootDamage1: 5
+  bulletShootDamage2: 5
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 2699123826227790593, guid: 4b3448c91902d2e42ae614ebf11200f2,
     type: 3}
   bulletShoot2: {fileID: 0}
-  bulletShoot3: {fileID: 0}
-  bulletShoot4: {fileID: 0}
 --- !u!4 &1441471203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5586667500579134659, guid: 4ee1b60b279b70144b3e7c2643a449b5,
@@ -14612,14 +14610,13 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1576182920}
-  damage: 10
+  bulletShootDamage1: 5
+  bulletShootDamage2: 5
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
     type: 3}
   bulletShoot2: {fileID: 0}
-  bulletShoot3: {fileID: 0}
-  bulletShoot4: {fileID: 0}
 --- !u!4 &1576182920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4150175718139645394, guid: 30537492faab62c4abec9729b3693f11,
@@ -18525,14 +18522,13 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1742884935}
-  damage: 20
+  bulletShootDamage1: 5
+  bulletShootDamage2: 5
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 913255736847165583, guid: 59c9dead0d3b9d04099de3988b54d58b,
     type: 3}
   bulletShoot2: {fileID: 0}
-  bulletShoot3: {fileID: 0}
-  bulletShoot4: {fileID: 0}
 --- !u!114 &1742884926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23407,12 +23403,12 @@ PrefabInstance:
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: sceneName
-      value: Prison
+      value: PresentationScene3
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
@@ -23422,7 +23418,7 @@ PrefabInstance:
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: spawnPoint.x
-      value: 126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535527, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}

@@ -8,6 +8,7 @@ namespace Platformer.Mechanics
     {
         public string characterName;
 
-        public int knockbackResistance;
+        public float knockbackResistance;
+        public float knockbackStrength = 5.0f;
     }
 }

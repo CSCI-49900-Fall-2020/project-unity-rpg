@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Platformer.Mechanics;
 
 public class CameraSet : MonoBehaviour
 {
+    GameObject donut;
     public GameObject mainCamera;
     public GameObject bossCamera;
 
     void Start()
     {
-        mainCamera = GameObject.Find("Main Camera");
+        donut = GameObject.Find("Donut");
+        if(donut != null)
+            mainCamera = donut.GetComponent<CharacterSwapping>().mainCamera.gameObject;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,12 +25,6 @@ public class CameraSet : MonoBehaviour
             bossCamera.SetActive(true);
         }
     }
-
-    //void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (other.attachedRigidbody)
-    //        other.attachedRigidbody.AddForce(Vector3.up * 10);
-    //}    //void OnTriggerStay2D(Collider2D other)
 
     void OnTriggerExit2D(Collider2D other)
     {

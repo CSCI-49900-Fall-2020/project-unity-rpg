@@ -93,6 +93,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Presentation/Tutorial 3.unity
     guid: 4552bc4b1a6f91e4e9ff486e00175cf7
   - enabled: 1
+    path: Assets/Scenes/Presentation/Tutorial 4.unity
+    guid: d2a6937662c99c44581422986fceb410
+  - enabled: 1
     path: Assets/Scenes/Presentation/Tutorial 9.unity
     guid: e5226b8313e32c047b8d62645dc811e5
   m_configObjects: {}
