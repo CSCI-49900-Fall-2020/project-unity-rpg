@@ -6,6 +6,7 @@ namespace Platformer.Mechanics
 {
     public class Knockback : MonoBehaviour
     {
+        public bool KnockUpOnly = false;
         public float knockbackStrength = 5.0f;
         public float selfKnockbackResistance = 2f;
         public int knockbackDamage = 5;
@@ -16,6 +17,11 @@ namespace Platformer.Mechanics
             if(other.gameObject.CompareTag("Player")){
                 float knockbackResistance = other.gameObject.GetComponent<Character>().knockbackResistance;
                 Vector2 pushDirection = -(gameObject.transform.position - other.gameObject.transform.position).normalized;
+
+                if(KnockUpOnly)
+                    pushDirection.x = 0;
+                    if(pushDirection.y < 0)
+                        pushDirection.y = -pushDirection.y;
 
                 other.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * Mathf.Clamp(knockbackStrength - knockbackResistance,1f,knockbackStrength), ForceMode2D.Impulse);
                 other.gameObject.GetComponent<PlayerController>().decrementHealth(knockbackDamage);
@@ -31,8 +37,8 @@ namespace Platformer.Mechanics
             if(target.CompareTag("Player")){
                 float knockbackResistance = target.GetComponent<Character>().knockbackResistance;
                 Vector2 pushDirection = -(gameObject.transform.position - target.gameObject.transform.position).normalized;
-
                 target.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * Mathf.Clamp(knockbackStrength - knockbackResistance,0.5f,knockbackStrength), ForceMode2D.Impulse);
+
             }
         }
 

@@ -241,5 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 10
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 5
   knockbackDamage: 10
+  selfKnockbackStrength: 5
