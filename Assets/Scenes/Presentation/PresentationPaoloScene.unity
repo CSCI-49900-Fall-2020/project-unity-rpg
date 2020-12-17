@@ -10542,6 +10542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &753062957
@@ -19114,9 +19115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af416e01fa102d14fbbcb234c05ec898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentationScene1
+  sceneName: PresentationScene3
   player: {fileID: 0}
-  spawnPoint: {x: 0, y: 0}
+  spawnPoint: {x: -7, y: 0}
   changeCamera: 0
   currCamera: {fileID: 0}
 --- !u!61 &1465177978
