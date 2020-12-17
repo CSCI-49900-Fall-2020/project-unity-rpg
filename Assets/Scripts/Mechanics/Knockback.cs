@@ -18,10 +18,11 @@ namespace Platformer.Mechanics
                 float knockbackResistance = other.gameObject.GetComponent<Character>().knockbackResistance;
                 Vector2 pushDirection = -(gameObject.transform.position - other.gameObject.transform.position).normalized;
 
-                if(KnockUpOnly)
+                if(KnockUpOnly){
                     pushDirection.x = 0;
                     if(pushDirection.y < 0)
                         pushDirection.y = -pushDirection.y;
+                }
 
                 other.gameObject.GetComponent<Rigidbody2D>().AddForce(pushDirection * Mathf.Clamp(knockbackStrength - knockbackResistance,1f,knockbackStrength), ForceMode2D.Impulse);
                 other.gameObject.GetComponent<PlayerController>().decrementHealth(knockbackDamage);
