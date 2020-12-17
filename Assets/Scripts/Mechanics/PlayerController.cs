@@ -64,7 +64,7 @@ namespace Platformer.Mechanics
         }
 
         void Start() {
-            attackPosition.localPosition = new Vector3(0.25f,0,0);
+            attackPosition.localPosition = new Vector3(0.5f,0,0);
         }
 
         protected void Update()
@@ -82,7 +82,7 @@ namespace Platformer.Mechanics
             if(!facingRight)
                 multiply = -1;
 
-            attackPosition.localPosition = new Vector3(0.25f * multiply,0,0);
+            attackPosition.localPosition = new Vector3(0.5f * multiply,0,0);
             Vector3 flip = attackPosition.localScale;
             flip.x *= -1;
             attackPosition.localScale = flip;

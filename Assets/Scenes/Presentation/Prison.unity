@@ -72139,6 +72139,7 @@ GameObject:
   - component: {fileID: 1816776384}
   - component: {fileID: 1816776383}
   - component: {fileID: 1816776382}
+  - component: {fileID: 1816776386}
   m_Layer: 0
   m_Name: Exit door
   m_TagString: Untagged
@@ -72153,7 +72154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816776381}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9382bacc6bb96e648b3938b1c1879e8f, type: 3}
   m_Name: 
@@ -72257,6 +72258,21 @@ Transform:
   m_Father: {fileID: 2045066693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1816776386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816776381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43c8ae0f29e529449a4ec03bd3cbeba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Victory
+  player: {fileID: 0}
+  spawnPoint: {x: 0, y: 0}
 --- !u!1 &1852716161
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ namespace Platformer.Mechanics
         public Transform attackPosition;
 
         public Animator attackAnimator;
-        public float attackRange = 0.5f;
+        public float attackRange = 1f;
         public LayerMask enemyLayerMask;
         public int damage;
         GameObject donut;
@@ -25,10 +25,7 @@ namespace Platformer.Mechanics
         }
         void Update()
         {
-           
-        
             if (timeBetweenAttack <= 0){
-
                 if(Input.GetKey(KeyCode.G)){
                     int bonusDamage = 0;
                     for (int i = 0; i < skillT.sTree.Length; i++)
@@ -46,12 +43,14 @@ namespace Platformer.Mechanics
                         {
                             bonusDamage += 3 * skillT.sTree[i].abilityLevel;
                         }
-                       
                     }
+
                     attackAnimator.Play("MeleeAttack");
+
                     Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, enemyLayerMask);
 
                     for(int i = 0; i < enemiesToDamage.Length; i++){
+                        Debug.Log(enemiesToDamage[i].name);
                         if(enemiesToDamage[i].CompareTag("enemy")){
                             enemiesToDamage[i].GetComponent<EnemyController>().HealthDecrement(damage + bonusDamage);
                             Debug.Log(damage + bonusDamage);
@@ -61,6 +60,7 @@ namespace Platformer.Mechanics
 
                         }
                     }
+
                     timeBetweenAttack = startTimeBetweenAttack;
                 }
             } else {
