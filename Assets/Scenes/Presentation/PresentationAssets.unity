@@ -16774,9 +16774,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  skillName: Devils Devotion
+  skillDescription: You sell a part of your soul in exchange for increasing your
+    magical potency
+  skillBonus: 'Increase Bullet Damage by '
 --- !u!114 &1672230341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16870,9 +16871,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  skillName: Wander's Instinct
+  skillDescription: Constant training allows you to take less damage
+  skillBonus: Reduce Damage by
 --- !u!114 &1672230347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16886,9 +16887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  skillName: Warrior's Spirit
+  skillDescription: Your battle experience makes you more efficent in close combat
+  skillBonus: Increase Melee Attack by
 --- !u!114 &1672230348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16902,9 +16903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  skillName: Inner Fire
+  skillDescription: Your hands grow hotter than before
+  skillBonus: Increase Bullet Damage by
 --- !u!114 &1672230349
 MonoBehaviour:
   m_ObjectHideFlags: 0
