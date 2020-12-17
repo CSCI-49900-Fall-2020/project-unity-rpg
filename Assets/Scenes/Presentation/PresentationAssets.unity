@@ -2616,6 +2616,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab4267cd3cd85f345828694fc1082314, type: 3}
+--- !u!1 &196824102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8667861619768255495, guid: ab4267cd3cd85f345828694fc1082314,
+    type: 3}
+  m_PrefabInstance: {fileID: 196824101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &196824104 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8667861621731986623, guid: ab4267cd3cd85f345828694fc1082314,
@@ -22521,6 +22527,11 @@ PrefabInstance:
       propertyPath: skillTreeUI
       value: 
       objectReference: {fileID: 1912691561}
+    - target: {fileID: 4735668207965535547, guid: a9e606954e579a04ba4ca958a32e1c98,
+        type: 3}
+      propertyPath: canvasSet
+      value: 
+      objectReference: {fileID: 196824102}
     - target: {fileID: 4735668207965535548, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: sTree.Array.size

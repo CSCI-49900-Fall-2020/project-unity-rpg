@@ -12,7 +12,7 @@ public class SkillManager : MonoBehaviour
     }
 
 	public GameObject skillTreeUI;
-
+	public GameObject canvasSet;
 	void Update()
 	{
 	  	if(Input.GetKeyDown("t"))
@@ -20,10 +20,14 @@ public class SkillManager : MonoBehaviour
 	    	if(skillTreeUI.activeSelf)
 	    	{
 	      		skillTreeUI.SetActive(false);
-	    	}else 
+				canvasSet.SetActive(true);
+
+			}
+			else 
 	    	{
 	      		skillTreeUI.SetActive(true);
-	    	}
+				canvasSet.SetActive(false);
+			}
 	  	}
 	}
 }
