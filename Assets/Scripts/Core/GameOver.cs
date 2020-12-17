@@ -16,7 +16,9 @@ public class GameOver : MonoBehaviour
         toDestroy = GameObject.FindObjectsOfType<DoNotDestroyOnTransition>();
 
         donut = GameObject.Find("Donut");
-        saveData = donut.GetComponent<SaveData>();
+        
+        if(donut != null)
+            saveData = donut.GetComponent<SaveData>();
     }
     
     public void LoadSave(){

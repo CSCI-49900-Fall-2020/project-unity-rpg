@@ -296,7 +296,6 @@ namespace Platformer.Mechanics
                 currentCharacter = character4;
                 currentCharacter.GetComponent<Transform>().gameObject.GetComponent<PlayerController>().controlEnabled = true;
                 mainCamera.objectToFollow = currentCharacter.GetComponent<Transform>().gameObject;
-                Debug.Log("test");
                 mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
                 mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
             } 
