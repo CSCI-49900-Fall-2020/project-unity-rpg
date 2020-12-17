@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc2155fdbd664644f855d206c8194ed3, type: 3}
-  m_Name: EquipmentSword
+  m_Name: Axe
   m_EditorClassIdentifier: 
-  itemName: Sword
+  itemName: Axe
   EquipmentID: 5
-  description: increase damage by 1
-  itemSprite: {fileID: 21300000, guid: 49aff6727c6c9944c8b1fcb42075904b, type: 3}
-  value: 1
+  description: add 3 damage to range attack
+  itemSprite: {fileID: 21300064, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
+  value: 3
   eUsing: 0
+  shootingPng: {fileID: 137294208505853080, guid: 3cf52f9afbc10c046b945e8fb070eaa4,
+    type: 3}
+  eItemUsedByCharacter: 

@@ -12,7 +12,7 @@ public class PickUpItem : MonoBehaviour
 
     private void Start()
     {
-       // donut = GameObject.Find("Donut");
+      
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,7 +24,7 @@ public class PickUpItem : MonoBehaviour
                 {
                     Destroy(gameObject);
                     GameManager.instance.AddItem(itemData);
-                    //donut.GetComponent<ShootManager>().enabled = true;
+                    
                 }
                 else
                 {
@@ -35,11 +35,15 @@ public class PickUpItem : MonoBehaviour
             {
                 if (GameManager.instance.AddEquipmentItem(equipmentData))
                 {
+                if (equipmentData.EquipmentID == 5)
+                {
+                    collision.GetComponent<PlayerDetectShoot>().enabled = true;
+                }
                     Destroy(gameObject);
 
                 }
             }
-        
+            
         
     }
 

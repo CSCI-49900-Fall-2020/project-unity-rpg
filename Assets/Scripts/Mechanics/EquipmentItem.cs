@@ -13,6 +13,7 @@ public class EquipmentItem : ScriptableObject
     public Sprite itemSprite;
     public int value;
     public bool eUsing;
+    public GameObject shootingPng;
 
     public string eItemUsedByCharacter;
 
