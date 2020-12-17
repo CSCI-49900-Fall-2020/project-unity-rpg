@@ -15,116 +15,106 @@ public class SkillButton : MonoBehaviour
 
 	public int abilityLevelReq = 1;
 	public bool unlockThisSkill = false;
-	bool unlockNextSkill = false;
+	public bool unlockNextSkill = false;
 	public string skilButtonID;
 	
-		
-		void Start()
+	public void SetDefault()
+	{
+		unlockThisSkill = false;
+		unlockNextSkill = false;
+		if(previousReq == null || previousReq.Length == 0)
 		{
-			if(previousReq == null || previousReq.Length == 0)
-			{
-				unlockThisSkill = true;
-				
-			}
-
-			if(unlockThisSkill == true){
-				GetComponent<Image>().color = new Color (1, 1, 1, 1);
-			}else
-			{
-				GetComponent<Image>().color = new Color (.5f, .5f, .5f, 1);
-			}
+			unlockThisSkill = true;
 		}
 
-
-	
-		void UnlockCurrentTeir()
+		if(unlockThisSkill == true){
+			GetComponent<Image>().color = new Color (1, 1, 1, 1);
+		}else
 		{
-			if(previousReq == null)
+			GetComponent<Image>().color = new Color (.5f, .5f, .5f, 1);
+		}
+	}	
+
+	void Start()
+	{
+		SetDefault();
+	}
+
+	public void UnlockCurrentTeir()
+	{
+		if(previousReq == null)
+		{
+			unlockThisSkill = true;
+			
+			GetComponent<Image>().color = new Color (1, 1, 1, 1);
+			return;
+		}
+		for (int i = 0; i < previousReq.Length; i++)
+		{
+			if(previousReq[i].GetComponent<SkillButton>().unlockNextSkill == false)
 			{
-				unlockThisSkill = true;
-				
-				GetComponent<Image>().color = new Color (1, 1, 1, 1);
+				unlockThisSkill = false;
+				GetComponent<Image>().color = new Color (.5f, .5f, .5f, 1);
 				return;
 			}
-			for (int i = 0; i < previousReq.Length; i++)
-			{
-				if(previousReq[i].GetComponent<SkillButton>().unlockNextSkill == false)
-				{
-					unlockThisSkill = false;
-					return;
-				}
-			}
-			unlockThisSkill = true;
-			GetComponent<Image>().color = new Color (1, 1, 1, 1);
-			return;	
+		}
+		unlockThisSkill = true;
+		GetComponent<Image>().color = new Color (1, 1, 1, 1);
+		return;	
+	}
+
+	public void UnlockNextTeir()
+	{
+		if(abilityLevel == abilityLevelReq)
+		{
+			unlockNextSkill = true;
 		}
 
-		void UnlockNextTeir()
+		for (int i = 0; i < nextReq.Length; i++)
 		{
-			if(abilityLevel == abilityLevelReq)
-			{
-				unlockNextSkill = true;
-			}
-
-			for (int i = 0; i < nextReq.Length; i++)
-			{
-				nextReq[i].GetComponent<SkillButton>().UnlockCurrentTeir();
-			}
+			nextReq[i].GetComponent<SkillButton>().UnlockCurrentTeir();
 		}
+	}
 
-		void OnMouseDown()
+	void OnMouseDown()
+	{
+		if (unlockThisSkill == false)
 		{
-			if (unlockThisSkill == false)
+			//holding left click colors red trying to upgrade a locked skill
+			GetComponent<Image>().color = new Color (1, 0, 0, 1);
+		}
+		else
+		{
+			if (skillTree.GetComponent<SkillTree>().abilityPoints != 0)
 			{
-				//holding left click colors red trying to upgrade a locked skill
+				//holding left click this colors green upgrading a skill
+				GetComponent<Image>().color = new Color (0, 1, 0, 1);
+			}	
+			else
+			{
+				//holding left click this colors red upgrading a skill without any points left
 				GetComponent<Image>().color = new Color (1, 0, 0, 1);
 			}
-			else
-			{
-				if (skillTree.GetComponent<SkillTree>().abilityPoints != 0)
-				{
-					//holding left click this colors green upgrading a skill
-					GetComponent<Image>().color = new Color (0, 1, 0, 1);
-				}	
-				else
-				{
-					//holding left click this colors red upgrading a skill without any points left
-					GetComponent<Image>().color = new Color (1, 0, 0, 1);
-				}
-			}
 		}
+	}
 
-		public void UseButton()
+	public void UseButton()
+	{
+		if (unlockThisSkill == true)
 		{
-/*
-			if (unlockThisSkill == false)
-			{
-				//releasing left mouse click will change icon to grey scale if skill is locked
-				GetComponent<Image>().color = new Color (.5f, .5f, .5f, 1);
-			}
-			else
-			{
-				//releasing left mouse click will change icon to normal color scale if skill is unlocked
-				GetComponent<Image>().color = new Color (1, 1, 1, 1);
-			}
-*/			if (unlockThisSkill == true)
-			{
-				//if skill is unlocked, then you decuct a point from skill tree
-				skillPlus1 = skillTree.GetComponent<SkillTree>().UpgradeSkill();
-			}
-
-			if(skillPlus1 == true)
-			{
-           
-				abilityLevel = abilityLevel + 1;
-				UnlockNextTeir();
-				UnlockCurrentTeir();
-				skillPlus1 = false;
-			
-			}
-		
-			
+			//if skill is unlocked, then you decuct a point from skill tree
+			skillPlus1 = skillTree.GetComponent<SkillTree>().UpgradeSkill();
 		}
+		
+
+		if(skillPlus1 == true)
+		{
+			abilityLevel = abilityLevel + 1;
+			UnlockNextTeir();
+			UnlockCurrentTeir();
+			skillPlus1 = false;
+		}			
+	}
 
     // Update is called once per frame
     void Update()
