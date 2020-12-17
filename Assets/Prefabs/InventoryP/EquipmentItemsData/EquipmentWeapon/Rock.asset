@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2155fdbd664644f855d206c8194ed3, type: 3}
+  m_Name: Rock
+  m_EditorClassIdentifier: 
+  itemName: Rock
+  EquipmentID: 5
+  description: adds 5 damage to range attack
+  itemSprite: {fileID: -4953782537898385540, guid: 2e5a928b82f61e1489ec8cd5b11590b7,
+    type: 3}
+  value: 5
+  eUsing: 0
+  shootingPng: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
+    type: 3}
+  eItemUsedByCharacter: 

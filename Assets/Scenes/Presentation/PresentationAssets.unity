@@ -1310,7 +1310,10 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 85298911}
-  damage: 5
+  bulletShootDamage1: 20
+  bulletShootDamage2: 20
+  bulletShootDamage3: 20
+  bulletShootDamage4: 20
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 8525623391309211960, guid: 47dd2016242ba5a47ab16c397949067e,
@@ -11730,8 +11733,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 822015837}
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
-  m_Value: 0.98471344
-  m_Size: 0.33497518
+  m_Value: 0.9847134
+  m_Size: 0.33497512
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13474,7 +13477,10 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1441471203}
-  damage: 15
+  bulletShootDamage1: 10
+  bulletShootDamage2: 10
+  bulletShootDamage3: 10
+  bulletShootDamage4: 10
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 2699123826227790593, guid: 4b3448c91902d2e42ae614ebf11200f2,
@@ -14611,7 +14617,10 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1576182920}
-  damage: 10
+  bulletShootDamage1: 15
+  bulletShootDamage2: 15
+  bulletShootDamage3: 15
+  bulletShootDamage4: 15
   characterS: {fileID: 0}
   donut: {fileID: 0}
   bulletShoot1: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
@@ -18524,11 +18533,13 @@ MonoBehaviour:
   timeTemp: 0
   fireRate: 0.15
   playerEntity: {fileID: 1742884935}
-  damage: 20
+  bulletShootDamage1: 5
+  bulletShootDamage2: 5
+  bulletShootDamage3: 5
+  bulletShootDamage4: 5
   characterS: {fileID: 0}
   donut: {fileID: 0}
-  bulletShoot1: {fileID: 913255736847165583, guid: 59c9dead0d3b9d04099de3988b54d58b,
-    type: 3}
+  bulletShoot1: {fileID: 0}
   bulletShoot2: {fileID: 0}
   bulletShoot3: {fileID: 0}
   bulletShoot4: {fileID: 0}

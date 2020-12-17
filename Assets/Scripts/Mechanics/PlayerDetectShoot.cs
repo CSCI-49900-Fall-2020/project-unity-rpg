@@ -12,12 +12,14 @@ public class PlayerDetectShoot : MonoBehaviour
     public Transform playerEntity;
     public int bulletShootDamage1 = 5;
     public int bulletShootDamage2 = 5;
-   
+   /* public int bulletShootDamage3 = 5;
+    public int bulletShootDamage4 = 5;*/
     public CharacterSwapping characterS;
     public GameObject donut;
     public GameObject bulletShoot1 = null;
     public GameObject bulletShoot2 = null;
-   
+/*    public GameObject bulletShoot3 = null;
+    public GameObject bulletShoot4 = null;*/
     KeyBinds keyB;
     SkillTree playerSkillTree;
     GameObject bulletShoot = null;
@@ -58,7 +60,7 @@ public class PlayerDetectShoot : MonoBehaviour
             case 2:
                 bulletShoot = bulletShoot2;
                 break;
-           /* case 3:
+          /*  case 3:
                 bulletShoot = bulletShoot3;
                 break;
             case 4:

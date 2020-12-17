@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc2155fdbd664644f855d206c8194ed3, type: 3}
+  m_Name: Leaf
+  m_EditorClassIdentifier: 
+  itemName: Leaf
+  EquipmentID: 5
+  description: adds 4 damage to range attack
+  itemSprite: {fileID: 8608028384471968613, guid: c65ffe83bbcfe214585d4bc093e99ea8,
+    type: 3}
+  value: 4
+  eUsing: 0
+  shootingPng: {fileID: 8379447584486350987, guid: e758d50d62e786c45a794f88545393c6,
+    type: 3}
+  eItemUsedByCharacter: 
