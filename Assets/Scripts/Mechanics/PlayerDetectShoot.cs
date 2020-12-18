@@ -100,7 +100,6 @@ public class PlayerDetectShoot : MonoBehaviour
                 bulletShoot = bulletShoot4;
                 break;*/
         }
-        SkillBonusDamage(bulletShootDamage);
     }
 
     public void ShootBulletButton(int bulletNumber)
@@ -108,6 +107,7 @@ public class PlayerDetectShoot : MonoBehaviour
         if (Time.time > timeTemp)
         {
             SelectBullet(bulletNumber);
+            SkillBonusDamage(bulletShootDamage);
             ShootBullet();
             timeTemp = Time.time + fireRate;
         }
@@ -115,12 +115,8 @@ public class PlayerDetectShoot : MonoBehaviour
 
     void ScriptBullet()
     {
-
-
         GameObject bullet = Instantiate(bulletShoot) as GameObject;
-        bullet.transform.position = playerEntity.transform.position + new Vector3 (0,.3f,0);
-        
-      
+        bullet.transform.position = playerEntity.transform.position + new Vector3 (0,.3f,0); 
     }
 
     public void ShootBullet()

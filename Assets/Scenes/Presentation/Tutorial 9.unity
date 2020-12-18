@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af416e01fa102d14fbbcb234c05ec898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PresentationScene1
+  sceneName: PresentationPaoloScene
   player: {fileID: 0}
   spawnPoint: {x: 0, y: 0}
   changeCamera: 0
