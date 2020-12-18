@@ -148,6 +148,10 @@ MonoBehaviour:
   nextReq: []
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788991865045665
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +301,10 @@ MonoBehaviour:
   - {fileID: 1055788992530828193}
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788992187979504
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +454,10 @@ MonoBehaviour:
   - {fileID: 1055788991859104151}
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788992279984253
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6772110211388723911, guid: 43a13808eafb7d940a8fc2256048ea0a,
+  m_Sprite: {fileID: 8198174818391257554, guid: 43a13808eafb7d940a8fc2256048ea0a,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -594,6 +606,10 @@ MonoBehaviour:
   nextReq: []
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788992285778615
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8198174818391257554, guid: 43a13808eafb7d940a8fc2256048ea0a,
+  m_Sprite: {fileID: -6772110211388723911, guid: 43a13808eafb7d940a8fc2256048ea0a,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -742,6 +758,10 @@ MonoBehaviour:
   nextReq: []
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788992377277098
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +985,10 @@ MonoBehaviour:
   nextReq: []
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788992530828193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1137,10 @@ MonoBehaviour:
   nextReq: []
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788992821845644
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1290,10 @@ MonoBehaviour:
   - {fileID: 1055788992279984253}
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788993136540918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,8 +1394,8 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1410,6 +1442,10 @@ MonoBehaviour:
   nextReq: []
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788993184861999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1559,6 +1595,10 @@ MonoBehaviour:
   - {fileID: 1055788992454784475}
   abilityLevel: 0
   skillTree: {fileID: 0}
+  abilityLevelReq: 1
+  unlockThisSkill: 0
+  unlockNextSkill: 0
+  skilButtonID: 
 --- !u!1 &1055788993265178615
 GameObject:
   m_ObjectHideFlags: 0

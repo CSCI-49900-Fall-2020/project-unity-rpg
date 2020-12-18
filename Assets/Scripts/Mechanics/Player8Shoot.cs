@@ -10,6 +10,7 @@ public class Player8Shoot : MonoBehaviour
 	private Vector2 screenBounds;
 	public int bulletDirection = 0;
 	public float tempTime;
+
 	void Start()
 	{
 		screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));

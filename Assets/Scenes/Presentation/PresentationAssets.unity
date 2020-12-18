@@ -2731,7 +2731,7 @@ RectTransform:
   m_Children:
   - {fileID: 1835924733}
   m_Father: {fileID: 1912691562}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4510,12 +4510,12 @@ RectTransform:
   m_Children:
   - {fileID: 1212501562}
   m_Father: {fileID: 1912691562}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162.7, y: 184.5}
-  m_SizeDelta: {x: 248.73407, y: 154.18619}
+  m_AnchoredPosition: {x: -179, y: 150.21}
+  m_SizeDelta: {x: 290.16803, y: 254.16101}
   m_Pivot: {x: 0.47244844, y: 1.0870861}
 --- !u!114 &442206052
 MonoBehaviour:
@@ -4551,7 +4551,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 50fcdb81528ecb34aa8e5b9cad79ebe4, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4695,9 +4695,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 0
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 0
+  selfKnockbackStrength: 5
 --- !u!114 &448402679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11069,7 +11071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.5000076, y: -1.5}
+  m_AnchoredPosition: {x: -0.5, y: -1.5}
   m_SizeDelta: {x: -29.451279, y: -25.516457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212501563
@@ -11370,7 +11372,7 @@ RectTransform:
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 1912691562}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16772,10 +16774,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: Devils Devotion
-  skillDescription: You sell a part of your soul in exchange for increasing your
-    magical potency
-  skillBonus: 'Increase Bullet Damage by '
+  bonus: 2
+  abilityLevel: 0
+  skillName: Magical Gem Proficency
+  skillDescription: Practicing with magical gems improves your magical abilities
+  skillBonus: 'Increases Magic Damage by '
 --- !u!114 &1672230341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16789,9 +16792,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  bonus: 3
+  abilityLevel: 0
+  skillName: Godly Hands
+  skillDescription: Using your bare hands you parry incoming attacks
+  skillBonus: 'Increases Damage Resistance by '
 --- !u!114 &1672230342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16805,9 +16810,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  bonus: 2
+  abilityLevel: 0
+  skillName: Warrior's Instinct
+  skillDescription: Your body becomes adept in mitigating damage in combat
+  skillBonus: 'Increases Damage Resistance by '
 --- !u!114 &1672230343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16821,9 +16828,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  bonus: 3
+  abilityLevel: 0
+  skillName: Heroic Spirit
+  skillDescription: Training with fallen heros has made you a stronger warrior than
+    before
+  skillBonus: 'Increases Melee Damage by '
 --- !u!114 &1672230344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16837,9 +16847,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  bonus: 2
+  abilityLevel: 0
+  skillName: Deadly Warfare
+  skillDescription: By attaching ice shards to your weapon, you deal more deadly
+    blows
+  skillBonus: 'Increases Melee Damage by '
 --- !u!114 &1672230345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16853,9 +16866,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  bonus: 3
+  abilityLevel: 0
+  skillName: Devils Devotion
+  skillDescription: You sell a part of your soul in exchange for increasing your
+    magical potency
+  skillBonus: 'Increases Magic Damage by '
 --- !u!114 &1672230346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16869,9 +16885,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
+  bonus: 1
+  abilityLevel: 0
   skillName: Wander's Instinct
   skillDescription: Constant training allows you to take less damage
-  skillBonus: Reduce Damage by
+  skillBonus: 'Increases Damage Resistance by '
 --- !u!114 &1672230347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16885,9 +16903,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
+  bonus: 1
+  abilityLevel: 0
   skillName: Warrior's Spirit
   skillDescription: Your battle experience makes you more efficent in close combat
-  skillBonus: Increase Melee Attack by
+  skillBonus: 'Increases Melee Damage by '
 --- !u!114 &1672230348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16901,9 +16921,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
+  bonus: 1
+  abilityLevel: 0
   skillName: Inner Fire
   skillDescription: Your hands grow hotter than before
-  skillBonus: Increase Bullet Damage by
+  skillBonus: 'Increases Magic Damage by '
 --- !u!114 &1672230349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16917,9 +16939,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 442206052}
-  skillName: NA
-  skillDescription: NA
-  skillBonus: NA
+  bonus: 4
+  abilityLevel: 0
+  skillName: Magical Mastery
+  skillDescription: Your magic has become more efficient than before
+  skillBonus: 'Increases Magic Damage by '
 --- !u!1 &1678070216
 GameObject:
   m_ObjectHideFlags: 0

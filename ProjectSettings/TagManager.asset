@@ -14,6 +14,7 @@ TagManager:
   - Ground
   - Boss
   - bullet
+  - enemyBullet
   layers:
   - Default
   - TransparentFX

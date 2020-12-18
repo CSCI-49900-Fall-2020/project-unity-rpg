@@ -8,9 +8,11 @@ public class SkillToolTips : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
 {
     public ToolTips tooltip;
     private Vector2 position;
-    public string skillName = "NA";
-    public string skillDescription = "NA";
-    public string skillBonus = "NA";
+    public int bonus = 1;
+    public int abilityLevel =0;
+    public string skillName;
+    public string skillDescription;
+    public string skillBonus;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -30,12 +32,14 @@ public class SkillToolTips : MonoBehaviour,IPointerEnterHandler,IPointerExitHand
 
     private string GetDetailText()
     {
+        abilityLevel = gameObject.GetComponent<SkillButton>().abilityLevel;
     	 StringBuilder stringBuilder = new StringBuilder();
-         stringBuilder.AppendFormat("Skill:"+skillName+" \n");
-         stringBuilder.AppendFormat("Current Level:"+gameObject.GetComponent<SkillButton>().abilityLevel+" \n");
-         stringBuilder.AppendFormat(skillDescription+skillBonus+"\n");
-         stringBuilder.AppendFormat("Next Level: "+(gameObject.GetComponent<SkillButton>().abilityLevel+1)+"\n");
-         stringBuilder.AppendFormat(skillDescription+skillBonus+"\n");
+         stringBuilder.AppendFormat("Skill: "           +skillName                  +" \n");
+         stringBuilder.AppendFormat("Current Level: "   +abilityLevel               +" \n");
+         stringBuilder.AppendFormat(skillDescription    +"\n");
+         stringBuilder.AppendFormat(skillBonus          +(abilityLevel*bonus)       +"\n\n");
+         stringBuilder.AppendFormat("Next Level: "      +(1+abilityLevel)           +"\n");
+         stringBuilder.AppendFormat(skillBonus          +((1+abilityLevel)*bonus)   +"\n");
 
          return stringBuilder.ToString();
     }

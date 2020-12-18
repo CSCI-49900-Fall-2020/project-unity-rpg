@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 23740490}
   - component: {fileID: 23740489}
   - component: {fileID: 23740495}
+  - component: {fileID: 23740499}
   m_Layer: 8
   m_Name: flying enemy (3)
   m_TagString: enemy
@@ -378,9 +379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 10
+  selfKnockbackStrength: 5
 --- !u!114 &23740490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,6 +587,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23740499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23740488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecc3b63ebc7a7241aa8cd6383e24cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 1
+  timeTemp: 0
+  fireRate: 1
+  enemyEntity: {fileID: 23740498}
+  direction: 3
+  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+    type: 3}
 --- !u!1 &35609160
 GameObject:
   m_ObjectHideFlags: 0
@@ -10663,9 +10685,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 5
+  selfKnockbackStrength: 5
 --- !u!114 &255766122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11063,6 +11087,7 @@ GameObject:
   - component: {fileID: 330260986}
   - component: {fileID: 330260985}
   - component: {fileID: 330260991}
+  - component: {fileID: 330260995}
   m_Layer: 8
   m_Name: flying enemy (4)
   m_TagString: enemy
@@ -11082,9 +11107,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 10
+  selfKnockbackStrength: 5
 --- !u!114 &330260986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11288,6 +11315,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &330260995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330260984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecc3b63ebc7a7241aa8cd6383e24cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 1
+  timeTemp: 0
+  fireRate: 1
+  enemyEntity: {fileID: 330260994}
+  direction: 3
+  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+    type: 3}
 --- !u!1 &341067384
 GameObject:
   m_ObjectHideFlags: 0
@@ -11505,9 +11551,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &397963616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11748,9 +11796,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &471658299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12311,9 +12361,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &514370230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13129,9 +13181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &641585116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18820,9 +18874,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &1192771580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19680,7 +19736,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -20369,9 +20425,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 20
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 20
+  selfKnockbackStrength: 5
 --- !u!1 &1378918198
 GameObject:
   m_ObjectHideFlags: 0
@@ -20676,6 +20734,7 @@ GameObject:
   - component: {fileID: 1424195760}
   - component: {fileID: 1424195766}
   - component: {fileID: 1424195770}
+  - component: {fileID: 1424195771}
   m_Layer: 8
   m_Name: flying enemy (1)
   m_TagString: enemy
@@ -20695,9 +20754,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 10
+  selfKnockbackStrength: 5
 --- !u!114 &1424195761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20918,6 +20979,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1424195771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424195759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecc3b63ebc7a7241aa8cd6383e24cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 1
+  timeTemp: 0
+  fireRate: 1
+  enemyEntity: {fileID: 1424195769}
+  direction: 3
+  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+    type: 3}
 --- !u!1 &1463317547
 GameObject:
   m_ObjectHideFlags: 0
@@ -20955,9 +21035,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &1463317549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21198,9 +21280,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &1510196962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21549,6 +21633,7 @@ GameObject:
   - component: {fileID: 1546236140}
   - component: {fileID: 1546236150}
   - component: {fileID: 1546236146}
+  - component: {fileID: 1546236151}
   m_Layer: 8
   m_Name: flying enemy
   m_TagString: enemy
@@ -21568,9 +21653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 10
+  selfKnockbackStrength: 5
 --- !u!114 &1546236141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21792,6 +21879,25 @@ MonoBehaviour:
   - {fileID: 341067385}
   - {fileID: 1695821731}
   - {fileID: 86818737}
+--- !u!114 &1546236151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546236139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecc3b63ebc7a7241aa8cd6383e24cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 1
+  timeTemp: 0
+  fireRate: 1
+  enemyEntity: {fileID: 1546236149}
+  direction: 3
+  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+    type: 3}
 --- !u!1 &1569319549
 GameObject:
   m_ObjectHideFlags: 0
@@ -21829,9 +21935,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &1569319551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71609,9 +71717,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &1732104062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72959,9 +73069,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &1922685175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73702,6 +73814,7 @@ GameObject:
   - component: {fileID: 2036674007}
   - component: {fileID: 2036674006}
   - component: {fileID: 2036674012}
+  - component: {fileID: 2036674016}
   m_Layer: 8
   m_Name: flying enemy (2)
   m_TagString: enemy
@@ -73721,9 +73834,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 10
+  selfKnockbackStrength: 5
 --- !u!114 &2036674007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73927,6 +74042,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036674016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036674005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecc3b63ebc7a7241aa8cd6383e24cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facingRight: 1
+  timeTemp: 0
+  fireRate: 1
+  enemyEntity: {fileID: 2036674015}
+  direction: 3
+  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+    type: 3}
 --- !u!1 &2045066691
 GameObject:
   m_ObjectHideFlags: 0
@@ -74087,9 +74221,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 15
+  selfKnockbackStrength: 5
 --- !u!114 &2076416750
 MonoBehaviour:
   m_ObjectHideFlags: 0
