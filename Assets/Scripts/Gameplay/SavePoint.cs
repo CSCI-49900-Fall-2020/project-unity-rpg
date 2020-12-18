@@ -16,7 +16,7 @@ public class SavePoint : MonoBehaviour
     GameObject DaveGO;
 
     public bool triggered = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         donut = GameObject.Find("Donut");

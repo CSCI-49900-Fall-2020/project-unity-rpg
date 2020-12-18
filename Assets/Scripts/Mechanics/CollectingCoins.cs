@@ -6,8 +6,7 @@ public class CollectingCoins : MonoBehaviour
 {
     public int coinValue = 1;
     public AudioClip pointsSound;
-    // Start is called before the first frame update
-   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player") 

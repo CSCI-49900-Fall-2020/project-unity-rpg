@@ -21,13 +21,11 @@ namespace Platformer.Mechanics
 
         public void attackPlayers(){
             if(timeBetweenAttack <= 0){
-                Debug.Log("attacking player");
                 Collider2D[] playersToDamage = Physics2D.OverlapCircleAll(attackPosition.position, attackRange, playerLayerMask);
 
                 if(playersToDamage != null){
                     for(int i = 0; i < playersToDamage.Length; i++){
                         playersToDamage[i].GetComponent<PlayerController>().decrementHealth(damage);
-                        Debug.Log(playersToDamage[i].name + " hit");
                     }
 
                     timeBetweenAttack = startTimeBetweenAttack;
@@ -35,7 +33,6 @@ namespace Platformer.Mechanics
                 
             } else {
                 timeBetweenAttack -= Time.deltaTime;
-                Debug.Log("waiting");
             }
         }
     }

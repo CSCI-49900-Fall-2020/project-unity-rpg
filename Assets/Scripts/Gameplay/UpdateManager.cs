@@ -8,7 +8,6 @@ public class UpdateManager : MonoBehaviour
 {
     CharacterSwapping characterSwapper;
     KeyBinds keyBinds;
-    // Start is called before the first frame update
     void Start()
     {
         keyBinds = GameObject.FindObjectOfType<KeyBinds>();

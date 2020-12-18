@@ -57,19 +57,6 @@ namespace Platformer.Mechanics
 
         }
 
-        // Old OnCollisionEnter2D
-        // void OnCollisionEnter2D(Collision2D collision)
-        // {
-        //     var player = collision.gameObject.GetComponent<PlayerController>();
-            
-        //     if (player != null)
-        //     {
-        //         var ev = Schedule<PlayerEnemyCollision>();
-        //         ev.player = player;
-        //         ev.enemy = this;
-        //     }
-        // }
-
         public void HealthDecrement(int damage){
             health.Decrement(damage);
             healthBar.transform.GetChild(0).GetComponent<EnemyHPBar>().SetCurrentHealth(health.currentHP);
@@ -91,10 +78,5 @@ namespace Platformer.Mechanics
                 control.move.x = Mathf.Clamp(mover.Position.x - transform.position.x, -1, 1);
             }
         }
-       
-        // private void OnDrawGizmosSelected() {
-        //     Gizmos.color = Color.red;
-        //     Gizmos.DrawWireSphere(attackPosition.transform.position, 1);
-        // }
     }
 }

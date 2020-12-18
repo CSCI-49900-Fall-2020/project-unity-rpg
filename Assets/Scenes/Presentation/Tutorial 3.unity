@@ -1199,6 +1199,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
 --- !u!1 &854466016 stripped
@@ -1219,6 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 1
   currentHP: 1
 --- !u!114 &854466018
@@ -1233,9 +1239,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 5
+  selfKnockbackStrength: 5
+--- !u!114 &854466019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854466016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793745086666334a95abc941e6bfa5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  aggroType: 1
+  aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!1 &908094159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,6 +1530,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
 --- !u!1 &1106225859 stripped
@@ -1526,6 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 1
   currentHP: 1
 --- !u!114 &1106225861
@@ -1540,9 +1570,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 5
+  selfKnockbackStrength: 5
+--- !u!114 &1106225862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106225859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793745086666334a95abc941e6bfa5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  aggroType: 1
+  aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!1 &1159349925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1942,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
 --- !u!1 &1276704999 stripped
@@ -1914,9 +1967,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 5
+  selfKnockbackStrength: 5
 --- !u!114 &1276705001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,8 +1984,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 1
   currentHP: 1
+--- !u!114 &1276705002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276704999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793745086666334a95abc941e6bfa5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  aggroType: 1
+  aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!1 &1311850850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,6 +2505,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1661912868639658944, guid: f158aa2be3df6489185ef721f6fd79c1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f158aa2be3df6489185ef721f6fd79c1, type: 3}
 --- !u!1 &1496799363 stripped
@@ -2453,6 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 1
   currentHP: 1
 --- !u!114 &1496799365
@@ -2467,9 +2545,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 5
+  selfKnockbackStrength: 5
+--- !u!114 &1496799366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496799363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793745086666334a95abc941e6bfa5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  aggroType: 1
+  aggroedPlayer: {fileID: 0}
+  enemyAggroRange: 5
 --- !u!1 &1533521475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,9 +2618,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f257af879d8434ca8eba84b0fd0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KnockUpOnly: 0
   knockbackStrength: 5
-  selfKnockbackStrength: 5
+  selfKnockbackResistance: 2
   knockbackDamage: 5
+  selfKnockbackStrength: 5
 --- !u!114 &1533521478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2553,6 +2651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffad43bb006db4856a9c527b89b48db9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageReduction: 0
   maxHP: 100
   currentHP: 100
 --- !u!114 &1533521480
