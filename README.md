@@ -52,6 +52,9 @@ Our plan to test our game will be to make sure all the features work. Our beta t
 3. Choose to Add a Project
 4. Open the cloned repository
 
+### Deployment
+Link: [Here](https://play.unity.com/mg/2d/project-unity-rpg-by-hubert-ye-james-zhao-paolo-tejeda-and-phillip-chen)
+
 
 # CSCI 499 Capstone Final Report
 
