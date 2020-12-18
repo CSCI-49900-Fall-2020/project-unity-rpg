@@ -25,10 +25,8 @@ public class BreakableBox : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>() || collision.gameObject.tag == "bullet")
         {
-            
             Debug.Log("works");
-           StartCoroutine(Break());
-          
+            StartCoroutine(Break());
         }
     }
     private IEnumerator Break()
@@ -38,7 +36,7 @@ public class BreakableBox : MonoBehaviour
         bc.enabled = false;
         if (drops) Instantiate(theDrops, dropPoint.position, dropPoint.rotation);
         yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
-       
+
         Destroy(gameObject);
     }
 

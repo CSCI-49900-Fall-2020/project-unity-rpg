@@ -17,7 +17,6 @@ public class CameraSet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    //void OnCollisionEnter2D()
     {
         if (other.gameObject.tag == "Player")
         {

@@ -19,8 +19,6 @@ namespace Platformer.Mechanics
             if (p != null)
             {
                 SceneManager.LoadScene("GameOver");
-                //var ev = Schedule<PlayerEnteredDeathZone>();
-                // ev.deathzone = this;
             }
             else
             {

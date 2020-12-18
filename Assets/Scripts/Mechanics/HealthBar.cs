@@ -18,8 +18,6 @@ namespace Platformer.Mechanics
             slider.value = currentHealth;
             hpNumbers.text = currentHealth + " / " + maxHealth;
 
-            
-             
             fill.color = gradient.Evaluate(slider.normalizedValue);
         }
 

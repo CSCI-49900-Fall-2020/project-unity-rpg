@@ -17,8 +17,6 @@ public class TextBoxManager : MonoBehaviour
     public int currentline;
     public int endatline;
 
-    //public PlayerController player; //replaced with public CharacterSwapping characterSwapper
-
     public bool isActive; //activate immediately upon entering scene, used for testing purposes
 
     public bool stopPlayerMovement;
@@ -58,14 +56,10 @@ public class TextBoxManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //player = GameObject.Find("Player").GetComponent<PlayerController>();
-
         if (!isActive)
         {
             return;
         }
-
-        //theText.text = textlines[currentline];
 
         if(currentline < textlines.Length)
             theText.text = textlines[currentline];
@@ -85,14 +79,12 @@ public class TextBoxManager : MonoBehaviour
     {
         textbox.SetActive(true);
 
-        //if (keyBinds.GetButtonDown("UICanvas"))
         (Donut.GetComponent(scriptName1) as MonoBehaviour).enabled = false;
 
         isActive = true;
         if (stopPlayerMovement)
         {   
             characterSwapper.currentCharacter.GetComponent<PlayerController>().controlEnabled = false;
-            //player.controlEnabled = false;
         }
     }
 

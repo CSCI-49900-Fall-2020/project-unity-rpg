@@ -33,9 +33,4 @@ public class DropItems : MonoBehaviour
 
         }
     }
-    public void Update()
-    {
-
-    }
-
 }

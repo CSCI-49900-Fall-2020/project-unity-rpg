@@ -12,7 +12,6 @@ public class GameOver : MonoBehaviour
     GameObject mainCamera;
     DoNotDestroyOnTransition[] toDestroy;
     
-    // Start is called before the first frame update
     void Start()
     {
         toDestroy = GameObject.FindObjectsOfType<DoNotDestroyOnTransition>();

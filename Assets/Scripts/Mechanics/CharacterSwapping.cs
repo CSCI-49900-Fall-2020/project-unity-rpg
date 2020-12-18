@@ -31,21 +31,16 @@ namespace Platformer.Mechanics
         Vector2 tempPosition;
         HealthBar tempHealthBar;
         ManaBar tempManaBar;
-        // public TextBoxManager textBoxManager;
-        // public DialogueOption dialogueOption;
 
         void Awake(){
             currentCharacter = character1;
             mainCamera.objectToFollow = currentCharacter;
-            // textBoxManager.player = currentCharacter.GetComponent<PlayerController>();
-            // dialogueOption.player = currentCharacter.GetComponent<PlayerController>();
         }
         void Start(){
             character2.GetComponent<PlayerController>().controlEnabled = false;
             character3.GetComponent<PlayerController>().controlEnabled = false;
             character4.GetComponent<PlayerController>().controlEnabled = false;
             
-            //healthBar.SetMaxHealth(100, 10);
             mainHealthBar.SetMaxHealth(currentCharacter.GetComponent<Health>().maxHP, currentCharacter.GetComponent<Health>().currentHP);
             mainManaBar.SetMaxMana(currentCharacter.GetComponent<Mana>().maxMP, currentCharacter.GetComponent<Mana>().currentMP);
             subCharacterName1.text = character2.GetComponent<Character>().characterName;
