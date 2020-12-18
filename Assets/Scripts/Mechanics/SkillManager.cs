@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Platformer.Mechanics;
 
 public class SkillManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class SkillManager : MonoBehaviour
 	{
 	  	if(Input.GetKeyDown("t"))
 	  	{
+	  		gameObject.GetComponent<SkillTree>().DisplayAbilityPoints();
 	    	if(skillTreeUI.activeSelf)
 	    	{
 	      		skillTreeUI.SetActive(false);

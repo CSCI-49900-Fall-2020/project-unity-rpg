@@ -34,6 +34,9 @@ namespace Platformer.Mechanics
         [HideInInspector]
         public Transform dropItem;
 
+        public GameObject donut;
+        public int exp = 4;
+
         void Awake()
         {
             control = GetComponent<AnimationController>();
@@ -54,7 +57,7 @@ namespace Platformer.Mechanics
             attackPosition.transform.SetParent(gameObject.transform);
             attackPosition.transform.localPosition = new Vector3(0.25f,0,0);
             dropItem = GetComponent<Transform>();
-
+            donut = GameObject.Find("Donut");
         }
 
         // Old OnCollisionEnter2D
@@ -79,6 +82,7 @@ namespace Platformer.Mechanics
                 {
                     Instantiate(theDrops, dropItem.position, dropItem.rotation);
                 }
+                donut.GetComponent<PlayerLevel>().GainExp(exp);
                 Destroy(gameObject);
             }
         }

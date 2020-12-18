@@ -12,16 +12,20 @@ namespace Platformer.Mechanics
 		public SkillButton[] sTree;
 		public Text visualPoints;
 
+		public void DisplayAbilityPoints(){
+			visualPoints.text = "Skill Points Left = " + abilityPoints;
+		}
+
 		void Awake()
 		{
-			visualPoints.text = "Skill Points Left = " + abilityPoints;
+			DisplayAbilityPoints();
 		}
 
 		public bool UpgradeSkill(){
 			if (abilityPoints > 0)
 			{ 
 				abilityPoints = abilityPoints - 1; 
-				visualPoints.text = "Skill Points Left = " + abilityPoints;
+				DisplayAbilityPoints();
 				return true;
 			}else
 			{
@@ -42,7 +46,7 @@ namespace Platformer.Mechanics
 
 		public void UseButton(){
 			SkillReset();
-			visualPoints.text = "Skill Points Left = " + abilityPoints;
+			DisplayAbilityPoints();
 		}
 	}
 }
