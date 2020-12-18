@@ -262,23 +262,103 @@ public class GameManager : MonoBehaviour
     {
         if (playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
         {
-            playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().health.maxHP - rEitem.value);
-            playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            if (rEitem.EquipmentID == 5)
+            {
+                if (rEitem.bullet1 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerDetectShoot>().bulletShootDamage1 = playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerDetectShoot>().bulletShootDamage1 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerDetectShoot>().bulletShoot1 = null;
+                    playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+
+                }
+                else if (rEitem.bullet1 == false && rEitem.bullet2 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerDetectShoot>().bulletShootDamage2 = playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerDetectShoot>().bulletShootDamage2 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerDetectShoot>().bulletShoot2 = null;
+                    playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+                }
+          
+            }
+            else
+            {
+                playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+                playerC.GetComponent<CharacterSwapping>().character1.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            }
+          
         }
         else if (playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
         {
-            playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().health.maxHP - rEitem.value);
-            playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            if (rEitem.EquipmentID == 5)
+            {
+                if (rEitem.bullet1 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerDetectShoot>().bulletShootDamage1 = playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerDetectShoot>().bulletShootDamage1 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerDetectShoot>().bulletShoot1 = null;
+                    playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+
+                }
+                else if (rEitem.bullet1 == false && rEitem.bullet2 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerDetectShoot>().bulletShootDamage2 = playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerDetectShoot>().bulletShootDamage2 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerDetectShoot>().bulletShoot2 = null;
+                    playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+                }
+
+            }
+
+            else {
+                playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+                playerC.GetComponent<CharacterSwapping>().character2.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            }
         }
         else if (playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
         {
-            playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().health.maxHP - rEitem.value);
-            playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            if (rEitem.EquipmentID == 5)
+            {
+                if (rEitem.bullet1 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerDetectShoot>().bulletShootDamage1 = playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerDetectShoot>().bulletShootDamage1 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerDetectShoot>().bulletShoot1 = null;
+                    playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+
+                }
+                else if (rEitem.bullet1 == false && rEitem.bullet2 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerDetectShoot>().bulletShootDamage2 = playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerDetectShoot>().bulletShootDamage2 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerDetectShoot>().bulletShoot2 = null;
+                    playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+                }
+
+            }
+
+            else {
+                playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+                playerC.GetComponent<CharacterSwapping>().character3.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            }
         }
         else if (playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Contains(rEitem))
         {
-            playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().health.maxHP - rEitem.value);
-            playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            if (rEitem.EquipmentID == 5)
+            {
+                if (rEitem.bullet1 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerDetectShoot>().bulletShootDamage1 = playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerDetectShoot>().bulletShootDamage1 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerDetectShoot>().bulletShoot1 = null;
+                    playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+
+                }
+                else if (rEitem.bullet1 == false && rEitem.bullet2 == true)
+                {
+                    playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerDetectShoot>().bulletShootDamage2 = playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerDetectShoot>().bulletShootDamage2 - rEitem.value;
+                    playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerDetectShoot>().bulletShoot2 = null;
+                    playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+                }
+
+            }
+            else {
+                playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().setMaxHealth(playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().health.maxHP - rEitem.value);
+                playerC.GetComponent<CharacterSwapping>().character4.GetComponent<PlayerController>().playerCurrentEitems.Remove(rEitem);
+            }
         }
 
 

@@ -226,6 +226,9 @@ public class EquipmentUsing : MonoBehaviour
                         GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                         button.enabled = false;
                         GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                        GameManager.instance.equipmentItems[i].eUsing = true;
+                        GameManager.instance.equipmentItems[i].bullet1 = true;
+                        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().playerCurrentEitems.Add(GetThisEItem());
                     }
                     else if (GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().bulletShoot2 == null)
                     {
@@ -235,6 +238,9 @@ public class EquipmentUsing : MonoBehaviour
                         GameManager.instance.equipmentSlots[i].transform.GetChild(2).transform.GetChild(0).GetComponent<Text>().color = new Color(1, 1, 1, 1);
                         button.enabled = false;
                         GameManager.instance.equipmentItems[i].eItemUsedByCharacter = GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Character>().characterName;
+                        GameManager.instance.equipmentItems[i].eUsing = true;
+                        GameManager.instance.equipmentItems[i].bullet2 = true;
+                        GameManager.instance.playerC.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().playerCurrentEitems.Add(GetThisEItem());
                     }
 
                 }
