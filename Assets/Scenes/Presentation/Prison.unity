@@ -604,7 +604,7 @@ MonoBehaviour:
   fireRate: 1
   enemyEntity: {fileID: 23740498}
   direction: 3
-  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+  bulletShoot: {fileID: 5495839495757404761, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
     type: 3}
 --- !u!1 &35609160
 GameObject:
@@ -11332,7 +11332,7 @@ MonoBehaviour:
   fireRate: 1
   enemyEntity: {fileID: 330260994}
   direction: 3
-  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+  bulletShoot: {fileID: 5495839495757404761, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
     type: 3}
 --- !u!1 &341067384
 GameObject:
@@ -20996,7 +20996,7 @@ MonoBehaviour:
   fireRate: 1
   enemyEntity: {fileID: 1424195769}
   direction: 3
-  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+  bulletShoot: {fileID: 5495839495757404761, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
     type: 3}
 --- !u!1 &1463317547
 GameObject:
@@ -21896,7 +21896,7 @@ MonoBehaviour:
   fireRate: 1
   enemyEntity: {fileID: 1546236149}
   direction: 3
-  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+  bulletShoot: {fileID: 5495839495757404761, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
     type: 3}
 --- !u!1 &1569319549
 GameObject:
@@ -74059,7 +74059,7 @@ MonoBehaviour:
   fireRate: 1
   enemyEntity: {fileID: 2036674015}
   direction: 3
-  bulletShoot: {fileID: 8258243179597350377, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
+  bulletShoot: {fileID: 5495839495757404761, guid: 5f2de17f1fcd97f4da8b1f9e587b1305,
     type: 3}
 --- !u!1 &2045066691
 GameObject:

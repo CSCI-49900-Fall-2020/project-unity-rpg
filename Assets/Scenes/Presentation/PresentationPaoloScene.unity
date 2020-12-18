@@ -15620,7 +15620,7 @@ MonoBehaviour:
   fireRate: 1
   enemyEntity: {fileID: 1192321500}
   direction: 2
-  bulletShoot: {fileID: 1711648223301018697, guid: 95c5a0c0adb7e5c4abc29873d2ccbf00,
+  bulletShoot: {fileID: 5573690230348830681, guid: 95c5a0c0adb7e5c4abc29873d2ccbf00,
     type: 3}
 --- !u!1001 &1210675784
 PrefabInstance:
