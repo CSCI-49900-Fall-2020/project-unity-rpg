@@ -12,7 +12,7 @@ Paolo Tejeda
 Phillip Chen
 
 ## Introduction
-	Our project is to create a 2-D Side Scroller RPG game in Unity using C#. Each person will be responsible for every part of the project including some sprites, enemy ai, bosses ai, and a bit of storyline, etc. Using the already existing template in Unity, we will make modifications and add in original designs. We will start with a generic “Hero on a quest to defeat the Big Bad Evil Guy (BBEG)” story and add twists and more complex backstories for each playable character as time goes on.
+Our project is to create a 2-D Side Scroller RPG game in Unity using C#. Each person will be responsible for every part of the project including some sprites, enemy ai, bosses ai, and a bit of storyline, etc. Using the already existing template in Unity, we will make modifications and add in original designs. We will start with a generic “Hero on a quest to defeat the Big Bad Evil Guy (BBEG)” story and add twists and more complex backstories for each playable character as time goes on.
 
 ## Features
 1. Bullet hell mechanics - The players need to dodge enemy projectiles or else they take damage.
@@ -51,6 +51,9 @@ Our plan to test our game will be to make sure all the features work. Our beta t
 2. Open Unity Hub
 3. Choose to Add a Project
 4. Open the cloned repository
+
+### Deployment
+Link: [Here](https://play.unity.com/mg/2d/project-unity-rpg-by-hubert-ye-james-zhao-paolo-tejeda-and-phillip-chen)
 
 
 # CSCI 499 Capstone Final Report
