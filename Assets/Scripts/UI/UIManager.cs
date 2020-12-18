@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject inventoryMenu;
     public GameObject StoreMenu;
+    public GameObject Uicanvas;
     //public GameObject playersBars;
    // public GameObject BarsBackgroundImage;
     private void Start()
@@ -48,7 +49,7 @@ public class UIManager : MonoBehaviour
     private void Resume()
     {
         inventoryMenu.gameObject.SetActive(false);
-        
+        Uicanvas.gameObject.SetActive(true);
       //  playersBars.gameObject.SetActive(true);
       //  BarsBackgroundImage.gameObject.SetActive(true);
         Time.timeScale = 1.0f;
@@ -57,21 +58,23 @@ public class UIManager : MonoBehaviour
     private void StoreResume()
     {
         StoreMenu.gameObject.SetActive(false);
+        Uicanvas.gameObject.SetActive(true);
         Time.timeScale = 1.0f;
         GameManager.instance.isPaused = false;
     }
     private void Pause()
     {
         inventoryMenu.gameObject.SetActive(true);
-       
-      //  playersBars.gameObject.SetActive(false);
-      //  BarsBackgroundImage.gameObject.SetActive(false);
+        Uicanvas.gameObject.SetActive(false);
+        //  playersBars.gameObject.SetActive(false);
+        //  BarsBackgroundImage.gameObject.SetActive(false);
         Time.timeScale = 0.0f;
         GameManager.instance.isPaused = true;
     }
     private void StorePause()
     {
         StoreMenu.gameObject.SetActive(true);
+        Uicanvas.gameObject.SetActive(false);
         Time.timeScale = 0.0f;
         GameManager.instance.isPaused = true;
     }

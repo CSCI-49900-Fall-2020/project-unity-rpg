@@ -10916,6 +10916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryMenu: {fileID: 542257671}
   StoreMenu: {fileID: 703896323}
+  Uicanvas: {fileID: 196824102}
 --- !u!4 &1191204976
 Transform:
   m_ObjectHideFlags: 0
@@ -11733,7 +11734,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
   m_Value: 0.9847134
-  m_Size: 0.33497518
+  m_Size: 0.33497512
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23427,7 +23428,7 @@ PrefabInstance:
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}

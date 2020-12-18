@@ -14,7 +14,6 @@ public class EquipmentItem : ScriptableObject
     public int value;
     public bool eUsing;
     public GameObject shootingPng;
-
     public string eItemUsedByCharacter;
 
     public EquipmentItem()
@@ -24,6 +23,7 @@ public class EquipmentItem : ScriptableObject
         description = null;
         value = 0;
         eUsing = false;
+        shootingPng = null;
     }
 
 }
