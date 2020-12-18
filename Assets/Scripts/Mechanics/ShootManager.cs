@@ -26,7 +26,11 @@ public class ShootManager : MonoBehaviour
         }
         if (keyBinds.GetButtonDown("Skill4"))
         {
-            gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton(3);
+            if (gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<Mana>().currentMP >= 5)
+            {
+                gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerController>().decrementMana(5);
+                gameObject.GetComponent<CharacterSwapping>().currentCharacter.GetComponent<PlayerDetectShoot>().ShootBulletButton(3);
+            }
         }
         if (keyBinds.GetButtonDown("Skill1"))
         {

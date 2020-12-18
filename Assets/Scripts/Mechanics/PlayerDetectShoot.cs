@@ -12,16 +12,19 @@ public class PlayerDetectShoot : MonoBehaviour
     public Transform playerEntity;
     public int bulletShootDamage1 = 5;
     public int bulletShootDamage2 = 5;
-   /* public int bulletShootDamage3 = 5;
+    public int bulletShootDamage3 = 10;
+   /* 
     public int bulletShootDamage4 = 5;*/
     public CharacterSwapping characterS;
     public GameObject donut;
     public GameObject bulletShoot1 = null;
     public GameObject bulletShoot2 = null;
-/*    public GameObject bulletShoot3 = null;
-    public GameObject bulletShoot4 = null;*/
+    public GameObject bulletShoot3 = null;
+    /*public GameObject bulletShoot4 = null;*/
     KeyBinds keyB;
     SkillTree playerSkillTree;
+
+    int bulletShootDamage;
     GameObject bulletShoot = null;
     Vector2 move;
 
@@ -51,35 +54,7 @@ public class PlayerDetectShoot : MonoBehaviour
         //if (Input.GetKey ("/") && Time.time > timeTemp)
     }
 
-    void SelectBullet(int bulletNumber){
-        switch (bulletNumber){
-            case 1:
-                bulletShoot = bulletShoot1;
-
-                break;
-            case 2:
-                bulletShoot = bulletShoot2;
-                break;
-          /*  case 3:
-                bulletShoot = bulletShoot3;
-                break;
-            case 4:
-                bulletShoot = bulletShoot4;
-                break;*/
-        }
-    }
-
-    public void ShootBulletButton(int bulletNumber)
-    {
-        if (Time.time > timeTemp)
-        {
-            SelectBullet(bulletNumber);
-            ShootBullet();
-            timeTemp = Time.time + fireRate;
-        }
-    }
-
-    void ScriptBullet()
+    void SkillBonusDamage(int bulletShootDamage)
     {
         int bonusDamage = 0;
         for (int i = 0; i < playerSkillTree.sTree.Length; i++)
@@ -101,10 +76,50 @@ public class PlayerDetectShoot : MonoBehaviour
                 bonusDamage += 4 * playerSkillTree.sTree[i].abilityLevel;
             }
         }
+        //characterS.currentCharacter.GetComponent<PlayerDetectShoot>().bulletShootDamage1
+        bulletShoot.GetComponent<BulletAnimationHit>().damage = bulletShootDamage + bonusDamage;
+    }
+
+    void SelectBullet(int bulletNumber){
+        switch (bulletNumber){
+            case 1:
+                bulletShoot = bulletShoot1;
+                bulletShoot.GetComponent<Transform>().localScale = new Vector3(1,1,1);
+                bulletShootDamage = bulletShootDamage1;
+                break;
+            case 2:
+                bulletShoot = bulletShoot2;
+                bulletShootDamage = bulletShootDamage2;
+                break;
+           case 3:
+                bulletShoot = bulletShoot3;
+                bulletShoot.GetComponent<Transform>().localScale = new Vector3(2,2,1);
+                bulletShootDamage = bulletShootDamage3;
+                break;
+           /*  case 4:
+                bulletShoot = bulletShoot4;
+                break;*/
+        }
+        SkillBonusDamage(bulletShootDamage);
+    }
+
+    public void ShootBulletButton(int bulletNumber)
+    {
+        if (Time.time > timeTemp)
+        {
+            SelectBullet(bulletNumber);
+            ShootBullet();
+            timeTemp = Time.time + fireRate;
+        }
+    }
+
+    void ScriptBullet()
+    {
+
 
         GameObject bullet = Instantiate(bulletShoot) as GameObject;
-        bullet.transform.position = playerEntity.transform.position;
-        bullet.GetComponent<BulletAnimationHit>().damage = characterS.currentCharacter.GetComponent<PlayerDetectShoot>().bulletShootDamage1 + bonusDamage;
+        bullet.transform.position = playerEntity.transform.position + new Vector3 (0,.3f,0);
+        
       
     }
 
