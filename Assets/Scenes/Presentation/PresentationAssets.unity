@@ -11734,7 +11734,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 822015836}
   m_Direction: 2
   m_Value: 0.9847134
-  m_Size: 0.33497512
+  m_Size: 0.33497518
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -23433,7 +23433,7 @@ PrefabInstance:
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
       propertyPath: sceneName
-      value: PresentationScene3
+      value: PresentationPaoloScene
       objectReference: {fileID: 0}
     - target: {fileID: 4735668207965535524, guid: a9e606954e579a04ba4ca958a32e1c98,
         type: 3}
